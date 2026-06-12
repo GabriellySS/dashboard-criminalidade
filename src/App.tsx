@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
 import mockData from './data/mockData.json';
-import { Header } from './components/Header';
-import { FilterBar } from './components/FilterBar';
-import { StatCards } from './components/StatCards';
-import { TrendChart } from './components/TrendChart';
+import { Header } from './components/Header/Header';
+import { FilterBar } from './components/FilterBar/FilterBar';
+import { StatCards } from './components/StatCards/StatCards';
+import { TrendChart } from './components/TrendChart/TrendChart';
 import type { CrimeRecord } from './types';
 import './App.css';
 

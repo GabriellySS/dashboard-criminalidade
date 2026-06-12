@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import type { CrimeRecord } from '../types';
+import type { CrimeRecord } from '../../types';
 import styles from './TrendChart.module.css';
 
 interface TrendChartProps {
