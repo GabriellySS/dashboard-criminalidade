@@ -1,0 +1,962 @@
+[
+  {
+    "id": 1,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 937
+  },
+  {
+    "id": 2,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3256
+  },
+  {
+    "id": 3,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 67
+  },
+  {
+    "id": 4,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 33
+  },
+  {
+    "id": 5,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 167
+  },
+  {
+    "id": 6,
+    "ano": 2019,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 3
+  },
+  {
+    "id": 7,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1078
+  },
+  {
+    "id": 8,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3043
+  },
+  {
+    "id": 9,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 50
+  },
+  {
+    "id": 10,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 35
+  },
+  {
+    "id": 11,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 202
+  },
+  {
+    "id": 12,
+    "ano": 2019,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 13,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 856
+  },
+  {
+    "id": 14,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4415
+  },
+  {
+    "id": 15,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 65
+  },
+  {
+    "id": 16,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 33
+  },
+  {
+    "id": 17,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 161
+  },
+  {
+    "id": 18,
+    "ano": 2019,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 19,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 858
+  },
+  {
+    "id": 20,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3501
+  },
+  {
+    "id": 21,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 50
+  },
+  {
+    "id": 22,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 46
+  },
+  {
+    "id": 23,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 164
+  },
+  {
+    "id": 24,
+    "ano": 2019,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 25,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 945
+  },
+  {
+    "id": 26,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4465
+  },
+  {
+    "id": 27,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 53
+  },
+  {
+    "id": 28,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 51
+  },
+  {
+    "id": 29,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 162
+  },
+  {
+    "id": 30,
+    "ano": 2020,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 3
+  },
+  {
+    "id": 31,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1014
+  },
+  {
+    "id": 32,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4170
+  },
+  {
+    "id": 33,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 68
+  },
+  {
+    "id": 34,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 52
+  },
+  {
+    "id": 35,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 218
+  },
+  {
+    "id": 36,
+    "ano": 2020,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 37,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1197
+  },
+  {
+    "id": 38,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4269
+  },
+  {
+    "id": 39,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 61
+  },
+  {
+    "id": 40,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 43
+  },
+  {
+    "id": 41,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 177
+  },
+  {
+    "id": 42,
+    "ano": 2020,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 3
+  },
+  {
+    "id": 43,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1185
+  },
+  {
+    "id": 44,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3785
+  },
+  {
+    "id": 45,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 61
+  },
+  {
+    "id": 46,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 49
+  },
+  {
+    "id": 47,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 179
+  },
+  {
+    "id": 48,
+    "ano": 2020,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 49,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1017
+  },
+  {
+    "id": 50,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3670
+  },
+  {
+    "id": 51,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 69
+  },
+  {
+    "id": 52,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 43
+  },
+  {
+    "id": 53,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 221
+  },
+  {
+    "id": 54,
+    "ano": 2021,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 55,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 945
+  },
+  {
+    "id": 56,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4080
+  },
+  {
+    "id": 57,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 61
+  },
+  {
+    "id": 58,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 37
+  },
+  {
+    "id": 59,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 228
+  },
+  {
+    "id": 60,
+    "ano": 2021,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 61,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 810
+  },
+  {
+    "id": 62,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4319
+  },
+  {
+    "id": 63,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 67
+  },
+  {
+    "id": 64,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 36
+  },
+  {
+    "id": 65,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 206
+  },
+  {
+    "id": 66,
+    "ano": 2021,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 67,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1110
+  },
+  {
+    "id": 68,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3368
+  },
+  {
+    "id": 69,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 63
+  },
+  {
+    "id": 70,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 36
+  },
+  {
+    "id": 71,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 172
+  },
+  {
+    "id": 72,
+    "ano": 2021,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 3
+  },
+  {
+    "id": 73,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1161
+  },
+  {
+    "id": 74,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3882
+  },
+  {
+    "id": 75,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 69
+  },
+  {
+    "id": 76,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 54
+  },
+  {
+    "id": 77,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 170
+  },
+  {
+    "id": 78,
+    "ano": 2022,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 4
+  },
+  {
+    "id": 79,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 871
+  },
+  {
+    "id": 80,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3885
+  },
+  {
+    "id": 81,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 52
+  },
+  {
+    "id": 82,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 41
+  },
+  {
+    "id": 83,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 162
+  },
+  {
+    "id": 84,
+    "ano": 2022,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 1
+  },
+  {
+    "id": 85,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 948
+  },
+  {
+    "id": 86,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3937
+  },
+  {
+    "id": 87,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 54
+  },
+  {
+    "id": 88,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 37
+  },
+  {
+    "id": 89,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 218
+  },
+  {
+    "id": 90,
+    "ano": 2022,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 3
+  },
+  {
+    "id": 91,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 880
+  },
+  {
+    "id": 92,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4459
+  },
+  {
+    "id": 93,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 69
+  },
+  {
+    "id": 94,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 48
+  },
+  {
+    "id": 95,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 152
+  },
+  {
+    "id": 96,
+    "ano": 2022,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 97,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1087
+  },
+  {
+    "id": 98,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3398
+  },
+  {
+    "id": 99,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 55
+  },
+  {
+    "id": 100,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 36
+  },
+  {
+    "id": 101,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 152
+  },
+  {
+    "id": 102,
+    "ano": 2023,
+    "mes": "Janeiro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 103,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1166
+  },
+  {
+    "id": 104,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 3826
+  },
+  {
+    "id": 105,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 59
+  },
+  {
+    "id": 106,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 52
+  },
+  {
+    "id": 107,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 212
+  },
+  {
+    "id": 108,
+    "ano": 2023,
+    "mes": "Abril",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 1
+  },
+  {
+    "id": 109,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 1125
+  },
+  {
+    "id": 110,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4009
+  },
+  {
+    "id": 111,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 60
+  },
+  {
+    "id": 112,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 30
+  },
+  {
+    "id": 113,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 226
+  },
+  {
+    "id": 114,
+    "ano": 2023,
+    "mes": "Julho",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  },
+  {
+    "id": 115,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 970
+  },
+  {
+    "id": 116,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 4438
+  },
+  {
+    "id": 117,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "São Paulo",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 63
+  },
+  {
+    "id": 118,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Roubo de Veículos",
+    "ocorrencias": 46
+  },
+  {
+    "id": 119,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Furtos",
+    "ocorrencias": 207
+  },
+  {
+    "id": 120,
+    "ano": 2023,
+    "mes": "Outubro",
+    "municipio": "Cotia",
+    "tipo_crime": "Homicídios Dolosos",
+    "ocorrencias": 2
+  }
+]
