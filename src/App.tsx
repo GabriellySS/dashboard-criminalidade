@@ -5,7 +5,7 @@ import { FilterBar } from './components/FilterBar';
 import { StatCards } from './components/StatCards';
 import { TrendChart } from './components/TrendChart';
 import type { CrimeRecord } from './types';
-import styles from './App.module.css';
+import './App.css';
 
 function App() {
   const [municipio, setMunicipio] = useState('Todos');
@@ -82,9 +82,9 @@ function App() {
   return (
     <>
       <Header />
-      <main className={styles.container}>
-        <div className={styles.titleSection}>
-          <p className={styles.subtitle}>
+      <main className="container">
+        <div className="titleSection">
+          <p className="subtitle">
             Painel interativo de análise criminal do Estado de São Paulo
           </p>
         </div>
@@ -101,7 +101,7 @@ function App() {
           anosList={anosList}
         />
 
-        <div className={styles.dashboardLayout}>
+        <div className="dashboardLayout">
           <StatCards
             totalOcorrencias={stats.total}
             mediaMensal={stats.media}
