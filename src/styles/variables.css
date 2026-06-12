@@ -1,0 +1,31 @@
+:root {
+  /* Espaçamento e Arredondamento Universais */
+  --radius-xl: 30px;
+  --radius-lg: 20px;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+.theme-light {
+  --color-bg: #E0E5EC; /* Base Neumórfica Neutra */
+  --color-surface: #E0E5EC; /* Superfície idêntica ao fundo */
+  --color-text-primary: #374151; /* Slate 700 */
+  --color-text-secondary: #6B7280; /* Slate 500 */
+  --color-accent: #22D3EE; /* Cyan Suave */
+  --shadow-primary-flat: 20px 20px 60px #bec3c9, -20px -20px 60px #ffffff;
+  --shadow-inset: inset 6px 6px 12px #bec3c9, inset -6px -6px 12px #ffffff;
+  --shadow-btn-hover: 5px 5px 15px #bec3c9, -5px -5px 15px #ffffff;
+  --shadow-card-hover: 25px 25px 70px #bec3c9, -25px -25px 70px #ffffff;
+}
+
+.theme-dark {
+  --color-bg: #1C212E; /* Dark Neutro */
+  --color-surface: #1C212E;
+  --color-text-primary: #F3F4F6; /* Gray 100 */
+  --color-text-secondary: #9CA3AF; /* Gray 400 */
+  --color-accent: #A78BFA; /* Violet Suave */
+  --shadow-primary-flat: 20px 20px 60px #181c27, -20px -20px 60px #202635;
+  --shadow-inset: inset 6px 6px 12px #181c27, inset -6px -6px 12px #202635;
+  --shadow-btn-hover: 5px 5px 15px #181c27, -5px -5px 15px #202635;
+  --shadow-card-hover: 25px 25px 70px #181c27, -25px -25px 70px #202635;
+}
