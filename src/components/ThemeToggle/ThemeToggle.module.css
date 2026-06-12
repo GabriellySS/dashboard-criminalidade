@@ -8,18 +8,17 @@
   align-items: center;
   justify-content: center;
   color: var(--color-text-primary);
-  box-shadow: var(--shadow-primary-flat);
+  box-shadow: var(--shadow-flat);
   cursor: pointer;
   outline: none;
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
 }
 
 .toggleButton:hover {
-  box-shadow: var(--shadow-btn-hover);
   transform: scale(1.05);
 }
 
 .toggleButton:active {
-  box-shadow: var(--shadow-inset);
+  box-shadow: var(--shadow-pressed);
   transform: scale(0.95);
 }
