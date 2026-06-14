@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
 import { TrendChart } from './components/TrendChart/TrendChart';
+import { CrimeDistributionChart } from './components/CrimeDistributionChart/CrimeDistributionChart';
 import { RegionTable } from './components/RegionTable/RegionTable';
 import { EmptyState } from './components/EmptyState/EmptyState';
 import type { CrimeRecord } from './types';
@@ -13,6 +14,7 @@ function App() {
   const [municipioSelecionado, setMunicipioSelecionado] = useState('Todos');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
   const [anoSelecionado, setAnoSelecionado] = useState('Todos');
+  const [mesSelecionado, setMesSelecionado] = useState('Todos');
   const [isLoading, setIsLoading] = useState(false);
 
   // Safely cast mockData to CrimeRecord[]
@@ -25,7 +27,7 @@ function App() {
       setIsLoading(false);
     }, 800);
     return () => clearTimeout(timer);
-  }, [municipioSelecionado, crimeSelecionado, anoSelecionado]);
+  }, [municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // Dynamic filter list options
   const municipiosList = useMemo(() => {
@@ -40,15 +42,36 @@ function App() {
     return Array.from(new Set(typedMockData.map((d) => String(d.ano)))).sort((a, b) => b.localeCompare(a));
   }, [typedMockData]);
 
+  const mesesList = useMemo(() => {
+    const MES_ORDEM: Record<string, number> = {
+      'Janeiro': 1,
+      'Fevereiro': 2,
+      'Março': 3,
+      'Abril': 4,
+      'Maio': 5,
+      'Junho': 6,
+      'Julho': 7,
+      'Agosto': 8,
+      'Setembro': 9,
+      'Outubro': 10,
+      'Novembro': 11,
+      'Dezembro': 12,
+    };
+    return Array.from(new Set(typedMockData.map((d) => d.mes))).sort((a, b) => {
+      return (MES_ORDEM[a] || 0) - (MES_ORDEM[b] || 0);
+    });
+  }, [typedMockData]);
+
   // Derived filtered data (dadosFiltrados)
   const dadosFiltrados = useMemo(() => {
     return typedMockData.filter((item) => {
       const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
       const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
       const matchAno = anoSelecionado === 'Todos' || String(item.ano) === anoSelecionado;
-      return matchMunicipio && matchCrime && matchAno;
+      const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
+      return matchMunicipio && matchCrime && matchAno && matchMes;
     });
-  }, [typedMockData, municipioSelecionado, crimeSelecionado, anoSelecionado]);
+  }, [typedMockData, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // Derived statistics for StatCards
   const stats = useMemo(() => {
@@ -62,12 +85,19 @@ function App() {
         const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
         const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
         const matchAno = item.ano === String(prevYear);
-        return matchMunicipio && matchCrime && matchAno;
+        const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
+        return matchMunicipio && matchCrime && matchAno && matchMes;
       });
       prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
     } else {
       // Compare current vs 2022
-      const data2022 = typedMockData.filter(item => item.ano === '2022' && (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) && (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado));
+      const data2022 = typedMockData.filter(
+        (item) =>
+          item.ano === '2022' &&
+          (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) &&
+          (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado) &&
+          (mesSelecionado === 'Todos' || item.mes === mesSelecionado)
+      );
       prevYearTotal = data2022.reduce((sum, item) => sum + item.ocorrencias, 0);
     }
 
@@ -76,7 +106,7 @@ function App() {
       variacaoTotal = ((total - prevYearTotal) / prevYearTotal) * 100;
     } else {
       // Realistic default variation if no comparative data
-      variacaoTotal = -12.5; 
+      variacaoTotal = -12.5;
     }
 
     // Dynamic Zonas de Alto Risco based on municipio and crime
@@ -109,7 +139,7 @@ function App() {
       efetivoAlocado,
       variacaoEfetivo,
     };
-  }, [typedMockData, dadosFiltrados, municipioSelecionado, crimeSelecionado, anoSelecionado]);
+  }, [typedMockData, dadosFiltrados, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   return (
     <>
@@ -128,14 +158,17 @@ function App() {
           setCrimeSelecionado={setCrimeSelecionado}
           anoSelecionado={anoSelecionado}
           setAnoSelecionado={setAnoSelecionado}
+          mesSelecionado={mesSelecionado}
+          setMesSelecionado={setMesSelecionado}
           municipiosList={municipiosList}
           tiposCrimeList={tiposCrimeList}
           anosList={anosList}
+          mesesList={mesesList}
         />
 
         <div className="dashboardLayout">
-          <StatCards 
-            totalOcorrencias={stats.total} 
+          <StatCards
+            totalOcorrencias={stats.total}
             variacaoTotal={stats.variacaoTotal}
             zonasAltoRisco={stats.zonasAltoRisco}
             variacaoZonas={stats.variacaoZonas}
@@ -146,14 +179,20 @@ function App() {
 
           {isLoading ? (
             <>
-              <TrendChart data={dadosFiltrados} isLoading={true} />
+              <div className="chartsGrid">
+                <TrendChart data={dadosFiltrados} isLoading={true} />
+                <CrimeDistributionChart data={dadosFiltrados} isLoading={true} />
+              </div>
               <RegionTable data={dadosFiltrados} isLoading={true} />
             </>
           ) : dadosFiltrados.length === 0 ? (
             <EmptyState />
           ) : (
             <>
-              <TrendChart data={dadosFiltrados} isLoading={false} />
+              <div className="chartsGrid">
+                <TrendChart data={dadosFiltrados} isLoading={false} />
+                <CrimeDistributionChart data={dadosFiltrados} isLoading={false} />
+              </div>
               <RegionTable data={dadosFiltrados} isLoading={false} />
             </>
           )}

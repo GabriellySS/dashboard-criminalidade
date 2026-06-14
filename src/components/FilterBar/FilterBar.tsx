@@ -9,9 +9,12 @@ interface FilterBarProps {
   setCrimeSelecionado: (c: string) => void;
   anoSelecionado: string;
   setAnoSelecionado: (a: string) => void;
+  mesSelecionado: string;
+  setMesSelecionado: (m: string) => void;
   municipiosList: string[];
   tiposCrimeList: string[];
   anosList: string[];
+  mesesList: string[];
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
@@ -21,9 +24,12 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   setCrimeSelecionado,
   anoSelecionado,
   setAnoSelecionado,
+  mesSelecionado,
+  setMesSelecionado,
   municipiosList,
   tiposCrimeList,
   anosList,
+  mesesList,
 }) => {
   return (
     <div className={styles.filterBar}>
@@ -73,6 +79,23 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           {anosList.map((a) => (
             <option key={a} value={a}>
               {a}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className={styles.filterGroup}>
+        <label htmlFor="mes-select">Mês</label>
+        <select
+          id="mes-select"
+          className={styles.select}
+          value={mesSelecionado}
+          onChange={(e) => setMesSelecionado(e.target.value)}
+        >
+          <option value="Todos">Todos os Meses</option>
+          {mesesList.map((m) => (
+            <option key={m} value={m}>
+              {m}
             </option>
           ))}
         </select>

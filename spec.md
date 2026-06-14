@@ -60,48 +60,18 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 }
 ```
 
-## 4. Arquitetura de Componentes e UI (Flat Design 2.0 / Enterprise UI)
-A interface adota um design focado em dados, limpo e de alto contraste.
-* **Estilo Base dos Cartões:** Sombras espessas são proibidas. Componentes como `Header`, `FilterBar`, `StatCards` e `TrendChart` devem usar:
-  - `background-color: var(--color-surface)`
-  - `border: 1px solid var(--color-border)`
-  - `border-radius: var(--radius-md)`
-  - `box-shadow: var(--shadow-subtle)`
-* **StatCards:** Devem incluir "badges" (etiquetas) de variação percentual (ex: +12.5% ou -4.2%). Use as variáveis `--color-success` e `--color-danger` (com seus respectivos backgrounds) para estilizá-los.
-* **TrendChart:** Gráfico de área limpo. A linha deve usar `var(--color-accent)` e o preenchimento da área deve ser muito sutil, usando `var(--color-accent-light)`.
-* **RegionTable (Novo):** Tabela de dados estatísticos inserida abaixo do gráfico, contendo as colunas: Região, Ocorrências, Variação, Status e Ações. Segue a mesma lógica de bordas finas do sistema.
+## 4. Arquitetura de Componentes e UI (Atualização)
+* **CrimeDistributionChart (Novo - Gráfico de Rosca):**
+  - Deve ser implementado utilizando a biblioteca `recharts` (componentes `<PieChart>`, `<Pie>` e `<Cell>`).
+  - Apresentar a distribuição percentual e absoluta por tipo de crime com base nos dados atualmente filtrados.
+  - Estilo estrito Flat Design 2.0: cores sólidas, limpas e sem gradientes ou sombras complexas.
+  - Incluir uma legenda lateral descritiva organizada exibindo a categoria e a percentagem calculada (ex: "Furtos: 45.2%").
 
-## 5. Gerenciamento de Estado e Lógica (React Hooks)
-O componente principal (`src/App.tsx`) atua como o controlador de estado (State Controller) e deve implementar a seguinte arquitetura de dados:
-
-1. **Estados Globais (useState):**
-   - `municipioSelecionado` (Valor inicial: 'Todos')
-   - `crimeSelecionado` (Valor inicial: 'Todos')
-   - `anoSelecionado` (Valor inicial: 'Todos')
-
-2. **Filtragem de Dados (useMemo):**
-   - Importe os dados de `src/data/mockData.json`.
-   - Crie uma constante `dadosFiltrados` usando `useMemo`. Ela deve filtrar o JSON e retornar apenas os registros que satisfaçam os três filtros simultaneamente. 
-   - Regra importante: Se o estado de um filtro for 'Todos', ele não deve restringir a busca.
-
-3. **Prop Drilling e Consumo (Interfaces TypeScript):**
-   - **`FilterBar`**: Deve receber os valores dos estados atuais e as funções atualizadoras (ex: `setMunicipioSelecionado`) para permitir que o usuário altere as seleções.
-   - **`StatCards`**: Deve receber métricas calculadas derivadas de `dadosFiltrados` (Total de ocorrências e valores para as tags de variação).
-   - **`TrendChart`**: Deve receber os `dadosFiltrados` para renderizar as linhas do gráfico dinamicamente.
-   - **`RegionTable`**: Deve receber os `dadosFiltrados` para exibir as linhas da tabela de forma correspondente ao que está no gráfico.
-   - Crie as interfaces (`interface Props { ... }`) em cada componente para tipar os dados recebidos.
-
-## 6. Tratamento de Exceções e UX (Edge Cases)
-A aplicação deve lidar com o tempo de carregamento de dados e a ausência de resultados para não quebrar a confiança do usuário.
-
-1. **Estado de Carregamento (Loading State / Skeletons):**
-   - Implemente um estado `isLoading` (booleano) no `App.tsx`.
-   - Crie um hook `useEffect` ou uma função que simule um atraso de rede (ex: `setTimeout` de 800ms) toda vez que os filtros forem alterados, setando `isLoading` para `true` e depois `false`.
-   - Crie um componente `Skeleton.tsx` genérico (um bloco cinza claro com animação de pulso/fade usando CSS).
-   - Enquanto `isLoading` for verdadeiro, os componentes `StatCards`, `TrendChart` e `RegionTable` devem renderizar esses Skeletons no lugar dos números e gráficos.
-
-2. **Estado Vazio (Empty State):**
-   - Se, após a filtragem, a constante `dadosFiltrados` retornar um array vazio (length === 0), a interface não deve renderizar gráficos em branco ou tabelas sem linhas.
-   - Crie um componente `EmptyState.tsx`.
-   - Ele deve exibir um ícone semântico (ex: `FileQuestion` ou `SearchX` do Lucide React), um título ("Nenhum registro encontrado") e um texto de apoio ("Não há dados de criminalidade para a combinação de filtros selecionada.").
-   - Este componente deve substituir o `TrendChart` e a `RegionTable` na tela quando não houver dados.
+## 5. Gerenciamento de Estado e Lógica (Atualização)
+1. **Estado do Filtro de Mês:**
+   - Adicionar o estado `mesSelecionado` (Valor inicial: 'Todos') no `src/App.tsx`.
+2. **Extração Dinâmica de Filtros:**
+   - O componente `FilterBar` deve extrair dinamicamente a lista de meses únicos presentes no `mockData.json` para preencher as opções do novo dropdown de meses, evitando duplicados.
+3. **Lógica de Filtragem Cruzada (useMemo):**
+   - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
+   - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
