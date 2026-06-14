@@ -11,103 +11,75 @@ from playwright.sync_api import sync_playwright
 TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 TARGET_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "data", "mockData.json")
 
-def generate_simulated_excel(file_path):
-    """Generates a simulated Excel file with the expected 'dirty' structure of the SSP-SP report."""
-    print(f"Generating simulated Excel spreadsheet at: {file_path}")
-    wb = openpyxl.Workbook()
-    ws = wb.active
-    ws.title = "Estatísticas SSP-SP"
-    
-    anos = ['2019', '2020', '2021', '2022', '2023']
-    meses_col = ['Jan', 'Abr', 'Jul', 'Out']
-    
-    # Header 1: Merged year headers
-    h1 = ["Município / Tipo Crime", ""]
-    for ano in anos:
-        h1.extend([f"ANO {ano}"] + [""] * (len(meses_col) - 1))
-    ws.append(h1)
-    
-    # Header 2: Sub-headers for months
-    h2 = ["Cidade", "Crime"]
-    for ano in anos:
-        for mes in meses_col:
-            h2.append(f"{mes}/{ano[-2:]}")
-    ws.append(h2)
-    
-    # Data Rows: Cities and crimes with accents and dirty formats
-    cities_crime = [
-        ('S. PAULO', 'Roubo de Veículos', 800, 300),
-        ('S. PAULO', 'Furtos', 2800, 1000),
-        ('S. PAULO', 'Homicídios Dolosos', 30, 15),
-        ('COTIA', 'Roubo de Veículos', 30, 15),
-        ('COTIA', 'Furtos', 120, 80),
-        ('COTIA', 'Homicídios Dolosos', 1, 3)
-    ]
-    
-    # Ensure reproducibility for random values
-    np.random.seed(42)
-    for city, crime, base_val, rand_range in cities_crime:
-        row = [city, crime]
-        for ano in anos:
-            for mes in meses_col:
-                val = base_val + np.random.randint(0, rand_range)
-                row.append(val)
-        ws.append(row)
-        
-    # Totals and empty rows to test sanitization
-    total_row = ["TOTAL GERAL", "---"] + [9999] * (len(anos) * len(meses_col))
-    ws.append(total_row)
-    
-    empty_row = ["", ""] + [None] * (len(anos) * len(meses_col))
-    ws.append(empty_row)
-    
-    wb.save(file_path)
-
 def scrape_with_playwright(download_dir):
-    """Navigates to the SSP-SP stats page using Playwright, intercepts and downloads the Excel file."""
+    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files for target regions, municipalities, and years."""
     url = "https://www.ssp.sp.gov.br/estatistica/dados-mensais"
-    file_path = os.path.join(download_dir, "ssp_data.xlsx")
+    
+    # Target configurations to scrape
+    targets = [
+        ('Capital', 'São Paulo'),
+        ('Grande São Paulo (exclui a Capital)', 'Cotia')
+    ]
+    years = ['2019', '2020', '2021', '2022', '2023']
     
     print(f"Starting Playwright automation targeting: {url}")
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        # Launch browser with headless=False to allow visual auditing/debugging
+        browser = p.chromium.launch(headless=False)
         context = browser.new_context(accept_downloads=True)
         page = context.new_page()
         
         try:
-            # Set timeout to 15 seconds to avoid hanging indefinitely if the network is offline or blocked
-            page.goto(url, timeout=15000)
-            print("Successfully loaded the SSP-SP page. Interacting with forms...")
+            print(f"Navigating to {url}...")
+            page.goto(url, timeout=30000)
+            page.wait_for_load_state("networkidle")
             
-            # Since the website might have complex dropdowns/dynamic rendering:
-            # We locate and click relevant options or dropdown selectors.
-            # In a typical flow: select 'Ano', select 'Município/Região', click 'Exportar' or 'Excel' button
-            # We attempt to find typical export / excel button selectors or text links.
-            # If they fail, exception is caught and we fallback.
+            # Explicitly wait for the primary filter dropdowns to be loaded in the DOM
+            page.wait_for_selector("select.form-select", timeout=15000)
             
-            # Example dropdown selection if elements are present:
-            # page.select_option('select#ano', label='2023')
-            # page.select_option('select#municipio', label='Todos')
-            
-            # Trigger download
-            with page.expect_download(timeout=10000) as download_info:
-                # Try clicking download button/icon. Using general selectors matching typical SSP-SP exports
-                export_button = page.locator("a[id*='btnExportar'], button[id*='btnExportar'], a:has-text('Exportar'), button:has-text('Excel')").first
-                if export_button.count() > 0:
-                    export_button.click()
-                else:
-                    # If selector not found, raise exception to trigger simulated excel fallback
-                    raise RuntimeError("Export button/element not found on the page.")
+            for regiao, municipio in targets:
+                for year in years:
+                    print(f"Scraping data for {municipio} ({regiao}) - Year {year}...")
                     
-            download = download_info.value
-            download.save_as(file_path)
-            print(f"Successfully downloaded file via Playwright to: {file_path}")
-            return file_path
+                    # Re-locate select elements in each iteration to avoid element detached errors
+                    selects = page.locator("select.form-select")
+                    
+                    # 1. Select Year (First select)
+                    selects.nth(0).select_option(label=year)
+                    page.wait_for_timeout(500)
+                    
+                    # 2. Select Region (Second select)
+                    selects.nth(1).select_option(label=regiao)
+                    # Wait for the municipality dropdown (Third select) to update options
+                    page.wait_for_timeout(1000)
+                    
+                    # 3. Select Municipality (Third select)
+                    selects = page.locator("select.form-select")
+                    muni_select = selects.nth(2)
+                    
+                    try:
+                        muni_select.select_option(label=municipio)
+                    except Exception:
+                        # Try uppercase fallback if needed
+                        muni_select.select_option(label=municipio.upper())
+                    page.wait_for_timeout(500)
+                    
+                    # Save path for this specific spreadsheet
+                    filename = f"{municipio}_{year}.xlsx".replace(" ", "_")
+                    filepath = os.path.join(download_dir, filename)
+                    
+                    # 4. Intercept and download Excel file
+                    with page.expect_download(timeout=20000) as download_info:
+                        export_button = page.locator("text=Exportar Dados")
+                        export_button.click()
+                        
+                    download = download_info.value
+                    download.save_as(filepath)
+                    print(f"Successfully downloaded and saved: {filename} ({os.path.getsize(filepath)} bytes)")
+                    
         except Exception as e:
-            print(f"Playwright automation encountered an issue or timed out: {e}")
-            print("Falling back to simulated spreadsheet generation.")
-            generate_simulated_excel(file_path)
-            return file_path
+            # Raise a real error instead of falling back to fake/simulated data
+            raise RuntimeError(f"Playwright automation failed or timed out: {e}")
         finally:
             browser.close()
 
@@ -115,21 +87,83 @@ def main():
     # Ensure temporary directory exists
     os.makedirs(TEMP_DIR, exist_ok=True)
     
-    downloaded_file = None
     try:
-        # 1. Run robot automation (Playwright)
-        downloaded_file = scrape_with_playwright(TEMP_DIR)
+        # 1. Run robot automation (Playwright) to download real spreadsheets
+        scrape_with_playwright(TEMP_DIR)
         
-        # 2. Parse downloaded file (Excel / CSV)
-        print(f"Reading spreadsheet: {downloaded_file}")
-        wb = openpyxl.load_workbook(downloaded_file)
-        sheet = wb.active
+        # 2. Compile downloaded spreadsheets into the expected format
+        print("Compiling downloaded real spreadsheets...")
+        anos = ['2019', '2020', '2021', '2022', '2023']
+        meses_col = ['Jan', 'Abr', 'Jul', 'Out']
+        
+        month_indices = {
+            'Jan': 1,
+            'Abr': 4,
+            'Jul': 7,
+            'Out': 10
+        }
+        
+        cities_map = {
+            'S. PAULO': 'São Paulo',
+            'COTIA': 'Cotia'
+        }
+        
+        crimes_targets = [
+            ('HOMICÍDIO DOLOSO (2)', 'HOMICÍDIO DOLOSO (2)'),
+            ('ROUBO DE VEÍCULO', 'ROUBO DE VEÍCULO'),
+            ('FURTO DE VEÍCULO', 'FURTO DE VEÍCULO')
+        ]
         
         rows = []
-        for r in sheet.iter_rows(values_only=True):
-            # Convert values to strings, map None to empty strings to match historical code
-            rows.append([str(cell) if cell is not None else "" for cell in r])
+        
+        # Reconstruct Header 1 (Merged year headers)
+        h1 = ["Município / Tipo Crime", ""]
+        for ano in anos:
+            h1.extend([f"ANO {ano}"] + [""] * (len(meses_col) - 1))
+        rows.append(h1)
+        
+        # Reconstruct Header 2 (Sub-headers for months)
+        h2 = ["Cidade", "Crime"]
+        for ano in anos:
+            for mes in meses_col:
+                h2.append(f"{mes}/{ano[-2:]}")
+        rows.append(h2)
+        
+        def clean_val(val):
+            if val is None:
+                return "0"
+            # Remove dots used as thousand separators (e.g. '1.213' -> '1213')
+            return str(val).strip().replace('.', '')
             
+        for city_key, city_file_prefix in cities_map.items():
+            for crime_label, crime_search in crimes_targets:
+                row = [city_key, crime_label]
+                for ano in anos:
+                    filename = f"{city_file_prefix}_{ano}.xlsx".replace(" ", "_")
+                    filepath = os.path.join(TEMP_DIR, filename)
+                    
+                    if not os.path.exists(filepath):
+                        raise FileNotFoundError(f"Legitimate scraped file not found: {filepath}")
+                        
+                    wb = openpyxl.load_workbook(filepath)
+                    sheet = wb.active
+                    
+                    found = False
+                    for r in sheet.iter_rows(values_only=True):
+                        if r[0] is not None:
+                            # Normalize text for comparisons
+                            t1 = "".join(c for c in unicodedata.normalize('NFD', str(r[0]).strip().upper()) if unicodedata.category(c) != 'Mn')
+                            t2 = "".join(c for c in unicodedata.normalize('NFD', crime_search.upper()) if unicodedata.category(c) != 'Mn')
+                            if t1 == t2:
+                                for mes in meses_col:
+                                    idx = month_indices[mes]
+                                    row.append(clean_val(r[idx]))
+                                found = True
+                                break
+                    if not found:
+                        raise ValueError(f"Crime nature '{crime_search}' not found in {filepath}")
+                rows.append(row)
+                
         # 3. Pandas ETL Sanitization & Transformation
         if len(rows) < 2:
             raise ValueError("Spreadsheet does not have enough rows (header + subheader + data).")
@@ -219,6 +253,7 @@ def main():
         
         # Calculate monthly variations
         df_long["variacao_mensal"] = df_long.groupby(["municipio", "tipo_crime"])["ocorrencias"].pct_change() * 100
+        df_long["variacao_mensal"] = df_long["variacao_mensal"].replace([np.inf, -np.inf], 0.0)
         df_long["variacao_mensal"] = df_long["variacao_mensal"].fillna(0.0).round(2)
         
         # Generate unique string IDs

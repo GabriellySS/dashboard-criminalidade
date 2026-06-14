@@ -26,16 +26,15 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 ]
 ```
 
-## 4. Fluxo de Automação (O Robô)
-1. **Navegação (Playwright):** Iniciar um browser Chromium em modo headless. Aceder ao URL de estatísticas da SSP-SP.
-2. **Interação:** Localizar e selecionar os dropdowns relevantes (ex: Ano, Município/Região) e clicar no botão de exportação (Excel/CSV).
-3. **Interceção:** Aguardar o evento de download do ficheiro e guardá-lo temporariamente numa pasta local (ex: /`temp_data`).
-4. **ETL (Pandas):** Ler o ficheiro descarregado. Aplicar as regras já desenvolvidas anteriormente: limpar cabeçalhos fundidos/duplos, padronizar nomes (sem acentos) e calcular a `variacao_mensal` matematicamente.
-5. **Limpeza:** Eliminar o ficheiro temporário e exportar o JSON final para o caminho do React.
+## 4. Fluxo de Automação Real (Playwright)
+1. **Navegação Inicial:** O robô deve inicializar o Chromium via Playwright (configurado temporariamente com `headless=False` para permitir auditoria visual durante o desenvolvimento).
+2. **Acesso e Espera:** Acessar o URL `https://www.ssp.sp.gov.br/estatistica/dados-mensais`. Aguardar até que os seletores principais de filtros (dropdowns de ano e região/município) estejam totalmente carregados no DOM (`page.wait_for_selector`).
+3. **Interação Condicional:** O robô deve interagir sequencialmente com os elementos seletores do formulário para garantir que o estado da página (ViewState/Session) seja atualizado antes de disparar o download.
+4. **Interceptação de Download:** Utilizar o gerenciador de contexto `with page.expect_download() as download_info:` associado ao clique no elemento de exportação para Excel.
+5. **Tratamento de Falhas (Sem Fallback Fake):** Remover a geração de planilhas simuladas por sementes aleatórias. Se o download falhar, o script deve lançar uma exceção clara detalhando qual elemento ou timeout causou a falha, garantindo previsibilidade.
 
 ## 5. Instruções para o Agente
-1. Leia o spec atualizado para a fase de automação total.
-2. Atualize o `requirements.txt` incluindo `playwright`. (Lembre-se que o Playwright requer a execução de `playwright install` após a instalação do pacote).
-3. Refatore o `scraper.py` integrando a API síncrona ou assíncrona do Playwright.
-4. Como o layout exato da SSP-SP pode ser complexo, estruture o código do Playwright com blocos `try/except` robustos e utilize seletores genéricos ou simule o fluxo documentado na secção 4.
-5. Mantenha intacta a função de limpeza e sanitização de dados (Pandas) que já foi validada no commit anterior, apenas conectando-a ao novo ficheiro descarregado pelo robô.
+1. Leia a nova estratégia de automação detalhada na seção 4 do @scraper_spec.md.
+2. Modifique o arquivo `scraper.py` para mudar o parâmetro de inicialização do browser para `headless=False` para podermos auditar visualmente se ele está alcançando a página correta.
+3. Remova completamente a função `generate_simulated_excel` e o seu bloco de execução dentro do `except`. Queremos que o script falhe explicitamente se não conseguir baixar os dados oficiais, eliminando o mascaramento de falsos positivos.
+4. Refatore a função `scrape_with_playwright` para aprimorar os seletores de clique com base na estrutura real da página, adicionando tempos de espera explícitos (`page.wait_for_timeout` ou `wait_for_load_state`) entre as interações.
