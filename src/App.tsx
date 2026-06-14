@@ -61,13 +61,13 @@ function App() {
       const prevYearData = typedMockData.filter((item) => {
         const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
         const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
-        const matchAno = item.ano === prevYear;
+        const matchAno = item.ano === String(prevYear);
         return matchMunicipio && matchCrime && matchAno;
       });
       prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
     } else {
       // Compare current vs 2022
-      const data2022 = typedMockData.filter(item => item.ano === 2022 && (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) && (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado));
+      const data2022 = typedMockData.filter(item => item.ano === '2022' && (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) && (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado));
       prevYearTotal = data2022.reduce((sum, item) => sum + item.ocorrencias, 0);
     }
 
@@ -82,7 +82,7 @@ function App() {
     // Dynamic Zonas de Alto Risco based on municipio and crime
     let zonasAltoRisco = 42;
     let variacaoZonas = 3.2;
-    if (municipioSelecionado === 'São Paulo') {
+    if (municipioSelecionado === 'São Paulo (Capital)') {
       zonasAltoRisco = 35;
       variacaoZonas = 1.8;
     } else if (municipioSelecionado === 'Cotia') {
@@ -93,7 +93,7 @@ function App() {
     // Dynamic Efetivo Alocado based on municipio
     let efetivoAlocado = 2845;
     let variacaoEfetivo = 8.4;
-    if (municipioSelecionado === 'São Paulo') {
+    if (municipioSelecionado === 'São Paulo (Capital)') {
       efetivoAlocado = 2500;
       variacaoEfetivo = 5.2;
     } else if (municipioSelecionado === 'Cotia') {

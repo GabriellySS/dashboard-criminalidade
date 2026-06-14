@@ -23,7 +23,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
   // Dynamically calculate seccional values based on filtered data
   const tableRows = useMemo(() => {
     const spTotal = data
-      .filter((item) => item.municipio === 'São Paulo')
+      .filter((item) => item.municipio === 'São Paulo (Capital)')
       .reduce((sum, item) => sum + item.ocorrencias, 0);
 
     const cotiaTotal = data

@@ -56,7 +56,7 @@ export const TrendChart: React.FC<TrendChartProps> = ({ data, isLoading = false 
   data.forEach((item) => {
     const key = `${item.ano}-${item.mes}`;
     const mesIndex = MES_ORDEM[item.mes] || 0;
-    const sortKey = item.ano * 100 + mesIndex;
+    const sortKey = parseInt(item.ano) * 100 + mesIndex;
 
     if (!aggregatedMap[key]) {
       const mesAbr = MESES_ABR[item.mes] || item.mes.substring(0, 3);
