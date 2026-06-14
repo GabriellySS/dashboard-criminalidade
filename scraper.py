@@ -243,6 +243,28 @@ def main():
         df_long["tipo_crime"] = df_long["tipo_crime"].replace(tipo_crime_mapping)
         df_long["tipo_crime"] = df_long["tipo_crime"].str.replace("Por Acidente De Trânsito", "(Trânsito)", regex=False)
         
+        # 4. CRIAÇÃO DE MACRO-CATEGORIAS
+        def get_macro_categoria(crime):
+            if not isinstance(crime, str):
+                return "Outros Crimes"
+            c = crime.lower()
+            if "homicídio doloso" in c or "homicidio doloso" in c:
+                return "Homicídio Doloso"
+            elif "homicídio culposo" in c or "homicidio culposo" in c:
+                return "Homicídio Culposo"
+            elif "lesão corporal" in c or "lesao corporal" in c:
+                return "Lesão Corporal"
+            elif "roubo" in c:
+                return "Roubo"
+            elif "furto" in c:
+                return "Furto"
+            elif "estupro" in c:
+                return "Estupro"
+            else:
+                return "Outros Crimes"
+                
+        df_long["categoria_crime"] = df_long["tipo_crime"].apply(get_macro_categoria)
+        
         # Chronological sorting for monthly variations
         mes_ordem = {
             "Janeiro": 1,
@@ -270,7 +292,7 @@ def main():
         df_long = df_long.drop(columns=["mes_ano", "mes_idx", "ano_int"])
         
         # Reorder columns
-        output_cols = ["id", "regiao", "municipio", "tipo_crime", "ano", "mes", "ocorrencias", "variacao_mensal"]
+        output_cols = ["id", "regiao", "municipio", "categoria_crime", "tipo_crime", "ano", "mes", "ocorrencias", "variacao_mensal"]
         df_output = df_long[output_cols]
         
         # Export output to json

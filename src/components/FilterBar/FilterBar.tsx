@@ -7,6 +7,8 @@ interface FilterBarProps {
   setRegiaoSelecionada: (r: string) => void;
   municipioSelecionado: string;
   setMunicipioSelecionado: (m: string) => void;
+  categoriaSelecionada: string;
+  setCategoriaSelecionada: (c: string) => void;
   crimeSelecionado: string;
   setCrimeSelecionado: (c: string) => void;
   anoSelecionado: string;
@@ -15,6 +17,7 @@ interface FilterBarProps {
   setMesSelecionado: (m: string) => void;
   regioesList: string[];
   municipiosList: string[];
+  categoriasList: string[];
   tiposCrimeList: string[];
   anosList: string[];
   mesesList: string[];
@@ -25,6 +28,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   setRegiaoSelecionada,
   municipioSelecionado,
   setMunicipioSelecionado,
+  categoriaSelecionada,
+  setCategoriaSelecionada,
   crimeSelecionado,
   setCrimeSelecionado,
   anoSelecionado,
@@ -33,6 +38,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   setMesSelecionado,
   regioesList,
   municipiosList,
+  categoriasList,
   tiposCrimeList,
   anosList,
   mesesList,
@@ -77,6 +83,26 @@ export const FilterBar: React.FC<FilterBarProps> = ({
       </div>
 
       <div className={styles.filterGroup}>
+        <label htmlFor="categoria-select">Categoria de Crime</label>
+        <select
+          id="categoria-select"
+          className={styles.select}
+          value={categoriaSelecionada}
+          onChange={(e) => {
+            setCategoriaSelecionada(e.target.value);
+            setCrimeSelecionado('Todos');
+          }}
+        >
+          <option value="Todas">Todas as Categorias</option>
+          {categoriasList.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className={styles.filterGroup}>
         <label htmlFor="crime-select">Tipo de Crime</label>
         <select
           id="crime-select"
@@ -84,7 +110,11 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           value={crimeSelecionado}
           onChange={(e) => setCrimeSelecionado(e.target.value)}
         >
-          <option value="Todos">Todos os Crimes</option>
+          {categoriaSelecionada === 'Todas' ? (
+            <option value="Todos">Todos os Crimes</option>
+          ) : (
+            <option value="Todos">Todos os subtipos</option>
+          )}
           {tiposCrimeList.map((t) => (
             <option key={t} value={t}>
               {t}

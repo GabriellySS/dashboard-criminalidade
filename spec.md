@@ -102,3 +102,7 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
    - Adicionar o estado `regiaoSelecionada` (iniciando em 'Todas').
    - O `FilterBar` deve apresentar o dropdown de "Região" antes do de "Município".
    - A lista do dropdown de Municípios deve ser gerada dinamicamente baseada na Região selecionada (se uma região específica for escolhida, mostrar apenas cidades daquela região).
+5. **Filtros em Cascata (Categoria > Tipo Específico):**
+  - Adicionar o estado global `categoriaSelecionada` (iniciando em 'Todas').
+  - O `FilterBar` deve apresentar um dropdown de "Categoria de Crime" antes do de "Tipo de Crime".
+  - Se uma Categoria for selecionada, o dropdown de "Tipo de Crime" deve listar a opção "Todos os subtipos" no topo, e abaixo exibir apenas os crimes pertencentes àquela macro-categoria.

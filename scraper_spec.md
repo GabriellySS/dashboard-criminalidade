@@ -18,6 +18,7 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
     "id": "string",
     "regiao": "string", 
     "municipio": "string",
+    "categoria_crime": "string",
     "tipo_crime": "string",
     "ano": "string",
     "mes": "string",
@@ -47,6 +48,15 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
     - "Homicídio Culposo Outros" -> "Homicídio Culposo"
     - "Lesão Corporal Culposa - Outras" -> "Lesão Corporal Culposa"
     - "Por Acidente De Trânsito" -> "(Trânsito)"
+6. **Criação de Macro-Categorias (Nova Coluna):**
+  - O Pandas deve criar uma nova coluna `categoria_crime` inferida a partir do nome do crime. Regras principais:
+    - Contém "Homicídio Doloso" -> "Homicídio Doloso"
+    - Contém "Homicídio Culposo" -> "Homicídio Culposo"
+    - Contém "Lesão Corporal" -> "Lesão Corporal"
+    - Contém "Roubo" -> "Roubo"
+    - Contém "Furto" -> "Furto"
+    - Contém "Estupro" -> "Estupro"
+    - Qualquer outro caso -> "Outros Crimes"
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.
