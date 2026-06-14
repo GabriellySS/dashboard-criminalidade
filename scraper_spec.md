@@ -26,12 +26,15 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 ]
 ```
 
-## 4. Fluxo de Automação Real (Loop Estadual)
-1. **Extração de Todos os Municípios (Playwright):** O robô não deve baixar o consolidado do estado. Em vez disso, ele deve:
-   - Aguardar o carregamento do `<select>` de municípios.
-   - Extrair uma lista com o texto de todas as tags `<option>` disponíveis nesse select (ignorando a opção "Todos" ou "Selecione").
-   - Fazer um laço de repetição (`for` loop): para cada município da lista, selecionar a opção no dropdown, clicar no botão de exportação, interceptar o download e salvar o arquivo no `TEMP_DIR`.
-2. **Transformação em Lote (Pandas):** O script Python deve ler todos os dezenas/centenas de arquivos baixados na pasta `TEMP_DIR`, concatená-los usando `pd.concat()` em um único DataFrame gigante e, em seguida, aplicar as regras de limpeza, cálculo de variação mensal (agrupado por cidade) e exportação.
+## 4. Fluxo de Automação Real (Escala Total: Anos x Cidades x Crimes)
+1. **Extração de Todos os Anos e Municípios (Playwright - Nested Loop):**
+   - O robô deve identificar o dropdown de `Anos` e extrair todas as opções válidas.
+   - O robô deve identificar o dropdown de `Municípios` e extrair todas as opções válidas (ignorando 'Todos' ou 'Selecione').
+   - O fluxo de iteração será: Para cada Ano `->` Para cada Município `->` Selecionar `->` Exportar `->` Salvar.
+2. **Inclusão de Todos os Tipos de Crime (Pandas ETL):**
+   - A planilha oficial da SSP-SP lista dezenas de crimes em suas linhas. O script deve parar de filtrar tipos específicos.
+   - **Sanitização Universal:** A função `normalize_text` deve aplicar um `Title Case` robusto (ex: "HOMICÍDIO DOLOSO" vira "Homicídio Doloso") e remover espaços em branco invisíveis (`strip()`) em toda e qualquer string da coluna `tipo_crime`.
+3. **Concatenação Massiva:** O Pandas deve ler o `TEMP_DIR`, agrupar os milhares de arquivos por Município e Crime, mantendo a série histórica de todos os anos contínua, e exportar o JSON.
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.

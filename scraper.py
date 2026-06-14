@@ -13,9 +13,8 @@ TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 TARGET_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "data", "mockData.json")
 
 def scrape_with_playwright(download_dir):
-    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files by looping through municipalities."""
+    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files by looping through years and municipalities."""
     url = "https://www.ssp.sp.gov.br/estatistica/dados-mensais"
-    years = ['2019', '2020', '2021', '2022', '2023']
     
     print(f"Starting Playwright automation targeting: {url}")
     with sync_playwright() as p:
@@ -31,10 +30,15 @@ def scrape_with_playwright(download_dir):
             # Explicitly wait for the primary filter dropdowns to be loaded in the DOM
             page.wait_for_selector("select.form-select", timeout=15000)
             
+            # Gather all years dynamically (skipping index 0 placeholder)
+            selects = page.locator("select.form-select")
+            year_select = selects.nth(0)
+            year_opts = year_select.locator("option")
+            years = [year_opts.nth(i).text_content().strip() for i in range(1, year_opts.count())]
+            
             # Gather all region-municipality combinations dynamically
             # Since the municipality dropdown is disabled until a region is selected, 
             # we iterate through the regions to extract their corresponding cities.
-            selects = page.locator("select.form-select")
             reg_select = selects.nth(1)
             reg_opts = reg_select.locator("option")
             regions = [reg_opts.nth(i).text_content().strip() for i in range(1, reg_opts.count())]
@@ -50,18 +54,21 @@ def scrape_with_playwright(download_dir):
                 for m in munis:
                     targets.append((r, m))
                     
+            print(f"Total years gathered: {len(years)} {years}")
             print(f"Total municipalities gathered across all regions: {len(targets)}")
             
             # =========================================================================
-            # DEVELOPMENT LIMITER: Only scrape the first 5 municipalities for testing
-            # to keep development execution times fast and prevent 20-minute timeouts.
-            # TO SCRAPE ALL 645+ MUNICIPALITIES OF SP, REMOVE '[:5]' LIMITER BELOW.
+            # DEVELOPMENT LIMITER: Only scrape 2 Years and 3 Municipalities for testing.
+            # This keeps development execution times fast and prevents timeouts.
+            # TO SCRAPE ALL YEARS AND ALL 645+ MUNICIPALITIES, REMOVE THE SLICES BELOW.
             # =========================================================================
-            targets_to_scrape = targets[:5]
-            print(f"Scraping limited to first 5 targets: {targets_to_scrape}")
+            years_to_scrape = years[:2]
+            targets_to_scrape = targets[:3]
+            print(f"Scraping limited to years: {years_to_scrape}")
+            print(f"Scraping limited to targets: {targets_to_scrape}")
             
-            for r, m in targets_to_scrape:
-                for year in years:
+            for year in years_to_scrape:
+                for r, m in targets_to_scrape:
                     print(f"Scraping data for {m} ({r}) - Year {year}...")
                     
                     # Re-locate select elements in each iteration to avoid element detached errors
@@ -81,7 +88,7 @@ def scrape_with_playwright(download_dir):
                     muni_select.select_option(label=m)
                     page.wait_for_timeout(300)
                     
-                    # Save path for this specific spreadsheet
+                    # Save path for this specific spreadsheet (naming includes municipality and year)
                     filename = f"{m}_{year}.xlsx".replace(" ", "_")
                     filepath = os.path.join(download_dir, filename)
                     
@@ -107,9 +114,8 @@ def main():
         # 1. Run robot automation (Playwright) to download real spreadsheets
         scrape_with_playwright(TEMP_DIR)
         
-        # 2. Compile downloaded spreadsheets dynamically in batch
+        # 2. Compile downloaded spreadsheets dynamically in batch (includes ALL crimes)
         print("Compiling downloaded real spreadsheets dynamically...")
-        anos = ['2019', '2020', '2021', '2022', '2023']
         meses_col = ['Jan', 'Abr', 'Jul', 'Out']
         
         month_indices = {
@@ -118,12 +124,6 @@ def main():
             'Jul': 7,
             'Out': 10
         }
-        
-        crimes_targets = [
-            ('HOMICÍDIO DOLOSO (2)', 'HOMICÍDIO DOLOSO (2)'),
-            ('ROUBO DE VEÍCULO', 'ROUBO DE VEÍCULO'),
-            ('FURTO DE VEÍCULO', 'FURTO DE VEÍCULO')
-        ]
         
         # Scan TEMP_DIR for all downloaded files
         files = [f for f in os.listdir(TEMP_DIR) if f.endswith('.xlsx')]
@@ -144,23 +144,20 @@ def main():
             
             rows_data = []
             for r in sheet.iter_rows(values_only=True):
-                if r[0] is not None:
-                    # check if row matches one of our target crimes
-                    for crime_label, crime_search in crimes_targets:
-                        t1 = "".join(c for c in unicodedata.normalize('NFD', str(r[0]).strip().upper()) if unicodedata.category(c) != 'Mn')
-                        t2 = "".join(c for c in unicodedata.normalize('NFD', crime_search.upper()) if unicodedata.category(c) != 'Mn')
-                        if t1 == t2:
-                            row = [city_name.upper(), crime_label]
-                            
-                            def clean_val(val):
-                                if val is None:
-                                    return "0"
-                                return str(val).strip().replace('.', '')
-                                
-                            for mes in meses_col:
-                                idx = month_indices[mes]
-                                row.append(clean_val(r[idx]))
-                            rows_data.append((row, year))
+                # Skip empty rows and the header label row containing 'NATUREZA'
+                if r[0] is not None and str(r[0]).strip().upper() != 'NATUREZA':
+                    crime_name = str(r[0]).strip()
+                    row = [city_name.upper(), crime_name]
+                    
+                    def clean_val(val):
+                        if val is None:
+                            return "0"
+                        return str(val).strip().replace('.', '')
+                        
+                    for mes in meses_col:
+                        idx = month_indices[mes]
+                        row.append(clean_val(r[idx]))
+                    rows_data.append((row, year))
                             
             # Convert rows to DataFrames and melt them to long format
             for row, yr in rows_data:
@@ -216,7 +213,7 @@ def main():
             if text_upper in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"]:
                 return "São Paulo (Capital)"
                 
-            # Generic Title Case normalization for all other cities
+            # Generic Title Case normalization for all other cities/crimes
             return text.title()
         
         df_long["municipio"] = df_long["municipio"].apply(normalize_text)
