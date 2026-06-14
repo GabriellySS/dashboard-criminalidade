@@ -1,10 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import mockData from './data/mockData.json';
 import { Header } from './components/Header/Header';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
 import { TrendChart } from './components/TrendChart/TrendChart';
 import { RegionTable } from './components/RegionTable/RegionTable';
+import { EmptyState } from './components/EmptyState/EmptyState';
 import type { CrimeRecord } from './types';
 import './App.css';
 
@@ -12,9 +13,19 @@ function App() {
   const [municipioSelecionado, setMunicipioSelecionado] = useState('Todos');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
   const [anoSelecionado, setAnoSelecionado] = useState('Todos');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Safely cast mockData to CrimeRecord[]
   const typedMockData = mockData as CrimeRecord[];
+
+  // Simulate loading delay whenever filters change
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [municipioSelecionado, crimeSelecionado, anoSelecionado]);
 
   // Dynamic filter list options
   const municipiosList = useMemo(() => {
@@ -130,9 +141,22 @@ function App() {
             variacaoZonas={stats.variacaoZonas}
             efetivoAlocado={stats.efetivoAlocado}
             variacaoEfetivo={stats.variacaoEfetivo}
+            isLoading={isLoading}
           />
-          <TrendChart data={dadosFiltrados} />
-          <RegionTable data={dadosFiltrados} />
+
+          {isLoading ? (
+            <>
+              <TrendChart data={dadosFiltrados} isLoading={true} />
+              <RegionTable data={dadosFiltrados} isLoading={true} />
+            </>
+          ) : dadosFiltrados.length === 0 ? (
+            <EmptyState />
+          ) : (
+            <>
+              <TrendChart data={dadosFiltrados} isLoading={false} />
+              <RegionTable data={dadosFiltrados} isLoading={false} />
+            </>
+          )}
         </div>
       </main>
     </>

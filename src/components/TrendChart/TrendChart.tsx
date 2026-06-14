@@ -8,11 +8,13 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import { Skeleton } from '../Skeleton/Skeleton';
 import type { CrimeRecord } from '../../types';
 import styles from './TrendChart.module.css';
 
 interface TrendChartProps {
   data: CrimeRecord[];
+  isLoading?: boolean;
 }
 
 const MESES_ABR: Record<string, string> = {
@@ -45,7 +47,7 @@ const MES_ORDEM: Record<string, number> = {
   'Dezembro': 12,
 };
 
-export const TrendChart: React.FC<TrendChartProps> = ({ data }) => {
+export const TrendChart: React.FC<TrendChartProps> = ({ data, isLoading = false }) => {
   const [activeTab, setActiveTab] = useState('12m');
 
   // Aggregate data chronologically by Month/Year
@@ -107,18 +109,21 @@ export const TrendChart: React.FC<TrendChartProps> = ({ data }) => {
           <button
             onClick={() => setActiveTab('12m')}
             className={`${styles.tab} ${activeTab === '12m' ? styles.tabActive : ''}`}
+            disabled={isLoading}
           >
             12 Meses
           </button>
           <button
             onClick={() => setActiveTab('6m')}
             className={`${styles.tab} ${activeTab === '6m' ? styles.tabActive : ''}`}
+            disabled={isLoading}
           >
             6 Meses
           </button>
           <button
             onClick={() => setActiveTab('30d')}
             className={`${styles.tab} ${activeTab === '30d' ? styles.tabActive : ''}`}
+            disabled={isLoading}
           >
             30 Dias
           </button>
@@ -126,7 +131,9 @@ export const TrendChart: React.FC<TrendChartProps> = ({ data }) => {
       </div>
 
       <div className={styles.responsiveContainer}>
-        {chartData.length === 0 ? (
+        {isLoading ? (
+          <Skeleton borderRadius="12px" />
+        ) : chartData.length === 0 ? (
           <div style={{ display: 'flex', height: '100%', alignItems: 'center', justifyContent: 'center', color: 'var(--color-text-secondary)' }}>
             Nenhum dado disponível para os filtros selecionados.
           </div>

@@ -90,3 +90,18 @@ O componente principal (`src/App.tsx`) atua como o controlador de estado (State 
    - **`TrendChart`**: Deve receber os `dadosFiltrados` para renderizar as linhas do gráfico dinamicamente.
    - **`RegionTable`**: Deve receber os `dadosFiltrados` para exibir as linhas da tabela de forma correspondente ao que está no gráfico.
    - Crie as interfaces (`interface Props { ... }`) em cada componente para tipar os dados recebidos.
+
+## 6. Tratamento de Exceções e UX (Edge Cases)
+A aplicação deve lidar com o tempo de carregamento de dados e a ausência de resultados para não quebrar a confiança do usuário.
+
+1. **Estado de Carregamento (Loading State / Skeletons):**
+   - Implemente um estado `isLoading` (booleano) no `App.tsx`.
+   - Crie um hook `useEffect` ou uma função que simule um atraso de rede (ex: `setTimeout` de 800ms) toda vez que os filtros forem alterados, setando `isLoading` para `true` e depois `false`.
+   - Crie um componente `Skeleton.tsx` genérico (um bloco cinza claro com animação de pulso/fade usando CSS).
+   - Enquanto `isLoading` for verdadeiro, os componentes `StatCards`, `TrendChart` e `RegionTable` devem renderizar esses Skeletons no lugar dos números e gráficos.
+
+2. **Estado Vazio (Empty State):**
+   - Se, após a filtragem, a constante `dadosFiltrados` retornar um array vazio (length === 0), a interface não deve renderizar gráficos em branco ou tabelas sem linhas.
+   - Crie um componente `EmptyState.tsx`.
+   - Ele deve exibir um ícone semântico (ex: `FileQuestion` ou `SearchX` do Lucide React), um título ("Nenhum registro encontrado") e um texto de apoio ("Não há dados de criminalidade para a combinação de filtros selecionada.").
+   - Este componente deve substituir o `TrendChart` e a `RegionTable` na tela quando não houver dados.

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Car, ShieldAlert, FileText } from 'lucide-react';
+import { Skeleton } from '../Skeleton/Skeleton';
 import styles from './StatCards.module.css';
 
 interface StatCardsProps {
@@ -9,6 +10,7 @@ interface StatCardsProps {
   variacaoZonas: number;
   efetivoAlocado: number;
   variacaoEfetivo: number;
+  isLoading?: boolean;
 }
 
 export const StatCards: React.FC<StatCardsProps> = ({
@@ -18,6 +20,7 @@ export const StatCards: React.FC<StatCardsProps> = ({
   variacaoZonas,
   efetivoAlocado,
   variacaoEfetivo,
+  isLoading = false,
 }) => {
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat('pt-BR').format(Math.round(num));
@@ -44,13 +47,23 @@ export const StatCards: React.FC<StatCardsProps> = ({
           <div className={styles.iconWrapper}>
             <Car size={20} />
           </div>
-          <span className={`${styles.badge} ${isOcorrenciasSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
-            {formatPercent(variacaoTotal)}
-          </span>
+          {isLoading ? (
+            <Skeleton width="55px" height="20px" borderRadius="9999px" />
+          ) : (
+            <span className={`${styles.badge} ${isOcorrenciasSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
+              {formatPercent(variacaoTotal)}
+            </span>
+          )}
         </div>
         <div className={styles.cardContent}>
           <span className={styles.label}>Ocorrências Registradas</span>
-          <span className={styles.value}>{formatNumber(totalOcorrencias)}</span>
+          {isLoading ? (
+            <div style={{ marginTop: '0.25rem', height: '38px', width: '120px' }}>
+              <Skeleton borderRadius="6px" />
+            </div>
+          ) : (
+            <span className={styles.value}>{formatNumber(totalOcorrencias)}</span>
+          )}
         </div>
       </div>
 
@@ -60,13 +73,23 @@ export const StatCards: React.FC<StatCardsProps> = ({
           <div className={styles.iconWrapper}>
             <ShieldAlert size={20} />
           </div>
-          <span className={`${styles.badge} ${isZonasSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
-            {formatPercent(variacaoZonas)}
-          </span>
+          {isLoading ? (
+            <Skeleton width="55px" height="20px" borderRadius="9999px" />
+          ) : (
+            <span className={`${styles.badge} ${isZonasSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
+              {formatPercent(variacaoZonas)}
+            </span>
+          )}
         </div>
         <div className={styles.cardContent}>
           <span className={styles.label}>Zonas de Alto Risco</span>
-          <span className={styles.value}>{formatNumber(zonasAltoRisco)}</span>
+          {isLoading ? (
+            <div style={{ marginTop: '0.25rem', height: '38px', width: '80px' }}>
+              <Skeleton borderRadius="6px" />
+            </div>
+          ) : (
+            <span className={styles.value}>{formatNumber(zonasAltoRisco)}</span>
+          )}
         </div>
       </div>
 
@@ -76,13 +99,23 @@ export const StatCards: React.FC<StatCardsProps> = ({
           <div className={styles.iconWrapper}>
             <FileText size={20} />
           </div>
-          <span className={`${styles.badge} ${isEfetivoSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
-            {formatPercent(variacaoEfetivo)}
-          </span>
+          {isLoading ? (
+            <Skeleton width="55px" height="20px" borderRadius="9999px" />
+          ) : (
+            <span className={`${styles.badge} ${isEfetivoSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
+              {formatPercent(variacaoEfetivo)}
+            </span>
+          )}
         </div>
         <div className={styles.cardContent}>
           <span className={styles.label}>Efetivo Alocado</span>
-          <span className={styles.value}>{formatNumber(efetivoAlocado)}</span>
+          {isLoading ? (
+            <div style={{ marginTop: '0.25rem', height: '38px', width: '100px' }}>
+              <Skeleton borderRadius="6px" />
+            </div>
+          ) : (
+            <span className={styles.value}>{formatNumber(efetivoAlocado)}</span>
+          )}
         </div>
       </div>
     </div>

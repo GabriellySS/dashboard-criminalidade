@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
+import { Skeleton } from '../Skeleton/Skeleton';
 import type { CrimeRecord } from '../../types';
 import styles from './RegionTable.module.css';
 
 interface RegionTableProps {
   data: CrimeRecord[];
+  isLoading?: boolean;
 }
 
 interface RegionRow {
@@ -15,7 +17,7 @@ interface RegionRow {
   status: 'Atenção' | 'Estável';
 }
 
-export const RegionTable: React.FC<RegionTableProps> = ({ data }) => {
+export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = false }) => {
   const [search, setSearch] = useState('');
 
   // Dynamically calculate seccional values based on filtered data
@@ -84,7 +86,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data }) => {
       <div className={styles.tableHeader}>
         <div className={styles.headerInfo}>
           <h2 className={styles.title}>Detalhamento por Região</h2>
-          <p className={styles.subtitle}>Dados agregados por delegacia seccional</p>
+          <p className={styles.subtitle}>Dados aggregados por delegacia seccional</p>
         </div>
         <div className={styles.searchWrapper}>
           <Search size={16} className={styles.searchIcon} />
@@ -94,6 +96,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data }) => {
             className={styles.searchInput}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            disabled={isLoading}
           />
         </div>
       </div>
@@ -110,7 +113,28 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data }) => {
             </tr>
           </thead>
           <tbody>
-            {filteredData.length === 0 ? (
+            {isLoading ? (
+              // Render 3 skeleton rows while loading
+              Array.from({ length: 3 }).map((_, idx) => (
+                <tr key={`skel-row-${idx}`}>
+                  <td>
+                    <Skeleton height="20px" width="160px" borderRadius="4px" />
+                  </td>
+                  <td>
+                    <Skeleton height="20px" width="60px" borderRadius="4px" />
+                  </td>
+                  <td>
+                    <Skeleton height="20px" width="50px" borderRadius="4px" />
+                  </td>
+                  <td>
+                    <Skeleton height="20px" width="70px" borderRadius="9999px" />
+                  </td>
+                  <td style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Skeleton height="20px" width="60px" borderRadius="4px" />
+                  </td>
+                </tr>
+              ))
+            ) : filteredData.length === 0 ? (
               <tr>
                 <td colSpan={5} style={{ textAlign: 'center', color: 'var(--color-text-secondary)', padding: '2rem' }}>
                   Nenhuma região correspondente encontrada.
