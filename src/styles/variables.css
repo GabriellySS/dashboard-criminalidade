@@ -1,46 +1,61 @@
-/* src/styles/variables.css */
-
 :root,
 .theme-light {
-  /* Fundo & Superfície (Um cinza muito claro com toque de azul da sua imagem) */
-  --color-bg: #e9eff6;
-  --color-surface: #e9eff6;
+  /* Fundo & Superfície */
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
 
-  /* Cores de Texto */
-  --color-text-primary: #4a5568;
-  --color-text-secondary: #a0aec0;
+  /* Bordas (A alma do Flat 2.0) */
+  --color-border: #E2E8F0;
 
-  /* Destaques (O azul vibrante dos botões e do gráfico) */
-  --color-accent: #2d6bfe;
-  --color-accent-gradient: linear-gradient(135deg, #4facfe 0%, #2d6bfe 100%);
+  /* Textos */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
 
-  /* Sombras Neumórficas Claras */
-  --shadow-flat: 8px 8px 16px #c5cce9, -8px -8px 16px #ffffff;
-  --shadow-pressed: inset 6px 6px 10px #c5cce9, inset -6px -6px 10px #ffffff;
-  --shadow-accent: 0px 8px 16px rgba(45, 107, 254, 0.3);
+  /* Destaques e Status */
+  --color-accent: #3B82F6;
+  --color-accent-light: #EFF6FF;
+  --color-success: #10B981;
+  --color-success-bg: #D1FAE5;
+  --color-danger: #EF4444;
+  --color-danger-bg: #FEE2E2;
 
-  /* Arredondamento */
-  --radius-pill: 50px;
-  --radius-card: 24px;
+  /* Estrutura */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
 .theme-dark {
-  /* Fundo & Superfície (Um slate escuro profundo) */
-  --color-bg: #1f232b;
-  --color-surface: #1f232b;
+  /* Fundo & Superfície (Tons de Slate profundo) */
+  --color-bg: #0F172A;
+  /* Slate 900 */
+  --color-surface: #1E293B;
+  /* Slate 800 */
 
-  /* Cores de Texto (Invertidas para alto contraste) */
-  --color-text-primary: #e2e8f0;
-  --color-text-secondary: #718096;
+  /* Bordas (Separando os cartões do fundo) */
+  --color-border: #334155;
+  /* Slate 700 */
 
-  /* O azul da sua imagem de referência funciona lindamente em fundos escuros */
-  --color-accent: #2d6bfe;
-  --color-accent-gradient: linear-gradient(135deg, #4facfe 0%, #2d6bfe 100%);
+  /* Textos (Invertidos para alto contraste) */
+  --color-text-primary: #F8FAFC;
+  /* Slate 50 */
+  --color-text-secondary: #94A3B8;
+  /* Slate 400 */
 
-  /* Sombras Neumórficas Escuras (O segredo: sombra preta embaixo, highlight cinza em cima) */
-  --shadow-flat: 8px 8px 16px #13151a, -8px -8px 16px #2b313c;
-  --shadow-pressed: inset 6px 6px 10px #13151a, inset -6px -6px 10px #2b313c;
+  /* Destaques e Status (Cores adaptadas para brilhar no escuro) */
+  --color-accent: #60A5FA;
+  /* Azul ligeiramente mais claro (Blue 400) */
+  --color-accent-light: rgba(59, 130, 246, 0.1);
+  /* Fundo do gráfico com opacidade */
 
-  /* Reduzimos um pouco o glow do botão no escuro para não ofuscar */
-  --shadow-accent: 0px 8px 16px rgba(45, 107, 254, 0.15);
+  /* Tags de Status com fundo translúcido para elegância */
+  --color-success: #34D399;
+  /* Emerald 400 */
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-danger: #F87171;
+  /* Red 400 */
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+
+  /* Sombras (No modo escuro, a sombra precisa ser mais opaca para aparecer) */
+  --shadow-subtle: 0 4px 6px -1px rgb(0 0 0 / 0.3);
 }

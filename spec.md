@@ -60,37 +60,19 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 }
 ```
 
-### 4. Requisitos de Implementação
+## 4. Arquitetura de Componentes e UI (Flat Design 2.0 / Enterprise UI)
+A interface adota um design focado em dados, limpo e de alto contraste.
+* **Estilo Base dos Cartões:** Sombras espessas são proibidas. Componentes como `Header`, `FilterBar`, `StatCards` e `TrendChart` devem usar:
+  - `background-color: var(--color-surface)`
+  - `border: 1px solid var(--color-border)`
+  - `border-radius: var(--radius-md)`
+  - `box-shadow: var(--shadow-subtle)`
+* **StatCards:** Devem incluir "badges" (etiquetas) de variação percentual (ex: +12.5% ou -4.2%). Use as variáveis `--color-success` e `--color-danger` (com seus respectivos backgrounds) para estilizá-los.
+* **TrendChart:** Gráfico de área limpo. A linha deve usar `var(--color-accent)` e o preenchimento da área deve ser muito sutil, usando `var(--color-accent-light)`.
+* **RegionTable (Novo):** Tabela de dados estatísticos inserida abaixo do gráfico, contendo as colunas: Região, Ocorrências, Variação, Status e Ações. Segue a mesma lógica de bordas finas do sistema.
 
-#### 4.1. Componente de Troca de Tema (```src/components/ThemeToggle```)
-Crie um componente simples (pode ser um botão ou um switch neomórfico) que utiliza um React Hook (ex: ```useEffect``` e ```useState```) para adicionar/remover as classes ```.theme-light``` e ```.theme-dark``` do body. Persista a preferência no localStorage.
-
-#### 4.2. Estilização de Componentes Neumórficos
-* Aplique os tokens consistentemente nos arquivos .```module.css```:
-
-* ```App``` (Layout): Deve usar ```background-color: var(--color-bg)``` e ```color: var(--color-text-primary)```.
-
-* ```Header```: Barra superior sutil.
-
-* ```StatCards``` e ```TrendChart``` (Container): Devem usar a sombra principal para parecerem extrudados.
-
-```css
-.cardContainer {
-  background-color: var(--color-surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-primary-flat);
-  padding: var(--spacing-lg);
-}
-```
-* Filtros (Dropdowns): Devem usar uma sombra mais suave ou uma versão "pressionada" (inset box-shadow) para interatividade.
-
-### 5. Instruções de Execução para o Agente
-1. Crie o arquivo ```src/styles/variables.css``` com as variáveis descritas no item 3.3.
-
-2. Certifique-se de que este arquivo CSS global seja importado no ```src/main.tsx```.
-
-3. Desenvolva o componente ```src/components/ThemeToggle``` e integre-o ao Header ou App para alternar as classes do body.
-
-4. Atualize os arquivos ```.module.css``` dos componentes existentes (```Header```, ```StatCards```, ```TrendChart```) para utilizar os novos tokens e aplicar as sombras neumórficas.
-
-5. Faça um commit ao final da implementação: ```feat: implementa design system neumórfico e temas claro/escuro.```
+## 5. Instruções de Execução para o Agente
+1. Leia as regras de UI atualizadas.
+2. Refatore os arquivos `.module.css` existentes para remover qualquer estilo neomórfico residual e aplicar o padrão de bordas do Flat Design.
+3. Atualize os componentes React para corresponder à nova estrutura (adicionando os badges nos cards).
+4. Crie o novo componente estático `RegionTable.tsx` e `RegionTable.module.css`.

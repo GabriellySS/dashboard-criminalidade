@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
 import { TrendChart } from './components/TrendChart/TrendChart';
+import { RegionTable } from './components/RegionTable/RegionTable';
 import type { CrimeRecord } from './types';
 import './App.css';
 
@@ -102,14 +103,9 @@ function App() {
         />
 
         <div className="dashboardLayout">
-          <StatCards
-            totalOcorrencias={stats.total}
-            mediaMensal={stats.media}
-            mesMaiorIncidencia={stats.mesMax}
-            valorMaiorIncidencia={stats.valorMax}
-          />
-
+          <StatCards totalOcorrencias={stats.total} />
           <TrendChart data={filteredData} />
+          <RegionTable />
         </div>
       </main>
     </>
