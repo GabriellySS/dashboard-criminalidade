@@ -5,7 +5,7 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 141,
+    "ocorrencias": 123,
     "variacao_mensal": 0.0
   },
   {
@@ -14,8 +14,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 188,
-    "variacao_mensal": 33.33
+    "ocorrencias": 173,
+    "variacao_mensal": 40.65
   },
   {
     "id": "Cotia_Furtos_2019_Julho",
@@ -23,8 +23,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 170,
-    "variacao_mensal": -9.57
+    "ocorrencias": 182,
+    "variacao_mensal": 5.2
   },
   {
     "id": "Cotia_Furtos_2019_Outubro",
@@ -32,8 +32,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 162,
-    "variacao_mensal": -4.71
+    "ocorrencias": 137,
+    "variacao_mensal": -24.73
   },
   {
     "id": "Cotia_Furtos_2020_Janeiro",
@@ -41,8 +41,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 178,
-    "variacao_mensal": 9.88
+    "ocorrencias": 163,
+    "variacao_mensal": 18.98
   },
   {
     "id": "Cotia_Furtos_2020_Abril",
@@ -50,8 +50,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 140,
-    "variacao_mensal": -21.35
+    "ocorrencias": 153,
+    "variacao_mensal": -6.13
   },
   {
     "id": "Cotia_Furtos_2020_Julho",
@@ -59,8 +59,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 151,
-    "variacao_mensal": 7.86
+    "ocorrencias": 193,
+    "variacao_mensal": 26.14
   },
   {
     "id": "Cotia_Furtos_2020_Outubro",
@@ -68,8 +68,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 180,
-    "variacao_mensal": 19.21
+    "ocorrencias": 181,
+    "variacao_mensal": -6.22
   },
   {
     "id": "Cotia_Furtos_2021_Janeiro",
@@ -77,8 +77,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 128,
-    "variacao_mensal": -28.89
+    "ocorrencias": 133,
+    "variacao_mensal": -26.52
   },
   {
     "id": "Cotia_Furtos_2021_Abril",
@@ -86,8 +86,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 191,
-    "variacao_mensal": 49.22
+    "ocorrencias": 167,
+    "variacao_mensal": 25.56
   },
   {
     "id": "Cotia_Furtos_2021_Julho",
@@ -95,8 +95,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 181,
-    "variacao_mensal": -5.24
+    "ocorrencias": 134,
+    "variacao_mensal": -19.76
   },
   {
     "id": "Cotia_Furtos_2021_Outubro",
@@ -104,8 +104,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 134,
-    "variacao_mensal": -25.97
+    "ocorrencias": 191,
+    "variacao_mensal": 42.54
   },
   {
     "id": "Cotia_Furtos_2022_Janeiro",
@@ -113,8 +113,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 135,
-    "variacao_mensal": 0.75
+    "ocorrencias": 197,
+    "variacao_mensal": 3.14
   },
   {
     "id": "Cotia_Furtos_2022_Abril",
@@ -122,8 +122,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 140,
-    "variacao_mensal": 3.7
+    "ocorrencias": 181,
+    "variacao_mensal": -8.12
   },
   {
     "id": "Cotia_Furtos_2022_Julho",
@@ -131,8 +131,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 122,
-    "variacao_mensal": -12.86
+    "ocorrencias": 159,
+    "variacao_mensal": -12.15
   },
   {
     "id": "Cotia_Furtos_2022_Outubro",
@@ -140,8 +140,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 192,
-    "variacao_mensal": 57.38
+    "ocorrencias": 199,
+    "variacao_mensal": 25.16
   },
   {
     "id": "Cotia_Furtos_2023_Janeiro",
@@ -149,8 +149,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 186,
-    "variacao_mensal": -3.12
+    "ocorrencias": 172,
+    "variacao_mensal": -13.57
   },
   {
     "id": "Cotia_Furtos_2023_Abril",
@@ -158,8 +158,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 146,
-    "variacao_mensal": -21.51
+    "ocorrencias": 143,
+    "variacao_mensal": -16.86
   },
   {
     "id": "Cotia_Furtos_2023_Julho",
@@ -167,8 +167,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 135,
-    "variacao_mensal": -7.53
+    "ocorrencias": 145,
+    "variacao_mensal": 1.4
   },
   {
     "id": "Cotia_Furtos_2023_Outubro",
@@ -176,8 +176,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 125,
-    "variacao_mensal": -7.41
+    "ocorrencias": 179,
+    "variacao_mensal": 23.45
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2019_Janeiro",
@@ -185,7 +185,7 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 3,
+    "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
@@ -194,8 +194,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2019_Julho",
@@ -203,7 +203,7 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 2,
+    "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
@@ -212,8 +212,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2020_Janeiro",
@@ -221,8 +221,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 100.0
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2020_Abril",
@@ -230,7 +230,7 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 2,
+    "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
@@ -240,7 +240,7 @@
     "ano": "2020",
     "mes": "Julho",
     "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2020_Outubro",
@@ -266,8 +266,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 100.0
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2021_Julho",
@@ -276,7 +276,7 @@
     "ano": "2021",
     "mes": "Julho",
     "ocorrencias": 3,
-    "variacao_mensal": 50.0
+    "variacao_mensal": 200.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2021_Outubro",
@@ -284,8 +284,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": -66.67
+    "ocorrencias": 3,
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2022_Janeiro",
@@ -293,8 +293,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 100.0
+    "ocorrencias": 3,
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2022_Abril",
@@ -302,8 +302,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 3,
-    "variacao_mensal": 50.0
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2022_Julho",
@@ -311,8 +311,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2022_Outubro",
@@ -321,7 +321,7 @@
     "ano": "2022",
     "mes": "Outubro",
     "ocorrencias": 3,
-    "variacao_mensal": 50.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2023_Janeiro",
@@ -329,8 +329,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2023_Abril",
@@ -338,8 +338,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2023_Julho",
@@ -348,7 +348,7 @@
     "ano": "2023",
     "mes": "Julho",
     "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "variacao_mensal": -66.67
   },
   {
     "id": "Cotia_Homicídios_Dolosos_2023_Outubro",
@@ -365,7 +365,7 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 34,
+    "ocorrencias": 41,
     "variacao_mensal": 0.0
   },
   {
@@ -374,8 +374,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 30,
-    "variacao_mensal": -11.76
+    "ocorrencias": 44,
+    "variacao_mensal": 7.32
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2019_Julho",
@@ -383,8 +383,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 38,
-    "variacao_mensal": 26.67
+    "ocorrencias": 41,
+    "variacao_mensal": -6.82
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2019_Outubro",
@@ -392,8 +392,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 43,
-    "variacao_mensal": 13.16
+    "ocorrencias": 36,
+    "variacao_mensal": -12.2
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2020_Janeiro",
@@ -401,8 +401,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 44,
-    "variacao_mensal": 2.33
+    "ocorrencias": 41,
+    "variacao_mensal": 13.89
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2020_Abril",
@@ -410,8 +410,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 41,
-    "variacao_mensal": -6.82
+    "ocorrencias": 42,
+    "variacao_mensal": 2.44
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2020_Julho",
@@ -420,7 +420,7 @@
     "ano": "2020",
     "mes": "Julho",
     "ocorrencias": 37,
-    "variacao_mensal": -9.76
+    "variacao_mensal": -11.9
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2020_Outubro",
@@ -428,8 +428,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 36,
-    "variacao_mensal": -2.7
+    "ocorrencias": 44,
+    "variacao_mensal": 18.92
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2021_Janeiro",
@@ -437,8 +437,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 41,
-    "variacao_mensal": 13.89
+    "ocorrencias": 32,
+    "variacao_mensal": -27.27
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2021_Abril",
@@ -446,8 +446,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 36,
-    "variacao_mensal": -12.2
+    "ocorrencias": 43,
+    "variacao_mensal": 34.38
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2021_Julho",
@@ -455,8 +455,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 33,
-    "variacao_mensal": -8.33
+    "ocorrencias": 30,
+    "variacao_mensal": -30.23
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2021_Outubro",
@@ -464,8 +464,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 41,
-    "variacao_mensal": 24.24
+    "ocorrencias": 33,
+    "variacao_mensal": 10.0
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2022_Janeiro",
@@ -473,8 +473,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 40,
-    "variacao_mensal": -2.44
+    "ocorrencias": 31,
+    "variacao_mensal": -6.06
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2022_Abril",
@@ -482,8 +482,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 34,
-    "variacao_mensal": -15.0
+    "ocorrencias": 37,
+    "variacao_mensal": 19.35
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2022_Julho",
@@ -491,8 +491,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 44,
-    "variacao_mensal": 29.41
+    "ocorrencias": 33,
+    "variacao_mensal": -10.81
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2022_Outubro",
@@ -500,8 +500,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 32,
-    "variacao_mensal": -27.27
+    "ocorrencias": 31,
+    "variacao_mensal": -6.06
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2023_Janeiro",
@@ -509,8 +509,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 32,
-    "variacao_mensal": 0.0
+    "ocorrencias": 43,
+    "variacao_mensal": 38.71
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2023_Abril",
@@ -518,8 +518,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 30,
-    "variacao_mensal": -6.25
+    "ocorrencias": 35,
+    "variacao_mensal": -18.6
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2023_Julho",
@@ -527,8 +527,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 36,
-    "variacao_mensal": 20.0
+    "ocorrencias": 35,
+    "variacao_mensal": 0.0
   },
   {
     "id": "Cotia_Roubo_de_Veículos_2023_Outubro",
@@ -536,8 +536,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 30,
-    "variacao_mensal": -16.67
+    "ocorrencias": 39,
+    "variacao_mensal": 11.43
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2019_Janeiro",
@@ -545,7 +545,7 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 3242,
+    "ocorrencias": 3052,
     "variacao_mensal": 0.0
   },
   {
@@ -554,8 +554,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 3262,
-    "variacao_mensal": 0.62
+    "ocorrencias": 3547,
+    "variacao_mensal": 16.22
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2019_Julho",
@@ -563,8 +563,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 3766,
-    "variacao_mensal": 15.45
+    "ocorrencias": 3656,
+    "variacao_mensal": 3.07
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2019_Outubro",
@@ -572,8 +572,8 @@
     "tipo_crime": "Furtos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 2928,
-    "variacao_mensal": -22.25
+    "ocorrencias": 3360,
+    "variacao_mensal": -8.1
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2020_Janeiro",
@@ -581,8 +581,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 2994,
-    "variacao_mensal": 2.25
+    "ocorrencias": 3274,
+    "variacao_mensal": -2.56
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2020_Abril",
@@ -590,8 +590,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 3072,
-    "variacao_mensal": 2.61
+    "ocorrencias": 2858,
+    "variacao_mensal": -12.71
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2020_Julho",
@@ -599,8 +599,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 3681,
-    "variacao_mensal": 19.82
+    "ocorrencias": 3310,
+    "variacao_mensal": 15.82
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2020_Outubro",
@@ -608,8 +608,8 @@
     "tipo_crime": "Furtos",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 3036,
-    "variacao_mensal": -17.52
+    "ocorrencias": 3481,
+    "variacao_mensal": 5.17
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2021_Janeiro",
@@ -617,8 +617,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 2801,
-    "variacao_mensal": -7.74
+    "ocorrencias": 3275,
+    "variacao_mensal": -5.92
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2021_Abril",
@@ -626,8 +626,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 3171,
-    "variacao_mensal": 13.21
+    "ocorrencias": 3499,
+    "variacao_mensal": 6.84
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2021_Julho",
@@ -635,8 +635,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 3516,
-    "variacao_mensal": 10.88
+    "ocorrencias": 3775,
+    "variacao_mensal": 7.89
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2021_Outubro",
@@ -644,8 +644,8 @@
     "tipo_crime": "Furtos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 3117,
-    "variacao_mensal": -11.35
+    "ocorrencias": 3582,
+    "variacao_mensal": -5.11
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2022_Janeiro",
@@ -653,8 +653,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 2843,
-    "variacao_mensal": -8.79
+    "ocorrencias": 2989,
+    "variacao_mensal": -16.55
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2022_Abril",
@@ -662,8 +662,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 2934,
-    "variacao_mensal": 3.2
+    "ocorrencias": 3757,
+    "variacao_mensal": 25.69
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2022_Julho",
@@ -671,8 +671,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 3112,
-    "variacao_mensal": 6.07
+    "ocorrencias": 3486,
+    "variacao_mensal": -7.21
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2022_Outubro",
@@ -680,8 +680,8 @@
     "tipo_crime": "Furtos",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 2855,
-    "variacao_mensal": -8.26
+    "ocorrencias": 3757,
+    "variacao_mensal": 7.77
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2023_Janeiro",
@@ -689,8 +689,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 3678,
-    "variacao_mensal": 28.83
+    "ocorrencias": 3362,
+    "variacao_mensal": -10.51
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2023_Abril",
@@ -698,8 +698,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 3541,
-    "variacao_mensal": -3.72
+    "ocorrencias": 3675,
+    "variacao_mensal": 9.31
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2023_Julho",
@@ -707,8 +707,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 2976,
-    "variacao_mensal": -15.96
+    "ocorrencias": 3366,
+    "variacao_mensal": -8.41
   },
   {
     "id": "São_Paulo_(Capital)_Furtos_2023_Outubro",
@@ -716,8 +716,8 @@
     "tipo_crime": "Furtos",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 3327,
-    "variacao_mensal": 11.79
+    "ocorrencias": 3043,
+    "variacao_mensal": -9.6
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2019_Janeiro",
@@ -734,8 +734,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 30,
-    "variacao_mensal": -21.05
+    "ocorrencias": 32,
+    "variacao_mensal": -15.79
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2019_Julho",
@@ -743,8 +743,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 40,
-    "variacao_mensal": 33.33
+    "ocorrencias": 34,
+    "variacao_mensal": 6.25
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2019_Outubro",
@@ -752,8 +752,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 43,
-    "variacao_mensal": 7.5
+    "ocorrencias": 32,
+    "variacao_mensal": -5.88
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2020_Janeiro",
@@ -761,8 +761,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 37,
-    "variacao_mensal": -13.95
+    "ocorrencias": 36,
+    "variacao_mensal": 12.5
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2020_Abril",
@@ -770,8 +770,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 38,
-    "variacao_mensal": 2.7
+    "ocorrencias": 34,
+    "variacao_mensal": -5.56
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2020_Julho",
@@ -779,8 +779,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 32,
-    "variacao_mensal": -15.79
+    "ocorrencias": 38,
+    "variacao_mensal": 11.76
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2020_Outubro",
@@ -788,8 +788,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 37,
-    "variacao_mensal": 15.62
+    "ocorrencias": 36,
+    "variacao_mensal": -5.26
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2021_Janeiro",
@@ -797,8 +797,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 30,
-    "variacao_mensal": -18.92
+    "ocorrencias": 31,
+    "variacao_mensal": -13.89
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2021_Abril",
@@ -806,8 +806,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 37,
-    "variacao_mensal": 23.33
+    "ocorrencias": 33,
+    "variacao_mensal": 6.45
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2021_Julho",
@@ -815,8 +815,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 41,
-    "variacao_mensal": 10.81
+    "ocorrencias": 38,
+    "variacao_mensal": 15.15
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2021_Outubro",
@@ -824,8 +824,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 40,
-    "variacao_mensal": -2.44
+    "ocorrencias": 41,
+    "variacao_mensal": 7.89
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2022_Janeiro",
@@ -833,8 +833,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 39,
-    "variacao_mensal": -2.5
+    "ocorrencias": 43,
+    "variacao_mensal": 4.88
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2022_Abril",
@@ -842,8 +842,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 40,
-    "variacao_mensal": 2.56
+    "ocorrencias": 31,
+    "variacao_mensal": -27.91
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2022_Julho",
@@ -851,8 +851,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 34,
-    "variacao_mensal": -15.0
+    "ocorrencias": 39,
+    "variacao_mensal": 25.81
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2022_Outubro",
@@ -860,8 +860,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 33,
-    "variacao_mensal": -2.94
+    "ocorrencias": 38,
+    "variacao_mensal": -2.56
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2023_Janeiro",
@@ -869,8 +869,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 33,
-    "variacao_mensal": 0.0
+    "ocorrencias": 39,
+    "variacao_mensal": 2.63
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2023_Abril",
@@ -878,8 +878,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 44,
-    "variacao_mensal": 33.33
+    "ocorrencias": 34,
+    "variacao_mensal": -12.82
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2023_Julho",
@@ -887,8 +887,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 33,
-    "variacao_mensal": -25.0
+    "ocorrencias": 31,
+    "variacao_mensal": -8.82
   },
   {
     "id": "São_Paulo_(Capital)_Homicídios_Dolosos_2023_Outubro",
@@ -896,8 +896,8 @@
     "tipo_crime": "Homicídios Dolosos",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 32,
-    "variacao_mensal": -3.03
+    "ocorrencias": 33,
+    "variacao_mensal": 6.45
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2019_Janeiro",
@@ -905,7 +905,7 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 1009,
+    "ocorrencias": 902,
     "variacao_mensal": 0.0
   },
   {
@@ -914,8 +914,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 1089,
-    "variacao_mensal": 7.93
+    "ocorrencias": 1070,
+    "variacao_mensal": 18.63
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2019_Julho",
@@ -923,8 +923,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 931,
-    "variacao_mensal": -14.51
+    "ocorrencias": 906,
+    "variacao_mensal": -15.33
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2019_Outubro",
@@ -932,8 +932,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 844,
-    "variacao_mensal": -9.34
+    "ocorrencias": 871,
+    "variacao_mensal": -3.86
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2020_Janeiro",
@@ -941,8 +941,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 1078,
-    "variacao_mensal": 27.73
+    "ocorrencias": 988,
+    "variacao_mensal": 13.43
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2020_Abril",
@@ -950,8 +950,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 1009,
-    "variacao_mensal": -6.4
+    "ocorrencias": 820,
+    "variacao_mensal": -17.0
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2020_Julho",
@@ -959,8 +959,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 1044,
-    "variacao_mensal": 3.47
+    "ocorrencias": 902,
+    "variacao_mensal": 10.0
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2020_Outubro",
@@ -968,8 +968,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 1089,
-    "variacao_mensal": 4.31
+    "ocorrencias": 921,
+    "variacao_mensal": 2.11
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2021_Janeiro",
@@ -977,8 +977,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 1060,
-    "variacao_mensal": -2.66
+    "ocorrencias": 1014,
+    "variacao_mensal": 10.1
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2021_Abril",
@@ -986,8 +986,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 913,
-    "variacao_mensal": -13.87
+    "ocorrencias": 887,
+    "variacao_mensal": -12.52
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2021_Julho",
@@ -995,8 +995,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 808,
-    "variacao_mensal": -11.5
+    "ocorrencias": 899,
+    "variacao_mensal": 1.35
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2021_Outubro",
@@ -1004,8 +1004,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 967,
-    "variacao_mensal": 19.68
+    "ocorrencias": 951,
+    "variacao_mensal": 5.78
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2022_Janeiro",
@@ -1013,8 +1013,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 933,
-    "variacao_mensal": -3.52
+    "ocorrencias": 930,
+    "variacao_mensal": -2.21
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2022_Abril",
@@ -1022,8 +1022,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 1066,
-    "variacao_mensal": 14.26
+    "ocorrencias": 949,
+    "variacao_mensal": 2.04
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2022_Julho",
@@ -1031,8 +1031,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 1069,
-    "variacao_mensal": 0.28
+    "ocorrencias": 1057,
+    "variacao_mensal": 11.38
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2022_Outubro",
@@ -1040,8 +1040,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 956,
-    "variacao_mensal": -10.57
+    "ocorrencias": 1093,
+    "variacao_mensal": 3.41
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2023_Janeiro",
@@ -1049,8 +1049,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 1048,
-    "variacao_mensal": 9.62
+    "ocorrencias": 991,
+    "variacao_mensal": -9.33
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2023_Abril",
@@ -1058,8 +1058,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 1059,
-    "variacao_mensal": 1.05
+    "ocorrencias": 1076,
+    "variacao_mensal": 8.58
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2023_Julho",
@@ -1067,8 +1067,8 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 810,
-    "variacao_mensal": -23.51
+    "ocorrencias": 960,
+    "variacao_mensal": -10.78
   },
   {
     "id": "São_Paulo_(Capital)_Roubo_de_Veículos_2023_Outubro",
@@ -1076,7 +1076,7 @@
     "tipo_crime": "Roubo de Veículos",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 811,
-    "variacao_mensal": 0.12
+    "ocorrencias": 821,
+    "variacao_mensal": -14.48
   }
 ]

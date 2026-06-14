@@ -71,3 +71,29 @@ export default defineConfig([
   },
 ])
 ```
+
+## Scraper ETL Pipeline Setup
+
+The data Ingestion pipeline uses Python with Playwright and Pandas. To set up the environment:
+
+1. Create and activate a Python virtual environment:
+   ```bash
+   python -m venv .venv
+   # On Windows:
+   .venv\Scripts\activate
+   # On macOS/Linux:
+   source .venv/bin/activate
+   ```
+2. Install the required python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Install the Playwright browser binaries (this is required for the web scraping browser):
+   ```bash
+   python -m playwright install
+   ```
+4. Run the scraper:
+   ```bash
+   python scraper.py
+   ```
+
