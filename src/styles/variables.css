@@ -1,0 +1,61 @@
+:root,
+.theme-light {
+  /* Fundo & Superfície */
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+
+  /* Bordas (A alma do Flat 2.0) */
+  --color-border: #E2E8F0;
+
+  /* Textos */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+
+  /* Destaques e Status */
+  --color-accent: #3B82F6;
+  --color-accent-light: #EFF6FF;
+  --color-success: #10B981;
+  --color-success-bg: #D1FAE5;
+  --color-danger: #EF4444;
+  --color-danger-bg: #FEE2E2;
+
+  /* Estrutura */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.theme-dark {
+  /* Fundo & Superfície (Tons de Slate profundo) */
+  --color-bg: #0F172A;
+  /* Slate 900 */
+  --color-surface: #1E293B;
+  /* Slate 800 */
+
+  /* Bordas (Separando os cartões do fundo) */
+  --color-border: #334155;
+  /* Slate 700 */
+
+  /* Textos (Invertidos para alto contraste) */
+  --color-text-primary: #F8FAFC;
+  /* Slate 50 */
+  --color-text-secondary: #94A3B8;
+  /* Slate 400 */
+
+  /* Destaques e Status (Cores adaptadas para brilhar no escuro) */
+  --color-accent: #60A5FA;
+  /* Azul ligeiramente mais claro (Blue 400) */
+  --color-accent-light: rgba(59, 130, 246, 0.1);
+  /* Fundo do gráfico com opacidade */
+
+  /* Tags de Status com fundo translúcido para elegância */
+  --color-success: #34D399;
+  /* Emerald 400 */
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-danger: #F87171;
+  /* Red 400 */
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+
+  /* Sombras (No modo escuro, a sombra precisa ser mais opaca para aparecer) */
+  --shadow-subtle: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+}
