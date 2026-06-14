@@ -60,12 +60,13 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 }
 ```
 
-## 4. Arquitetura de Componentes e UI (Atualização)
-* **CrimeDistributionChart (Novo - Gráfico de Rosca):**
-  - Deve ser implementado utilizando a biblioteca `recharts` (componentes `<PieChart>`, `<Pie>` e `<Cell>`).
-  - Apresentar a distribuição percentual e absoluta por tipo de crime com base nos dados atualmente filtrados.
-  - Estilo estrito Flat Design 2.0: cores sólidas, limpas e sem gradientes ou sombras complexas.
-  - Incluir uma legenda lateral descritiva organizada exibindo a categoria e a percentagem calculada (ex: "Furtos: 45.2%").
+## 4. Arquitetura de Componentes e UI (Atualização de Layout)
+* **CrimeDistributionChart (Gráfico de Rosca / Donut Chart):**
+  - Deve ser implementado utilizando a biblioteca `recharts` (componentes `<PieChart>`, `<Pie>`, `<Cell>`).
+  - **Disposição Estrutural (Layout Vertical):** O contêiner interno do cartão deve seguir um fluxo de coluna (`display: flex; flex-direction: column; align-items: center;`).
+  - **Legendas/Listagem:** A listagem detalhada por Tipo de Crime (contendo o indicador de cor, nome da categoria, porcentagem e valor absoluto) deve ser renderizada na parte superior do bloco de conteúdo.
+  - **Gráfico de Pizza:** O gráfico de rosca físico com o totalizador centralizado (`total`) deve se posicionar obrigatoriamente **abaixo** dessa listagem de legendas, centralizado horizontalmente.
+  - O estilo visual deve herdar os tokens globais do Flat Design 2.0 (sem bordas grossas ou sombras internas).
 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**

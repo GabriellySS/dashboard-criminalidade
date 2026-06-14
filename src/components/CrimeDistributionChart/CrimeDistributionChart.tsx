@@ -93,6 +93,23 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
         </div>
       ) : (
         <div className={styles.chartContent}>
+          <div className={styles.legendContainer}>
+            {chartData.map((entry, index) => (
+              <div key={`legend-${index}`} className={styles.legendItem}>
+                <span
+                  className={styles.legendDot}
+                  style={{ backgroundColor: entry.color }}
+                />
+                <span className={styles.legendLabel}>
+                  {entry.name}: {entry.percentage.toFixed(1)}%
+                </span>
+                <span className={styles.legendValue}>
+                  ({new Intl.NumberFormat('pt-BR').format(entry.value)})
+                </span>
+              </div>
+            ))}
+          </div>
+
           <div className={styles.responsiveContainer}>
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -112,23 +129,6 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
                 <Tooltip content={<CustomTooltip />} />
               </PieChart>
             </ResponsiveContainer>
-          </div>
-
-          <div className={styles.legendContainer}>
-            {chartData.map((entry, index) => (
-              <div key={`legend-${index}`} className={styles.legendItem}>
-                <span
-                  className={styles.legendDot}
-                  style={{ backgroundColor: entry.color }}
-                />
-                <span className={styles.legendLabel}>
-                  {entry.name}: {entry.percentage.toFixed(1)}%
-                </span>
-                <span className={styles.legendValue}>
-                  {new Intl.NumberFormat('pt-BR').format(entry.value)}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       )}
