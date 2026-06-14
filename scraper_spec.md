@@ -30,13 +30,11 @@ O ficheiro final `src/data/mockData.json` deve conter a seguinte estrutura estri
 2. **Limpeza de Dados (Sanitização):**
    - Remover cabeçalhos duplos, linhas de totais em branco ou células fundidas (típico em folhas de cálculo do governo).
    - Eliminar acentos e padronizar os nomes dos municípios e dos crimes.
-3. **Cálculo Matemático:** Calcular a `variacao_mensal` (crescimento ou decréscimo percentual em relação ao mês anterior para a mesma cidade e crime).
-4. **Exportação:** Salvar o resultado limpo no caminho `src/data/mockData.json`.
+3. **Cálculo Matemático:** Calcular a ```variacao_mensal``` (crescimento ou decréscimo percentual em relação ao mês anterior para a mesma cidade e crime).
+4. **Exportação:** Salvar o resultado limpo no caminho ```src/data/mockData.json```.
 
 ## 5. Instruções para o Agente
 1. Leia esta especificação atualizada.
-2. Certifique-se imediatamente de que a pasta `.venv/` está incluída no ficheiro `.gitignore` na raiz do projeto, para não poluir o repositório.
-3. Atualize o ficheiro `requirements.txt` com as novas bibliotecas necessárias (`requests`, `beautifulsoup4`, `openpyxl`).
-4. Refatore o ficheiro `scraper.py`. Implemente uma lógica real utilizando `requests` e `pandas` para procurar as tabelas de criminalidade.
-5. Escreva uma função robusta de limpeza no Pandas para tratar cabeçalhos sujos, preencher valores nulos e calcular a variação percentual mensal.
-6. O output final deve continuar a sobrescrever perfeitamente o ficheiro `src/data/mockData.json`.
+2. Atualize o ficheiro ```requirements.txt``` para incluir ```requests```, ```beautifulsoup4``` e ```openpyxl```.
+3. Refatore o ficheiro ```scraper.py``` para substituir os dados fictícios por uma lógica real de web scraping utilizando ```requests``` e ```pandas```.
+4. Devido à complexidade do site da SSP-SP (que pode usar Postbacks ASP.NET), caso a extração direta da página seja demasiado complexa para um script simples, crie a lógica para o script ler os dados a partir de um ficheiro CSV/Excel local (simulando o download manual) e fazer todo o tratamento ETL.
