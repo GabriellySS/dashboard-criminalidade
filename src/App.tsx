@@ -88,37 +88,32 @@ function App() {
     const total = dadosFiltrados.reduce((sum, item) => sum + item.ocorrencias, 0);
 
     // Calculate previous period total for variation
-    let prevYearTotal = 0;
+    let variacaoTotal: number | null = null;
     if (anoSelecionado !== 'Todos') {
-      const prevYear = parseInt(anoSelecionado) - 1;
-      const prevYearData = typedMockData.filter((item) => {
-        const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
-        const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
-        const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
-        const matchAno = item.ano === String(prevYear);
-        const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
-        return matchRegiao && matchMunicipio && matchCrime && matchAno && matchMes;
-      });
-      prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
-    } else {
-      // Compare current vs 2022
-      const data2022 = typedMockData.filter(
-        (item) =>
-          item.ano === '2022' &&
-          (regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada) &&
-          (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) &&
-          (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado) &&
-          (mesSelecionado === 'Todos' || item.mes === mesSelecionado)
-      );
-      prevYearTotal = data2022.reduce((sum, item) => sum + item.ocorrencias, 0);
-    }
+      const prevYear = String(parseInt(anoSelecionado) - 1);
+      const hasDataForPrevYear = typedMockData.some((item) => item.ano === prevYear);
+      
+      if (hasDataForPrevYear) {
+        const prevYearData = typedMockData.filter((item) => {
+          const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
+          const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
+          const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
+          const matchAno = item.ano === prevYear;
+          const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
+          return matchRegiao && matchMunicipio && matchCrime && matchAno && matchMes;
+        });
 
-    let variacaoTotal = 0;
-    if (prevYearTotal > 0) {
-      variacaoTotal = ((total - prevYearTotal) / prevYearTotal) * 100;
-    } else {
-      // Realistic default variation if no comparative data
-      variacaoTotal = -12.5;
+        if (prevYearData.length > 0) {
+          const prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
+          if (prevYearTotal > 0) {
+            variacaoTotal = ((total - prevYearTotal) / prevYearTotal) * 100;
+          } else if (prevYearTotal === 0 && total === 0) {
+            variacaoTotal = 0;
+          } else {
+            variacaoTotal = 100;
+          }
+        }
+      }
     }
 
     // Calculate crime mais frequente
