@@ -11,6 +11,7 @@ import type { CrimeRecord } from './types';
 import './App.css';
 
 function App() {
+  const [regiaoSelecionada, setRegiaoSelecionada] = useState('Todas');
   const [municipioSelecionado, setMunicipioSelecionado] = useState('Todos');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
   const [anoSelecionado, setAnoSelecionado] = useState('Todos');
@@ -27,12 +28,20 @@ function App() {
       setIsLoading(false);
     }, 800);
     return () => clearTimeout(timer);
-  }, [municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [regiaoSelecionada, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // Dynamic filter list options
-  const municipiosList = useMemo(() => {
-    return Array.from(new Set(typedMockData.map((d) => d.municipio))).sort();
+  const regioesList = useMemo(() => {
+    return Array.from(new Set(typedMockData.map((d) => d.regiao))).sort();
   }, [typedMockData]);
+
+  // Cascading Filter: municipalities list depends on the selected region
+  const municipiosList = useMemo(() => {
+    const filtered = regiaoSelecionada === 'Todas'
+      ? typedMockData
+      : typedMockData.filter((d) => d.regiao === regiaoSelecionada);
+    return Array.from(new Set(filtered.map((d) => d.municipio))).sort();
+  }, [typedMockData, regiaoSelecionada]);
 
   const tiposCrimeList = useMemo(() => {
     return Array.from(new Set(typedMockData.map((d) => d.tipo_crime))).sort();
@@ -65,13 +74,14 @@ function App() {
   // Derived filtered data (dadosFiltrados)
   const dadosFiltrados = useMemo(() => {
     return typedMockData.filter((item) => {
+      const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
       const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
       const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
       const matchAno = anoSelecionado === 'Todos' || String(item.ano) === anoSelecionado;
       const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
-      return matchMunicipio && matchCrime && matchAno && matchMes;
+      return matchRegiao && matchMunicipio && matchCrime && matchAno && matchMes;
     });
-  }, [typedMockData, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [typedMockData, regiaoSelecionada, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // Derived statistics for StatCards
   const stats = useMemo(() => {
@@ -82,11 +92,12 @@ function App() {
     if (anoSelecionado !== 'Todos') {
       const prevYear = parseInt(anoSelecionado) - 1;
       const prevYearData = typedMockData.filter((item) => {
+        const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
         const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
         const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
         const matchAno = item.ano === String(prevYear);
         const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
-        return matchMunicipio && matchCrime && matchAno && matchMes;
+        return matchRegiao && matchMunicipio && matchCrime && matchAno && matchMes;
       });
       prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
     } else {
@@ -94,6 +105,7 @@ function App() {
       const data2022 = typedMockData.filter(
         (item) =>
           item.ano === '2022' &&
+          (regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada) &&
           (municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado) &&
           (crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado) &&
           (mesSelecionado === 'Todos' || item.mes === mesSelecionado)
@@ -139,7 +151,7 @@ function App() {
       efetivoAlocado,
       variacaoEfetivo,
     };
-  }, [typedMockData, dadosFiltrados, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [typedMockData, dadosFiltrados, regiaoSelecionada, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   return (
     <>
@@ -152,6 +164,8 @@ function App() {
         </div>
 
         <FilterBar
+          regiaoSelecionada={regiaoSelecionada}
+          setRegiaoSelecionada={setRegiaoSelecionada}
           municipioSelecionado={municipioSelecionado}
           setMunicipioSelecionado={setMunicipioSelecionado}
           crimeSelecionado={crimeSelecionado}
@@ -160,6 +174,7 @@ function App() {
           setAnoSelecionado={setAnoSelecionado}
           mesSelecionado={mesSelecionado}
           setMesSelecionado={setMesSelecionado}
+          regioesList={regioesList}
           municipiosList={municipiosList}
           tiposCrimeList={tiposCrimeList}
           anosList={anosList}

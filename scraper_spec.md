@@ -16,6 +16,7 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 [
   {
     "id": "string",
+    "regiao": "string", 
     "municipio": "string",
     "tipo_crime": "string",
     "ano": "string",
@@ -27,10 +28,9 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 ```
 
 ## 4. Fluxo de Automação Real (Escala Total: Anos x Cidades x Crimes)
-1. **Extração de Todos os Anos e Municípios (Playwright - Nested Loop):**
-   - O robô deve identificar o dropdown de `Anos` e extrair todas as opções válidas.
-   - O robô deve identificar o dropdown de `Municípios` e extrair todas as opções válidas (ignorando 'Todos' ou 'Selecione').
-   - O fluxo de iteração será: Para cada Ano `->` Para cada Município `->` Selecionar `->` Exportar `->` Salvar.
+1. **Extração Tripla (Ano > Região > Município):**
+   - O fluxo do Playwright agora deve ser: Selecionar Ano -> Extrair opções de Região -> Para cada Região, selecionar -> Extrair opções de Município atreladas a essa região -> Para cada Município, exportar.
+   - O arquivo temporário salvo deve conter a região no nome, ou a lógica do Pandas deve inferir a região com base nas pastas/nomes para embutir a nova coluna `regiao` no JSON final.
 2. **Inclusão de Todos os Tipos de Crime (Pandas ETL):**
    - A planilha oficial da SSP-SP lista dezenas de crimes em suas linhas. O script deve parar de filtrar tipos específicos.
    - **Sanitização Universal:** A função `normalize_text` deve aplicar um `Title Case` robusto (ex: "HOMICÍDIO DOLOSO" vira "Homicídio Doloso") e remover espaços em branco invisíveis (`strip()`) em toda e qualquer string da coluna `tipo_crime`.

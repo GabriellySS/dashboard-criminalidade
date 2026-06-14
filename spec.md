@@ -62,6 +62,10 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 
 ## 4. Arquitetura de Componentes e UI (Atualização de Legendas)
 * **CrimeDistributionChart (Gráfico de Rosca / Donut Chart):**
+  - O componente não deve renderizar todos os crimes brutos.
+  - Deve classificar (sort) o array de dados processados em ordem decrescente pelo volume de ocorrências.
+  - Manter apenas os 4 tipos de crimes com maiores índices como fatias individuais.
+  - Todos os crimes restantes devem ter seus valores somados e agrupados sob uma única fatia rotulada dinamicamente como "Outros", garantindo que a rosca sempre feche 100% do total real.
   - Deve conter um título e subtítulo alinhados ao padrão Enterprise UI.
   - **Disposição Estrutural:** O layout principal do card deve seguir um fluxo vertical (`display: flex; flex-direction: column; gap: 1.5rem;`).
   - **Legendas Customizadas (Lista de Progresso 100% Width):**
@@ -79,3 +83,7 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 3. **Lógica de Filtragem Cruzada (useMemo):**
    - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
    - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
+4. **Filtros em Cascata (Região > Município):**
+   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Todas').
+   - O `FilterBar` deve apresentar o dropdown de "Região" antes do de "Município".
+   - A lista do dropdown de Municípios deve ser gerada dinamicamente baseada na Região selecionada (se uma região específica for escolhida, mostrar apenas cidades daquela região).

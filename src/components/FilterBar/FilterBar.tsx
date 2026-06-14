@@ -3,6 +3,8 @@ import { Filter } from 'lucide-react';
 import styles from './FilterBar.module.css';
 
 interface FilterBarProps {
+  regiaoSelecionada: string;
+  setRegiaoSelecionada: (r: string) => void;
   municipioSelecionado: string;
   setMunicipioSelecionado: (m: string) => void;
   crimeSelecionado: string;
@@ -11,6 +13,7 @@ interface FilterBarProps {
   setAnoSelecionado: (a: string) => void;
   mesSelecionado: string;
   setMesSelecionado: (m: string) => void;
+  regioesList: string[];
   municipiosList: string[];
   tiposCrimeList: string[];
   anosList: string[];
@@ -18,6 +21,8 @@ interface FilterBarProps {
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
+  regiaoSelecionada,
+  setRegiaoSelecionada,
   municipioSelecionado,
   setMunicipioSelecionado,
   crimeSelecionado,
@@ -26,6 +31,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   setAnoSelecionado,
   mesSelecionado,
   setMesSelecionado,
+  regioesList,
   municipiosList,
   tiposCrimeList,
   anosList,
@@ -33,6 +39,26 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 }) => {
   return (
     <div className={styles.filterBar}>
+      <div className={styles.filterGroup}>
+        <label htmlFor="regiao-select">Região</label>
+        <select
+          id="regiao-select"
+          className={styles.select}
+          value={regiaoSelecionada}
+          onChange={(e) => {
+            setRegiaoSelecionada(e.target.value);
+            setMunicipioSelecionado('Todos');
+          }}
+        >
+          <option value="Todas">Todas as Regiões</option>
+          {regioesList.map((r) => (
+            <option key={r} value={r}>
+              {r}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className={styles.filterGroup}>
         <label htmlFor="municipio-select">Município</label>
         <select

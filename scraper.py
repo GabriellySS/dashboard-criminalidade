@@ -13,7 +13,7 @@ TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 TARGET_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "data", "mockData.json")
 
 def scrape_with_playwright(download_dir):
-    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files by looping through years and municipalities."""
+    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files by looping through years, regions, and municipalities."""
     url = "https://www.ssp.sp.gov.br/estatistica/dados-mensais"
     
     print(f"Starting Playwright automation targeting: {url}")
@@ -30,76 +30,81 @@ def scrape_with_playwright(download_dir):
             # Explicitly wait for the primary filter dropdowns to be loaded in the DOM
             page.wait_for_selector("select.form-select", timeout=15000)
             
-            # Gather all years dynamically (skipping index 0 placeholder)
+            # Gather all years dynamically
             selects = page.locator("select.form-select")
             year_select = selects.nth(0)
             year_opts = year_select.locator("option")
             years = [year_opts.nth(i).text_content().strip() for i in range(1, year_opts.count())]
             
-            # Gather all region-municipality combinations dynamically
-            # Since the municipality dropdown is disabled until a region is selected, 
-            # we iterate through the regions to extract their corresponding cities.
+            # Gather all regions dynamically
             reg_select = selects.nth(1)
             reg_opts = reg_select.locator("option")
             regions = [reg_opts.nth(i).text_content().strip() for i in range(1, reg_opts.count())]
             
-            targets = []
-            for r in regions:
-                reg_select.select_option(label=r)
-                page.wait_for_timeout(500)
-                
-                muni_select = page.locator("select.form-select").nth(2)
-                muni_opts = muni_select.locator("option")
-                munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
-                for m in munis:
-                    targets.append((r, m))
-                    
-            print(f"Total years gathered: {len(years)} {years}")
-            print(f"Total municipalities gathered across all regions: {len(targets)}")
+            print(f"Total years gathered: {len(years)} {years[:3]}...")
+            print(f"Total regions gathered: {len(regions)} {regions[:3]}...")
             
             # =========================================================================
-            # DEVELOPMENT LIMITER: Only scrape 2 Years and 3 Municipalities for testing.
+            # DEVELOPMENT LIMITER: Only scrape 1 Year, 2 Regions, and 2 Municipalities per region.
             # This keeps development execution times fast and prevents timeouts.
-            # TO SCRAPE ALL YEARS AND ALL 645+ MUNICIPALITIES, REMOVE THE SLICES BELOW.
+            # TO SCRAPE ALL YEARS, REGIONS AND MUNICIPALITIES, REMOVE THE SLICES BELOW.
             # =========================================================================
-            years_to_scrape = years[:2]
-            targets_to_scrape = targets[:3]
+            years_to_scrape = years[:1]
+            regions_to_scrape = regions[:2]
             print(f"Scraping limited to years: {years_to_scrape}")
-            print(f"Scraping limited to targets: {targets_to_scrape}")
+            print(f"Scraping limited to regions: {regions_to_scrape}")
             
             for year in years_to_scrape:
-                for r, m in targets_to_scrape:
-                    print(f"Scraping data for {m} ({r}) - Year {year}...")
-                    
-                    # Re-locate select elements in each iteration to avoid element detached errors
+                for r in regions_to_scrape:
+                    # Select region to load its municipalities
                     selects = page.locator("select.form-select")
-                    
-                    # 1. Select Year
-                    selects.nth(0).select_option(label=year)
-                    page.wait_for_timeout(300)
-                    
-                    # 2. Select Region
                     selects.nth(1).select_option(label=r)
-                    page.wait_for_timeout(500)
+                    page.wait_for_timeout(1000)
                     
-                    # 3. Select Municipality
-                    selects = page.locator("select.form-select")
-                    muni_select = selects.nth(2)
-                    muni_select.select_option(label=m)
-                    page.wait_for_timeout(300)
+                    # Gather municipalities for this region
+                    muni_select = page.locator("select.form-select").nth(2)
+                    muni_opts = muni_select.locator("option")
+                    munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
                     
-                    # Save path for this specific spreadsheet (naming includes municipality and year)
-                    filename = f"{m}_{year}.xlsx".replace(" ", "_")
-                    filepath = os.path.join(download_dir, filename)
+                    # Apply municipal dev limiter (only 2 cities per region)
+                    munis_to_scrape = munis[:2]
+                    print(f"Region '{r}': Scraping limited to cities: {munis_to_scrape}")
                     
-                    # 4. Intercept and download Excel file
-                    with page.expect_download(timeout=20000) as download_info:
-                        export_button = page.locator("text=Exportar Dados")
-                        export_button.click()
+                    for m in munis_to_scrape:
+                        print(f"Scraping data for {m} ({r}) - Year {year}...")
                         
-                    download = download_info.value
-                    download.save_as(filepath)
-                    print(f"Successfully downloaded and saved: {filename} ({os.path.getsize(filepath)} bytes)")
+                        # Re-locate select elements in each iteration to avoid element detached errors
+                        selects = page.locator("select.form-select")
+                        
+                        # 1. Select Year
+                        selects.nth(0).select_option(label=year)
+                        page.wait_for_timeout(300)
+                        
+                        # 2. Select Region
+                        selects.nth(1).select_option(label=r)
+                        page.wait_for_timeout(500)
+                        
+                        # 3. Select Municipality
+                        selects = page.locator("select.form-select")
+                        muni_select = selects.nth(2)
+                        muni_select.select_option(label=m)
+                        page.wait_for_timeout(300)
+                        
+                        # Save path for this specific spreadsheet (naming includes region, municipality and year)
+                        # We use double underscore '__' to separate variables to ensure clean dynamic parsing in Pandas
+                        r_clean = r.replace(" ", "_")
+                        m_clean = m.replace(" ", "_")
+                        filename = f"{r_clean}__{m_clean}__{year}.xlsx"
+                        filepath = os.path.join(download_dir, filename)
+                        
+                        # 4. Intercept and download Excel file
+                        with page.expect_download(timeout=20000) as download_info:
+                            export_button = page.locator("text=Exportar Dados")
+                            export_button.click()
+                            
+                        download = download_info.value
+                        download.save_as(filepath)
+                        print(f"Successfully downloaded and saved: {filename} ({os.path.getsize(filepath)} bytes)")
                     
         except Exception as e:
             raise RuntimeError(f"Playwright automation failed or timed out: {e}")
@@ -131,12 +136,13 @@ def main():
         all_dfs = []
         
         for f in files:
-            # Filename is formatted as: "MunicipalityName_Year.xlsx"
-            parts = f.rsplit('_', 1)
-            if len(parts) != 2:
+            # Filename is formatted as: "RegionName__MunicipalityName__Year.xlsx"
+            parts = f.split("__")
+            if len(parts) != 3:
                 continue
-            city_name = parts[0].replace('_', ' ')
-            year = parts[1].split('.')[0]
+            region_name = parts[0].replace('_', ' ')
+            city_name = parts[1].replace('_', ' ')
+            year = parts[2].split('.')[0]
             
             filepath = os.path.join(TEMP_DIR, f)
             wb = openpyxl.load_workbook(filepath)
@@ -147,7 +153,7 @@ def main():
                 # Skip empty rows and the header label row containing 'NATUREZA'
                 if r[0] is not None and str(r[0]).strip().upper() != 'NATUREZA':
                     crime_name = str(r[0]).strip()
-                    row = [city_name.upper(), crime_name]
+                    row = [region_name.upper(), city_name.upper(), crime_name]
                     
                     def clean_val(val):
                         if val is None:
@@ -161,11 +167,11 @@ def main():
                             
             # Convert rows to DataFrames and melt them to long format
             for row, yr in rows_data:
-                cols = ["municipio", "tipo_crime"] + [f"{mes}/{yr[-2:]}" for mes in meses_col]
+                cols = ["regiao", "municipio", "tipo_crime"] + [f"{mes}/{yr[-2:]}" for mes in meses_col]
                 df_single = pd.DataFrame([row], columns=cols)
                 
                 df_long_single = df_single.melt(
-                    id_vars=["municipio", "tipo_crime"],
+                    id_vars=["regiao", "municipio", "tipo_crime"],
                     value_vars=[f"{mes}/{yr[-2:]}" for mes in meses_col],
                     var_name="mes_ano",
                     value_name="ocorrencias"
@@ -216,6 +222,7 @@ def main():
             # Generic Title Case normalization for all other cities/crimes
             return text.title()
         
+        df_long["regiao"] = df_long["regiao"].apply(normalize_text)
         df_long["municipio"] = df_long["municipio"].apply(normalize_text)
         df_long["tipo_crime"] = df_long["tipo_crime"].apply(normalize_text)
         
@@ -229,7 +236,7 @@ def main():
         df_long["mes_idx"] = df_long["mes"].map(mes_ordem)
         df_long["ano_int"] = df_long["ano"].astype(int)
         
-        df_long = df_long.sort_values(by=["municipio", "tipo_crime", "ano_int", "mes_idx"]).reset_index(drop=True)
+        df_long = df_long.sort_values(by=["regiao", "municipio", "tipo_crime", "ano_int", "mes_idx"]).reset_index(drop=True)
         
         # Calculate monthly variations grouped correctly by municipio and crime
         df_long["variacao_mensal"] = df_long.groupby(["municipio", "tipo_crime"])["ocorrencias"].pct_change() * 100
@@ -246,7 +253,7 @@ def main():
         df_long = df_long.drop(columns=["mes_ano", "mes_idx", "ano_int"])
         
         # Reorder columns
-        output_cols = ["id", "municipio", "tipo_crime", "ano", "mes", "ocorrencias", "variacao_mensal"]
+        output_cols = ["id", "regiao", "municipio", "tipo_crime", "ano", "mes", "ocorrencias", "variacao_mensal"]
         df_output = df_long[output_cols]
         
         # Export output to json

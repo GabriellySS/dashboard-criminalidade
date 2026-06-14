@@ -1,5 +1,6 @@
 export interface CrimeRecord {
   id: string;
+  regiao: string;
   ano: string;
   mes: string;
   municipio: string;

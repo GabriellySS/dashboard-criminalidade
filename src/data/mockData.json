@@ -1,42 +1,7 @@
 [
   {
-    "id": "Alto_Alegre_Estupro_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Estupro_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -46,6 +11,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -55,6 +21,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -64,6 +31,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -72,43 +40,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Estupro_De_Vulnerável_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_De_Vulnerável_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_De_Vulnerável_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Alto_Alegre_Estupro_De_Vulnerável_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Estupro_De_Vulnerável_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -118,6 +51,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_De_Vulnerável_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -127,6 +61,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_De_Vulnerável_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -136,6 +71,7 @@
   },
   {
     "id": "Alto_Alegre_Estupro_De_Vulnerável_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -144,43 +80,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Furto_-_Outros_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_-_Outros_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_-_Outros_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_-_Outros_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Furto_-_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -190,6 +91,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_-_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -199,6 +101,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_-_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -208,6 +111,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_-_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -216,43 +120,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Furto_De_Veículo_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_De_Veículo_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_De_Veículo_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Alto_Alegre_Furto_De_Veículo_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Furto_De_Veículo_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -262,6 +131,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_De_Veículo_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -271,6 +141,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_De_Veículo_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -280,6 +151,7 @@
   },
   {
     "id": "Alto_Alegre_Furto_De_Veículo_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -288,43 +160,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Culposo_Outros_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Outros_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Outros_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Outros_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Homicídio_Culposo_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -334,6 +171,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -343,6 +181,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -352,6 +191,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -360,43 +200,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -406,6 +211,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -415,6 +221,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -424,6 +231,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -432,43 +240,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -478,6 +251,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -487,6 +261,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -496,6 +271,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -504,43 +280,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -550,6 +291,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -559,6 +301,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -568,6 +311,7 @@
   },
   {
     "id": "Alto_Alegre_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -576,43 +320,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Latrocínio_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Latrocínio_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Latrocínio_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Latrocínio_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Latrocínio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -622,6 +331,7 @@
   },
   {
     "id": "Alto_Alegre_Latrocínio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -631,6 +341,7 @@
   },
   {
     "id": "Alto_Alegre_Latrocínio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -640,6 +351,7 @@
   },
   {
     "id": "Alto_Alegre_Latrocínio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -648,43 +360,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -694,6 +371,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -703,6 +381,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -712,6 +391,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_-_Outras_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -720,43 +400,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -766,6 +411,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -775,6 +421,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -784,6 +431,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -792,52 +440,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 3,
-    "variacao_mensal": 200.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": -66.67
-  },
-  {
     "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -847,6 +461,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -856,6 +471,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Dolosa_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -864,43 +480,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -910,6 +491,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -919,6 +501,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -928,6 +511,7 @@
   },
   {
     "id": "Alto_Alegre_Lesão_Corporal_Seguida_De_Morte_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -936,43 +520,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -982,6 +531,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -991,6 +541,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -1000,6 +551,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -1008,43 +560,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -1054,6 +571,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -1063,6 +581,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -1072,6 +591,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -1080,43 +600,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -1126,6 +611,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -1135,6 +621,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -1144,6 +631,7 @@
   },
   {
     "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -1152,43 +640,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Roubo_-_Outros_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_-_Outros_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_-_Outros_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_-_Outros_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Roubo_-_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -1198,6 +651,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_-_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -1207,6 +661,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_-_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -1216,6 +671,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_-_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -1224,43 +680,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Roubo_A_Banco_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_A_Banco_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_A_Banco_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_A_Banco_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Roubo_A_Banco_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -1270,6 +691,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_A_Banco_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -1279,6 +701,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_A_Banco_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -1288,6 +711,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_A_Banco_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -1296,43 +720,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Roubo_De_Carga_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Carga_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Carga_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Carga_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Roubo_De_Carga_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -1342,6 +731,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Carga_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -1351,6 +741,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Carga_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -1360,6 +751,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Carga_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -1368,43 +760,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Roubo_De_Veículo_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Veículo_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Veículo_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Roubo_De_Veículo_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Roubo_De_Veículo_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -1414,6 +771,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Veículo_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -1423,6 +781,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Veículo_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -1432,6 +791,7 @@
   },
   {
     "id": "Alto_Alegre_Roubo_De_Veículo_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -1440,43 +800,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Tentativa_De_Homicídio_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Tentativa_De_Homicídio_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Tentativa_De_Homicídio_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Tentativa_De_Homicídio_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Tentativa_De_Homicídio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -1486,6 +811,7 @@
   },
   {
     "id": "Alto_Alegre_Tentativa_De_Homicídio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -1495,6 +821,7 @@
   },
   {
     "id": "Alto_Alegre_Tentativa_De_Homicídio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -1504,6 +831,7 @@
   },
   {
     "id": "Alto_Alegre_Tentativa_De_Homicídio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -1512,43 +840,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -1558,6 +851,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -1567,6 +861,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -1576,6 +871,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -1584,43 +880,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2025_Janeiro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2025_Abril",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2025_Julho",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2025_Outubro",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -1630,6 +891,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -1639,6 +901,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -1648,6 +911,7 @@
   },
   {
     "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -1656,52 +920,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Estupro_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Estupro_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Estupro_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Estupro_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Estupro_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Estupro_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -1711,6 +941,7 @@
   },
   {
     "id": "Andradina_Estupro_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -1720,6 +951,7 @@
   },
   {
     "id": "Andradina_Estupro_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro",
     "ano": "2026",
@@ -1728,43 +960,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Estupro_De_Vulnerável_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Estupro_De_Vulnerável_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Estupro_De_Vulnerável_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Estupro_De_Vulnerável_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Estupro_De_Vulnerável_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -1774,6 +971,7 @@
   },
   {
     "id": "Andradina_Estupro_De_Vulnerável_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -1783,6 +981,7 @@
   },
   {
     "id": "Andradina_Estupro_De_Vulnerável_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -1792,6 +991,7 @@
   },
   {
     "id": "Andradina_Estupro_De_Vulnerável_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
@@ -1800,52 +1000,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Furto_-_Outros_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 55,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Furto_-_Outros_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 28,
-    "variacao_mensal": -49.09
-  },
-  {
-    "id": "Andradina_Furto_-_Outros_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 39,
-    "variacao_mensal": 39.29
-  },
-  {
-    "id": "Andradina_Furto_-_Outros_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 42,
-    "variacao_mensal": 7.69
-  },
-  {
     "id": "Andradina_Furto_-_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 36,
-    "variacao_mensal": -14.29
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Furto_-_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -1855,6 +1021,7 @@
   },
   {
     "id": "Andradina_Furto_-_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -1864,6 +1031,7 @@
   },
   {
     "id": "Andradina_Furto_-_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto - Outros",
     "ano": "2026",
@@ -1872,43 +1040,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Furto_De_Veículo_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Furto_De_Veículo_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": -50.0
-  },
-  {
-    "id": "Andradina_Furto_De_Veículo_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 3,
-    "variacao_mensal": 50.0
-  },
-  {
-    "id": "Andradina_Furto_De_Veículo_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
-  },
-  {
     "id": "Andradina_Furto_De_Veículo_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -1918,6 +1051,7 @@
   },
   {
     "id": "Andradina_Furto_De_Veículo_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -1927,6 +1061,7 @@
   },
   {
     "id": "Andradina_Furto_De_Veículo_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -1936,6 +1071,7 @@
   },
   {
     "id": "Andradina_Furto_De_Veículo_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Furto De Veículo",
     "ano": "2026",
@@ -1944,43 +1080,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Culposo_Outros_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Outros_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Outros_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Outros_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Homicídio_Culposo_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -1990,6 +1091,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -1999,6 +1101,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -2008,6 +1111,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Outros",
     "ano": "2026",
@@ -2016,43 +1120,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -2062,6 +1131,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -2071,6 +1141,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -2080,6 +1151,7 @@
   },
   {
     "id": "Andradina_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
     "ano": "2026",
@@ -2088,43 +1160,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_(2)_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_(2)_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_(2)_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_(2)_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Homicídio_Doloso_(2)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -2134,6 +1171,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_(2)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -2143,6 +1181,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_(2)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -2152,6 +1191,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_(2)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2026",
@@ -2160,43 +1200,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2206,6 +1211,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2215,6 +1221,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2224,6 +1231,7 @@
   },
   {
     "id": "Andradina_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2232,43 +1240,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Latrocínio_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Latrocínio_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Latrocínio_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Latrocínio_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Latrocínio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -2278,6 +1251,7 @@
   },
   {
     "id": "Andradina_Latrocínio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -2287,6 +1261,7 @@
   },
   {
     "id": "Andradina_Latrocínio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -2296,6 +1271,7 @@
   },
   {
     "id": "Andradina_Latrocínio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Latrocínio",
     "ano": "2026",
@@ -2304,43 +1280,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
     "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -2350,6 +1291,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -2359,6 +1301,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -2368,6 +1311,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_-_Outras_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa - Outras",
     "ano": "2026",
@@ -2376,52 +1320,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 28,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 30,
-    "variacao_mensal": 7.14
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 19,
-    "variacao_mensal": -36.67
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 23,
-    "variacao_mensal": 21.05
-  },
-  {
     "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 22,
-    "variacao_mensal": -4.35
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -2431,6 +1341,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -2440,6 +1351,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
@@ -2448,52 +1360,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Lesão_Corporal_Dolosa_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 36,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Dolosa_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 22,
-    "variacao_mensal": -38.89
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Dolosa_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 19,
-    "variacao_mensal": -13.64
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Dolosa_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 14,
-    "variacao_mensal": -26.32
-  },
-  {
     "id": "Andradina_Lesão_Corporal_Dolosa_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 13,
-    "variacao_mensal": -7.14
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Lesão_Corporal_Dolosa_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -2503,6 +1381,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Dolosa_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -2512,6 +1391,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Dolosa_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
@@ -2520,43 +1400,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -2566,6 +1411,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -2575,6 +1421,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -2584,6 +1431,7 @@
   },
   {
     "id": "Andradina_Lesão_Corporal_Seguida_De_Morte_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
@@ -2592,43 +1440,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -2638,6 +1451,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -2647,6 +1461,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -2656,6 +1471,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
@@ -2664,43 +1480,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2710,6 +1491,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2719,6 +1501,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2728,6 +1511,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
@@ -2736,43 +1520,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -2782,6 +1531,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -2791,6 +1541,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -2800,6 +1551,7 @@
   },
   {
     "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
@@ -2808,52 +1560,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Roubo_-_Outros_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_-_Outros_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -75.0
-  },
-  {
-    "id": "Andradina_Roubo_-_Outros_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Roubo_-_Outros_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Roubo_-_Outros_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Roubo_-_Outros_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -2863,6 +1581,7 @@
   },
   {
     "id": "Andradina_Roubo_-_Outros_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -2872,6 +1591,7 @@
   },
   {
     "id": "Andradina_Roubo_-_Outros_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
@@ -2880,43 +1600,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Roubo_A_Banco_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_A_Banco_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_A_Banco_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_A_Banco_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Roubo_A_Banco_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -2926,6 +1611,7 @@
   },
   {
     "id": "Andradina_Roubo_A_Banco_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -2935,6 +1621,7 @@
   },
   {
     "id": "Andradina_Roubo_A_Banco_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -2944,6 +1631,7 @@
   },
   {
     "id": "Andradina_Roubo_A_Banco_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
@@ -2952,43 +1640,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Roubo_De_Carga_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Carga_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Carga_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Carga_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Roubo_De_Carga_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -2998,6 +1651,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Carga_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -3007,6 +1661,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Carga_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -3016,6 +1671,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Carga_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
@@ -3024,43 +1680,8 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Roubo_De_Veículo_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Veículo_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Veículo_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Roubo_De_Veículo_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Roubo_De_Veículo_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -3070,6 +1691,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Veículo_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -3079,6 +1701,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Veículo_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -3088,6 +1711,7 @@
   },
   {
     "id": "Andradina_Roubo_De_Veículo_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
@@ -3096,52 +1720,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Tentativa_De_Homicídio_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Tentativa_De_Homicídio_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Tentativa_De_Homicídio_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Tentativa_De_Homicídio_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Tentativa_De_Homicídio_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Tentativa_De_Homicídio_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -3151,6 +1741,7 @@
   },
   {
     "id": "Andradina_Tentativa_De_Homicídio_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -3160,6 +1751,7 @@
   },
   {
     "id": "Andradina_Tentativa_De_Homicídio_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
@@ -3168,52 +1760,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Total_De_Estupro_(4)_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -66.67
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 3,
-    "variacao_mensal": 200.0
-  },
-  {
     "id": "Andradina_Total_De_Estupro_(4)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 2,
-    "variacao_mensal": -33.33
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Total_De_Estupro_(4)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -3223,6 +1781,7 @@
   },
   {
     "id": "Andradina_Total_De_Estupro_(4)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -3232,6 +1791,7 @@
   },
   {
     "id": "Andradina_Total_De_Estupro_(4)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
@@ -3240,52 +1800,18 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2025_Janeiro",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2025_Abril",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -75.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2025_Julho",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2025_Outubro",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
     "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Abril",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -3295,6 +1821,7 @@
   },
   {
     "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Julho",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -3304,6 +1831,7 @@
   },
   {
     "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
+    "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
@@ -3312,53 +1840,19 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Estupro_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Estupro_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Estupro_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 4,
-    "variacao_mensal": 33.33
-  },
-  {
-    "id": "Araçatuba_Estupro_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": -75.0
-  },
-  {
-    "id": "Araçatuba_Estupro_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Estupro_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Estupro",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Estupro_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Estupro_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Estupro",
     "ano": "2026",
     "mes": "Abril",
@@ -3366,8 +1860,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Estupro_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Estupro_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Estupro",
     "ano": "2026",
     "mes": "Julho",
@@ -3375,8 +1870,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Estupro_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Estupro_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Estupro",
     "ano": "2026",
     "mes": "Outubro",
@@ -3384,710 +1880,389 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 5,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -80.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 9,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Estupro_De_Vulnerável_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Estupro De Vulnerável",
     "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": -88.89
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 6,
-    "variacao_mensal": 500.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Estupro_De_Vulnerável_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Estupro De Vulnerável",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 234,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 235,
-    "variacao_mensal": 0.43
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 183,
-    "variacao_mensal": -22.13
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 168,
-    "variacao_mensal": -8.2
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 162,
-    "variacao_mensal": -3.57
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 176,
-    "variacao_mensal": 8.64
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Furto_-_Outros_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto - Outros",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 7,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 6,
-    "variacao_mensal": -14.29
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 6,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 5,
-    "variacao_mensal": -16.67
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 6,
-    "variacao_mensal": 20.0
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 14,
-    "variacao_mensal": 133.33
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Furto_De_Veículo_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Outros_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Outros",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
     "mes": "Janeiro",
     "ocorrencias": 2,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
+    "id": "Agudos_Estupro_De_Vulnerável_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
+    "id": "Agudos_Estupro_De_Vulnerável_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
     "mes": "Julho",
-    "ocorrencias": 3,
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Estupro_De_Vulnerável_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_-_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 28,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_-_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 15,
+    "variacao_mensal": -46.43
+  },
+  {
+    "id": "Agudos_Furto_-_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Agudos_Furto_-_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_De_Veículo_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_De_Veículo_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_De_Veículo_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Furto_De_Veículo_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Agudos_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_(2)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_(2)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_(2)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_(2)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Latrocínio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Latrocínio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Latrocínio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Latrocínio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_-_Outras_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_-_Outras_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_-_Outras_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_-_Outras_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 6,
     "variacao_mensal": 200.0
   },
   {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": 33.33
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": 100.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": -75.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_(2)_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Latrocínio_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Latrocínio",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 3,
-    "variacao_mensal": 200.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_-_Outras_2026_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa - Outras",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 58,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 80,
-    "variacao_mensal": 37.93
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 114,
-    "variacao_mensal": 42.5
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 66,
-    "variacao_mensal": -42.11
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 70,
-    "variacao_mensal": 6.06
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 82,
-    "variacao_mensal": 17.14
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Julho",
@@ -4095,8 +2270,9 @@
     "variacao_mensal": -100.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Outubro",
@@ -4104,62 +2280,29 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2025_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Dolosa_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
+    "ano": "2026",
     "mes": "Janeiro",
-    "ocorrencias": 59,
+    "ocorrencias": 18,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 73,
-    "variacao_mensal": 23.73
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 66,
-    "variacao_mensal": -9.59
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 79,
-    "variacao_mensal": 19.7
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Dolosa",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 63,
-    "variacao_mensal": -20.25
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Dolosa_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 89,
-    "variacao_mensal": 41.27
+    "ocorrencias": 13,
+    "variacao_mensal": -27.78
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Dolosa_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Julho",
@@ -4167,8 +2310,9 @@
     "variacao_mensal": -100.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Dolosa_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Dolosa_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Outubro",
@@ -4176,44 +2320,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Lesão Corporal Seguida De Morte",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Seguida_De_Morte_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4221,8 +2330,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Seguida_De_Morte_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
     "mes": "Abril",
@@ -4230,8 +2340,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Seguida_De_Morte_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
     "mes": "Julho",
@@ -4239,8 +2350,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Lesão_Corporal_Seguida_De_Morte_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Lesão_Corporal_Seguida_De_Morte_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Lesão Corporal Seguida De Morte",
     "ano": "2026",
     "mes": "Outubro",
@@ -4248,53 +2360,19 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": 100.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
     "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": -75.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
     "mes": "Abril",
@@ -4302,8 +2380,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
     "mes": "Julho",
@@ -4311,8 +2390,9 @@
     "variacao_mensal": -100.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
     "ano": "2026",
     "mes": "Outubro",
@@ -4320,44 +2400,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4365,8 +2410,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Abril",
@@ -4374,8 +2420,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Julho",
@@ -4383,8 +2430,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
     "ano": "2026",
     "mes": "Outubro",
@@ -4392,44 +2440,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4437,8 +2450,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
     "mes": "Abril",
@@ -4446,8 +2460,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
     "mes": "Julho",
@@ -4455,8 +2470,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Nº De Vítimas Em Latrocínio",
     "ano": "2026",
     "mes": "Outubro",
@@ -4464,71 +2480,39 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_-_Outros_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 7,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_-_Outros_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 10,
-    "variacao_mensal": 42.86
-  },
-  {
-    "id": "Araçatuba_Roubo_-_Outros_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 10,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_-_Outros_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo - Outros",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": -60.0
-  },
-  {
-    "id": "Araçatuba_Roubo_-_Outros_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_-_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
     "mes": "Janeiro",
-    "ocorrencias": 5,
-    "variacao_mensal": 25.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_-_Outros_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_-_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 6,
-    "variacao_mensal": 20.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_-_Outros_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_-_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_-_Outros_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_-_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo - Outros",
     "ano": "2026",
     "mes": "Outubro",
@@ -4536,44 +2520,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_A_Banco_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_A_Banco_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_A_Banco_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_A_Banco_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo A Banco",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_A_Banco_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_A_Banco_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4581,8 +2530,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_A_Banco_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_A_Banco_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
     "mes": "Abril",
@@ -4590,8 +2540,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_A_Banco_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_A_Banco_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
     "mes": "Julho",
@@ -4599,8 +2550,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_A_Banco_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_A_Banco_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo A Banco",
     "ano": "2026",
     "mes": "Outubro",
@@ -4608,44 +2560,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Carga_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Carga_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Carga_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Carga_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Carga",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Carga_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Carga_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4653,8 +2570,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Carga_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Carga_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
     "mes": "Abril",
@@ -4662,8 +2580,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Carga_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Carga_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
     "mes": "Julho",
@@ -4671,8 +2590,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Carga_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Carga_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Carga",
     "ano": "2026",
     "mes": "Outubro",
@@ -4680,44 +2600,9 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Veículo_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Veículo_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Veículo_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Veículo_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Roubo_De_Veículo_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Veículo_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
     "mes": "Janeiro",
@@ -4725,26 +2610,29 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Veículo_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Veículo_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 1,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Veículo_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Veículo_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Roubo_De_Veículo_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Roubo_De_Veículo_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2026",
     "mes": "Outubro",
@@ -4752,71 +2640,39 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 5,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 2,
-    "variacao_mensal": -33.33
-  },
-  {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Tentativa_De_Homicídio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
     "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Tentativa_De_Homicídio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 100.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Tentativa_De_Homicídio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Tentativa_De_Homicídio_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Tentativa_De_Homicídio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Tentativa De Homicídio",
     "ano": "2026",
     "mes": "Outubro",
@@ -4824,71 +2680,959 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2025_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Agudos_Total_De_Estupro_(4)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
     "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Estupro_(4)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Agudos_Total_De_Estupro_(4)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Estupro_(4)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Roubo - Outros (1)",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Roubo_-_Outros_(1)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Roubo - Outros (1)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Roubo_-_Outros_(1)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Roubo - Outros (1)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Agudos_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Agudos",
+    "tipo_crime": "Total De Roubo - Outros (1)",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_De_Vulnerável_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_De_Vulnerável_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_De_Vulnerável_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Estupro_De_Vulnerável_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Estupro De Vulnerável",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_-_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_-_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_-_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_-_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto - Outros",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_De_Veículo_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_De_Veículo_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_De_Veículo_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Furto_De_Veículo_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Outros",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Culposo_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Culposo Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_(2)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_(2)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_(2)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_(2)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Latrocínio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Latrocínio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Latrocínio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Latrocínio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Latrocínio",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_-_Outras_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_-_Outras_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_-_Outras_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_-_Outras_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa - Outras",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Culposa_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Culposa Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Dolosa_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Dolosa",
+    "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 5,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Dolosa_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Dolosa",
+    "ano": "2026",
     "mes": "Abril",
     "ocorrencias": 4,
     "variacao_mensal": -20.0
   },
   {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 10,
-    "variacao_mensal": 150.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2026_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": -90.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2026_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 6,
-    "variacao_mensal": 500.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2026_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Estupro (4)",
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Dolosa_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Dolosa",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
     "variacao_mensal": -100.0
   },
   {
-    "id": "Araçatuba_Total_De_Estupro_(4)_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Dolosa_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Dolosa",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Seguida_De_Morte_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Seguida De Morte",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Seguida_De_Morte_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Seguida De Morte",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Seguida_De_Morte_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Seguida De Morte",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Lesão_Corporal_Seguida_De_Morte_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Lesão Corporal Seguida De Morte",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Latrocínio",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Latrocínio",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Latrocínio",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Nº De Vítimas Em Latrocínio",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_-_Outros_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo - Outros",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_-_Outros_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo - Outros",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_-_Outros_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo - Outros",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_-_Outros_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo - Outros",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_A_Banco_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo A Banco",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_A_Banco_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo A Banco",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_A_Banco_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo A Banco",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_A_Banco_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo A Banco",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Carga_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Carga",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Carga_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Carga",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Carga_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Carga",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Carga_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Carga",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Veículo_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Veículo_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Veículo_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Roubo_De_Veículo_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Tentativa_De_Homicídio_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Tentativa De Homicídio",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Tentativa_De_Homicídio_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Tentativa De Homicídio",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Tentativa_De_Homicídio_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Tentativa De Homicídio",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Tentativa_De_Homicídio_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Tentativa De Homicídio",
+    "ano": "2026",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Total_De_Estupro_(4)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Total_De_Estupro_(4)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Total_De_Estupro_(4)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
+    "tipo_crime": "Total De Estupro (4)",
+    "ano": "2026",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Álvaro_De_Carvalho_Total_De_Estupro_(4)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
     "tipo_crime": "Total De Estupro (4)",
     "ano": "2026",
     "mes": "Outubro",
@@ -4896,71 +3640,39 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2025_Janeiro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Janeiro",
-    "ocorrencias": 7,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2025_Abril",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Abril",
-    "ocorrencias": 10,
-    "variacao_mensal": 42.86
-  },
-  {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2025_Julho",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Julho",
-    "ocorrencias": 10,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2025_Outubro",
-    "municipio": "Araçatuba",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2025",
-    "mes": "Outubro",
-    "ocorrencias": 4,
-    "variacao_mensal": -60.0
-  },
-  {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
-    "municipio": "Araçatuba",
+    "id": "Álvaro_De_Carvalho_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Janeiro",
-    "ocorrencias": 5,
-    "variacao_mensal": 25.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2026_Abril",
-    "municipio": "Araçatuba",
+    "id": "Álvaro_De_Carvalho_Total_De_Roubo_-_Outros_(1)_2026_Abril",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Abril",
-    "ocorrencias": 6,
-    "variacao_mensal": 20.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2026_Julho",
-    "municipio": "Araçatuba",
+    "id": "Álvaro_De_Carvalho_Total_De_Roubo_-_Outros_(1)_2026_Julho",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
-    "variacao_mensal": -100.0
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Araçatuba_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
-    "municipio": "Araçatuba",
+    "id": "Álvaro_De_Carvalho_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
+    "regiao": "Bauru",
+    "municipio": "Álvaro De Carvalho",
     "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Outubro",

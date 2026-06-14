@@ -15,15 +15,19 @@ interface CrimeDistributionChartProps {
   isLoading?: boolean;
 }
 
-// Flat Design 2.0 Solid Colors for Crime Categories
-const CRIME_COLORS: Record<string, string> = {
-  'Furtos': '#3B82F6',           // Flat Blue
-  'Roubo de Veículos': '#10B981',  // Flat Emerald
-  'Homicídios Dolosos': '#EF4444', // Flat Red
-};
+// Flat Design 2.0 Colors for Top 4 crimes
+const PRESET_COLORS = [
+  '#3B82F6', // Blue
+  '#10B981', // Emerald
+  '#F59E0B', // Amber
+  '#8B5CF6', // Violet
+];
+
+// Color for the aggregated "Outros" category
+const OUTROS_COLOR = '#64748B'; // Slate Gray
 
 // Default fallback color
-const DEFAULT_COLOR = '#64748B';
+const DEFAULT_COLOR = '#94A3B8';
 
 // Custom Tooltip component defined outside render to prevent re-creation/lint warnings
 interface CustomTooltipProps {
@@ -65,16 +69,39 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
     totalOccurrences += item.ocorrencias;
   });
 
-  // 2. Prepare chart data
-  const chartData = Object.entries(groupMap).map(([crime, occurrences]) => {
-    const percentage = totalOccurrences > 0 ? (occurrences / totalOccurrences) * 100 : 0;
-    return {
-      name: crime,
-      value: occurrences,
+  // 2. Sort all crimes descending by occurrences
+  const sortedRawData = Object.entries(groupMap)
+    .map(([crime, value]) => ({ name: crime, value }))
+    .sort((a, b) => b.value - a.value);
+
+  // 3. Keep top 4 and group the rest into "Outros"
+  const top4 = sortedRawData.slice(0, 4);
+  const othersRaw = sortedRawData.slice(4);
+
+  const chartData: Array<{ name: string; value: number; percentage: number; color: string }> = [];
+
+  // Add top 4 elements
+  top4.forEach((entry, idx) => {
+    const percentage = totalOccurrences > 0 ? (entry.value / totalOccurrences) * 100 : 0;
+    chartData.push({
+      name: entry.name,
+      value: entry.value,
       percentage,
-      color: CRIME_COLORS[crime] || DEFAULT_COLOR,
-    };
-  }).sort((a, b) => b.value - a.value); // Sort descending
+      color: PRESET_COLORS[idx] || DEFAULT_COLOR,
+    });
+  });
+
+  // Aggregate others if present
+  if (othersRaw.length > 0) {
+    const othersValue = othersRaw.reduce((sum, item) => sum + item.value, 0);
+    const othersPercentage = totalOccurrences > 0 ? (othersValue / totalOccurrences) * 100 : 0;
+    chartData.push({
+      name: 'Outros',
+      value: othersValue,
+      percentage: othersPercentage,
+      color: OUTROS_COLOR,
+    });
+  }
 
   return (
     <div className={styles.chartContainer}>
