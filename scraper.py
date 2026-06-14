@@ -233,6 +233,16 @@ def main():
         df_long = df_long[~df_long["tipo_crime"].str.startswith(("Total ", "Total De "))]
         df_long = df_long[~df_long["tipo_crime"].str.startswith(("Nº De Vítimas", "N° De Vítimas"))]
         
+        # 3. DICIONÁRIO DE PADRONIZAÇÃO (UX)
+        tipo_crime_mapping = {
+            "Furto - Outros": "Furto (Geral)",
+            "Roubo - Outros": "Roubo (Geral)",
+            "Homicídio Culposo Outros": "Homicídio Culposo",
+            "Lesão Corporal Culposa - Outras": "Lesão Corporal Culposa",
+        }
+        df_long["tipo_crime"] = df_long["tipo_crime"].replace(tipo_crime_mapping)
+        df_long["tipo_crime"] = df_long["tipo_crime"].str.replace("Por Acidente De Trânsito", "(Trânsito)", regex=False)
+        
         # Chronological sorting for monthly variations
         mes_ordem = {
             "Janeiro": 1,

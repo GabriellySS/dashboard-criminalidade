@@ -40,6 +40,13 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
   - **Remoção de Lixo:** Utilizar Expressões Regulares (Regex) para remover qualquer número entre parênteses no final das strings (ex: ` (1)`, ` (2)`).
   - **Prevenção de Dupla Contagem:** O Pandas deve excluir (dropar) sumariamente qualquer linha onde a coluna `tipo_crime` comece com a palavra "Total".
   - **Isolamento de Métricas:** O Pandas deve excluir sumariamente qualquer linha onde a coluna `tipo_crime` comece com "Nº De Vítimas" ou "N° De Vítimas". Apenas as ocorrências base (BOs) devem permanecer no dataset.
+5. **Dicionário de Padronização (De -> Para):**
+  - Aplicar substituições exatas (replace) nas strings para melhorar a UX do painel:
+    - "Furto - Outros" -> "Furto (Geral)"
+    - "Roubo - Outros" -> "Roubo (Geral)"
+    - "Homicídio Culposo Outros" -> "Homicídio Culposo"
+    - "Lesão Corporal Culposa - Outras" -> "Lesão Corporal Culposa"
+    - "Por Acidente De Trânsito" -> "(Trânsito)"
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.
