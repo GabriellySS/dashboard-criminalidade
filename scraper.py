@@ -5,6 +5,7 @@ import unicodedata
 import numpy as np
 import pandas as pd
 import openpyxl
+# pyrefly: ignore [missing-import]
 from playwright.sync_api import sync_playwright
 
 # Define paths
