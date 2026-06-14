@@ -35,6 +35,11 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
    - A planilha oficial da SSP-SP lista dezenas de crimes em suas linhas. O script deve parar de filtrar tipos específicos.
    - **Sanitização Universal:** A função `normalize_text` deve aplicar um `Title Case` robusto (ex: "HOMICÍDIO DOLOSO" vira "Homicídio Doloso") e remover espaços em branco invisíveis (`strip()`) em toda e qualquer string da coluna `tipo_crime`.
 3. **Concatenação Massiva:** O Pandas deve ler o `TEMP_DIR`, agrupar os milhares de arquivos por Município e Crime, mantendo a série histórica de todos os anos contínua, e exportar o JSON.
+4. **Higienização de Tipos de Crime (Pandas ETL):**
+  - O script deve limpar os nomes dos crimes ANTES de exportar o JSON.
+  - **Remoção de Lixo:** Utilizar Expressões Regulares (Regex) para remover qualquer número entre parênteses no final das strings (ex: ` (1)`, ` (2)`).
+  - **Prevenção de Dupla Contagem:** O Pandas deve excluir (dropar) sumariamente qualquer linha onde a coluna `tipo_crime` comece com a palavra "Total".
+  - **Isolamento de Métricas:** O Pandas deve excluir sumariamente qualquer linha onde a coluna `tipo_crime` comece com "Nº De Vítimas" ou "N° De Vítimas". Apenas as ocorrências base (BOs) devem permanecer no dataset.
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.

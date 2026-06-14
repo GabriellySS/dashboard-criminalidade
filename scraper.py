@@ -226,6 +226,13 @@ def main():
         df_long["municipio"] = df_long["municipio"].apply(normalize_text)
         df_long["tipo_crime"] = df_long["tipo_crime"].apply(normalize_text)
         
+        # 1. REMOÇÃO DE NOTAS DE RODAPÉ
+        df_long["tipo_crime"] = df_long["tipo_crime"].str.replace(r"\s*\(\d+\)", "", regex=True).str.strip()
+        
+        # 2. FILTRAGEM DE LINHAS INVÁLIDAS
+        df_long = df_long[~df_long["tipo_crime"].str.startswith(("Total ", "Total De "))]
+        df_long = df_long[~df_long["tipo_crime"].str.startswith(("Nº De Vítimas", "N° De Vítimas"))]
+        
         # Chronological sorting for monthly variations
         mes_ordem = {
             "Janeiro": 1,

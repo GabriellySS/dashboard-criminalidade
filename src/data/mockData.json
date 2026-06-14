@@ -240,40 +240,40 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Janeiro",
+    "id": "Alto_Alegre_Homicídio_Doloso_2026_Janeiro",
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Abril",
+    "id": "Alto_Alegre_Homicídio_Doloso_2026_Abril",
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Abril",
     "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Julho",
+    "id": "Alto_Alegre_Homicídio_Doloso_2026_Julho",
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2026_Outubro",
+    "id": "Alto_Alegre_Homicídio_Doloso_2026_Outubro",
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Outubro",
     "ocorrencias": 0,
@@ -520,126 +520,6 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Alto_Alegre_Roubo_-_Outros_2026_Janeiro",
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
@@ -834,86 +714,6 @@
     "regiao": "Araçatuba",
     "municipio": "Alto Alegre",
     "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Estupro_(4)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Alto_Alegre_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Alto Alegre",
-    "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Outubro",
     "ocorrencias": 0,
@@ -1160,40 +960,40 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_(2)_2026_Janeiro",
+    "id": "Andradina_Homicídio_Doloso_2026_Janeiro",
     "regiao": "Araçatuba",
     "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Janeiro",
     "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_(2)_2026_Abril",
+    "id": "Andradina_Homicídio_Doloso_2026_Abril",
     "regiao": "Araçatuba",
     "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Abril",
     "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_(2)_2026_Julho",
+    "id": "Andradina_Homicídio_Doloso_2026_Julho",
     "regiao": "Araçatuba",
     "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Julho",
     "ocorrencias": 0,
     "variacao_mensal": -100.0
   },
   {
-    "id": "Andradina_Homicídio_Doloso_(2)_2026_Outubro",
+    "id": "Andradina_Homicídio_Doloso_2026_Outubro",
     "regiao": "Araçatuba",
     "municipio": "Andradina",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "tipo_crime": "Homicídio Doloso",
     "ano": "2026",
     "mes": "Outubro",
     "ocorrencias": 0,
@@ -1440,126 +1240,6 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_(3)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso (3)",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Homicídio_Doloso_Por_Acidente_De_Trânsito_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Homicídio Doloso Por Acidente De Trânsito",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Nº_De_Vítimas_Em_Latrocínio_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Nº De Vítimas Em Latrocínio",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
     "id": "Andradina_Roubo_-_Outros_2026_Janeiro",
     "regiao": "Araçatuba",
     "municipio": "Andradina",
@@ -1754,86 +1434,6 @@
     "regiao": "Araçatuba",
     "municipio": "Andradina",
     "tipo_crime": "Tentativa De Homicídio",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 4,
-    "variacao_mensal": 100.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Total_De_Estupro_(4)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Estupro (4)",
-    "ano": "2026",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Janeiro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Janeiro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Abril",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Abril",
-    "ocorrencias": 3,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Julho",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
-    "ano": "2026",
-    "mes": "Julho",
-    "ocorrencias": 0,
-    "variacao_mensal": -100.0
-  },
-  {
-    "id": "Andradina_Total_De_Roubo_-_Outros_(1)_2026_Outubro",
-    "regiao": "Araçatuba",
-    "municipio": "Andradina",
-    "tipo_crime": "Total De Roubo - Outros (1)",
     "ano": "2026",
     "mes": "Outubro",
     "ocorrencias": 0,
