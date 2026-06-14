@@ -71,8 +71,22 @@ A interface adota um design focado em dados, limpo e de alto contraste.
 * **TrendChart:** Gráfico de área limpo. A linha deve usar `var(--color-accent)` e o preenchimento da área deve ser muito sutil, usando `var(--color-accent-light)`.
 * **RegionTable (Novo):** Tabela de dados estatísticos inserida abaixo do gráfico, contendo as colunas: Região, Ocorrências, Variação, Status e Ações. Segue a mesma lógica de bordas finas do sistema.
 
-## 5. Instruções de Execução para o Agente
-1. Leia as regras de UI atualizadas.
-2. Refatore os arquivos `.module.css` existentes para remover qualquer estilo neomórfico residual e aplicar o padrão de bordas do Flat Design.
-3. Atualize os componentes React para corresponder à nova estrutura (adicionando os badges nos cards).
-4. Crie o novo componente estático `RegionTable.tsx` e `RegionTable.module.css`.
+## 5. Gerenciamento de Estado e Lógica (React Hooks)
+O componente principal (`src/App.tsx`) atua como o controlador de estado (State Controller) e deve implementar a seguinte arquitetura de dados:
+
+1. **Estados Globais (useState):**
+   - `municipioSelecionado` (Valor inicial: 'Todos')
+   - `crimeSelecionado` (Valor inicial: 'Todos')
+   - `anoSelecionado` (Valor inicial: 'Todos')
+
+2. **Filtragem de Dados (useMemo):**
+   - Importe os dados de `src/data/mockData.json`.
+   - Crie uma constante `dadosFiltrados` usando `useMemo`. Ela deve filtrar o JSON e retornar apenas os registros que satisfaçam os três filtros simultaneamente. 
+   - Regra importante: Se o estado de um filtro for 'Todos', ele não deve restringir a busca.
+
+3. **Prop Drilling e Consumo (Interfaces TypeScript):**
+   - **`FilterBar`**: Deve receber os valores dos estados atuais e as funções atualizadoras (ex: `setMunicipioSelecionado`) para permitir que o usuário altere as seleções.
+   - **`StatCards`**: Deve receber métricas calculadas derivadas de `dadosFiltrados` (Total de ocorrências e valores para as tags de variação).
+   - **`TrendChart`**: Deve receber os `dadosFiltrados` para renderizar as linhas do gráfico dinamicamente.
+   - **`RegionTable`**: Deve receber os `dadosFiltrados` para exibir as linhas da tabela de forma correspondente ao que está no gráfico.
+   - Crie as interfaces (`interface Props { ... }`) em cada componente para tipar os dados recebidos.

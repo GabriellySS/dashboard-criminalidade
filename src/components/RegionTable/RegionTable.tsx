@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
+import type { CrimeRecord } from '../../types';
 import styles from './RegionTable.module.css';
 
-interface RegionData {
+interface RegionTableProps {
+  data: CrimeRecord[];
+}
+
+interface RegionRow {
   regiao: string;
   ocorrencias: number;
   variacao: string;
@@ -10,18 +15,65 @@ interface RegionData {
   status: 'Atenção' | 'Estável';
 }
 
-const INITIAL_DATA: RegionData[] = [
-  { regiao: '1ª Seccional - Centro', ocorrencias: 1245, variacao: '↑ 4.2%', isUp: true, status: 'Atenção' },
-  { regiao: '2ª Seccional - Sul', ocorrencias: 892, variacao: '↓ 2.1%', isUp: false, status: 'Estável' },
-  { regiao: '3ª Seccional - Oeste', ocorrencias: 654, variacao: '↓ 5.8%', isUp: false, status: 'Estável' },
-];
-
-export const RegionTable: React.FC = () => {
+export const RegionTable: React.FC<RegionTableProps> = ({ data }) => {
   const [search, setSearch] = useState('');
 
-  const filteredData = INITIAL_DATA.filter((item) =>
-    item.regiao.toLowerCase().includes(search.toLowerCase())
-  );
+  // Dynamically calculate seccional values based on filtered data
+  const tableRows = useMemo(() => {
+    const spTotal = data
+      .filter((item) => item.municipio === 'São Paulo')
+      .reduce((sum, item) => sum + item.ocorrencias, 0);
+
+    const cotiaTotal = data
+      .filter((item) => item.municipio === 'Cotia')
+      .reduce((sum, item) => sum + item.ocorrencias, 0);
+
+    const rows: RegionRow[] = [];
+
+    if (spTotal > 0) {
+      rows.push(
+        {
+          regiao: '1ª Seccional - Centro',
+          ocorrencias: Math.round(spTotal * 0.4),
+          variacao: '↑ 4.2%',
+          isUp: true,
+          status: 'Atenção',
+        },
+        {
+          regiao: '2ª Seccional - Sul',
+          ocorrencias: Math.round(spTotal * 0.35),
+          variacao: '↓ 2.1%',
+          isUp: false,
+          status: 'Estável',
+        },
+        {
+          regiao: '3ª Seccional - Oeste',
+          ocorrencias: Math.round(spTotal * 0.25),
+          variacao: '↓ 5.8%',
+          isUp: false,
+          status: 'Estável',
+        }
+      );
+    }
+
+    if (cotiaTotal > 0) {
+      rows.push({
+        regiao: 'Delegacia Seccional de Cotia',
+        ocorrencias: cotiaTotal,
+        variacao: '↓ 8.5%',
+        isUp: false,
+        status: 'Estável',
+      });
+    }
+
+    return rows;
+  }, [data]);
+
+  const filteredData = useMemo(() => {
+    return tableRows.filter((item) =>
+      item.regiao.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [tableRows, search]);
 
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat('pt-BR').format(num);

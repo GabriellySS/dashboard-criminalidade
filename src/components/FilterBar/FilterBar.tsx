@@ -3,24 +3,24 @@ import { Filter } from 'lucide-react';
 import styles from './FilterBar.module.css';
 
 interface FilterBarProps {
-  municipio: string;
-  setMunicipio: (m: string) => void;
-  tipoCrime: string;
-  setTipoCrime: (t: string) => void;
-  ano: string;
-  setAno: (a: string) => void;
+  municipioSelecionado: string;
+  setMunicipioSelecionado: (m: string) => void;
+  crimeSelecionado: string;
+  setCrimeSelecionado: (c: string) => void;
+  anoSelecionado: string;
+  setAnoSelecionado: (a: string) => void;
   municipiosList: string[];
   tiposCrimeList: string[];
   anosList: string[];
 }
 
 export const FilterBar: React.FC<FilterBarProps> = ({
-  municipio,
-  setMunicipio,
-  tipoCrime,
-  setTipoCrime,
-  ano,
-  setAno,
+  municipioSelecionado,
+  setMunicipioSelecionado,
+  crimeSelecionado,
+  setCrimeSelecionado,
+  anoSelecionado,
+  setAnoSelecionado,
   municipiosList,
   tiposCrimeList,
   anosList,
@@ -32,8 +32,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <select
           id="municipio-select"
           className={styles.select}
-          value={municipio}
-          onChange={(e) => setMunicipio(e.target.value)}
+          value={municipioSelecionado}
+          onChange={(e) => setMunicipioSelecionado(e.target.value)}
         >
           <option value="Todos">Todos os Municípios</option>
           {municipiosList.map((m) => (
@@ -49,8 +49,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <select
           id="crime-select"
           className={styles.select}
-          value={tipoCrime}
-          onChange={(e) => setTipoCrime(e.target.value)}
+          value={crimeSelecionado}
+          onChange={(e) => setCrimeSelecionado(e.target.value)}
         >
           <option value="Todos">Todos os Crimes</option>
           {tiposCrimeList.map((t) => (
@@ -66,8 +66,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <select
           id="ano-select"
           className={styles.select}
-          value={ano}
-          onChange={(e) => setAno(e.target.value)}
+          value={anoSelecionado}
+          onChange={(e) => setAnoSelecionado(e.target.value)}
         >
           <option value="Todos">Todos os Anos</option>
           {anosList.map((a) => (
