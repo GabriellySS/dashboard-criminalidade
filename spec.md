@@ -80,6 +80,15 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
     - Card Frequente: Substituir por um ícone de alerta ou foco (ex: `AlertCircle` ou `Target`).
     - Card Média: Substituir por um ícone de calendário ou calculadora (ex: `Calendar` ou `Calculator`).
   - **Lógica da Porcentagem (Badge):** A porcentagem (badge verde/vermelho) no Card de Total deve ser calculada dinamicamente. Ela deve comparar o Total de Ocorrências do período atualmente selecionado com o período equivalente anterior. Se não houver dados anteriores para comparar, a badge não deve ser renderizada na tela.
+  * **Tabela de Dados (Data Grid):**
+  - Renomear o componente de "Detalhamento por Região" para "Detalhamento de Ocorrências".
+  - O subtítulo deve refletir o nível de detalhe atual do filtro (ex: "Análise granular das ocorrências registradas").
+  - **Colunas:** 1. `Município / Crime` (Exibe o nome do município ou do tipo de crime, dependendo do que estiver agrupado).
+    2. `Ocorrências` (Valor absoluto).
+    3. `Variação (Mês)` (Valor da coluna `variacao_mensal` gerada pelo Python).
+    4. `Status` (Badge visual: Vermelho com texto "Alerta" se variação > 0; Verde com texto "Estável/Queda" se variação <= 0).
+  - A tabela deve ser alimentada pelo estado `dadosFiltrados` e possuir paginação ou scroll interno se passar de 5 a 10 itens.
+  - A coluna de "Ações" (AÇÕES) pode ser removida por enquanto, pois não temos sub-rotas no momento.
 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**

@@ -9,93 +9,77 @@ interface RegionTableProps {
   isLoading?: boolean;
 }
 
-interface RegionRow {
-  regiao: string;
-  ocorrencias: number;
-  variacao: string;
-  isUp: boolean;
-  status: 'Atenção' | 'Estável';
-}
-
 export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = false }) => {
   const [search, setSearch] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
-  // Dynamically calculate seccional values based on filtered data
-  const tableRows = useMemo(() => {
-    const spTotal = data
-      .filter((item) => item.municipio === 'São Paulo (Capital)')
-      .reduce((sum, item) => sum + item.ocorrencias, 0);
+  // Reset page on search change
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+    setCurrentPage(1);
+  };
 
-    const cotiaTotal = data
-      .filter((item) => item.municipio === 'Cotia')
-      .reduce((sum, item) => sum + item.ocorrencias, 0);
+  // Dynamically determine how to label the first column based on filters present in data
+  const uniqueMunicipios = useMemo(() => Array.from(new Set(data.map((d) => d.municipio))), [data]);
+  const uniqueCrimes = useMemo(() => Array.from(new Set(data.map((d) => d.tipo_crime))), [data]);
 
-    const rows: RegionRow[] = [];
+  const showCrimeOnly = uniqueMunicipios.length === 1;
+  const showMunicipioOnly = uniqueCrimes.length === 1;
 
-    if (spTotal > 0) {
-      rows.push(
-        {
-          regiao: '1ª Seccional - Centro',
-          ocorrencias: Math.round(spTotal * 0.4),
-          variacao: '↑ 4.2%',
-          isUp: true,
-          status: 'Atenção',
-        },
-        {
-          regiao: '2ª Seccional - Sul',
-          ocorrencias: Math.round(spTotal * 0.35),
-          variacao: '↓ 2.1%',
-          isUp: false,
-          status: 'Estável',
-        },
-        {
-          regiao: '3ª Seccional - Oeste',
-          ocorrencias: Math.round(spTotal * 0.25),
-          variacao: '↓ 5.8%',
-          isUp: false,
-          status: 'Estável',
-        }
+  const getLabel = (item: CrimeRecord) => {
+    if (showCrimeOnly && !showMunicipioOnly) {
+      return item.tipo_crime;
+    }
+    if (showMunicipioOnly && !showCrimeOnly) {
+      return item.municipio;
+    }
+    return `${item.municipio} / ${item.tipo_crime}`;
+  };
+
+  const searchedData = useMemo(() => {
+    return data.filter((item) => {
+      const searchLower = search.toLowerCase();
+      return (
+        item.municipio.toLowerCase().includes(searchLower) ||
+        item.tipo_crime.toLowerCase().includes(searchLower)
       );
-    }
+    });
+  }, [data, search]);
 
-    if (cotiaTotal > 0) {
-      rows.push({
-        regiao: 'Delegacia Seccional de Cotia',
-        ocorrencias: cotiaTotal,
-        variacao: '↓ 8.5%',
-        isUp: false,
-        status: 'Estável',
-      });
-    }
+  const totalPages = Math.ceil(searchedData.length / itemsPerPage) || 1;
+  const currentPageAdjusted = Math.min(currentPage, totalPages);
 
-    return rows;
-  }, [data]);
-
-  const filteredData = useMemo(() => {
-    return tableRows.filter((item) =>
-      item.regiao.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [tableRows, search]);
+  const paginatedData = useMemo(() => {
+    const startIndex = (currentPageAdjusted - 1) * itemsPerPage;
+    return searchedData.slice(startIndex, startIndex + itemsPerPage);
+  }, [searchedData, currentPageAdjusted, itemsPerPage]);
 
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat('pt-BR').format(num);
+  };
+
+  const formatPercent = (num: number) => {
+    const absVal = Math.abs(num).toFixed(1);
+    const sign = num >= 0 ? '↑' : '↓';
+    return `${sign} ${absVal}%`;
   };
 
   return (
     <div className={styles.tableContainer}>
       <div className={styles.tableHeader}>
         <div className={styles.headerInfo}>
-          <h2 className={styles.title}>Detalhamento por Região</h2>
-          <p className={styles.subtitle}>Dados aggregados por delegacia seccional</p>
+          <h2 className={styles.title}>Detalhamento de Ocorrências</h2>
+          <p className={styles.subtitle}>Análise granular das ocorrências registradas</p>
         </div>
         <div className={styles.searchWrapper}>
           <Search size={16} className={styles.searchIcon} />
           <input
             type="text"
-            placeholder="Buscar região..."
+            placeholder="Buscar município ou crime..."
             className={styles.searchInput}
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={handleSearchChange}
             disabled={isLoading}
           />
         </div>
@@ -105,20 +89,19 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>Região / DP</th>
+              <th>Município / Crime</th>
               <th>Ocorrências</th>
-              <th>Variação (Mês)</th>
+              <th>Variação</th>
               <th>Status</th>
-              <th style={{ textAlign: 'right' }}>Ações</th>
             </tr>
           </thead>
           <tbody>
             {isLoading ? (
-              // Render 3 skeleton rows while loading
-              Array.from({ length: 3 }).map((_, idx) => (
+              // Render skeleton rows while loading
+              Array.from({ length: 5 }).map((_, idx) => (
                 <tr key={`skel-row-${idx}`}>
                   <td>
-                    <Skeleton height="20px" width="160px" borderRadius="4px" />
+                    <Skeleton height="20px" width="180px" borderRadius="4px" />
                   </td>
                   <td>
                     <Skeleton height="20px" width="60px" borderRadius="4px" />
@@ -129,45 +112,64 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
                   <td>
                     <Skeleton height="20px" width="70px" borderRadius="9999px" />
                   </td>
-                  <td style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Skeleton height="20px" width="60px" borderRadius="4px" />
-                  </td>
                 </tr>
               ))
-            ) : filteredData.length === 0 ? (
+            ) : paginatedData.length === 0 ? (
               <tr>
-                <td colSpan={5} style={{ textAlign: 'center', color: 'var(--color-text-secondary)', padding: '2rem' }}>
-                  Nenhuma região correspondente encontrada.
+                <td colSpan={4} style={{ textAlign: 'center', color: 'var(--color-text-secondary)', padding: '2.5rem 1rem' }}>
+                  Nenhuma ocorrência correspondente encontrada.
                 </td>
               </tr>
             ) : (
-              filteredData.map((item) => (
-                <tr key={item.regiao}>
-                  <td className={styles.dpCell}>{item.regiao}</td>
-                  <td>{formatNumber(item.ocorrencias)}</td>
-                  <td className={item.isUp ? styles.variationUp : styles.variationDown}>
-                    {item.variacao}
-                  </td>
-                  <td>
-                    <span
-                      className={`${styles.badge} ${
-                        item.status === 'Atenção' ? styles.badgeAttention : styles.badgeStable
-                      }`}
-                    >
-                      {item.status}
-                    </span>
-                  </td>
-                  <td style={{ textAlign: 'right' }}>
-                    <button className={styles.actionLink} type="button">
-                      Ver Dados
-                    </button>
-                  </td>
-                </tr>
-              ))
+              paginatedData.map((item) => {
+                const isAlerta = item.variacao_mensal > 0;
+                return (
+                  <tr key={item.id}>
+                    <td className={styles.dpCell}>{getLabel(item)}</td>
+                    <td>{formatNumber(item.ocorrencias)}</td>
+                    <td className={isAlerta ? styles.variationUp : styles.variationDown}>
+                      {formatPercent(item.variacao_mensal)}
+                    </td>
+                    <td>
+                      <span
+                        className={`${styles.badge} ${
+                          isAlerta ? styles.badgeAttention : styles.badgeStable
+                        }`}
+                      >
+                        {isAlerta ? 'Alerta' : 'Estável/Queda'}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })
             )}
           </tbody>
         </table>
       </div>
+
+      {!isLoading && totalPages > 1 && (
+        <div className={styles.pagination}>
+          <span className={styles.pageInfo}>
+            Página <strong>{currentPageAdjusted}</strong> de {totalPages} ({searchedData.length} itens)
+          </span>
+          <div className={styles.pageButtons}>
+            <button
+              className={styles.pageButton}
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPageAdjusted === 1}
+            >
+              Anterior
+            </button>
+            <button
+              className={styles.pageButton}
+              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+              disabled={currentPageAdjusted === totalPages}
+            >
+              Próxima
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
