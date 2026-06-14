@@ -93,23 +93,44 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
         </div>
       ) : (
         <div className={styles.chartContent}>
+          {/* Custom Legends: Horizontal progress bars occupying 100% width */}
           <div className={styles.legendContainer}>
             {chartData.map((entry, index) => (
               <div key={`legend-${index}`} className={styles.legendItem}>
-                <span
-                  className={styles.legendDot}
-                  style={{ backgroundColor: entry.color }}
-                />
-                <span className={styles.legendLabel}>
-                  {entry.name}: {entry.percentage.toFixed(1)}%
-                </span>
-                <span className={styles.legendValue}>
-                  ({new Intl.NumberFormat('pt-BR').format(entry.value)})
-                </span>
+                {/* Linha Superior (Dados) */}
+                <div className={styles.legendHeader}>
+                  <div className={styles.legendLeft}>
+                    <span
+                      className={styles.legendDot}
+                      style={{ backgroundColor: entry.color }}
+                    />
+                    <span className={styles.legendLabel}>{entry.name}</span>
+                  </div>
+                  <div className={styles.legendRight}>
+                    <span className={styles.legendValue}>
+                      {new Intl.NumberFormat('pt-BR').format(entry.value)}
+                    </span>
+                    <span className={styles.legendPercentage}>
+                      {entry.percentage.toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
+
+                {/* Linha Inferior (Barra de Progresso) */}
+                <div className={styles.progressBarTrack}>
+                  <div
+                    className={styles.progressBarFill}
+                    style={{
+                      width: `${entry.percentage}%`,
+                      backgroundColor: entry.color,
+                    }}
+                  />
+                </div>
               </div>
             ))}
           </div>
 
+          {/* Physical Donut Chart with totalizer centered */}
           <div className={styles.responsiveContainer}>
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -129,6 +150,16 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
                 <Tooltip content={<CustomTooltip />} />
               </PieChart>
             </ResponsiveContainer>
+            
+            {/* Centered Totalizer */}
+            <div style={{ position: 'absolute', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Total
+              </span>
+              <span style={{ fontSize: '1.35rem', color: 'var(--color-text-primary)', fontWeight: 800 }}>
+                {new Intl.NumberFormat('pt-BR').format(totalOccurrences)}
+              </span>
+            </div>
           </div>
         </div>
       )}

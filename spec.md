@@ -60,13 +60,16 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
 }
 ```
 
-## 4. Arquitetura de Componentes e UI (Atualização de Layout)
+## 4. Arquitetura de Componentes e UI (Atualização de Legendas)
 * **CrimeDistributionChart (Gráfico de Rosca / Donut Chart):**
-  - Deve ser implementado utilizando a biblioteca `recharts` (componentes `<PieChart>`, `<Pie>`, `<Cell>`).
-  - **Disposição Estrutural (Layout Vertical):** O contêiner interno do cartão deve seguir um fluxo de coluna (`display: flex; flex-direction: column; align-items: center;`).
-  - **Legendas/Listagem:** A listagem detalhada por Tipo de Crime (contendo o indicador de cor, nome da categoria, porcentagem e valor absoluto) deve ser renderizada na parte superior do bloco de conteúdo.
-  - **Gráfico de Pizza:** O gráfico de rosca físico com o totalizador centralizado (`total`) deve se posicionar obrigatoriamente **abaixo** dessa listagem de legendas, centralizado horizontalmente.
-  - O estilo visual deve herdar os tokens globais do Flat Design 2.0 (sem bordas grossas ou sombras internas).
+  - Deve conter um título e subtítulo alinhados ao padrão Enterprise UI.
+  - **Disposição Estrutural:** O layout principal do card deve seguir um fluxo vertical (`display: flex; flex-direction: column; gap: 1.5rem;`).
+  - **Legendas Customizadas (Lista de Progresso 100% Width):**
+    - A lista de legendas deve ser posicionada na parte superior do card, acima do gráfico de rosca, e ocupar toda a largura disponível (`width: 100%`).
+    - Cada item da legenda deve ser um bloco contendo duas linhas:
+      - **Linha Superior (Dados):** Um marcador circular com a cor correspondente à fatia, o nome do crime alinhado à esquerda, e à direita os valores textuais (o número absoluto em negrito e a porcentagem sutil ao lado, ex: **4,312** `34.6%`).
+      - **Linha Inferior (Barra de Progresso):** Um contêiner de fundo cinza sutil (`var(--color-border)`) com 100% de largura, altura fina (ex: 4px ou 6px) e arredondado, contendo uma barra interna preenchida com a cor correspondente ao crime, cuja largura (`width`) seja equivalente à porcentagem daquele crime no total acumulado.
+  - **Gráfico Físico (Rosca):** Deve ser posicionado na base do card, centralizado horizontalmente, exibindo o número totalizador no centro da rosca (`total`).
 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**

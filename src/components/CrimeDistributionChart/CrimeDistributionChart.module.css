@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  min-height: 400px;
+  min-height: 480px;
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -40,24 +40,36 @@
 
 .legendContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
   width: 100%;
 }
 
 .legendItem {
   display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+.legendHeader {
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
   font-size: 0.875rem;
   color: var(--color-text-primary);
 }
 
+.legendLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .legendDot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -66,18 +78,42 @@
   font-weight: 500;
 }
 
+.legendRight {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+}
+
 .legendValue {
   font-weight: 700;
+}
+
+.legendPercentage {
+  font-size: 0.75rem;
   color: var(--color-text-secondary);
-  margin-left: 0.25rem;
+}
+
+.progressBarTrack {
+  background-color: var(--color-border);
+  height: 6px;
+  border-radius: 3px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease-out;
 }
 
 .responsiveContainer {
   width: 100%;
-  height: 260px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .customTooltip {
