@@ -1,4 +1,5 @@
 import React from 'react';
+import { Filter } from 'lucide-react';
 import styles from './FilterBar.module.css';
 
 interface FilterBarProps {
@@ -76,6 +77,11 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           ))}
         </select>
       </div>
+
+      <button className={styles.button} type="button">
+        <Filter size={16} fill="white" />
+        Aplicar Filtros
+      </button>
     </div>
   );
 };

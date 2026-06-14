@@ -1,14 +1,12 @@
 .header {
   background-color: var(--color-surface);
-  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-flat);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-subtle);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .brand {
@@ -18,30 +16,49 @@
 }
 
 .logoIcon {
-  color: #ffffff;
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-accent-gradient);
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-accent);
 }
 
 .title {
-  font-size: 1.35rem;
-  font-weight: 850;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--color-text-primary);
   letter-spacing: -0.025em;
   margin: 0;
 }
 
-@media (max-width: 600px) {
-  .header {
-    padding: 1rem;
-    margin-top: 0.5rem;
-  }
-  .title {
-    font-size: 1.1rem;
-  }
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionIcon {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.actionIcon:hover {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  cursor: pointer;
 }
