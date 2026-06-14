@@ -1,15 +1,16 @@
 # Especificação: Pipeline de Dados SSP-SP (Extrator e Limpador)
 
 ## 1. Visão Geral
-O objetivo deste script em Python é atuar como um pipeline de dados (ETL - Extract, Transform, Load). Ele deve processar dados brutos de criminalidade do estado de São Paulo e convertê-los no formato exato (JSON) que a aplicação frontend em React espera.
+O objetivo deste script em Python (ETL) é extrair automaticamente os dados reais de criminalidade do portal da Secretaria de Segurança Pública de São Paulo (SSP-SP), limpar a formatação governamental e converter os dados para o formato JSON consumido pelo nosso frontend em React.
 
-## 2. Stack Tecnológico
+## 2. Stack Tecnológico e Ambiente
 * **Linguagem:** Python 3.x
-* **Bibliotecas Principais:** `pandas` (para manipulação de dados), `json` (para exportação).
-* **Gerenciamento de Dependências:** `requirements.txt` ou `pip`.
+* **Ambiente Virtual:** O projeto obrigatoriamente utiliza um ambiente virtual local na diretoria `.venv`.
+* **Bibliotecas Principais:** `requests`, `beautifulsoup4`, `pandas`, `openpyxl`.
+* **Gestão de Dependências:** `requirements.txt`.
 
 ## 3. Estrutura de Dados Esperada (O Alvo)
-O script Python deve gerar um arquivo JSON final que siga *exatamente* esta estrutura de interface TypeScript consumida pelo React:
+O ficheiro final `src/data/mockData.json` deve conter a seguinte estrutura estrita:
 ```json
 [
   {
@@ -24,13 +25,18 @@ O script Python deve gerar um arquivo JSON final que siga *exatamente* esta estr
 ]
 ```
 
-## 4. Regras de Transformação (Pandas)
-1. **Normalização de Nomes:** Padronizar os nomes dos municípios (ex: "S. PAULO" para "São Paulo (Capital)") e dos crimes para bater com os filtros do frontend.
-2. **Cálculo de Variação:** O script deve calcular matematicamente a `variacao_mensal` (porcentagem de aumento ou queda) comparando o mês atual da linha com o mês anterior do mesmo município e crime.
-3. **Exportação:** O arquivo resultante deve salvar/sobrescrever os dados no caminho: `src/data/mockData.json` (ou um novo `realData.json` que conectaremos depois).
+## 4. Fluxo de Extração e Transformação (Scraping)
+1. **Extração Bruta:** O script deve aceder aos dados da SSP-SP. (Para fins deste desenvolvimento, o script deve procurar tabelas HTML com os dados de ocorrências por município, ou fazer o download de uma folha de cálculo pública).
+2. **Limpeza de Dados (Sanitização):**
+   - Remover cabeçalhos duplos, linhas de totais em branco ou células fundidas (típico em folhas de cálculo do governo).
+   - Eliminar acentos e padronizar os nomes dos municípios e dos crimes.
+3. **Cálculo Matemático:** Calcular a `variacao_mensal` (crescimento ou decréscimo percentual em relação ao mês anterior para a mesma cidade e crime).
+4. **Exportação:** Salvar o resultado limpo no caminho `src/data/mockData.json`.
 
 ## 5. Instruções para o Agente
-1. Leia esta especificação para entender o formato de saída desejado.
-2. Crie um ambiente virtual Python (opcional, dependendo do setup) ou apenas o script ```scraper.py``` na raiz ou em uma pasta ```/scripts```.
-3. Escreva o código Pandas que cria um DataFrame fictício (neste primeiro momento) com a complexidade real (dezenas de cidades, vários anos, variações reais calculadas) para testarmos a capacidade do script de gerar o JSON perfeito.
-4. Após validar a geração do JSON, evoluiremos o script para fazer o download das planilhas reais via web scraping.
+1. Leia esta especificação atualizada.
+2. Certifique-se imediatamente de que a pasta `.venv/` está incluída no ficheiro `.gitignore` na raiz do projeto, para não poluir o repositório.
+3. Atualize o ficheiro `requirements.txt` com as novas bibliotecas necessárias (`requests`, `beautifulsoup4`, `openpyxl`).
+4. Refatore o ficheiro `scraper.py`. Implemente uma lógica real utilizando `requests` e `pandas` para procurar as tabelas de criminalidade.
+5. Escreva uma função robusta de limpeza no Pandas para tratar cabeçalhos sujos, preencher valores nulos e calcular a variação percentual mensal.
+6. O output final deve continuar a sobrescrever perfeitamente o ficheiro `src/data/mockData.json`.
