@@ -6,20 +6,16 @@ import styles from './StatCards.module.css';
 interface StatCardsProps {
   totalOcorrencias: number;
   variacaoTotal: number;
-  zonasAltoRisco: number;
-  variacaoZonas: number;
-  efetivoAlocado: number;
-  variacaoEfetivo: number;
+  crimeMaisFrequente: string;
+  mediaMensal: number;
   isLoading?: boolean;
 }
 
 export const StatCards: React.FC<StatCardsProps> = ({
   totalOcorrencias,
   variacaoTotal,
-  zonasAltoRisco,
-  variacaoZonas,
-  efetivoAlocado,
-  variacaoEfetivo,
+  crimeMaisFrequente,
+  mediaMensal,
   isLoading = false,
 }) => {
   const formatNumber = (num: number) => {
@@ -32,16 +28,11 @@ export const StatCards: React.FC<StatCardsProps> = ({
     return `${sign} ${absVal}%`;
   };
 
-  // Card 1: decrease is success, increase is danger
   const isOcorrenciasSuccess = variacaoTotal <= 0;
-  // Card 2: decrease is success, increase is danger
-  const isZonasSuccess = variacaoZonas <= 0;
-  // Card 3: increase is success, decrease is danger
-  const isEfetivoSuccess = variacaoEfetivo >= 0;
 
   return (
     <div className={styles.cardsContainer}>
-      {/* Card 1: Ocorrências Registradas */}
+      {/* Card 1: Total de Ocorrências */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <div className={styles.iconWrapper}>
@@ -56,7 +47,7 @@ export const StatCards: React.FC<StatCardsProps> = ({
           )}
         </div>
         <div className={styles.cardContent}>
-          <span className={styles.label}>Ocorrências Registradas</span>
+          <span className={styles.label}>Total de Ocorrências</span>
           {isLoading ? (
             <div style={{ marginTop: '0.25rem', height: '38px', width: '120px' }}>
               <Skeleton borderRadius="6px" />
@@ -67,54 +58,42 @@ export const StatCards: React.FC<StatCardsProps> = ({
         </div>
       </div>
 
-      {/* Card 2: Zonas de Alto Risco */}
+      {/* Card 2: Crime Mais Frequente */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <div className={styles.iconWrapper}>
             <ShieldAlert size={20} />
           </div>
-          {isLoading ? (
-            <Skeleton width="55px" height="20px" borderRadius="9999px" />
-          ) : (
-            <span className={`${styles.badge} ${isZonasSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
-              {formatPercent(variacaoZonas)}
-            </span>
-          )}
         </div>
         <div className={styles.cardContent}>
-          <span className={styles.label}>Zonas de Alto Risco</span>
+          <span className={styles.label}>Crime Mais Frequente</span>
           {isLoading ? (
-            <div style={{ marginTop: '0.25rem', height: '38px', width: '80px' }}>
+            <div style={{ marginTop: '0.25rem', height: '38px', width: '150px' }}>
               <Skeleton borderRadius="6px" />
             </div>
           ) : (
-            <span className={styles.value}>{formatNumber(zonasAltoRisco)}</span>
+            <span className={styles.value} style={{ fontSize: '1.25rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {crimeMaisFrequente || 'Nenhum'}
+            </span>
           )}
         </div>
       </div>
 
-      {/* Card 3: Efetivo Alocado */}
+      {/* Card 3: Média Mensal */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <div className={styles.iconWrapper}>
             <FileText size={20} />
           </div>
-          {isLoading ? (
-            <Skeleton width="55px" height="20px" borderRadius="9999px" />
-          ) : (
-            <span className={`${styles.badge} ${isEfetivoSuccess ? styles.badgeSuccess : styles.badgeDanger}`}>
-              {formatPercent(variacaoEfetivo)}
-            </span>
-          )}
         </div>
         <div className={styles.cardContent}>
-          <span className={styles.label}>Efetivo Alocado</span>
+          <span className={styles.label}>Média Mensal</span>
           {isLoading ? (
             <div style={{ marginTop: '0.25rem', height: '38px', width: '100px' }}>
               <Skeleton borderRadius="6px" />
             </div>
           ) : (
-            <span className={styles.value}>{formatNumber(efetivoAlocado)}</span>
+            <span className={styles.value}>{formatNumber(mediaMensal)}</span>
           )}
         </div>
       </div>

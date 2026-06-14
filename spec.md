@@ -74,6 +74,11 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
       - **Linha Superior (Dados):** Um marcador circular com a cor correspondente à fatia, o nome do crime alinhado à esquerda, e à direita os valores textuais (o número absoluto em negrito e a porcentagem sutil ao lado, ex: **4,312** `34.6%`).
       - **Linha Inferior (Barra de Progresso):** Um contêiner de fundo cinza sutil (`var(--color-border)`) com 100% de largura, altura fina (ex: 4px ou 6px) e arredondado, contendo uma barra interna preenchida com a cor correspondente ao crime, cuja largura (`width`) seja equivalente à porcentagem daquele crime no total acumulado.
   - **Gráfico Físico (Rosca):** Deve ser posicionado na base do card, centralizado horizontalmente, exibindo o número totalizador no centro da rosca (`total`).
+* **Cartões de Resumo (Summary Cards):**
+  - Os cartões superiores devem exibir dados estritamente calculados a partir do estado `dadosFiltrados`.
+  - **Card 1: Total de Ocorrências:** Somatório do campo `ocorrencias`.
+  - **Card 2: Crime Mais Frequente (Substitui Zonas de Risco):** Deve calcular qual `tipo_crime` tem o maior somatório de ocorrências no período filtrado e exibir o seu nome.
+  - **Card 3: Média Mensal (Substitui Efetivo Alocado):** Deve calcular a média de ocorrências por mês (Total de Ocorrências dividido pela quantidade de meses filtrados no dataset) e exibir o valor arredondado.
 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**

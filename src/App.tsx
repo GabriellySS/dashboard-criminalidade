@@ -121,35 +121,30 @@ function App() {
       variacaoTotal = -12.5;
     }
 
-    // Dynamic Zonas de Alto Risco based on municipio and crime
-    let zonasAltoRisco = 42;
-    let variacaoZonas = 3.2;
-    if (municipioSelecionado === 'São Paulo (Capital)') {
-      zonasAltoRisco = 35;
-      variacaoZonas = 1.8;
-    } else if (municipioSelecionado === 'Cotia') {
-      zonasAltoRisco = 7;
-      variacaoZonas = -5.4;
-    }
+    // Calculate crime mais frequente
+    const counts: Record<string, number> = {};
+    dadosFiltrados.forEach((item) => {
+      counts[item.tipo_crime] = (counts[item.tipo_crime] || 0) + item.ocorrencias;
+    });
+    let crimeMaisFrequente = '';
+    let maxVal = -1;
+    Object.entries(counts).forEach(([crime, val]) => {
+      if (val > maxVal) {
+        maxVal = val;
+        crimeMaisFrequente = crime;
+      }
+    });
 
-    // Dynamic Efetivo Alocado based on municipio
-    let efetivoAlocado = 2845;
-    let variacaoEfetivo = 8.4;
-    if (municipioSelecionado === 'São Paulo (Capital)') {
-      efetivoAlocado = 2500;
-      variacaoEfetivo = 5.2;
-    } else if (municipioSelecionado === 'Cotia') {
-      efetivoAlocado = 345;
-      variacaoEfetivo = 12.1;
-    }
+    // Calculate media mensal
+    const uniqueMonths = Array.from(new Set(dadosFiltrados.map((item) => `${item.ano}-${item.mes}`)));
+    const numMonths = uniqueMonths.length || 1;
+    const mediaMensal = Math.round(total / numMonths);
 
     return {
       total,
       variacaoTotal,
-      zonasAltoRisco,
-      variacaoZonas,
-      efetivoAlocado,
-      variacaoEfetivo,
+      crimeMaisFrequente,
+      mediaMensal,
     };
   }, [typedMockData, dadosFiltrados, regiaoSelecionada, municipioSelecionado, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
@@ -185,10 +180,8 @@ function App() {
           <StatCards
             totalOcorrencias={stats.total}
             variacaoTotal={stats.variacaoTotal}
-            zonasAltoRisco={stats.zonasAltoRisco}
-            variacaoZonas={stats.variacaoZonas}
-            efetivoAlocado={stats.efetivoAlocado}
-            variacaoEfetivo={stats.variacaoEfetivo}
+            crimeMaisFrequente={stats.crimeMaisFrequente}
+            mediaMensal={stats.mediaMensal}
             isLoading={isLoading}
           />
 

@@ -44,11 +44,15 @@ def scrape_with_playwright(download_dir):
             print(f"Total years gathered: {len(years)} {years[:3]}...")
             print(f"Total regions gathered: {len(regions)} {regions[:3]}...")
             
-            # Scrape all years and regions dynamically gathered
-            years_to_scrape = years
-            regions_to_scrape = regions
-            print(f"Scraping all gathered years: {years_to_scrape}")
-            print(f"Scraping all gathered regions: {regions_to_scrape}")
+            # =========================================================================
+            # DEVELOPMENT LIMITER: Only scrape 1 Year, 1 Region, and 2 Municipalities per region.
+            # This keeps development execution times fast and prevents timeouts.
+            # TO SCRAPE ALL YEARS, REGIONS AND MUNICIPALITIES, REMOVE THE SLICES BELOW.
+            # =========================================================================
+            years_to_scrape = years[:1]
+            regions_to_scrape = regions[:1]
+            print(f"Scraping limited to years: {years_to_scrape}")
+            print(f"Scraping limited to regions: {regions_to_scrape}")
             
             for year in years_to_scrape:
                 for r in regions_to_scrape:
@@ -62,9 +66,9 @@ def scrape_with_playwright(download_dir):
                     muni_opts = muni_select.locator("option")
                     munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
                     
-                    # Scrape all municipalities of the region
-                    munis_to_scrape = munis
-                    print(f"Region '{r}': Scraping all cities: {munis_to_scrape}")
+                    # Apply municipal dev limiter (only 2 cities per region)
+                    munis_to_scrape = munis[:2]
+                    print(f"Region '{r}': Scraping limited to cities: {munis_to_scrape}")
                     
                     for m in munis_to_scrape:
                         print(f"Scraping data for {m} ({r}) - Year {year}...")
