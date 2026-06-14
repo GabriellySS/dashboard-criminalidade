@@ -26,11 +26,12 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 ]
 ```
 
-## 4. Fluxo de Automação Real (Escala Estadual)
-1. **Seleção de Filtros (Playwright):** No portal da SSP-SP, o robô deve interagir com o dropdown de Municípios e selecionar a opção que traga o consolidado de "Todos" ou baixar a planilha geral do Estado de SP (evitando fazer o loop manual por 645 cidades, o que causaria estouro de timeout).
-2. **Normalização em Massa (Pandas):** - A função de limpeza do Pandas não deve mais usar mapeamentos manuais rígidos (if/else) para nomes de cidades, exceto para correções explícitas de siglas conhecidas (ex: "S. PAULO" ou "SÃO PAULO" -> "São Paulo (Capital)").
-   - Para todas as outras cidades, aplicar a capitalização padrão (`.str.title()`) e remover espaços extras para garantir a padronização.
-3. **Gerenciamento de Volume de Dados:** O formato do JSON final em `src/data/mockData.json` deve permanecer idêntico, mas agora conterá os registros de todos os municípios processados cronologicamente.
+## 4. Fluxo de Automação Real (Loop Estadual)
+1. **Extração de Todos os Municípios (Playwright):** O robô não deve baixar o consolidado do estado. Em vez disso, ele deve:
+   - Aguardar o carregamento do `<select>` de municípios.
+   - Extrair uma lista com o texto de todas as tags `<option>` disponíveis nesse select (ignorando a opção "Todos" ou "Selecione").
+   - Fazer um laço de repetição (`for` loop): para cada município da lista, selecionar a opção no dropdown, clicar no botão de exportação, interceptar o download e salvar o arquivo no `TEMP_DIR`.
+2. **Transformação em Lote (Pandas):** O script Python deve ler todos os dezenas/centenas de arquivos baixados na pasta `TEMP_DIR`, concatená-los usando `pd.concat()` em um único DataFrame gigante e, em seguida, aplicar as regras de limpeza, cálculo de variação mensal (agrupado por cidade) e exportação.
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.

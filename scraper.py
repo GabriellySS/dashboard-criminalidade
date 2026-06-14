@@ -13,17 +13,8 @@ TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 TARGET_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "data", "mockData.json")
 
 def scrape_with_playwright(download_dir):
-    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files for target configurations."""
+    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files by looping through municipalities."""
     url = "https://www.ssp.sp.gov.br/estatistica/dados-mensais"
-    
-    # We download:
-    # 1. State Consolidated (keeping region and municipality as default)
-    # 2. Specific key municipalities (Capital and Cotia) to support the frontend's special metrics
-    targets = [
-        ('Regiões', 'Municípios', 'Estado de São Paulo'),
-        ('Capital', 'São Paulo', 'São Paulo'),
-        ('Grande São Paulo (exclui a Capital)', 'Cotia', 'Cotia')
-    ]
     years = ['2019', '2020', '2021', '2022', '2023']
     
     print(f"Starting Playwright automation targeting: {url}")
@@ -40,39 +31,58 @@ def scrape_with_playwright(download_dir):
             # Explicitly wait for the primary filter dropdowns to be loaded in the DOM
             page.wait_for_selector("select.form-select", timeout=15000)
             
-            for regiao, municipio, file_prefix in targets:
+            # Gather all region-municipality combinations dynamically
+            # Since the municipality dropdown is disabled until a region is selected, 
+            # we iterate through the regions to extract their corresponding cities.
+            selects = page.locator("select.form-select")
+            reg_select = selects.nth(1)
+            reg_opts = reg_select.locator("option")
+            regions = [reg_opts.nth(i).text_content().strip() for i in range(1, reg_opts.count())]
+            
+            targets = []
+            for r in regions:
+                reg_select.select_option(label=r)
+                page.wait_for_timeout(500)
+                
+                muni_select = page.locator("select.form-select").nth(2)
+                muni_opts = muni_select.locator("option")
+                munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
+                for m in munis:
+                    targets.append((r, m))
+                    
+            print(f"Total municipalities gathered across all regions: {len(targets)}")
+            
+            # =========================================================================
+            # DEVELOPMENT LIMITER: Only scrape the first 5 municipalities for testing
+            # to keep development execution times fast and prevent 20-minute timeouts.
+            # TO SCRAPE ALL 645+ MUNICIPALITIES OF SP, REMOVE '[:5]' LIMITER BELOW.
+            # =========================================================================
+            targets_to_scrape = targets[:5]
+            print(f"Scraping limited to first 5 targets: {targets_to_scrape}")
+            
+            for r, m in targets_to_scrape:
                 for year in years:
-                    print(f"Scraping data for {file_prefix} - Year {year}...")
+                    print(f"Scraping data for {m} ({r}) - Year {year}...")
                     
                     # Re-locate select elements in each iteration to avoid element detached errors
                     selects = page.locator("select.form-select")
                     
                     # 1. Select Year
                     selects.nth(0).select_option(label=year)
+                    page.wait_for_timeout(300)
+                    
+                    # 2. Select Region
+                    selects.nth(1).select_option(label=r)
                     page.wait_for_timeout(500)
                     
-                    if regiao != 'Regiões' or municipio != 'Municípios':
-                        # 2. Select Region
-                        selects.nth(1).select_option(label=regiao)
-                        # Wait for the municipality dropdown (Third select) to update options
-                        page.wait_for_timeout(1000)
-                        
-                        # 3. Select Municipality
-                        selects = page.locator("select.form-select")
-                        muni_select = selects.nth(2)
-                        
-                        try:
-                            muni_select.select_option(label=municipio)
-                        except Exception:
-                            muni_select.select_option(label=municipio.upper())
-                        page.wait_for_timeout(500)
-                    else:
-                        # Reset region select to default index 0 to clear previous selection
-                        selects.nth(1).select_option(index=0)
-                        page.wait_for_timeout(1000)
+                    # 3. Select Municipality
+                    selects = page.locator("select.form-select")
+                    muni_select = selects.nth(2)
+                    muni_select.select_option(label=m)
+                    page.wait_for_timeout(300)
                     
                     # Save path for this specific spreadsheet
-                    filename = f"{file_prefix}_{year}.xlsx".replace(" ", "_")
+                    filename = f"{m}_{year}.xlsx".replace(" ", "_")
                     filepath = os.path.join(download_dir, filename)
                     
                     # 4. Intercept and download Excel file
@@ -97,7 +107,7 @@ def main():
         # 1. Run robot automation (Playwright) to download real spreadsheets
         scrape_with_playwright(TEMP_DIR)
         
-        # 2. Compile downloaded spreadsheets dynamically
+        # 2. Compile downloaded spreadsheets dynamically in batch
         print("Compiling downloaded real spreadsheets dynamically...")
         anos = ['2019', '2020', '2021', '2022', '2023']
         meses_col = ['Jan', 'Abr', 'Jul', 'Out']
@@ -115,91 +125,61 @@ def main():
             ('FURTO DE VEÍCULO', 'FURTO DE VEÍCULO')
         ]
         
-        # Scan TEMP_DIR for downloaded files to build the list of cities dynamically
+        # Scan TEMP_DIR for all downloaded files
         files = [f for f in os.listdir(TEMP_DIR) if f.endswith('.xlsx')]
-        cities_detected = set()
+        
+        all_dfs = []
+        
         for f in files:
+            # Filename is formatted as: "MunicipalityName_Year.xlsx"
             parts = f.rsplit('_', 1)
-            if len(parts) == 2:
-                cities_detected.add(parts[0].replace('_', ' '))
-                
-        print(f"Detected cities from files: {cities_detected}")
-        
-        rows = []
-        
-        # Reconstruct Header 1 (Merged year headers)
-        h1 = ["Município / Tipo Crime", ""]
-        for ano in anos:
-            h1.extend([f"ANO {ano}"] + [""] * (len(meses_col) - 1))
-        rows.append(h1)
-        
-        # Reconstruct Header 2 (Sub-headers for months)
-        h2 = ["Cidade", "Crime"]
-        for ano in anos:
-            for mes in meses_col:
-                h2.append(f"{mes}/{ano[-2:]}")
-        rows.append(h2)
-        
-        def clean_val(val):
-            if val is None:
-                return "0"
-            return str(val).strip().replace('.', '')
+            if len(parts) != 2:
+                continue
+            city_name = parts[0].replace('_', ' ')
+            year = parts[1].split('.')[0]
             
-        for city in sorted(cities_detected):
-            city_file_prefix = city.replace(" ", "_")
-            for crime_label, crime_search in crimes_targets:
-                row = [city.upper(), crime_label]
-                for ano in anos:
-                    filename = f"{city_file_prefix}_{ano}.xlsx"
-                    filepath = os.path.join(TEMP_DIR, filename)
-                    
-                    if not os.path.exists(filepath):
-                        raise FileNotFoundError(f"Legitimate scraped file not found: {filepath}")
-                        
-                    wb = openpyxl.load_workbook(filepath)
-                    sheet = wb.active
-                    
-                    found = False
-                    for r in sheet.iter_rows(values_only=True):
-                        if r[0] is not None:
-                            # Normalize text for comparisons
-                            t1 = "".join(c for c in unicodedata.normalize('NFD', str(r[0]).strip().upper()) if unicodedata.category(c) != 'Mn')
-                            t2 = "".join(c for c in unicodedata.normalize('NFD', crime_search.upper()) if unicodedata.category(c) != 'Mn')
-                            if t1 == t2:
-                                for mes in meses_col:
-                                    idx = month_indices[mes]
-                                    row.append(clean_val(r[idx]))
-                                found = True
-                                break
-                    if not found:
-                        raise ValueError(f"Crime nature '{crime_search}' not found in {filepath}")
-                rows.append(row)
-                
-        # 3. Pandas ETL Sanitization & Transformation
-        if len(rows) < 2:
-            raise ValueError("Spreadsheet does not have enough rows (header + subheader + data).")
+            filepath = os.path.join(TEMP_DIR, f)
+            wb = openpyxl.load_workbook(filepath)
+            sheet = wb.active
             
-        header_cols = ["municipio", "tipo_crime"]
-        col_names = rows[1][2:]
-        columns = header_cols + col_names
-        
-        data_rows = rows[2:]
-        df_raw = pd.DataFrame(data_rows, columns=columns)
-        
-        # Clean null values and empty rows
-        df_raw = df_raw.replace(["None", "---", "", "nan"], np.nan)
-        df_raw = df_raw.dropna(subset=["municipio", "tipo_crime"])
-        
-        # Remove total rows
-        df_raw = df_raw[~df_raw["municipio"].str.contains("TOTAL", case=False, na=False)]
-        
-        # Melt data from wide to long format
-        df_long = df_raw.melt(
-            id_vars=["municipio", "tipo_crime"],
-            value_vars=col_names,
-            var_name="mes_ano",
-            value_name="ocorrencias"
-        )
+            rows_data = []
+            for r in sheet.iter_rows(values_only=True):
+                if r[0] is not None:
+                    # check if row matches one of our target crimes
+                    for crime_label, crime_search in crimes_targets:
+                        t1 = "".join(c for c in unicodedata.normalize('NFD', str(r[0]).strip().upper()) if unicodedata.category(c) != 'Mn')
+                        t2 = "".join(c for c in unicodedata.normalize('NFD', crime_search.upper()) if unicodedata.category(c) != 'Mn')
+                        if t1 == t2:
+                            row = [city_name.upper(), crime_label]
+                            
+                            def clean_val(val):
+                                if val is None:
+                                    return "0"
+                                return str(val).strip().replace('.', '')
+                                
+                            for mes in meses_col:
+                                idx = month_indices[mes]
+                                row.append(clean_val(r[idx]))
+                            rows_data.append((row, year))
+                            
+            # Convert rows to DataFrames and melt them to long format
+            for row, yr in rows_data:
+                cols = ["municipio", "tipo_crime"] + [f"{mes}/{yr[-2:]}" for mes in meses_col]
+                df_single = pd.DataFrame([row], columns=cols)
+                
+                df_long_single = df_single.melt(
+                    id_vars=["municipio", "tipo_crime"],
+                    value_vars=[f"{mes}/{yr[-2:]}" for mes in meses_col],
+                    var_name="mes_ano",
+                    value_name="ocorrencias"
+                )
+                all_dfs.append(df_long_single)
+                
+        if not all_dfs:
+            raise ValueError("No data files were processed successfully.")
+            
+        # 3. Concatenate all DataFrames into a single long-format DataFrame
+        df_long = pd.concat(all_dfs, ignore_index=True)
         
         # Convert occurrences to integers safely
         df_long["ocorrencias"] = pd.to_numeric(df_long["ocorrencias"]).fillna(0).astype(int)
@@ -236,7 +216,7 @@ def main():
             if text_upper in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"]:
                 return "São Paulo (Capital)"
                 
-            # Generic Title Case normalization for all other cities/regions
+            # Generic Title Case normalization for all other cities
             return text.title()
         
         df_long["municipio"] = df_long["municipio"].apply(normalize_text)

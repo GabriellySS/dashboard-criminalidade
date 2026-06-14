@@ -1,187 +1,187 @@
 [
   {
-    "id": "Cotia_Furto_De_Veículo_2019_Janeiro",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Furto_De_Veículo_2019_Janeiro",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 26,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Furto_De_Veículo_2019_Abril",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Furto_De_Veículo_2019_Abril",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Furto De Veículo",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 23,
-    "variacao_mensal": -11.54
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2019_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 18,
-    "variacao_mensal": -21.74
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2019_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Outubro",
-    "ocorrencias": 27,
-    "variacao_mensal": 50.0
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2020_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Janeiro",
-    "ocorrencias": 25,
-    "variacao_mensal": -7.41
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2020_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Abril",
-    "ocorrencias": 11,
-    "variacao_mensal": -56.0
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2020_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Julho",
-    "ocorrencias": 10,
-    "variacao_mensal": -9.09
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2020_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Outubro",
-    "ocorrencias": 19,
-    "variacao_mensal": 90.0
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2021_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Janeiro",
-    "ocorrencias": 24,
-    "variacao_mensal": 26.32
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2021_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Abril",
-    "ocorrencias": 28,
-    "variacao_mensal": 16.67
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2021_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 27,
-    "variacao_mensal": -3.57
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2021_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 40,
-    "variacao_mensal": 48.15
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2022_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 31,
-    "variacao_mensal": -22.5
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2022_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 46,
-    "variacao_mensal": 48.39
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2022_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 51,
-    "variacao_mensal": 10.87
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2022_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 27,
-    "variacao_mensal": -47.06
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2023_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 34,
-    "variacao_mensal": 25.93
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2023_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 44,
-    "variacao_mensal": 29.41
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2023_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 41,
-    "variacao_mensal": -6.82
-  },
-  {
-    "id": "Cotia_Furto_De_Veículo_2023_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 41,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2019_Janeiro",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Furto_De_Veículo_2019_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2019_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2020_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2020_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2020_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2020_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2021_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2021_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2021_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2021_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2022_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2022_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2022_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2022_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2023_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2023_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2023_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Furto_De_Veículo_2023_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2019_Janeiro",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Janeiro",
@@ -189,1434 +189,2514 @@
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2019_Abril",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2019_Abril",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 2,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2019_Julho",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2019_Julho",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 2,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2019_Outubro",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2019_Outubro",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 3,
-    "variacao_mensal": 50.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2020_Janeiro",
-    "municipio": "Cotia",
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2020_Janeiro",
+    "municipio": "Alto Alegre",
     "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2020_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2020_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2020_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2021_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2021_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2021_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2021_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2022_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2022_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2022_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2022_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2023_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2023_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2023_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Homicídio_Doloso_(2)_2023_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2019_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2019_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2019_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2019_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2020_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2020_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2020_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2020_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2021_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2021_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2021_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2021_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2022_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2022_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2022_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2022_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2023_Janeiro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2023_Abril",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2023_Julho",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Alto_Alegre_Roubo_De_Veículo_2023_Outubro",
+    "municipio": "Alto Alegre",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2019_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 3,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2019_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2019_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2019_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2020_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
     "ano": "2020",
     "mes": "Janeiro",
     "ocorrencias": 4,
     "variacao_mensal": 33.33
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2020_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "id": "Andradina_Furto_De_Veículo_2020_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 4,
-    "variacao_mensal": 0.0
+    "ocorrencias": 1,
+    "variacao_mensal": -75.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2020_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
+    "id": "Andradina_Furto_De_Veículo_2020_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
     "ano": "2020",
     "mes": "Julho",
     "ocorrencias": 2,
+    "variacao_mensal": 100.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2020_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 1,
     "variacao_mensal": -50.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2020_Outubro",
-    "municipio": "Cotia",
+    "id": "Andradina_Furto_De_Veículo_2021_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 2,
+    "variacao_mensal": 100.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2021_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2021_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 2,
+    "variacao_mensal": 100.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2021_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2022_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2022_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 8,
+    "variacao_mensal": 700.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2022_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 3,
+    "variacao_mensal": -62.5
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2022_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2023_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2023_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 5,
+    "variacao_mensal": 66.67
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2023_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": -80.0
+  },
+  {
+    "id": "Andradina_Furto_De_Veículo_2023_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 5,
+    "variacao_mensal": 400.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2019_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2019_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2019_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2019_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2020_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2020_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2020_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2020_Outubro",
+    "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 3,
-    "variacao_mensal": 50.0
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2021_Janeiro",
-    "municipio": "Cotia",
+    "id": "Andradina_Homicídio_Doloso_(2)_2021_Janeiro",
+    "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2021_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2021_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2021_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2022_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2022_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2022_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2022_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
+  },
+  {
+    "id": "Andradina_Homicídio_Doloso_(2)_2023_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
     "mes": "Janeiro",
     "ocorrencias": 1,
     "variacao_mensal": -66.67
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2021_Abril",
-    "municipio": "Cotia",
+    "id": "Andradina_Homicídio_Doloso_(2)_2023_Abril",
+    "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
+    "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 2,
-    "variacao_mensal": 100.0
-  },
-  {
-    "id": "Cotia_Homicídio_Doloso_(2)_2021_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
-  },
-  {
-    "id": "Cotia_Homicídio_Doloso_(2)_2021_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 1,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Cotia_Homicídio_Doloso_(2)_2022_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Janeiro",
     "ocorrencias": 0,
     "variacao_mensal": -100.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2022_Abril",
-    "municipio": "Cotia",
+    "id": "Andradina_Homicídio_Doloso_(2)_2023_Julho",
+    "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 1,
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2022_Julho",
-    "municipio": "Cotia",
+    "id": "Andradina_Homicídio_Doloso_(2)_2023_Outubro",
+    "municipio": "Andradina",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 4,
-    "variacao_mensal": 300.0
-  },
-  {
-    "id": "Cotia_Homicídio_Doloso_(2)_2022_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
+    "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 2,
-    "variacao_mensal": -50.0
-  },
-  {
-    "id": "Cotia_Homicídio_Doloso_(2)_2023_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 2,
+    "ocorrencias": 0,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2023_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 1,
-    "variacao_mensal": -50.0
+    "id": "Andradina_Roubo_De_Veículo_2019_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2023_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
+    "id": "Andradina_Roubo_De_Veículo_2019_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2019_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
     "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2019_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
     "ocorrencias": 0,
     "variacao_mensal": -100.0
   },
   {
-    "id": "Cotia_Homicídio_Doloso_(2)_2023_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 0,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2019_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 22,
-    "variacao_mensal": 0.0
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2019_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 29,
-    "variacao_mensal": 31.82
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2019_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 41,
-    "variacao_mensal": 41.38
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2019_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Outubro",
-    "ocorrencias": 45,
-    "variacao_mensal": 9.76
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2020_Janeiro",
-    "municipio": "Cotia",
+    "id": "Andradina_Roubo_De_Veículo_2020_Janeiro",
+    "municipio": "Andradina",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 30,
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2020_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2020_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2020_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2021_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2021_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2021_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2021_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2022_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2022_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2022_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2022_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2023_Janeiro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2023_Abril",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2023_Julho",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Andradina_Roubo_De_Veículo_2023_Outubro",
+    "municipio": "Andradina",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2019_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 11,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2019_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 6,
+    "variacao_mensal": -45.45
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2019_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 9,
+    "variacao_mensal": 50.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2019_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 10,
+    "variacao_mensal": 11.11
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2020_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 14,
+    "variacao_mensal": 40.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2020_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 10,
+    "variacao_mensal": -28.57
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2020_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 12,
+    "variacao_mensal": 20.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2020_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 8,
     "variacao_mensal": -33.33
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2020_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2020",
-    "mes": "Abril",
-    "ocorrencias": 11,
-    "variacao_mensal": -63.33
+    "id": "Araçatuba_Furto_De_Veículo_2021_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 9,
+    "variacao_mensal": 12.5
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2020_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2020",
+    "id": "Araçatuba_Furto_De_Veículo_2021_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 4,
+    "variacao_mensal": -55.56
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2021_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 5,
+    "variacao_mensal": 25.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2021_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 9,
+    "variacao_mensal": 80.0
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2022_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 19,
+    "variacao_mensal": 111.11
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2022_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 12,
+    "variacao_mensal": -36.84
+  },
+  {
+    "id": "Araçatuba_Furto_De_Veículo_2022_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
     "mes": "Julho",
     "ocorrencias": 9,
-    "variacao_mensal": -18.18
+    "variacao_mensal": -25.0
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2020_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2020",
+    "id": "Araçatuba_Furto_De_Veículo_2022_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
     "mes": "Outubro",
     "ocorrencias": 12,
     "variacao_mensal": 33.33
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2021_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
+    "id": "Araçatuba_Furto_De_Veículo_2023_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 15,
-    "variacao_mensal": 25.0
+    "ocorrencias": 12,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2021_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
+    "id": "Araçatuba_Furto_De_Veículo_2023_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 20,
-    "variacao_mensal": 33.33
+    "ocorrencias": 5,
+    "variacao_mensal": -58.33
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2021_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
+    "id": "Araçatuba_Furto_De_Veículo_2023_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 14,
-    "variacao_mensal": -30.0
+    "ocorrencias": 9,
+    "variacao_mensal": 80.0
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2021_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
+    "id": "Araçatuba_Furto_De_Veículo_2023_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
     "mes": "Outubro",
     "ocorrencias": 17,
-    "variacao_mensal": 21.43
+    "variacao_mensal": 88.89
   },
   {
-    "id": "Cotia_Roubo_De_Veículo_2022_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 22,
-    "variacao_mensal": 29.41
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2022_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 15,
-    "variacao_mensal": -31.82
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2022_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 22,
-    "variacao_mensal": 46.67
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2022_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 52,
-    "variacao_mensal": 136.36
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2023_Janeiro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 33,
-    "variacao_mensal": -36.54
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2023_Abril",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 37,
-    "variacao_mensal": 12.12
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2023_Julho",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 29,
-    "variacao_mensal": -21.62
-  },
-  {
-    "id": "Cotia_Roubo_De_Veículo_2023_Outubro",
-    "municipio": "Cotia",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 44,
-    "variacao_mensal": 51.72
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2019_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2019_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Janeiro",
-    "ocorrencias": 7264,
+    "ocorrencias": 4,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2019_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 7782,
-    "variacao_mensal": 7.13
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2019_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 7868,
-    "variacao_mensal": 1.11
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2019_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Outubro",
-    "ocorrencias": 8083,
-    "variacao_mensal": 2.73
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2020_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Janeiro",
-    "ocorrencias": 7427,
-    "variacao_mensal": -8.12
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2020_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Abril",
-    "ocorrencias": 3946,
-    "variacao_mensal": -46.87
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2020_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Julho",
-    "ocorrencias": 5617,
-    "variacao_mensal": 42.35
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2020_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Outubro",
-    "ocorrencias": 5442,
-    "variacao_mensal": -3.12
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2021_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Janeiro",
-    "ocorrencias": 5749,
-    "variacao_mensal": 5.64
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2021_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Abril",
-    "ocorrencias": 5982,
-    "variacao_mensal": 4.05
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2021_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 6827,
-    "variacao_mensal": 14.13
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2021_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 7631,
-    "variacao_mensal": 11.78
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2022_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 7113,
-    "variacao_mensal": -6.79
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2022_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 7597,
-    "variacao_mensal": 6.8
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2022_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 8170,
-    "variacao_mensal": 7.54
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2022_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 8825,
-    "variacao_mensal": 8.02
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2023_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 7716,
-    "variacao_mensal": -12.57
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2023_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 7522,
-    "variacao_mensal": -2.51
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2023_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 7882,
-    "variacao_mensal": 4.79
-  },
-  {
-    "id": "Estado_De_São_Paulo_Furto_De_Veículo_2023_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 8177,
-    "variacao_mensal": 3.74
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2019_Janeiro",
-    "municipio": "Estado De São Paulo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2019_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 270,
+    "mes": "Abril",
+    "ocorrencias": 4,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2019_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 255,
-    "variacao_mensal": -5.56
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2019_Julho",
-    "municipio": "Estado De São Paulo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2019_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 186,
-    "variacao_mensal": -27.06
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2019_Outubro",
-    "municipio": "Estado De São Paulo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2019_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 253,
-    "variacao_mensal": 36.02
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2020_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
-    "mes": "Janeiro",
-    "ocorrencias": 263,
-    "variacao_mensal": 3.95
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2020_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
-    "mes": "Abril",
-    "ocorrencias": 264,
-    "variacao_mensal": 0.38
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2020_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
-    "mes": "Julho",
-    "ocorrencias": 217,
-    "variacao_mensal": -17.8
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2020_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
-    "mes": "Outubro",
-    "ocorrencias": 243,
-    "variacao_mensal": 11.98
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2021_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Janeiro",
-    "ocorrencias": 284,
-    "variacao_mensal": 16.87
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2021_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Abril",
-    "ocorrencias": 215,
-    "variacao_mensal": -24.3
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2021_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 199,
-    "variacao_mensal": -7.44
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2021_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 221,
-    "variacao_mensal": 11.06
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2022_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 236,
-    "variacao_mensal": 6.79
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2022_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 230,
-    "variacao_mensal": -2.54
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2022_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 259,
-    "variacao_mensal": 12.61
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2022_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 270,
-    "variacao_mensal": 4.25
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2023_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 250,
-    "variacao_mensal": -7.41
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2023_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 225,
-    "variacao_mensal": -10.0
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2023_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 162,
-    "variacao_mensal": -28.0
-  },
-  {
-    "id": "Estado_De_São_Paulo_Homicídio_Doloso_(2)_2023_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 196,
-    "variacao_mensal": 20.99
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2019_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 3948,
+    "ocorrencias": 2,
     "variacao_mensal": 0.0
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2019_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 4070,
-    "variacao_mensal": 3.09
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2019_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 3691,
-    "variacao_mensal": -9.31
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2019_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Outubro",
-    "ocorrencias": 3821,
-    "variacao_mensal": 3.52
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2020_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2020_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 3662,
-    "variacao_mensal": -4.16
+    "ocorrencias": 6,
+    "variacao_mensal": 200.0
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2020_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2020_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 2215,
-    "variacao_mensal": -39.51
+    "ocorrencias": 1,
+    "variacao_mensal": -83.33
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2020_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2020_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 2427,
-    "variacao_mensal": 9.57
+    "ocorrencias": 2,
+    "variacao_mensal": 100.0
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2020_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2020_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 2354,
-    "variacao_mensal": -3.01
+    "ocorrencias": 3,
+    "variacao_mensal": 50.0
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2021_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2021_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 2779,
-    "variacao_mensal": 18.05
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2021_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2021_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 2335,
-    "variacao_mensal": -15.98
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2021_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 2552,
-    "variacao_mensal": 9.29
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2021_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 3023,
-    "variacao_mensal": 18.46
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2022_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 2936,
-    "variacao_mensal": -2.88
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2022_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 3041,
-    "variacao_mensal": 3.58
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2022_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 3332,
-    "variacao_mensal": 9.57
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2022_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 3982,
-    "variacao_mensal": 19.51
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2023_Janeiro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 3172,
-    "variacao_mensal": -20.34
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2023_Abril",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 3079,
-    "variacao_mensal": -2.93
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2023_Julho",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 2837,
-    "variacao_mensal": -7.86
-  },
-  {
-    "id": "Estado_De_São_Paulo_Roubo_De_Veículo_2023_Outubro",
-    "municipio": "Estado De São Paulo",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 3328,
-    "variacao_mensal": 17.31
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2019_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 2847,
+    "ocorrencias": 2,
     "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2019_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 3274,
-    "variacao_mensal": 15.0
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2019_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 3367,
-    "variacao_mensal": 2.84
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2019_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2019",
-    "mes": "Outubro",
-    "ocorrencias": 3380,
-    "variacao_mensal": 0.39
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2020_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Janeiro",
-    "ocorrencias": 2965,
-    "variacao_mensal": -12.28
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2020_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Abril",
-    "ocorrencias": 1541,
-    "variacao_mensal": -48.03
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2020_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Julho",
-    "ocorrencias": 2556,
-    "variacao_mensal": 65.87
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2020_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2020",
-    "mes": "Outubro",
-    "ocorrencias": 2185,
-    "variacao_mensal": -14.51
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2021_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Janeiro",
-    "ocorrencias": 2323,
-    "variacao_mensal": 6.32
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2021_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Abril",
-    "ocorrencias": 2684,
-    "variacao_mensal": 15.54
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2021_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 2939,
-    "variacao_mensal": 9.5
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2021_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 3383,
-    "variacao_mensal": 15.11
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2022_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 2837,
-    "variacao_mensal": -16.14
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2022_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 3380,
-    "variacao_mensal": 19.14
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2022_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 3566,
-    "variacao_mensal": 5.5
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2022_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2022",
-    "mes": "Outubro",
-    "ocorrencias": 3858,
-    "variacao_mensal": 8.19
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2023_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Janeiro",
-    "ocorrencias": 3308,
-    "variacao_mensal": -14.26
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2023_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 3154,
-    "variacao_mensal": -4.66
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2023_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 3414,
-    "variacao_mensal": 8.24
-  },
-  {
-    "id": "São_Paulo_(Capital)_Furto_De_Veículo_2023_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Furto De Veículo",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 3535,
-    "variacao_mensal": 3.54
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2019_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2021_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 55,
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 2,
     "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2019_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2021_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2019",
-    "mes": "Abril",
-    "ocorrencias": 59,
-    "variacao_mensal": 7.27
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2019_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2019",
-    "mes": "Julho",
-    "ocorrencias": 53,
-    "variacao_mensal": -10.17
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2019_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2019",
+    "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 62,
-    "variacao_mensal": 16.98
+    "ocorrencias": 4,
+    "variacao_mensal": 100.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2020_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2022_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
+    "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 67,
-    "variacao_mensal": 8.06
+    "ocorrencias": 2,
+    "variacao_mensal": -50.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2020_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2022_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
+    "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 52,
-    "variacao_mensal": -22.39
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2020_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2022_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
+    "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 54,
-    "variacao_mensal": 3.85
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2020_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2020",
-    "mes": "Outubro",
-    "ocorrencias": 43,
-    "variacao_mensal": -20.37
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2021_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Janeiro",
-    "ocorrencias": 64,
-    "variacao_mensal": 48.84
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2021_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Abril",
-    "ocorrencias": 52,
-    "variacao_mensal": -18.75
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2021_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Julho",
-    "ocorrencias": 43,
-    "variacao_mensal": -17.31
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2021_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2021",
-    "mes": "Outubro",
-    "ocorrencias": 43,
+    "ocorrencias": 1,
     "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2022_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Janeiro",
-    "ocorrencias": 55,
-    "variacao_mensal": 27.91
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2022_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Abril",
-    "ocorrencias": 45,
-    "variacao_mensal": -18.18
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2022_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2022",
-    "mes": "Julho",
-    "ocorrencias": 42,
-    "variacao_mensal": -6.67
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2022_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2022_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 57,
-    "variacao_mensal": 35.71
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2023_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2023_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Homicídio Doloso (2)",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 43,
-    "variacao_mensal": -24.56
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2023_Abril",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Abril",
-    "ocorrencias": 49,
-    "variacao_mensal": 13.95
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2023_Julho",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Julho",
-    "ocorrencias": 23,
-    "variacao_mensal": -53.06
-  },
-  {
-    "id": "São_Paulo_(Capital)_Homicídio_Doloso_(2)_2023_Outubro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Homicídio Doloso (2)",
-    "ano": "2023",
-    "mes": "Outubro",
-    "ocorrencias": 43,
-    "variacao_mensal": 86.96
-  },
-  {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2019_Janeiro",
-    "municipio": "São Paulo (Capital)",
-    "tipo_crime": "Roubo De Veículo",
-    "ano": "2019",
-    "mes": "Janeiro",
-    "ocorrencias": 1747,
+    "ocorrencias": 3,
     "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2019_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2023_Abril",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 2,
+    "variacao_mensal": -33.33
+  },
+  {
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2023_Julho",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
+  },
+  {
+    "id": "Araçatuba_Homicídio_Doloso_(2)_2023_Outubro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 8,
+    "variacao_mensal": 700.0
+  },
+  {
+    "id": "Araçatuba_Roubo_De_Veículo_2019_Janeiro",
+    "municipio": "Araçatuba",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Araçatuba_Roubo_De_Veículo_2019_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2019",
     "mes": "Abril",
-    "ocorrencias": 1865,
-    "variacao_mensal": 6.75
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2019_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2019_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2019",
     "mes": "Julho",
-    "ocorrencias": 1688,
-    "variacao_mensal": -9.49
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2019_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2019_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2019",
     "mes": "Outubro",
-    "ocorrencias": 1772,
-    "variacao_mensal": 4.98
+    "ocorrencias": 6,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2020_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2020_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2020",
     "mes": "Janeiro",
-    "ocorrencias": 1643,
-    "variacao_mensal": -7.28
+    "ocorrencias": 2,
+    "variacao_mensal": -66.67
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2020_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2020_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2020",
     "mes": "Abril",
-    "ocorrencias": 955,
-    "variacao_mensal": -41.87
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2020_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2020_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2020",
     "mes": "Julho",
-    "ocorrencias": 1080,
-    "variacao_mensal": 13.09
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2020_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2020_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2020",
     "mes": "Outubro",
-    "ocorrencias": 971,
-    "variacao_mensal": -10.09
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2021_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2021_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2021",
     "mes": "Janeiro",
-    "ocorrencias": 1216,
-    "variacao_mensal": 25.23
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2021_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2021_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2021",
     "mes": "Abril",
-    "ocorrencias": 993,
-    "variacao_mensal": -18.34
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2021_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2021_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2021",
     "mes": "Julho",
-    "ocorrencias": 1094,
-    "variacao_mensal": 10.17
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2021_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2021_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2021",
     "mes": "Outubro",
-    "ocorrencias": 1287,
-    "variacao_mensal": 17.64
+    "ocorrencias": 2,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2022_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2022_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2022",
     "mes": "Janeiro",
-    "ocorrencias": 1125,
-    "variacao_mensal": -12.59
+    "ocorrencias": 1,
+    "variacao_mensal": -50.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2022_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2022_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2022",
     "mes": "Abril",
-    "ocorrencias": 1234,
-    "variacao_mensal": 9.69
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2022_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2022_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2022",
     "mes": "Julho",
-    "ocorrencias": 1382,
-    "variacao_mensal": 11.99
+    "ocorrencias": 1,
+    "variacao_mensal": -66.67
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2022_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2022_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2022",
     "mes": "Outubro",
-    "ocorrencias": 1573,
-    "variacao_mensal": 13.82
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2023_Janeiro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2023_Janeiro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2023",
     "mes": "Janeiro",
-    "ocorrencias": 1213,
-    "variacao_mensal": -22.89
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2023_Abril",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2023_Abril",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2023",
     "mes": "Abril",
-    "ocorrencias": 1259,
-    "variacao_mensal": 3.79
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2023_Julho",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2023_Julho",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2023",
     "mes": "Julho",
-    "ocorrencias": 1136,
-    "variacao_mensal": -9.77
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
   },
   {
-    "id": "São_Paulo_(Capital)_Roubo_De_Veículo_2023_Outubro",
-    "municipio": "São Paulo (Capital)",
+    "id": "Araçatuba_Roubo_De_Veículo_2023_Outubro",
+    "municipio": "Araçatuba",
     "tipo_crime": "Roubo De Veículo",
     "ano": "2023",
     "mes": "Outubro",
-    "ocorrencias": 1315,
-    "variacao_mensal": 15.76
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2019_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2019_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2019_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2019_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2020_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2020_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2020_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2020_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2021_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2021_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2021_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2021_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2022_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2022_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2022_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2022_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2023_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2023_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2023_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Furto_De_Veículo_2023_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2019_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2019_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2019_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2019_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2020_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2020_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2020_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2020_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2021_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2021_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2021_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2021_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2022_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2022_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2022_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2022_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2023_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2023_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2023_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Homicídio_Doloso_(2)_2023_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2019_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2019_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2019_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2019_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2020_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2020_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2020_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2020_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2021_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2021_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2021_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2021_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2022_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2022_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2022_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2022_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2023_Janeiro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2023_Abril",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2023_Julho",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Auriflama_Roubo_De_Veículo_2023_Outubro",
+    "municipio": "Auriflama",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2019_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2019_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2019_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2019_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 2,
+    "variacao_mensal": 100.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2020_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 3,
+    "variacao_mensal": 50.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2020_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2020_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2020_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2021_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2021_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2021_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2021_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2022_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2022_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2022_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2022_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 3,
+    "variacao_mensal": 200.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2023_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2023_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2023_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Furto_De_Veículo_2023_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Furto De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2019_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2019_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2019_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2019_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2020_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2020_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2020_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2020_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2021_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2021_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2021_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2021_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2022_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2022_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2022_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2022_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 1,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2023_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": -100.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2023_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2023_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Homicídio_Doloso_(2)_2023_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Homicídio Doloso (2)",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2019_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2019_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2019_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2019_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2019",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2020_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2020_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2020_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2020_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2020",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2021_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2021_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2021_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2021_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2021",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2022_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2022_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2022_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2022_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2022",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2023_Janeiro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Janeiro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2023_Abril",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Abril",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2023_Julho",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Julho",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
+  },
+  {
+    "id": "Avanhandava_Roubo_De_Veículo_2023_Outubro",
+    "municipio": "Avanhandava",
+    "tipo_crime": "Roubo De Veículo",
+    "ano": "2023",
+    "mes": "Outubro",
+    "ocorrencias": 0,
+    "variacao_mensal": 0.0
   }
 ]
