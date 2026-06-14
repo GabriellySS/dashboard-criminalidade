@@ -13,19 +13,21 @@ TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 TARGET_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "data", "mockData.json")
 
 def scrape_with_playwright(download_dir):
-    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files for target regions, municipalities, and years."""
+    """Navigates to the SSP-SP stats page using Playwright and downloads Excel files for target configurations."""
     url = "https://www.ssp.sp.gov.br/estatistica/dados-mensais"
     
-    # Target configurations to scrape
+    # We download:
+    # 1. State Consolidated (keeping region and municipality as default)
+    # 2. Specific key municipalities (Capital and Cotia) to support the frontend's special metrics
     targets = [
-        ('Capital', 'São Paulo'),
-        ('Grande São Paulo (exclui a Capital)', 'Cotia')
+        ('Regiões', 'Municípios', 'Estado de São Paulo'),
+        ('Capital', 'São Paulo', 'São Paulo'),
+        ('Grande São Paulo (exclui a Capital)', 'Cotia', 'Cotia')
     ]
     years = ['2019', '2020', '2021', '2022', '2023']
     
     print(f"Starting Playwright automation targeting: {url}")
     with sync_playwright() as p:
-        # Launch browser with headless=False to allow visual auditing/debugging
         browser = p.chromium.launch(headless=False)
         context = browser.new_context(accept_downloads=True)
         page = context.new_page()
@@ -38,35 +40,39 @@ def scrape_with_playwright(download_dir):
             # Explicitly wait for the primary filter dropdowns to be loaded in the DOM
             page.wait_for_selector("select.form-select", timeout=15000)
             
-            for regiao, municipio in targets:
+            for regiao, municipio, file_prefix in targets:
                 for year in years:
-                    print(f"Scraping data for {municipio} ({regiao}) - Year {year}...")
+                    print(f"Scraping data for {file_prefix} - Year {year}...")
                     
                     # Re-locate select elements in each iteration to avoid element detached errors
                     selects = page.locator("select.form-select")
                     
-                    # 1. Select Year (First select)
+                    # 1. Select Year
                     selects.nth(0).select_option(label=year)
                     page.wait_for_timeout(500)
                     
-                    # 2. Select Region (Second select)
-                    selects.nth(1).select_option(label=regiao)
-                    # Wait for the municipality dropdown (Third select) to update options
-                    page.wait_for_timeout(1000)
-                    
-                    # 3. Select Municipality (Third select)
-                    selects = page.locator("select.form-select")
-                    muni_select = selects.nth(2)
-                    
-                    try:
-                        muni_select.select_option(label=municipio)
-                    except Exception:
-                        # Try uppercase fallback if needed
-                        muni_select.select_option(label=municipio.upper())
-                    page.wait_for_timeout(500)
+                    if regiao != 'Regiões' or municipio != 'Municípios':
+                        # 2. Select Region
+                        selects.nth(1).select_option(label=regiao)
+                        # Wait for the municipality dropdown (Third select) to update options
+                        page.wait_for_timeout(1000)
+                        
+                        # 3. Select Municipality
+                        selects = page.locator("select.form-select")
+                        muni_select = selects.nth(2)
+                        
+                        try:
+                            muni_select.select_option(label=municipio)
+                        except Exception:
+                            muni_select.select_option(label=municipio.upper())
+                        page.wait_for_timeout(500)
+                    else:
+                        # Reset region select to default index 0 to clear previous selection
+                        selects.nth(1).select_option(index=0)
+                        page.wait_for_timeout(1000)
                     
                     # Save path for this specific spreadsheet
-                    filename = f"{municipio}_{year}.xlsx".replace(" ", "_")
+                    filename = f"{file_prefix}_{year}.xlsx".replace(" ", "_")
                     filepath = os.path.join(download_dir, filename)
                     
                     # 4. Intercept and download Excel file
@@ -79,7 +85,6 @@ def scrape_with_playwright(download_dir):
                     print(f"Successfully downloaded and saved: {filename} ({os.path.getsize(filepath)} bytes)")
                     
         except Exception as e:
-            # Raise a real error instead of falling back to fake/simulated data
             raise RuntimeError(f"Playwright automation failed or timed out: {e}")
         finally:
             browser.close()
@@ -92,8 +97,8 @@ def main():
         # 1. Run robot automation (Playwright) to download real spreadsheets
         scrape_with_playwright(TEMP_DIR)
         
-        # 2. Compile downloaded spreadsheets into the expected format
-        print("Compiling downloaded real spreadsheets...")
+        # 2. Compile downloaded spreadsheets dynamically
+        print("Compiling downloaded real spreadsheets dynamically...")
         anos = ['2019', '2020', '2021', '2022', '2023']
         meses_col = ['Jan', 'Abr', 'Jul', 'Out']
         
@@ -104,16 +109,21 @@ def main():
             'Out': 10
         }
         
-        cities_map = {
-            'S. PAULO': 'São Paulo',
-            'COTIA': 'Cotia'
-        }
-        
         crimes_targets = [
             ('HOMICÍDIO DOLOSO (2)', 'HOMICÍDIO DOLOSO (2)'),
             ('ROUBO DE VEÍCULO', 'ROUBO DE VEÍCULO'),
             ('FURTO DE VEÍCULO', 'FURTO DE VEÍCULO')
         ]
+        
+        # Scan TEMP_DIR for downloaded files to build the list of cities dynamically
+        files = [f for f in os.listdir(TEMP_DIR) if f.endswith('.xlsx')]
+        cities_detected = set()
+        for f in files:
+            parts = f.rsplit('_', 1)
+            if len(parts) == 2:
+                cities_detected.add(parts[0].replace('_', ' '))
+                
+        print(f"Detected cities from files: {cities_detected}")
         
         rows = []
         
@@ -133,14 +143,14 @@ def main():
         def clean_val(val):
             if val is None:
                 return "0"
-            # Remove dots used as thousand separators (e.g. '1.213' -> '1213')
             return str(val).strip().replace('.', '')
             
-        for city_key, city_file_prefix in cities_map.items():
+        for city in sorted(cities_detected):
+            city_file_prefix = city.replace(" ", "_")
             for crime_label, crime_search in crimes_targets:
-                row = [city_key, crime_label]
+                row = [city.upper(), crime_label]
                 for ano in anos:
-                    filename = f"{city_file_prefix}_{ano}.xlsx".replace(" ", "_")
+                    filename = f"{city_file_prefix}_{ano}.xlsx"
                     filepath = os.path.join(TEMP_DIR, filename)
                     
                     if not os.path.exists(filepath):
@@ -219,22 +229,14 @@ def main():
         def normalize_text(text):
             if not isinstance(text, str):
                 return text
-            text = text.strip().upper()
+            text = text.strip()
             
-            # Cities mapping
-            if text in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"]:
+            # Special manual correction for Capital
+            text_upper = text.upper()
+            if text_upper in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"]:
                 return "São Paulo (Capital)"
-            if text == "COTIA":
-                return "Cotia"
                 
-            # Crime mapping
-            norm_crime = "".join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
-            if "ROUBO" in norm_crime and "VEICULO" in norm_crime:
-                return "Roubo de Veículos"
-            if "FURTO" in norm_crime:
-                return "Furtos"
-            if "HOMICIDIO" in norm_crime:
-                return "Homicídios Dolosos"
+            # Generic Title Case normalization for all other cities/regions
             return text.title()
         
         df_long["municipio"] = df_long["municipio"].apply(normalize_text)
@@ -252,7 +254,7 @@ def main():
         
         df_long = df_long.sort_values(by=["municipio", "tipo_crime", "ano_int", "mes_idx"]).reset_index(drop=True)
         
-        # Calculate monthly variations
+        # Calculate monthly variations grouped correctly by municipio and crime
         df_long["variacao_mensal"] = df_long.groupby(["municipio", "tipo_crime"])["ocorrencias"].pct_change() * 100
         df_long["variacao_mensal"] = df_long["variacao_mensal"].replace([np.inf, -np.inf], 0.0)
         df_long["variacao_mensal"] = df_long["variacao_mensal"].fillna(0.0).round(2)

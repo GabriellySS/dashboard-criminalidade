@@ -26,15 +26,14 @@ O output final em `src/data/mockData.json` deve manter estritamente esta tipagem
 ]
 ```
 
-## 4. Fluxo de Automação Real (Playwright)
-1. **Navegação Inicial:** O robô deve inicializar o Chromium via Playwright (configurado temporariamente com `headless=False` para permitir auditoria visual durante o desenvolvimento).
-2. **Acesso e Espera:** Acessar o URL `https://www.ssp.sp.gov.br/estatistica/dados-mensais`. Aguardar até que os seletores principais de filtros (dropdowns de ano e região/município) estejam totalmente carregados no DOM (`page.wait_for_selector`).
-3. **Interação Condicional:** O robô deve interagir sequencialmente com os elementos seletores do formulário para garantir que o estado da página (ViewState/Session) seja atualizado antes de disparar o download.
-4. **Interceptação de Download:** Utilizar o gerenciador de contexto `with page.expect_download() as download_info:` associado ao clique no elemento de exportação para Excel.
-5. **Tratamento de Falhas (Sem Fallback Fake):** Remover a geração de planilhas simuladas por sementes aleatórias. Se o download falhar, o script deve lançar uma exceção clara detalhando qual elemento ou timeout causou a falha, garantindo previsibilidade.
+## 4. Fluxo de Automação Real (Escala Estadual)
+1. **Seleção de Filtros (Playwright):** No portal da SSP-SP, o robô deve interagir com o dropdown de Municípios e selecionar a opção que traga o consolidado de "Todos" ou baixar a planilha geral do Estado de SP (evitando fazer o loop manual por 645 cidades, o que causaria estouro de timeout).
+2. **Normalização em Massa (Pandas):** - A função de limpeza do Pandas não deve mais usar mapeamentos manuais rígidos (if/else) para nomes de cidades, exceto para correções explícitas de siglas conhecidas (ex: "S. PAULO" ou "SÃO PAULO" -> "São Paulo (Capital)").
+   - Para todas as outras cidades, aplicar a capitalização padrão (`.str.title()`) e remover espaços extras para garantir a padronização.
+3. **Gerenciamento de Volume de Dados:** O formato do JSON final em `src/data/mockData.json` deve permanecer idêntico, mas agora conterá os registros de todos os municípios processados cronologicamente.
 
 ## 5. Instruções para o Agente
-1. Leia a nova estratégia de automação detalhada na seção 4 do @scraper_spec.md.
-2. Modifique o arquivo `scraper.py` para mudar o parâmetro de inicialização do browser para `headless=False` para podermos auditar visualmente se ele está alcançando a página correta.
-3. Remova completamente a função `generate_simulated_excel` e o seu bloco de execução dentro do `except`. Queremos que o script falhe explicitamente se não conseguir baixar os dados oficiais, eliminando o mascaramento de falsos positivos.
-4. Refatore a função `scrape_with_playwright` para aprimorar os seletores de clique com base na estrutura real da página, adicionando tempos de espera explícitos (`page.wait_for_timeout` ou `wait_for_load_state`) entre as interações.
+1. Leia a atualização de escala estadual no @scraper_spec.md.
+2. Refatore o `scraper.py` para remover a trava que limitava a extração apenas a São Paulo e Cotia.
+3. Atualize a função de normalização de texto para tratar dinamicamente o nome de qualquer município do estado que apareça na planilha baixada.
+4. Mantenha o cálculo de `variacao_mensal` agrupado por `["municipio", "tipo_crime"]` para que a variação percentual seja calculada corretamente e isolada dentro de cada cidade.
