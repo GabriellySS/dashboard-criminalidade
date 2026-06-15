@@ -4,6 +4,7 @@ class MunicipioResponse(BaseModel):
     id: int
     regiao_id: int
     nome: str
+    regiao_nome: str
 
     class Config:
         from_attributes = True

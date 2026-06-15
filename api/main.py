@@ -47,9 +47,14 @@ async def get_status():
 
 @app.get("/api/municipios", response_model=List[MunicipioResponse])
 def list_municipios(db: Session = Depends(get_db)):
-    """Retorna todos os municípios cadastrados no banco de dados."""
-    result = db.execute(text("SELECT id, regiao_id, nome FROM municipios ORDER BY nome"))
-    return [{"id": r[0], "regiao_id": r[1], "nome": r[2]} for r in result]
+    """Retorna todos os municípios cadastrados no banco de dados, incluindo o nome da região."""
+    result = db.execute(text("""
+        SELECT m.id, m.regiao_id, m.nome, r.nome AS regiao_nome 
+        FROM municipios m 
+        JOIN regioes r ON m.regiao_id = r.id 
+        ORDER BY m.nome
+    """))
+    return [{"id": r[0], "regiao_id": r[1], "nome": r[2], "regiao_nome": r[3]} for r in result]
 
 @app.get("/api/ocorrencias", response_model=List[OcorrenciaResponse])
 def list_ocorrencias(

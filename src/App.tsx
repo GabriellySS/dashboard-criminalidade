@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from 'react';
-import mockData from './data/mockData.json';
 import { Header } from './components/Header/Header';
 import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
@@ -18,9 +17,73 @@ function App() {
   const [anoSelecionado, setAnoSelecionado] = useState('Todos');
   const [mesSelecionado, setMesSelecionado] = useState('Todos');
   const [isLoading, setIsLoading] = useState(false);
+  const [crimeRecords, setCrimeRecords] = useState<CrimeRecord[]>([]);
 
-  // Safely cast mockData to CrimeRecord[]
-  const typedMockData = mockData as CrimeRecord[];
+  // Fetch data from real FastAPI routes
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const [resMunicipios, resOcorrencias] = await Promise.all([
+          fetch('http://localhost:8000/api/municipios'),
+          fetch('http://localhost:8000/api/ocorrencias')
+        ]);
+
+        if (!resMunicipios.ok || !resOcorrencias.ok) {
+          throw new Error('Falha ao carregar dados da API');
+        }
+
+        const municipiosData = await resMunicipios.json();
+        const ocorrenciasData = await resOcorrencias.json();
+
+        // Map municipalities by ID for fast lookup
+        const municipiosMap: Record<number, { nome: string; regiao_nome: string }> = {};
+        municipiosData.forEach((m: { id: number; nome: string; regiao_nome: string }) => {
+          municipiosMap[m.id] = { nome: m.nome, regiao_nome: m.regiao_nome };
+        });
+
+        // Map months (Integer -> String) to match frontend format
+        const MES_MAP_REVERSE: Record<number, string> = {
+          1: "Janeiro",
+          2: "Fevereiro",
+          3: "Março",
+          4: "Abril",
+          5: "Maio",
+          6: "Junho",
+          7: "Julho",
+          8: "Agosto",
+          9: "Setembro",
+          10: "Outubro",
+          11: "Novembro",
+          12: "Dezembro"
+        };
+
+        // Format occurrences to CrimeRecord[]
+        const records: CrimeRecord[] = ocorrenciasData.map((occ: any) => {
+          const municipioInfo = municipiosMap[occ.municipio_id];
+          return {
+            id: String(occ.id),
+            regiao: municipioInfo ? municipioInfo.regiao_nome : 'Não especificado',
+            municipio: municipioInfo ? municipioInfo.nome : 'Não especificado',
+            categoria_crime: occ.categoria_macro,
+            tipo_crime: occ.nome_crime,
+            ano: String(occ.ano),
+            mes: MES_MAP_REVERSE[occ.mes] || 'Janeiro',
+            ocorrencias: occ.total_ocorrencias,
+            variacao_mensal: occ.variacao_mensal
+          };
+        });
+
+        setCrimeRecords(records);
+      } catch (error) {
+        console.error('Erro ao carregar dados:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   // Simulate loading delay whenever filters change
   useEffect(() => {
@@ -33,33 +96,33 @@ function App() {
 
   // Dynamic filter list options
   const regioesList = useMemo(() => {
-    return Array.from(new Set(typedMockData.map((d) => d.regiao))).sort();
-  }, [typedMockData]);
+    return Array.from(new Set(crimeRecords.map((d) => d.regiao))).sort();
+  }, [crimeRecords]);
 
   // Cascading Filter: municipalities list depends on the selected region
   const municipiosList = useMemo(() => {
     const filtered = regiaoSelecionada === 'Todas'
-      ? typedMockData
-      : typedMockData.filter((d) => d.regiao === regiaoSelecionada);
+      ? crimeRecords
+      : crimeRecords.filter((d) => d.regiao === regiaoSelecionada);
     return Array.from(new Set(filtered.map((d) => d.municipio))).sort();
-  }, [typedMockData, regiaoSelecionada]);
+  }, [crimeRecords, regiaoSelecionada]);
 
   // Categoria filter list options
   const categoriasList = useMemo(() => {
-    return Array.from(new Set(typedMockData.map((d) => d.categoria_crime))).sort();
-  }, [typedMockData]);
+    return Array.from(new Set(crimeRecords.map((d) => d.categoria_crime))).sort();
+  }, [crimeRecords]);
 
   // Cascading Filter: types of crime list depends on the selected category
   const tiposCrimeList = useMemo(() => {
     const filtered = categoriaSelecionada === 'Todas'
-      ? typedMockData
-      : typedMockData.filter((d) => d.categoria_crime === categoriaSelecionada);
+      ? crimeRecords
+      : crimeRecords.filter((d) => d.categoria_crime === categoriaSelecionada);
     return Array.from(new Set(filtered.map((d) => d.tipo_crime))).sort();
-  }, [typedMockData, categoriaSelecionada]);
+  }, [crimeRecords, categoriaSelecionada]);
 
   const anosList = useMemo(() => {
-    return Array.from(new Set(typedMockData.map((d) => String(d.ano)))).sort((a, b) => b.localeCompare(a));
-  }, [typedMockData]);
+    return Array.from(new Set(crimeRecords.map((d) => String(d.ano)))).sort((a, b) => b.localeCompare(a));
+  }, [crimeRecords]);
 
   const mesesList = useMemo(() => {
     const MES_ORDEM: Record<string, number> = {
@@ -76,14 +139,14 @@ function App() {
       'Novembro': 11,
       'Dezembro': 12,
     };
-    return Array.from(new Set(typedMockData.map((d) => d.mes))).sort((a, b) => {
+    return Array.from(new Set(crimeRecords.map((d) => d.mes))).sort((a, b) => {
       return (MES_ORDEM[a] || 0) - (MES_ORDEM[b] || 0);
     });
-  }, [typedMockData]);
+  }, [crimeRecords]);
 
   // Derived filtered data (dadosFiltrados)
   const dadosFiltrados = useMemo(() => {
-    return typedMockData.filter((item) => {
+    return crimeRecords.filter((item) => {
       const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
       const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
       const matchCategoria = categoriaSelecionada === 'Todas' || item.categoria_crime === categoriaSelecionada;
@@ -92,7 +155,7 @@ function App() {
       const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
       return matchRegiao && matchMunicipio && matchCategoria && matchCrime && matchAno && matchMes;
     });
-  }, [typedMockData, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [crimeRecords, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // Derived statistics for StatCards
   const stats = useMemo(() => {
@@ -102,10 +165,10 @@ function App() {
     let variacaoTotal: number | null = null;
     if (anoSelecionado !== 'Todos') {
       const prevYear = String(parseInt(anoSelecionado) - 1);
-      const hasDataForPrevYear = typedMockData.some((item) => item.ano === prevYear);
+      const hasDataForPrevYear = crimeRecords.some((item) => item.ano === prevYear);
       
       if (hasDataForPrevYear) {
-        const prevYearData = typedMockData.filter((item) => {
+        const prevYearData = crimeRecords.filter((item) => {
           const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
           const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
           const matchCategoria = categoriaSelecionada === 'Todas' || item.categoria_crime === categoriaSelecionada;
@@ -153,7 +216,7 @@ function App() {
       crimeMaisFrequente,
       mediaMensal,
     };
-  }, [typedMockData, dadosFiltrados, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [crimeRecords, dadosFiltrados, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   return (
     <>
