@@ -13,6 +13,7 @@ from sqlalchemy import text
 
 # Define paths
 TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
+MAX_RETRIES = 3
 
 def check_data_exists(municipio: str, ano: str) -> bool:
     """Checks the database to see if occurrences already exist for this municipality and year."""
@@ -230,46 +231,78 @@ def scrape_with_playwright(download_dir):
                         
                         print(f"🔎 [FILA] Iniciando extração: {m} ({r}) - {year}...")
                         
-                        # Pausa humanizada antes de interagir (anti-bloqueio)
-                        sleep_time = random.uniform(2.0, 6.0)
-                        time.sleep(sleep_time)
+                        success = False
+                        for attempt in range(1, MAX_RETRIES + 1):
+                            try:
+                                # Pausa humanizada antes de interagir (anti-bloqueio)
+                                sleep_time = random.uniform(2.0, 6.0)
+                                time.sleep(sleep_time)
+                                
+                                selects = page.locator("select.form-select")
+                                
+                                # 1. Select Year
+                                selects.nth(0).select_option(label=year)
+                                page.wait_for_timeout(300)
+                                
+                                # 2. Select Region
+                                selects.nth(1).select_option(label=r)
+                                page.wait_for_timeout(500)
+                                
+                                # 3. Select Municipality
+                                selects = page.locator("select.form-select")
+                                muni_select = selects.nth(2)
+                                muni_select.select_option(label=m)
+                                page.wait_for_timeout(300)
+                                
+                                r_clean = r.replace(" ", "_")
+                                m_clean = m.replace(" ", "_")
+                                filename = f"{r_clean}__{m_clean}__{year}.xlsx"
+                                filepath = os.path.join(download_dir, filename)
+                                
+                                # 4. Intercept and download Excel file
+                                with page.expect_download(timeout=20000) as download_info:
+                                    export_button = page.locator("text=Exportar Dados")
+                                    export_button.click()
+                                    
+                                download = download_info.value
+                                download.save_as(filepath)
+                                
+                                # Process immediately (saving in batch and free memory)
+                                processar_e_carregar_lote(filepath)
+                                print(f"✅ [SUCESSO] Dados de '{normalized_m}' - {year} salvos no banco!")
+                                
+                                # Delete file immediately to save space
+                                if os.path.exists(filepath):
+                                    os.remove(filepath)
+                                
+                                success = True
+                                break
+                            except Exception as e:
+                                print(f"⚠️ [AVISO] Falha na tentativa {attempt}/{MAX_RETRIES} para '{normalized_m}' ({year}): {e}")
+                                # Clean up file if it exists
+                                r_clean = r.replace(" ", "_")
+                                m_clean = m.replace(" ", "_")
+                                filename = f"{r_clean}__{m_clean}__{year}.xlsx"
+                                filepath = os.path.join(download_dir, filename)
+                                if os.path.exists(filepath):
+                                    try:
+                                        os.remove(filepath)
+                                    except Exception:
+                                        pass
+                                
+                                if attempt < MAX_RETRIES:
+                                    print("Aguardando 5 segundos e recarregando a página...")
+                                    time.sleep(5)
+                                    try:
+                                        page.reload()
+                                        page.wait_for_load_state("networkidle")
+                                    except Exception as reload_err:
+                                        print(f"⚠️ Erro ao recarregar a página: {reload_err}")
+                                else:
+                                    print(f"❌ [ERRO CRÍTICO] Esgotadas as {MAX_RETRIES} tentativas para '{normalized_m}' - {year}. Falha graciosa ativada. Pulando para a próxima cidade/ano.")
                         
-                        selects = page.locator("select.form-select")
-                        
-                        # 1. Select Year
-                        selects.nth(0).select_option(label=year)
-                        page.wait_for_timeout(300)
-                        
-                        # 2. Select Region
-                        selects.nth(1).select_option(label=r)
-                        page.wait_for_timeout(500)
-                        
-                        # 3. Select Municipality
-                        selects = page.locator("select.form-select")
-                        muni_select = selects.nth(2)
-                        muni_select.select_option(label=m)
-                        page.wait_for_timeout(300)
-                        
-                        r_clean = r.replace(" ", "_")
-                        m_clean = m.replace(" ", "_")
-                        filename = f"{r_clean}__{m_clean}__{year}.xlsx"
-                        filepath = os.path.join(download_dir, filename)
-                        
-                        # 4. Intercept and download Excel file
-                        with page.expect_download(timeout=20000) as download_info:
-                            export_button = page.locator("text=Exportar Dados")
-                            export_button.click()
-                            
-                        download = download_info.value
-                        download.save_as(filepath)
-                        
-                        # Process immediately (saving in batch and free memory)
-                        processar_e_carregar_lote(filepath)
-                        print(f"✅ [SUCESSO] Dados de '{normalized_m}' - {year} salvos no banco!")
-                        
-                        # Delete file immediately to save space
-                        if os.path.exists(filepath):
-                            os.remove(filepath)
+                        if not success:
+                            continue
                             
         except Exception as e:
             raise RuntimeError(f"Erro na automação Playwright: {e}")

@@ -51,6 +51,10 @@ Os dados consolidados devem ser inseridos em tabelas relacionais no PostgreSQL. 
      - Contém "Furto" -> "Furto"
      - Contém "Estupro" -> "Estupro"
      - Qualquer outro caso -> "Outros Crimes"
+7. **Resiliência e Tolerância a Falhas (Retry Pattern & Graceful Degradation):**
+   - **Mecanismo de Retentativas:** O bloco de interação (seleção de campos, interceptação do download e processamento inicial) é executado sob um limite máximo de 3 tentativas (`MAX_RETRIES = 3`).
+   - **Tratamento de Oscilações:** Exceções de rede ou carregamento (como `TimeoutError` do Playwright) são capturadas. O robô emite um aviso no terminal, aguarda 5 segundos, recarrega a página (`page.reload()`) e tenta novamente.
+   - **Falha Graciosa:** Caso a extração de um município e ano falhe em todas as 3 tentativas, o script imprime um erro claro informando o ocorrido, limpa eventuais arquivos temporários residuais e usa `continue` para pular para a próxima cidade/ano sem interromper a execução global do pipeline.
 
 ## 5. Instruções para o Agente
 1. Leia a atualização de escala estadual no @scraper_spec.md.
