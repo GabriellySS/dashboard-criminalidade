@@ -4,11 +4,13 @@
 Construir o frontend de uma aplicação web (Single Page Application) que exibe dados estatísticos de criminalidade do estado de São Paulo. Esta fase foca na implementação de um **Design System Neumórfico (Soft UI)** com suporte nativo a temas Claro (Light) e Escuro (Dark). A troca de temas deve ser reativa.
 
 ## 2. Stack Tecnológico e Arquitetura Visual
-* **Framework:** React com TypeScript (Vite).
+* **Framework Frontend:** React com TypeScript (Vite).
 * **Estilização:** CSS Modules (arquivos `.module.css` localizados ao lado de cada componente).
 * **Fundação Visual:** Design Tokens definidos como Variáveis CSS globais no arquivo `src/styles/variables.css`. O tema é controlado alternando a classe `.theme-light` ou `.theme-dark` no elemento `body`.
 * **Ícones:** Lucide React.
 * **Visualização de Dados:** Recharts.
+* **API REST (Camada Intermediária):** FastAPI (Python).
+* **Banco de Dados:** PostgreSQL (Banco de Dados relacional rodando via Docker).
 
 ## 3. Design System & Design Tokens (src/styles/variables.css)
 
@@ -89,12 +91,12 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
     4. `Status` (Badge visual: Vermelho com texto "Alerta" se variação > 0; Verde com texto "Estável/Queda" se variação <= 0).
   - A tabela deve ser alimentada pelo estado `dadosFiltrados` e possuir paginação ou scroll interno se passar de 5 a 10 itens.
   - A coluna de "Ações" (AÇÕES) pode ser removida por enquanto, pois não temos sub-rotas no momento.
-
+ 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**
    - Adicionar o estado `mesSelecionado` (Valor inicial: 'Todos') no `src/App.tsx`.
 2. **Extração Dinâmica de Filtros:**
-   - O componente `FilterBar` deve extrair dinamicamente a lista de meses únicos presentes no `mockData.json` para preencher as opções do novo dropdown de meses, evitando duplicados.
+   - O componente `FilterBar` deve extrair dinamicamente a lista de meses únicos presentes nos dados recebidos da API REST para preencher as opções do novo dropdown de meses, evitando duplicados.
 3. **Lógica de Filtragem Cruzada (useMemo):**
    - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
    - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
