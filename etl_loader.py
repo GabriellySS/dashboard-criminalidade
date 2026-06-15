@@ -1,5 +1,6 @@
 import logging
 import pandas as pd
+# pyrefly: ignore [missing-import]
 from sqlalchemy import text
 from db_connection import engine
 

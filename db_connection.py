@@ -1,5 +1,7 @@
 import logging
+# pyrefly: ignore [missing-import]
 from sqlalchemy import create_engine, text
+# pyrefly: ignore [missing-import]
 from sqlalchemy.exc import SQLAlchemyError
 
 # Configuração de logging
