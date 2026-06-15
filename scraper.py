@@ -7,6 +7,8 @@ import pandas as pd
 import openpyxl
 # pyrefly: ignore [missing-import]
 from playwright.sync_api import sync_playwright
+from etl_loader import carregar_dados_para_banco
+
 
 # Define paths
 TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
@@ -295,12 +297,8 @@ def main():
         output_cols = ["id", "regiao", "municipio", "categoria_crime", "tipo_crime", "ano", "mes", "ocorrencias", "variacao_mensal"]
         df_output = df_long[output_cols]
         
-        # Export output to json
-        result_json = df_output.to_dict(orient="records")
-        with open(TARGET_JSON, "w", encoding="utf-8") as f:
-            json.dump(result_json, f, ensure_ascii=False, indent=2)
-            
-        print(f"Successfully generated and saved {len(df_output)} real/sanitized records to {TARGET_JSON}")
+        # Load output to PostgreSQL database
+        carregar_dados_para_banco(df_output)
         
     finally:
         # 4. Clean up temporary files to keep the repository clean
