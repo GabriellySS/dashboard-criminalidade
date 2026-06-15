@@ -89,12 +89,8 @@ def carregar_dados_para_banco(df: pd.DataFrame):
                 )
                 crimes_map[c_nome_upper] = res.scalar()
 
-        # 4. Limpar Ocorrências Existentes antes da carga para evitar duplicação
-        logger.info("Limpando dados de ocorrências anteriores...")
-        conn.execute(text("TRUNCATE TABLE ocorrencias RESTART IDENTITY CASCADE"))
-
-        # 5. Ocorrências
-        logger.info("Preparando e inserindo ocorrências...")
+        # 4. Limpar Ocorrências Existentes do lote correspondente antes de inserir
+        logger.info("Limpando dados de ocorrências anteriores do mesmo lote...")
         
         # Mapeando os IDs do DataFrame usando as estruturas auxiliares construídas acima
         df_ocorrencias = df.copy()
@@ -115,6 +111,17 @@ def carregar_dados_para_banco(df: pd.DataFrame):
         
         # Converter anos para int
         df_ocorrencias['ano_int'] = df_ocorrencias['ano'].astype(int)
+        
+        # Limpar apenas as chaves (municipio_id, ano) que estão sendo reinseridas neste lote
+        for muni_id in df_ocorrencias['municipio_id'].unique():
+            for ano_val in df_ocorrencias['ano_int'].unique():
+                conn.execute(
+                    text("DELETE FROM ocorrencias WHERE municipio_id = :municipio_id AND ano = :ano"),
+                    {"municipio_id": int(muni_id), "ano": int(ano_val)}
+                )
+
+        # 5. Ocorrências
+        logger.info("Preparando e inserindo ocorrências...")
         
         # Inserção em lote (bulk insert) das ocorrências
         records_to_insert = []
