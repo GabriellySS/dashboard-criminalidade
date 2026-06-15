@@ -63,9 +63,10 @@
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.searchInput:focus {
+.searchInput:focus,
+.searchInput:focus-visible {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .tableWrapper {
@@ -191,11 +192,17 @@
   color: var(--color-text-primary);
   cursor: pointer;
   transition: all 0.2s;
+  outline: none;
 }
 
 .pageButton:hover:not(:disabled) {
   border-color: var(--color-accent);
   color: var(--color-accent);
+}
+
+.pageButton:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .pageButton:disabled {

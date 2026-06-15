@@ -77,6 +77,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
           <input
             type="text"
             placeholder="Buscar município ou crime..."
+            aria-label="Buscar município ou crime"
             className={styles.searchInput}
             value={search}
             onChange={handleSearchChange}
@@ -157,6 +158,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
               className={styles.pageButton}
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPageAdjusted === 1}
+              aria-label="Ir para a página anterior"
             >
               Anterior
             </button>
@@ -164,6 +166,7 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
               className={styles.pageButton}
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPageAdjusted === totalPages}
+              aria-label="Ir para a próxima página"
             >
               Próxima
             </button>

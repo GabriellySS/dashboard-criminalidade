@@ -49,6 +49,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="regiao-select">Região</label>
         <select
           id="regiao-select"
+          aria-label="Filtrar por Região"
           className={styles.select}
           value={regiaoSelecionada}
           onChange={(e) => {
@@ -69,6 +70,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="municipio-select">Município</label>
         <select
           id="municipio-select"
+          aria-label="Filtrar por Município"
           className={styles.select}
           value={municipioSelecionado}
           onChange={(e) => setMunicipioSelecionado(e.target.value)}
@@ -86,6 +88,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="categoria-select">Categoria de Crime</label>
         <select
           id="categoria-select"
+          aria-label="Filtrar por Categoria de Crime"
           className={styles.select}
           value={categoriaSelecionada}
           onChange={(e) => {
@@ -106,6 +109,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="crime-select">Tipo de Crime</label>
         <select
           id="crime-select"
+          aria-label="Filtrar por Tipo de Crime"
           className={styles.select}
           value={crimeSelecionado}
           onChange={(e) => setCrimeSelecionado(e.target.value)}
@@ -127,6 +131,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="ano-select">Ano</label>
         <select
           id="ano-select"
+          aria-label="Filtrar por Ano"
           className={styles.select}
           value={anoSelecionado}
           onChange={(e) => setAnoSelecionado(e.target.value)}
@@ -144,6 +149,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <label htmlFor="mes-select">Mês</label>
         <select
           id="mes-select"
+          aria-label="Filtrar por Mês"
           className={styles.select}
           value={mesSelecionado}
           onChange={(e) => setMesSelecionado(e.target.value)}
@@ -157,7 +163,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
-      <button className={styles.button} type="button">
+      <button className={styles.button} type="button" aria-label="Aplicar filtros selecionados">
         <Filter size={16} fill="white" />
         Aplicar Filtros
       </button>
