@@ -9,8 +9,12 @@ Construir o frontend de uma aplicação web (Single Page Application) que exibe 
 * **Fundação Visual:** Design Tokens definidos como Variáveis CSS globais no arquivo `src/styles/variables.css`. O tema é controlado alternando a classe `.theme-light` ou `.theme-dark` no elemento `body`.
 * **Ícones:** Lucide React.
 * **Visualização de Dados:** Recharts.
-* **API REST (Camada Intermediária):** FastAPI (Python).
 * **Banco de Dados:** PostgreSQL (Banco de Dados relacional rodando via Docker).
+* **Backend / API (Camada Intermediária):**
+  - **Framework:** `FastAPI` (Python) com servidor ASGI `uvicorn`.
+  - **Função:** Serve como ponte de comunicação entre o banco de dados PostgreSQL e o frontend em React, entregando dados dinâmicos processados.
+  - **Estrutura:** A camada de backend estará contida na pasta raiz `/api` do projeto.
+  - **Segurança e Comunicação:** Uso do middleware `CORSMiddleware` do FastAPI para gerenciar a política de CORS, permitindo que o frontend React faça requisições HTTP seguras à API.
 
 ## 3. Design System & Design Tokens (src/styles/variables.css)
 
