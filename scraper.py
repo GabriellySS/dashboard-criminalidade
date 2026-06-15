@@ -47,17 +47,18 @@ def scrape_with_playwright(download_dir):
             print(f"Total regions gathered: {len(regions)} {regions[:3]}...")
             
             # =========================================================================
-            # DEVELOPMENT LIMITER: Only scrape 1 Year, 1 Region, and 2 Municipalities per region.
-            # This keeps development execution times fast and prevents timeouts.
-            # TO SCRAPE ALL YEARS, REGIONS AND MUNICIPALITIES, REMOVE THE SLICES BELOW.
+            # CONFIGURAÇÃO DE ESCOPO:
+            # - 1 Ano inteiro completo (o último ano disponível, ex: 2026)
+            # - Todas as regiões disponíveis
+            # - Cidades prioritárias: São Paulo, Osasco, Cotia, Barueri (e pelo menos 1 de cada região para diversidade)
             # =========================================================================
             years_to_scrape = years[:1]
-            regions_to_scrape = regions[:1]
-            print(f"Scraping limited to years: {years_to_scrape}")
-            print(f"Scraping limited to regions: {regions_to_scrape}")
+            regions_to_scrape = regions
+            print(f"Scraping years: {years_to_scrape}")
+            print(f"Scraping regions: {regions_to_scrape}")
             
             for year in years_to_scrape:
-                for r in regions_to_scrape:
+                for r_idx, r in enumerate(regions_to_scrape):
                     # Select region to load its municipalities
                     selects = page.locator("select.form-select")
                     selects.nth(1).select_option(label=r)
@@ -68,12 +69,21 @@ def scrape_with_playwright(download_dir):
                     muni_opts = muni_select.locator("option")
                     munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
                     
-                    # Apply municipal dev limiter (only 2 cities per region)
-                    munis_to_scrape = munis[:2]
-                    print(f"Region '{r}': Scraping limited to cities: {munis_to_scrape}")
+                    # Filtragem para garantir cidades de teste de UI + representação estadual
+                    munis_to_scrape = []
+                    for idx, m_name in enumerate(munis):
+                        m_upper = m_name.upper()
+                        is_target = any(tc in m_upper for tc in ["SÃO PAULO", "SAO PAULO", "S. PAULO", "S.PAULO", "COTIA", "OSASCO", "BARUERI"])
+                        if is_target:
+                            munis_to_scrape.append(m_name)
+                        elif idx < 1:  # Mantém pelo menos a primeira cidade de cada região
+                            munis_to_scrape.append(m_name)
+                            
+                    print(f"\n[Região {r_idx + 1}/{len(regions_to_scrape)}] Processando: {r}")
+                    print(f"  Cidades a extrair nesta região: {munis_to_scrape}")
                     
-                    for m in munis_to_scrape:
-                        print(f"Scraping data for {m} ({r}) - Year {year}...")
+                    for m_idx, m in enumerate(munis_to_scrape):
+                        print(f"    -> [{m_idx + 1}/{len(munis_to_scrape)}] Extraindo {m} ({r}) - Ano {year}...")
                         
                         # Re-locate select elements in each iteration to avoid element detached errors
                         selects = page.locator("select.form-select")
@@ -92,8 +102,7 @@ def scrape_with_playwright(download_dir):
                         muni_select.select_option(label=m)
                         page.wait_for_timeout(300)
                         
-                        # Save path for this specific spreadsheet (naming includes region, municipality and year)
-                        # We use double underscore '__' to separate variables to ensure clean dynamic parsing in Pandas
+                        # Save path for this specific spreadsheet
                         r_clean = r.replace(" ", "_")
                         m_clean = m.replace(" ", "_")
                         filename = f"{r_clean}__{m_clean}__{year}.xlsx"
@@ -106,13 +115,13 @@ def scrape_with_playwright(download_dir):
                             
                         download = download_info.value
                         download.save_as(filepath)
-                        print(f"Successfully downloaded and saved: {filename} ({os.path.getsize(filepath)} bytes)")
+                        print(f"      [OK] Salvo: {filename} ({os.path.getsize(filepath)} bytes)")
                     
         except Exception as e:
             raise RuntimeError(f"Playwright automation failed or timed out: {e}")
         finally:
             browser.close()
-
+ 
 def main():
     # Ensure temporary directory exists
     os.makedirs(TEMP_DIR, exist_ok=True)
@@ -122,14 +131,22 @@ def main():
         scrape_with_playwright(TEMP_DIR)
         
         # 2. Compile downloaded spreadsheets dynamically in batch (includes ALL crimes)
-        print("Compiling downloaded real spreadsheets dynamically...")
-        meses_col = ['Jan', 'Abr', 'Jul', 'Out']
+        print("\nCompilando planilhas extraídas dinamicamente...")
+        meses_col = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
         
         month_indices = {
             'Jan': 1,
+            'Fev': 2,
+            'Mar': 3,
             'Abr': 4,
+            'Mai': 5,
+            'Jun': 6,
             'Jul': 7,
-            'Out': 10
+            'Ago': 8,
+            'Set': 9,
+            'Out': 10,
+            'Nov': 11,
+            'Dez': 12
         }
         
         # Scan TEMP_DIR for all downloaded files
@@ -192,9 +209,17 @@ def main():
         # Extract month and year from column headers (e.g., "Jan/19")
         mes_map = {
             "Jan": "Janeiro",
+            "Fev": "Fevereiro",
+            "Mar": "Março",
             "Abr": "Abril",
+            "Mai": "Maio",
+            "Jun": "Junho",
             "Jul": "Julho",
-            "Out": "Outubro"
+            "Ago": "Agosto",
+            "Set": "Setembro",
+            "Out": "Outubro",
+            "Nov": "Novembro",
+            "Dez": "Dezembro"
         }
         
         def parse_mes_ano(val):
@@ -220,7 +245,7 @@ def main():
             text_upper = text.upper()
             if text_upper in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"]:
                 return "São Paulo (Capital)"
-                
+            
             # Generic Title Case normalization for all other cities/crimes
             return text.title()
         
@@ -250,9 +275,9 @@ def main():
             if not isinstance(crime, str):
                 return "Outros Crimes"
             c = crime.lower()
-            if "homicídio doloso" in c or "homicidio doloso" in c:
+            if "homicídio doloso" in c or "homicio doloso" in c:
                 return "Homicídio Doloso"
-            elif "homicídio culposo" in c or "homicidio culposo" in c:
+            elif "homicídio culposo" in c or "homicio culposo" in c:
                 return "Homicídio Culposo"
             elif "lesão corporal" in c or "lesao corporal" in c:
                 return "Lesão Corporal"
@@ -270,9 +295,17 @@ def main():
         # Chronological sorting for monthly variations
         mes_ordem = {
             "Janeiro": 1,
+            "Fevereiro": 2,
+            "Março": 3,
             "Abril": 4,
+            "Maio": 5,
+            "Junho": 6,
             "Julho": 7,
-            "Outubro": 10
+            "Agosto": 8,
+            "Setembro": 9,
+            "Outubro": 10,
+            "Novembro": 11,
+            "Dezembro": 12
         }
         df_long["mes_idx"] = df_long["mes"].map(mes_ordem)
         df_long["ano_int"] = df_long["ano"].astype(int)

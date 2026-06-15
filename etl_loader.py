@@ -47,7 +47,7 @@ def carregar_dados_para_banco(df: pd.DataFrame):
             reg_upper = reg.upper()
             if reg_upper not in regioes_map:
                 res = conn.execute(
-                    text("INSERT INTO regioes (nome) VALUES (:nome) RETURNING id"),
+                    text("INSERT INTO regioes (nome) VALUES (:nome) ON CONFLICT (nome) DO UPDATE SET nome = EXCLUDED.nome RETURNING id"),
                     {"nome": reg}
                 )
                 regioes_map[reg_upper] = res.scalar()
@@ -84,7 +84,7 @@ def carregar_dados_para_banco(df: pd.DataFrame):
             
             if c_nome_upper not in crimes_map:
                 res = conn.execute(
-                    text("INSERT INTO tipos_crime (categoria_macro, nome_crime) VALUES (:categoria_macro, :nome_crime) RETURNING id"),
+                    text("INSERT INTO tipos_crime (categoria_macro, nome_crime) VALUES (:categoria_macro, :nome_crime) ON CONFLICT (nome_crime) DO UPDATE SET categoria_macro = EXCLUDED.categoria_macro RETURNING id"),
                     {"categoria_macro": c_macro, "nome_crime": c_nome}
                 )
                 crimes_map[c_nome_upper] = res.scalar()
