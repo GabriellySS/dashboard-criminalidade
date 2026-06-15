@@ -202,8 +202,7 @@ def scrape_with_playwright(download_dir):
             reg_opts = reg_select.locator("option")
             regions = [reg_opts.nth(i).text_content().strip() for i in range(1, reg_opts.count())]
             
-            # 1 Ano inteiro completo (o último ano disponível)
-            years_to_scrape = years[:1]
+            years_to_scrape = years
             regions_to_scrape = regions
             
             for year in years_to_scrape:
@@ -218,15 +217,7 @@ def scrape_with_playwright(download_dir):
                     muni_opts = muni_select.locator("option")
                     munis = [muni_opts.nth(i).text_content().strip() for i in range(1, muni_opts.count())]
                     
-                    # Target cities + representativeness
-                    munis_to_scrape = []
-                    for idx, m_name in enumerate(munis):
-                        m_upper = m_name.upper()
-                        is_target = any(tc in m_upper for tc in ["SÃO PAULO", "SAO PAULO", "S. PAULO", "S.PAULO", "COTIA", "OSASCO", "BARUERI"])
-                        if is_target:
-                            munis_to_scrape.append(m_name)
-                        elif idx < 1:
-                            munis_to_scrape.append(m_name)
+                    munis_to_scrape = munis
                             
                     for m_idx, m in enumerate(munis_to_scrape):
                         # check manual correction for Capital to check checkpoint correctly
