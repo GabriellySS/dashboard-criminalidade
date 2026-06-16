@@ -26,3 +26,29 @@ O objetivo deste pipeline é operar como um robô de extração 100% automatizad
 * **Retentativas:** Limite máximo de 3 tentativas para interação (`MAX_RETRIES = 3`).
 * **Oscilações:** Timeout espera 5 segundos e tenta novamente recarregando a página.
 * **Falha Graciosa:** Pula cidade com erro após 3 tentativas sem derrubar a execução global.
+
+---
+
+## 5. Variáveis de Ambiente e Conexão com o Banco (atualizado em perf/sec-p0-fundacao)
+
+O pipeline **não utiliza mais credenciais hardcoded**. A conexão com o banco de dados é configurada
+exclusivamente via variável de ambiente, lida com `python-dotenv`.
+
+### Variável Requerida
+
+| Variável | Descrição | Definida em |
+|---|---|---|
+| `DATABASE_URL` | String completa de conexão PostgreSQL | `.env` (local) / ambiente do sistema (produção) |
+
+### Como Configurar
+
+1. Na raiz do projeto, copie `.env.example` para `.env`.
+2. Defina `DATABASE_URL` com suas credenciais.
+3. O arquivo `.env` está no `.gitignore` e **jamais deve ser commitado**.
+
+### Comportamento em Ausência de Variável
+
+Se `DATABASE_URL` não estiver definida, o módulo `db_connection.py` levanta
+`EnvironmentError` explicitamente na inicialização, impedindo que o pipeline rode
+com configuração inválida silenciosa.
+

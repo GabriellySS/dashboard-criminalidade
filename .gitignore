@@ -26,6 +26,9 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Variáveis de ambiente (credenciais locais — NUNCA commitar)
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

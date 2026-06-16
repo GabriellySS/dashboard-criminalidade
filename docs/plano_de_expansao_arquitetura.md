@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.0  
+> **Versão:** 1.1 *(atualizado em 16/06/2026 — branch `perf/sec-p0-fundacao`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -591,21 +591,21 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 
 ## 5. Prioridades de Execução (Resumo)
 
-| Prioridade | Item | Esforço | Impacto |
-|---|---|---|---|
-| 🔴 P0 | Índices compostos no banco | Baixo (1h) | Altíssimo |
-| 🔴 P0 | Variáveis de ambiente (remover credentials hardcoded) | Baixo (2h) | Alto (segurança) |
-| 🔴 P0 | Adicionar `estado_id` em `regioes` + migration | Médio (4h) | Bloqueador da expansão |
-| 🟡 P1 | Cache Redis nas rotas da API | Médio (8h) | Alto |
-| 🟡 P1 | Refatoração do scraper para `BaseScraper` | Alto (2 dias) | Alto |
-| 🟡 P1 | Lista de anos dinâmica no frontend | Baixo (2h) | Médio |
-| 🟡 P1 | Estado de erro + retry no frontend | Médio (4h) | Médio |
-| 🟢 P2 | Combobox com busca para municípios | Médio (1 dia) | Alto (UX) |
-| 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio |
-| 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) |
-| 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo |
-| 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico |
-| 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico |
+| Prioridade | Item | Esforço | Impacto | Status |
+|---|---|---|---|---|
+| ~~🔴 P0~~ | ~~Índices compostos no banco~~ | ~~Baixo (1h)~~ | ~~Altíssimo~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
+| ~~🔴 P0~~ | ~~Variáveis de ambiente (remover credentials hardcoded)~~ | ~~Baixo (2h)~~ | ~~Alto (segurança)~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
+| 🔴 P0 | Adicionar `estado_id` em `regioes` + migration | Médio (4h) | Bloqueador da expansão | ⏳ Pendente |
+| 🟡 P1 | Cache Redis nas rotas da API | Médio (8h) | Alto | ⏳ Pendente |
+| 🟡 P1 | Refatoração do scraper para `BaseScraper` | Alto (2 dias) | Alto | ⏳ Pendente |
+| 🟡 P1 | Lista de anos dinâmica no frontend | Baixo (2h) | Médio | ⏳ Pendente |
+| 🟡 P1 | Estado de erro + retry no frontend | Médio (4h) | Médio | ⏳ Pendente |
+| 🟢 P2 | Combobox com busca para municípios | Médio (1 dia) | Alto (UX) | ⏳ Pendente |
+| 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
+| 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
+| 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |
+| 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico | ⏳ Pendente |
+| 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico | ⏳ Pendente |
 
 ---
 

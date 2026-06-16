@@ -1,15 +1,29 @@
+import os
 import logging
+# pyrefly: ignore [missing-import]
+from dotenv import load_dotenv
 # pyrefly: ignore [missing-import]
 from sqlalchemy import create_engine, text
 # pyrefly: ignore [missing-import]
 from sqlalchemy.exc import SQLAlchemyError
 
+# Carrega as variáveis do arquivo .env (se existir) para os.environ
+# Em produção, as variáveis devem ser injetadas diretamente no ambiente do sistema.
+load_dotenv()
+
 # Configuração de logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-# String de conexão do banco de dados
-DATABASE_URL = 'postgresql://admin:admin@localhost:5432/ssp_dashboard'
+# Lê a string de conexão do ambiente. Sem fallback hardcoded — falha explicitamente
+# se a variável não estiver definida, evitando conexões silenciosas com credenciais erradas.
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise EnvironmentError(
+        "A variável de ambiente DATABASE_URL não está definida. "
+        "Copie o arquivo .env.example para .env e preencha com suas credenciais."
+    )
 
 # Criação do engine SQLAlchemy
 engine = create_engine(DATABASE_URL)
