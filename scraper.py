@@ -15,22 +15,26 @@ from sqlalchemy import text
 TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp_data")
 MAX_RETRIES = 3
 
-def check_data_exists(municipio: str, ano: str) -> bool:
-    """Checks the database to see if occurrences already exist for this municipality and year."""
+PROGRESSO_CACHE = set()
+
+def carregar_progresso_banco():
+    """Carrega todos os pares de município e ano já salvos no banco de dados para um set em memória."""
+    global PROGRESSO_CACHE
     query = """
-        SELECT COUNT(1)
+        SELECT DISTINCT UPPER(m.nome) as nome, o.ano
         FROM ocorrencias o
         JOIN municipios m ON o.municipio_id = m.id
-        WHERE UPPER(m.nome) = :municipio AND o.ano = :ano
     """
     try:
         with engine.connect() as conn:
-            result = conn.execute(text(query), {"municipio": municipio.upper(), "ano": int(ano)})
-            count = result.scalar()
-            return count > 0
+            result = conn.execute(text(query))
+            for row in result:
+                if row[0] is not None:
+                    key = f"{row[0].upper()}_{row[1]}"
+                    PROGRESSO_CACHE.add(key)
+        print(f"📦 [CACHE] {len(PROGRESSO_CACHE)} checkpoints carregados na memória com sucesso!")
     except Exception as e:
-        print(f"⚠️ Erro ao verificar checkpoints no banco: {e}")
-        return False
+        print(f"⚠️ Erro ao carregar checkpoints em memória: {e}")
 
 def processar_e_carregar_lote(filepath: str):
     """Processes a single downloaded Excel file and saves it immediately to the database."""
@@ -224,8 +228,9 @@ def scrape_with_playwright(download_dir):
                         # check manual correction for Capital to check checkpoint correctly
                         normalized_m = "São Paulo (Capital)" if m.upper() in ["S. PAULO", "S.PAULO", "SAO PAULO", "SÃO PAULO"] else m
                         
-                        # Checkpoint: verify if data already exists in database
-                        if check_data_exists(normalized_m, year):
+                        # Checkpoint: verify if data already exists in database using cache
+                        check_key = f"{normalized_m.upper()}_{year}"
+                        if check_key in PROGRESSO_CACHE:
                             print(f"⏭️ [PROGRESSO] Dados de '{normalized_m}' para o ano {year} já existem no banco. Pulando...")
                             continue
                         
@@ -269,6 +274,7 @@ def scrape_with_playwright(download_dir):
                                 
                                 # Process immediately (saving in batch and free memory)
                                 processar_e_carregar_lote(filepath)
+                                PROGRESSO_CACHE.add(f"{normalized_m.upper()}_{year}")
                                 print(f"✅ [SUCESSO] Dados de '{normalized_m}' - {year} salvos no banco!")
                                 
                                 # Delete file immediately to save space
@@ -311,6 +317,7 @@ def scrape_with_playwright(download_dir):
 
 def main():
     os.makedirs(TEMP_DIR, exist_ok=True)
+    carregar_progresso_banco()
     try:
         scrape_with_playwright(TEMP_DIR)
     finally:

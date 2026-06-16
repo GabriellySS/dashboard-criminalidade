@@ -21,7 +21,8 @@ O objetivo deste pipeline é operar como um robô de extração 100% automatizad
 5. **Dicionário de Padronização:** Substituições exatas (ex: "Furto - Outros" -> "Furto (Geral)").
 6. **Criação de Macro-Categorias:** Nova coluna `categoria_crime` inferida a partir do nome do crime.
 
-## 4. Resiliência e Tolerância a Falhas (Retry Pattern)
+## 4. Resiliência, Performance e Tolerância a Falhas
+* **Cache de Checkpoints em Memória (O(1)):** No início do processo, é executada uma única consulta no banco de dados (`carregar_progresso_banco()`) fazendo o JOIN entre ocorrencias e municipios para carregar todos os pares `"MUNICÍPIO_ANO"` existentes. Esse conjunto é armazenado em um `set` global na memória do Python (`PROGRESSO_CACHE`), reduzindo o I/O do banco de dados (evitando consultas N+1 repetitivas no banco) e acelerando significativamente a performance da raspagem.
 * **Retentativas:** Limite máximo de 3 tentativas para interação (`MAX_RETRIES = 3`).
 * **Oscilações:** Timeout espera 5 segundos e tenta novamente recarregando a página.
 * **Falha Graciosa:** Pula cidade com erro após 3 tentativas sem derrubar a execução global.
