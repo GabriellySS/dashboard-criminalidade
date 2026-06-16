@@ -4,11 +4,19 @@
 Construir o frontend de uma aplicação web (Single Page Application) que exibe dados estatísticos de criminalidade do estado de São Paulo. Esta fase foca na implementação de um **Design System Neumórfico (Soft UI)** com suporte nativo a temas Claro (Light) e Escuro (Dark). A troca de temas deve ser reativa.
 
 ## 2. Stack Tecnológico e Arquitetura Visual
-* **Framework:** React com TypeScript (Vite).
+* **Framework Frontend:** React com TypeScript (Vite).
 * **Estilização:** CSS Modules (arquivos `.module.css` localizados ao lado de cada componente).
 * **Fundação Visual:** Design Tokens definidos como Variáveis CSS globais no arquivo `src/styles/variables.css`. O tema é controlado alternando a classe `.theme-light` ou `.theme-dark` no elemento `body`.
 * **Ícones:** Lucide React.
 * **Visualização de Dados:** Recharts.
+* **Banco de Dados:** PostgreSQL (Banco de Dados relacional rodando via Docker).
+* **Backend / API (Camada Intermediária):**
+  - **Framework:** `FastAPI` (Python) com servidor ASGI `uvicorn`.
+  - **Função:** Serve como ponte de comunicação entre o banco de dados PostgreSQL e o frontend em React, entregando dados dinâmicos processados.
+  - **Arquitetura de Dados (Server-Side Aggregation):** A API não retorna mais dados brutos (`SELECT *`). A rota `/api/ocorrencias` agora aceita parâmetros opcionais de query para filtragem: `municipio` (str, opcional), `regiao` (str, opcional) e `ano` (int, opcional). A agregação é feita no banco de dados e retorna as propriedades `categoria_crime`, `mes`, `ano`, `total_ocorrencias` e `municipio`.
+  - **Fluxo do Frontend (Default Filtering):** O React inicia carregando dados do município "São Paulo (Capital)" sem ano padrão selecionado (exibindo a série histórica completa por padrão). Ao selecionar uma Região, o filtro de município é redefinido para "Todas as cidades", fazendo com que o dashboard exiba os dados agregados da região inteira. O mapeamento do gráfico consome a propriedade `ano` retornada pelo backend para evitar rótulos 'undefined'. O dashboard foca estritamente na visualização gráfica agregada (visão macro e evolução temporal).
+  - **Estrutura:** A camada de backend estará contida na pasta raiz `/api` do projeto.
+  - **Segurança e Comunicação:** Uso do middleware `CORSMiddleware` do FastAPI para gerenciar a política de CORS, permitindo que o frontend React faça requisições HTTP seguras à API.
 
 ## 3. Design System & Design Tokens (src/styles/variables.css)
 
@@ -80,29 +88,22 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
     - Card Frequente: Substituir por um ícone de alerta ou foco (ex: `AlertCircle` ou `Target`).
     - Card Média: Substituir por um ícone de calendário ou calculadora (ex: `Calendar` ou `Calculator`).
   - **Lógica da Porcentagem (Badge):** A porcentagem (badge verde/vermelho) no Card de Total deve ser calculada dinamicamente. Ela deve comparar o Total de Ocorrências do período atualmente selecionado com o período equivalente anterior. Se não houver dados anteriores para comparar, a badge não deve ser renderizada na tela.
-  * **Tabela de Dados (Data Grid):**
-  - Renomear o componente de "Detalhamento por Região" para "Detalhamento de Ocorrências".
-  - O subtítulo deve refletir o nível de detalhe atual do filtro (ex: "Análise granular das ocorrências registradas").
-  - **Colunas:** 1. `Município / Crime` (Exibe o nome do município ou do tipo de crime, dependendo do que estiver agrupado).
-    2. `Ocorrências` (Valor absoluto).
-    3. `Variação (Mês)` (Valor da coluna `variacao_mensal` gerada pelo Python).
-    4. `Status` (Badge visual: Vermelho com texto "Alerta" se variação > 0; Verde com texto "Estável/Queda" se variação <= 0).
-  - A tabela deve ser alimentada pelo estado `dadosFiltrados` e possuir paginação ou scroll interno se passar de 5 a 10 itens.
-  - A coluna de "Ações" (AÇÕES) pode ser removida por enquanto, pois não temos sub-rotas no momento.
 
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**
    - Adicionar o estado `mesSelecionado` (Valor inicial: 'Todos') no `src/App.tsx`.
 2. **Extração Dinâmica de Filtros:**
-   - O componente `FilterBar` deve extrair dinamicamente a lista de meses únicos presentes no `mockData.json` para preencher as opções do novo dropdown de meses, evitando duplicados.
+   - O componente `FilterBar` deve extrair dinamicamente a lista de meses únicos presentes nos dados recebidos da API REST para preencher as opções do novo dropdown de meses, evitando duplicados.
 3. **Lógica de Filtragem Cruzada (useMemo):**
    - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
    - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
 4. **Filtros em Cascata (Região > Município):**
-   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Todas').
-   - O `FilterBar` deve apresentar o dropdown de "Região" antes do de "Município".
-   - A lista do dropdown de Municípios deve ser gerada dinamicamente baseada na Região selecionada (se uma região específica for escolhida, mostrar apenas cidades daquela região).
-5. **Filtros em Cascata (Categoria > Tipo Específico):**
+   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Capital'), `municipioSelecionado` (iniciando em 'São Paulo (Capital)') e `anoSelecionado` (iniciando em 'Todos', para mostrar toda a série histórica por padrão no carregamento inicial).
+   - O dropdown de "Município" deve ser dependente da "Região", permanecendo desabilitado (`disabled`) caso a Região esteja definida como "Todas".
+   - Quando uma Região for selecionada, o dropdown de Município deve ser populado apenas com as cidades daquela região específica, com o valor padrão "Todas as cidades" selecionado para permitir a visão agregada.
+5. **Ordenação Temporal de Anos:**
+   - A lista de anos disponíveis no seletor de filtros deve ser apresentada em ordem decrescente (ex: 2024, 2023, 2022...) e a opção "Todos os anos" deve permitir a visualização de toda a série histórica.
+6. **Filtros em Cascata (Categoria > Tipo Específico):**
   - Adicionar o estado global `categoriaSelecionada` (iniciando em 'Todas').
   - O `FilterBar` deve apresentar um dropdown de "Categoria de Crime" antes do de "Tipo de Crime".
   - Se uma Categoria for selecionada, o dropdown de "Tipo de Crime" deve listar a opção "Todos os subtipos" no topo, e abaixo exibir apenas os crimes pertencentes àquela macro-categoria.

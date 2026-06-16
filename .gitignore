@@ -20,6 +20,11 @@ __pycache__/
 
 .vite/
 .venv/
+.docker/
+
+__pycache__/
+*.pyc
+*.pyo
 
 # Editor directories and files
 .vscode/*
