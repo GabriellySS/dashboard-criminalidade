@@ -1,5 +1,10 @@
 import sys
 import os
+# pyrefly: ignore [missing-import]
+from dotenv import load_dotenv
+
+# Carrega variáveis do .env antes de qualquer outra importação que as utilize
+load_dotenv()
 from typing import Optional, List
 # pyrefly: ignore [missing-import]
 from fastapi import FastAPI, Depends
@@ -31,13 +36,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configurando middleware de CORS
+# Origens permitidas: lidas da variável CORS_ORIGINS (lista separada por vírgula).
+# Em desenvolvimento, o padrão é o servidor Vite local.
+# Em produção, defina CORS_ORIGINS com os domínios confiáveis da aplicação.
+_raw_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000")
+CORS_ORIGINS: list[str] = [origin.strip() for origin in _raw_origins.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 @app.get("/api/status")
