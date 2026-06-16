@@ -1,11 +1,10 @@
 export interface CrimeRecord {
-  id: string;
-  regiao: string;
-  ano: string;
-  mes: string;
-  municipio: string;
   categoria_crime: string;
-  tipo_crime: string;
+  mes: string;
+  ano: string;
   ocorrencias: number;
-  variacao_mensal: number;
+  municipio: string;
+  tipo_crime?: string;
+  variacao_mensal?: number;
+  id?: string;
 }
