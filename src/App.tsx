@@ -10,7 +10,7 @@ import type { CrimeRecord } from './types';
 import './App.css';
 
 function App() {
-  const [regiaoSelecionada, setRegiaoSelecionada] = useState('Todas');
+  const [regiaoSelecionada, setRegiaoSelecionada] = useState('Capital');
   const [municipioSelecionado, setMunicipioSelecionado] = useState('São Paulo (Capital)');
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todas');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
@@ -102,7 +102,7 @@ function App() {
   }, []);
 
   const anosList = useMemo(() => {
-    return ['2021', '2022', '2023', '2024'];
+    return ['2024', '2023', '2022', '2021'];
   }, []);
 
   const mesesList = useMemo(() => {

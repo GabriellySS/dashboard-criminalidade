@@ -74,6 +74,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           className={styles.select}
           value={municipioSelecionado}
           onChange={(e) => setMunicipioSelecionado(e.target.value)}
+          disabled={regiaoSelecionada === 'Todas'}
         >
           <option value="Todas as cidades">Todas as cidades</option>
           {municipiosList.map((m) => (

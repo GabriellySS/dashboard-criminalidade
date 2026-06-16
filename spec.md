@@ -107,10 +107,12 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
    - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
    - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
 4. **Filtros em Cascata (Região > Município):**
-   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Todas').
-   - O `FilterBar` deve apresentar o dropdown de "Região" antes do de "Município".
-   - A lista do dropdown de Municípios deve ser gerada dinamicamente baseada na Região selecionada (se uma região específica for escolhida, mostrar apenas cidades daquela região).
-5. **Filtros em Cascata (Categoria > Tipo Específico):**
+   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Capital') e `municipioSelecionado` (iniciando em 'São Paulo (Capital)' no carregamento padrão inicial).
+   - O dropdown de "Município" deve ser dependente da "Região", permanecendo desabilitado (`disabled`) caso a Região esteja definida como "Todas".
+   - Quando uma Região for selecionada, o dropdown de Município deve ser populado apenas com as cidades daquela região específica, com o valor padrão "Todas as cidades" selecionado para permitir a visão agregada.
+5. **Ordenação Temporal de Anos:**
+   - A lista de anos disponíveis no seletor de filtros deve ser apresentada em ordem decrescente (ex: 2024, 2023, 2022...).
+6. **Filtros em Cascata (Categoria > Tipo Específico):**
   - Adicionar o estado global `categoriaSelecionada` (iniciando em 'Todas').
   - O `FilterBar` deve apresentar um dropdown de "Categoria de Crime" antes do de "Tipo de Crime".
   - Se uma Categoria for selecionada, o dropdown de "Tipo de Crime" deve listar a opção "Todos os subtipos" no topo, e abaixo exibir apenas os crimes pertencentes àquela macro-categoria.
