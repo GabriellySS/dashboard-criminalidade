@@ -60,11 +60,11 @@ def list_municipios(db: Session = Depends(get_db)):
 def list_ocorrencias(
     municipio: Optional[str] = None,
     regiao: Optional[str] = None,
-    ano: int = 2023,
+    ano: Optional[int] = None,
     db: Session = Depends(get_db)
 ):
     """
-    Retorna a lista de ocorrências com filtros opcionais de município e região,
+    Retorna a lista de ocorrências com filtros opcionais de município, região e ano,
     realizando JOIN com tipos_crime, municipios e regioes para permitir
     a agregação dinâmica.
     """
@@ -78,12 +78,14 @@ def list_ocorrencias(
         JOIN tipos_crime tc ON o.tipo_crime_id = tc.id
         JOIN municipios m ON o.municipio_id = m.id
         JOIN regioes r ON m.regiao_id = r.id
-        WHERE o.ano = :ano
+        WHERE 1=1
     """
-    params = {
-        "ano": ano
-    }
+    params = {}
     
+    if ano is not None:
+        query += " AND o.ano = :ano"
+        params["ano"] = ano
+        
     if municipio and municipio != "Todos" and municipio != "Todas as cidades":
         query += " AND m.nome = :municipio"
         params["municipio"] = municipio

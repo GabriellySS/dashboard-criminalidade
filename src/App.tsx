@@ -14,7 +14,7 @@ function App() {
   const [municipioSelecionado, setMunicipioSelecionado] = useState('São Paulo (Capital)');
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todas');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
-  const [anoSelecionado, setAnoSelecionado] = useState('2023');
+  const [anoSelecionado, setAnoSelecionado] = useState('Todos');
   const [mesSelecionado, setMesSelecionado] = useState('Todos');
   const [isLoading, setIsLoading] = useState(false);
   const [crimeRecords, setCrimeRecords] = useState<CrimeRecord[]>([]);
@@ -32,15 +32,21 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       if (municipiosData.length === 0) return;
-      if (anoSelecionado === 'Todos') return;
 
       setIsLoading(true);
       try {
-        let url = `http://localhost:8000/api/ocorrencias?ano=${anoSelecionado}`;
+        let url = `http://localhost:8000/api/ocorrencias?`;
+        if (anoSelecionado !== 'Todos') {
+          url += `ano=${anoSelecionado}&`;
+        }
         if (municipioSelecionado !== 'Todas as cidades' && municipioSelecionado !== 'Todos') {
-          url += `&municipio=${encodeURIComponent(municipioSelecionado)}`;
+          url += `municipio=${encodeURIComponent(municipioSelecionado)}&`;
         } else if (regiaoSelecionada !== 'Todas') {
-          url += `&regiao=${encodeURIComponent(regiaoSelecionada)}`;
+          url += `regiao=${encodeURIComponent(regiaoSelecionada)}&`;
+        }
+
+        if (url.endsWith('&') || url.endsWith('?')) {
+          url = url.slice(0, -1);
         }
 
         const resOcorrencias = await fetch(url);
@@ -163,7 +169,7 @@ function App() {
     ocorrencias: r.ocorrencias,
     variacao_mensal: 0,
     regiao: '',
-    ano: anoSelecionado,
+    ano: r.ano,
     mes: r.mes,
     categoria_crime: r.categoria_crime,
     tipo_crime: r.categoria_crime

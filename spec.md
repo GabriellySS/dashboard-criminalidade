@@ -14,7 +14,7 @@ Construir o frontend de uma aplicação web (Single Page Application) que exibe 
   - **Framework:** `FastAPI` (Python) com servidor ASGI `uvicorn`.
   - **Função:** Serve como ponte de comunicação entre o banco de dados PostgreSQL e o frontend em React, entregando dados dinâmicos processados.
   - **Arquitetura de Dados (Server-Side Aggregation):** A API não retorna mais dados brutos (`SELECT *`). A rota `/api/ocorrencias` agora aceita parâmetros opcionais de query para filtragem: `municipio` (str, opcional) e `regiao` (str, opcional), além de `ano` (int, obrigatório). Se for enviada apenas a `regiao` e o `ano` (sem município), o banco realiza o GROUP BY somando as ocorrências de todas as cidades pertencentes àquela região. A consulta retorna `categoria_crime`, `mes`, `ano` e `total_ocorrencias` já agregados.
-  - **Fluxo do Frontend (Default Filtering):** O React inicia carregando dados do município "São Paulo (Capital)" no ano "2023". Ao selecionar uma Região, o filtro de município é redefinido para "Todas as cidades", fazendo com que o dashboard exiba os dados agregados da região inteira. O mapeamento do gráfico consome a propriedade `ano` retornada pelo backend para evitar rótulos 'undefined'.
+  - **Fluxo do Frontend (Default Filtering):** O React inicia carregando dados do município "São Paulo (Capital)" sem ano padrão selecionado (exibindo a série histórica completa por padrão). Ao selecionar uma Região, o filtro de município é redefinido para "Todas as cidades", fazendo com que o dashboard exiba os dados agregados da região inteira. O mapeamento do gráfico consome a propriedade `ano` retornada pelo backend para evitar rótulos 'undefined'.
   - **Estrutura:** A camada de backend estará contida na pasta raiz `/api` do projeto.
   - **Segurança e Comunicação:** Uso do middleware `CORSMiddleware` do FastAPI para gerenciar a política de CORS, permitindo que o frontend React faça requisições HTTP seguras à API.
 
@@ -107,11 +107,11 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
    - A constante `dadosFiltrados` deve passar a filtrar os registros considerando quatro critérios simultâneos: Município, Tipo de Crime, Ano e Mês.
    - Se o mês selecionado for 'Todos', a restrição de mês deve ser ignorada na filtragem.
 4. **Filtros em Cascata (Região > Município):**
-   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Capital') e `municipioSelecionado` (iniciando em 'São Paulo (Capital)' no carregamento padrão inicial).
+   - Adicionar o estado `regiaoSelecionada` (iniciando em 'Capital'), `municipioSelecionado` (iniciando em 'São Paulo (Capital)') e `anoSelecionado` (iniciando em 'Todos', para mostrar toda a série histórica por padrão no carregamento inicial).
    - O dropdown de "Município" deve ser dependente da "Região", permanecendo desabilitado (`disabled`) caso a Região esteja definida como "Todas".
    - Quando uma Região for selecionada, o dropdown de Município deve ser populado apenas com as cidades daquela região específica, com o valor padrão "Todas as cidades" selecionado para permitir a visão agregada.
 5. **Ordenação Temporal de Anos:**
-   - A lista de anos disponíveis no seletor de filtros deve ser apresentada em ordem decrescente (ex: 2024, 2023, 2022...).
+   - A lista de anos disponíveis no seletor de filtros deve ser apresentada em ordem decrescente (ex: 2024, 2023, 2022...) e a opção "Todos os anos" deve permitir a visualização de toda a série histórica.
 6. **Filtros em Cascata (Categoria > Tipo Específico):**
   - Adicionar o estado global `categoriaSelecionada` (iniciando em 'Todas').
   - O `FilterBar` deve apresentar um dropdown de "Categoria de Crime" antes do de "Tipo de Crime".
