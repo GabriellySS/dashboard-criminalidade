@@ -32,14 +32,18 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       if (municipiosData.length === 0) return;
-      if (municipioSelecionado === 'Todos' || anoSelecionado === 'Todos') return;
+      if (anoSelecionado === 'Todos') return;
 
       setIsLoading(true);
       try {
-        const municipioInfo = municipiosData.find((m: any) => m.nome === municipioSelecionado);
-        const municipioId = municipioInfo ? municipioInfo.id : 1;
+        let url = `http://localhost:8000/api/ocorrencias?ano=${anoSelecionado}`;
+        if (municipioSelecionado !== 'Todas as cidades' && municipioSelecionado !== 'Todos') {
+          url += `&municipio=${encodeURIComponent(municipioSelecionado)}`;
+        } else if (regiaoSelecionada !== 'Todas') {
+          url += `&regiao=${encodeURIComponent(regiaoSelecionada)}`;
+        }
 
-        const resOcorrencias = await fetch(`http://localhost:8000/api/ocorrencias?municipio_id=${municipioId}&ano=${anoSelecionado}`);
+        const resOcorrencias = await fetch(url);
 
         if (!resOcorrencias.ok) {
           throw new Error('Falha ao carregar dados da API');
@@ -59,6 +63,7 @@ function App() {
           return {
             categoria_crime: occ.categoria_crime,
             mes: MES_MAP_REVERSE[occ.mes] || 'Janeiro',
+            ano: String(occ.ano),
             ocorrencias: occ.total_ocorrencias,
           };
         });
@@ -72,7 +77,7 @@ function App() {
     };
 
     fetchData();
-  }, [municipiosData, municipioSelecionado, anoSelecionado]); // Fetch data only when municipio or ano change
+  }, [municipiosData, municipioSelecionado, regiaoSelecionada, anoSelecionado]); // Fetch data when municipio, region or ano change
 
   // Dynamic filter list options
   const regioesList = useMemo(() => {

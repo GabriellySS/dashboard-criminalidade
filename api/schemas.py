@@ -12,6 +12,7 @@ class MunicipioResponse(BaseModel):
 class OcorrenciaResponse(BaseModel):
     categoria_crime: str
     mes: int
+    ano: int
     total_ocorrencias: int
 
     class Config:

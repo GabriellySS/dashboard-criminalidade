@@ -58,29 +58,43 @@ def list_municipios(db: Session = Depends(get_db)):
 
 @app.get("/api/ocorrencias", response_model=List[OcorrenciaResponse])
 def list_ocorrencias(
-    municipio_id: int = 1,
+    municipio: Optional[str] = None,
+    regiao: Optional[str] = None,
     ano: int = 2023,
     db: Session = Depends(get_db)
 ):
     """
-    Retorna a lista de ocorrências com filtros obrigatórios/padrão de município_id e ano,
-    realizando JOIN com tipos_crime para incluir os nomes da categoria e agrupar por mes.
+    Retorna a lista de ocorrências com filtros opcionais de município e região,
+    realizando JOIN com tipos_crime, municipios e regioes para permitir
+    a agregação dinâmica.
     """
     query = """
         SELECT 
             tc.categoria_macro as categoria_crime, 
             o.mes, 
+            o.ano,
             SUM(o.total_ocorrencias) as total_ocorrencias
         FROM ocorrencias o
         JOIN tipos_crime tc ON o.tipo_crime_id = tc.id
-        WHERE o.municipio_id = :municipio_id AND o.ano = :ano
-        GROUP BY tc.categoria_macro, o.mes
-        ORDER BY o.mes DESC, tc.categoria_macro ASC
+        JOIN municipios m ON o.municipio_id = m.id
+        JOIN regioes r ON m.regiao_id = r.id
+        WHERE o.ano = :ano
     """
     params = {
-        "municipio_id": municipio_id,
         "ano": ano
     }
+    
+    if municipio and municipio != "Todos" and municipio != "Todas as cidades":
+        query += " AND m.nome = :municipio"
+        params["municipio"] = municipio
+    elif regiao and regiao != "Todas":
+        query += " AND r.nome = :regiao"
+        params["regiao"] = regiao
+        
+    query += """
+        GROUP BY tc.categoria_macro, o.mes, o.ano
+        ORDER BY o.mes DESC, tc.categoria_macro ASC
+    """
     
     result = db.execute(text(query), params)
     
@@ -88,7 +102,8 @@ def list_ocorrencias(
         {
             "categoria_crime": r[0],
             "mes": r[1],
-            "total_ocorrencias": r[2] or 0
+            "ano": r[2],
+            "total_ocorrencias": r[3] or 0
         }
         for r in result
     ]
