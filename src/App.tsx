@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   const [regiaoSelecionada, setRegiaoSelecionada] = useState('Todas');
-  const [municipioSelecionado, setMunicipioSelecionado] = useState('Cotia');
+  const [municipioSelecionado, setMunicipioSelecionado] = useState('São Paulo (Capital)');
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todas');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
   const [anoSelecionado, setAnoSelecionado] = useState('2023');
