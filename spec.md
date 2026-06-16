@@ -13,8 +13,8 @@ Construir o frontend de uma aplicação web (Single Page Application) que exibe 
 * **Backend / API (Camada Intermediária):**
   - **Framework:** `FastAPI` (Python) com servidor ASGI `uvicorn`.
   - **Função:** Serve como ponte de comunicação entre o banco de dados PostgreSQL e o frontend em React, entregando dados dinâmicos processados.
-  - **Arquitetura de Dados (Server-Side Aggregation):** A API não retorna mais dados brutos (`SELECT *`). A rota `/api/ocorrencias` agora aceita parâmetros opcionais de query para filtragem: `municipio` (str, opcional), `regiao` (str, opcional) e `ano` (int, opcional). A agregação é feita no banco de dados e retorna obrigatoriamente as propriedades `categoria_crime`, `mes`, `ano`, `total_ocorrencias` e `municipio` (contendo o nome do município correspondente, a representação da região como "Região" ou o Estado inteiro) para alimentar as visões do frontend.
-  - **Fluxo do Frontend (Default Filtering):** O React inicia carregando dados do município "São Paulo (Capital)" sem ano padrão selecionado (exibindo a série histórica completa por padrão). Ao selecionar uma Região, o filtro de município é redefinido para "Todas as cidades", fazendo com que o dashboard exiba os dados agregados da região inteira. O mapeamento do gráfico consome a propriedade `ano` retornada pelo backend para evitar rótulos 'undefined'. A tabela de detalhamento renderiza a coluna de município concatenada com a categoria ou tipo de crime usando fallbacks seguros para dados geográficos.
+  - **Arquitetura de Dados (Server-Side Aggregation):** A API não retorna mais dados brutos (`SELECT *`). A rota `/api/ocorrencias` agora aceita parâmetros opcionais de query para filtragem: `municipio` (str, opcional), `regiao` (str, opcional) e `ano` (int, opcional). A agregação é feita no banco de dados e retorna as propriedades `categoria_crime`, `mes`, `ano`, `total_ocorrencias` e `municipio`.
+  - **Fluxo do Frontend (Default Filtering):** O React inicia carregando dados do município "São Paulo (Capital)" sem ano padrão selecionado (exibindo a série histórica completa por padrão). Ao selecionar uma Região, o filtro de município é redefinido para "Todas as cidades", fazendo com que o dashboard exiba os dados agregados da região inteira. O mapeamento do gráfico consome a propriedade `ano` retornada pelo backend para evitar rótulos 'undefined'. O dashboard foca estritamente na visualização gráfica agregada (visão macro e evolução temporal).
   - **Estrutura:** A camada de backend estará contida na pasta raiz `/api` do projeto.
   - **Segurança e Comunicação:** Uso do middleware `CORSMiddleware` do FastAPI para gerenciar a política de CORS, permitindo que o frontend React faça requisições HTTP seguras à API.
 
@@ -88,16 +88,7 @@ Defina as seguintes variáveis dentro de `:root`, `.theme-light` e `.theme-dark`
     - Card Frequente: Substituir por um ícone de alerta ou foco (ex: `AlertCircle` ou `Target`).
     - Card Média: Substituir por um ícone de calendário ou calculadora (ex: `Calendar` ou `Calculator`).
   - **Lógica da Porcentagem (Badge):** A porcentagem (badge verde/vermelho) no Card de Total deve ser calculada dinamicamente. Ela deve comparar o Total de Ocorrências do período atualmente selecionado com o período equivalente anterior. Se não houver dados anteriores para comparar, a badge não deve ser renderizada na tela.
-  * **Tabela de Dados (Data Grid):**
-  - Renomear o componente de "Detalhamento por Região" para "Detalhamento de Ocorrências".
-  - O subtítulo deve refletir o nível de detalhe atual do filtro (ex: "Análise granular das ocorrências registradas").
-  - **Colunas:** 1. `Município / Crime` (Exibe o nome do município ou do tipo de crime, dependendo do que estiver agrupado).
-    2. `Ocorrências` (Valor absoluto).
-    3. `Variação (Mês)` (Valor da coluna `variacao_mensal` gerada pelo Python).
-    4. `Status` (Badge visual: Vermelho com texto "Alerta" se variação > 0; Verde com texto "Estável/Queda" se variação <= 0).
-  - A tabela deve ser alimentada pelo estado `dadosFiltrados` e possuir paginação ou scroll interno se passar de 5 a 10 itens.
-  - A coluna de "Ações" (AÇÕES) pode ser removida por enquanto, pois não temos sub-rotas no momento.
- 
+
 ## 5. Gerenciamento de Estado e Lógica (Atualização)
 1. **Estado do Filtro de Mês:**
    - Adicionar o estado `mesSelecionado` (Valor inicial: 'Todos') no `src/App.tsx`.

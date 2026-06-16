@@ -4,7 +4,6 @@ import { FilterBar } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
 import { TrendChart } from './components/TrendChart/TrendChart';
 import { CrimeDistributionChart } from './components/CrimeDistributionChart/CrimeDistributionChart';
-import { RegionTable } from './components/RegionTable/RegionTable';
 import { EmptyState } from './components/EmptyState/EmptyState';
 import type { CrimeRecord } from './types';
 import './App.css';
@@ -164,18 +163,6 @@ function App() {
     };
   }, [dadosFiltrados]);
 
-  // Adapt the RegionTable to expect new schema. We rename the fields.
-  const tableData = dadosFiltrados.map(r => ({
-    municipio: r.municipio || 'Região',
-    ocorrencias: r.ocorrencias,
-    variacao_mensal: 0,
-    regiao: '',
-    ano: r.ano,
-    mes: r.mes,
-    categoria_crime: r.categoria_crime,
-    tipo_crime: r.categoria_crime
-  }));
-
   const chartData = dadosFiltrados.map(r => ({
     ...r,
     tipo_crime: r.categoria_crime
@@ -222,23 +209,17 @@ function App() {
           />
 
           {isLoading ? (
-            <>
-              <div className="chartsGrid">
-                <TrendChart data={chartData} isLoading={true} />
-                <CrimeDistributionChart data={chartData} isLoading={true} />
-              </div>
-              <RegionTable data={tableData} isLoading={true} />
-            </>
+            <div className="chartsGrid">
+              <TrendChart data={chartData} isLoading={true} />
+              <CrimeDistributionChart data={chartData} isLoading={true} />
+            </div>
           ) : dadosFiltrados.length === 0 ? (
             <EmptyState />
           ) : (
-            <>
-              <div className="chartsGrid">
-                <TrendChart data={chartData} isLoading={false} />
-                <CrimeDistributionChart data={chartData} isLoading={false} />
-              </div>
-              <RegionTable data={tableData} isLoading={false} />
-            </>
+            <div className="chartsGrid">
+              <TrendChart data={chartData} isLoading={false} />
+              <CrimeDistributionChart data={chartData} isLoading={false} />
+            </div>
           )}
         </div>
       </main>
