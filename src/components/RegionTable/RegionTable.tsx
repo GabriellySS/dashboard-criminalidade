@@ -28,22 +28,23 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
   const showMunicipioOnly = uniqueCrimes.length === 1;
 
   const getLabel = (item: CrimeRecord) => {
+    const muni = item.municipio || 'Região';
+    const crime = item.tipo_crime || item.categoria_crime || 'Crime';
     if (showCrimeOnly && !showMunicipioOnly) {
-      return item.tipo_crime;
+      return crime;
     }
     if (showMunicipioOnly && !showCrimeOnly) {
-      return item.municipio;
+      return muni;
     }
-    return `${item.municipio} / ${item.tipo_crime}`;
+    return `${muni} / ${crime}`;
   };
 
   const searchedData = useMemo(() => {
     return data.filter((item) => {
       const searchLower = search.toLowerCase();
-      return (
-        item.municipio.toLowerCase().includes(searchLower) ||
-        item.tipo_crime.toLowerCase().includes(searchLower)
-      );
+      const muni = (item.municipio || 'Região').toLowerCase();
+      const crime = (item.tipo_crime || item.categoria_crime || '').toLowerCase();
+      return muni.includes(searchLower) || crime.includes(searchLower);
     });
   }, [data, search]);
 
@@ -122,14 +123,15 @@ export const RegionTable: React.FC<RegionTableProps> = ({ data, isLoading = fals
                 </td>
               </tr>
             ) : (
-              paginatedData.map((item) => {
-                const isAlerta = item.variacao_mensal > 0;
+              paginatedData.map((item, idx) => {
+                const isAlerta = (item.variacao_mensal || 0) > 0;
+                const uniqueKey = item.id || `${item.municipio}-${item.categoria_crime}-${item.mes}-${item.ano}-${idx}`;
                 return (
-                  <tr key={item.id}>
+                  <tr key={uniqueKey}>
                     <td className={styles.dpCell}>{getLabel(item)}</td>
                     <td>{formatNumber(item.ocorrencias)}</td>
                     <td className={isAlerta ? styles.variationUp : styles.variationDown}>
-                      {formatPercent(item.variacao_mensal)}
+                      {formatPercent(item.variacao_mensal || 0)}
                     </td>
                     <td>
                       <span

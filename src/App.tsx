@@ -71,6 +71,7 @@ function App() {
             mes: MES_MAP_REVERSE[occ.mes] || 'Janeiro',
             ano: String(occ.ano),
             ocorrencias: occ.total_ocorrencias,
+            municipio: occ.municipio || '',
           };
         });
 
@@ -165,7 +166,7 @@ function App() {
 
   // Adapt the RegionTable to expect new schema. We rename the fields.
   const tableData = dadosFiltrados.map(r => ({
-    municipio: r.categoria_crime,
+    municipio: r.municipio || 'Região',
     ocorrencias: r.ocorrencias,
     variacao_mensal: 0,
     regiao: '',

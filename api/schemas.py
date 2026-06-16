@@ -14,6 +14,7 @@ class OcorrenciaResponse(BaseModel):
     mes: int
     ano: int
     total_ocorrencias: int
+    municipio: str
 
     class Config:
         from_attributes = True

@@ -68,12 +68,26 @@ def list_ocorrencias(
     realizando JOIN com tipos_crime, municipios e regioes para permitir
     a agregação dinâmica.
     """
-    query = """
+    is_municipio = municipio and municipio != "Todos" and municipio != "Todas as cidades"
+    is_regiao = regiao and regiao != "Todas"
+    
+    if is_municipio:
+        geo_select = "m.nome as municipio"
+        geo_group = "m.nome"
+    elif is_regiao:
+        geo_select = "r.nome || ' (Região)' as municipio"
+        geo_group = "r.nome"
+    else:
+        geo_select = "'Estado de São Paulo' as municipio"
+        geo_group = "'Estado de São Paulo'"
+
+    query = f"""
         SELECT 
             tc.categoria_macro as categoria_crime, 
             o.mes, 
             o.ano,
-            SUM(o.total_ocorrencias) as total_ocorrencias
+            SUM(o.total_ocorrencias) as total_ocorrencias,
+            {geo_select}
         FROM ocorrencias o
         JOIN tipos_crime tc ON o.tipo_crime_id = tc.id
         JOIN municipios m ON o.municipio_id = m.id
@@ -86,15 +100,15 @@ def list_ocorrencias(
         query += " AND o.ano = :ano"
         params["ano"] = ano
         
-    if municipio and municipio != "Todos" and municipio != "Todas as cidades":
+    if is_municipio:
         query += " AND m.nome = :municipio"
         params["municipio"] = municipio
-    elif regiao and regiao != "Todas":
+    elif is_regiao:
         query += " AND r.nome = :regiao"
         params["regiao"] = regiao
         
-    query += """
-        GROUP BY tc.categoria_macro, o.mes, o.ano
+    query += f"""
+        GROUP BY tc.categoria_macro, o.mes, o.ano, {geo_group}
         ORDER BY o.mes DESC, tc.categoria_macro ASC
     """
     
@@ -105,7 +119,8 @@ def list_ocorrencias(
             "categoria_crime": r[0],
             "mes": r[1],
             "ano": r[2],
-            "total_ocorrencias": r[3] or 0
+            "total_ocorrencias": r[3] or 0,
+            "municipio": r[4]
         }
         for r in result
     ]
