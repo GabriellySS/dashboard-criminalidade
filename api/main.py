@@ -58,59 +58,37 @@ def list_municipios(db: Session = Depends(get_db)):
 
 @app.get("/api/ocorrencias", response_model=List[OcorrenciaResponse])
 def list_ocorrencias(
-    municipio_id: Optional[int] = None,
-    ano: Optional[int] = None,
-    mes: Optional[int] = None,
+    municipio_id: int = 1,
+    ano: int = 2023,
     db: Session = Depends(get_db)
 ):
     """
-    Retorna a lista de ocorrências com filtros opcionais de município_id, ano e mes,
-    realizando JOIN com tipos_crime para incluir os nomes reais do crime.
+    Retorna a lista de ocorrências com filtros obrigatórios/padrão de município_id e ano,
+    realizando JOIN com tipos_crime para incluir os nomes da categoria e agrupar por mes.
     """
     query = """
         SELECT 
-            o.id, 
-            o.municipio_id, 
-            o.tipo_crime_id, 
-            tc.nome_crime, 
-            tc.categoria_macro, 
-            o.ano, 
+            tc.categoria_macro as categoria_crime, 
             o.mes, 
-            o.total_ocorrencias, 
-            o.variacao_mensal
+            SUM(o.total_ocorrencias) as total_ocorrencias
         FROM ocorrencias o
         JOIN tipos_crime tc ON o.tipo_crime_id = tc.id
-        WHERE 1=1
+        WHERE o.municipio_id = :municipio_id AND o.ano = :ano
+        GROUP BY tc.categoria_macro, o.mes
+        ORDER BY o.mes DESC, tc.categoria_macro ASC
     """
-    params = {}
-    
-    if municipio_id is not None:
-        query += " AND o.municipio_id = :municipio_id"
-        params["municipio_id"] = municipio_id
-        
-    if ano is not None:
-        query += " AND o.ano = :ano"
-        params["ano"] = ano
-        
-    if mes is not None:
-        query += " AND o.mes = :mes"
-        params["mes"] = mes
-        
-    query += " ORDER BY o.ano DESC, o.mes DESC, tc.nome_crime ASC"
+    params = {
+        "municipio_id": municipio_id,
+        "ano": ano
+    }
     
     result = db.execute(text(query), params)
     
     return [
         {
-            "id": r[0],
-            "municipio_id": r[1],
-            "tipo_crime_id": r[2],
-            "nome_crime": r[3],
-            "categoria_macro": r[4],
-            "ano": r[5],
-            "mes": r[6],
-            "total_ocorrencias": r[7],
-            "variacao_mensal": r[8]
+            "categoria_crime": r[0],
+            "mes": r[1],
+            "total_ocorrencias": r[2] or 0
         }
         for r in result
     ]

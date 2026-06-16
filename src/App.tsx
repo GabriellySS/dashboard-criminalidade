@@ -11,66 +11,55 @@ import './App.css';
 
 function App() {
   const [regiaoSelecionada, setRegiaoSelecionada] = useState('Todas');
-  const [municipioSelecionado, setMunicipioSelecionado] = useState('Todos');
+  const [municipioSelecionado, setMunicipioSelecionado] = useState('Cotia');
   const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todas');
   const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
-  const [anoSelecionado, setAnoSelecionado] = useState('Todos');
+  const [anoSelecionado, setAnoSelecionado] = useState('2023');
   const [mesSelecionado, setMesSelecionado] = useState('Todos');
   const [isLoading, setIsLoading] = useState(false);
   const [crimeRecords, setCrimeRecords] = useState<CrimeRecord[]>([]);
+  const [municipiosData, setMunicipiosData] = useState<any[]>([]);
 
-  // Fetch data from real FastAPI routes
+  // Carrega lista de municípios inicialmente
+  useEffect(() => {
+    fetch('http://localhost:8000/api/municipios')
+      .then(res => res.json())
+      .then(data => setMunicipiosData(data))
+      .catch(err => console.error('Erro ao carregar municípios:', err));
+  }, []);
+
+  // Fetch data with Server-Side Aggregation based on active filters
   useEffect(() => {
     const fetchData = async () => {
+      if (municipiosData.length === 0) return;
+      if (municipioSelecionado === 'Todos' || anoSelecionado === 'Todos') return;
+
       setIsLoading(true);
       try {
-        const [resMunicipios, resOcorrencias] = await Promise.all([
-          fetch('http://localhost:8000/api/municipios'),
-          fetch('http://localhost:8000/api/ocorrencias')
-        ]);
+        const municipioInfo = municipiosData.find((m: any) => m.nome === municipioSelecionado);
+        const municipioId = municipioInfo ? municipioInfo.id : 1;
 
-        if (!resMunicipios.ok || !resOcorrencias.ok) {
+        const resOcorrencias = await fetch(`http://localhost:8000/api/ocorrencias?municipio_id=${municipioId}&ano=${anoSelecionado}`);
+
+        if (!resOcorrencias.ok) {
           throw new Error('Falha ao carregar dados da API');
         }
 
-        const municipiosData = await resMunicipios.json();
         const ocorrenciasData = await resOcorrencias.json();
-
-        // Map municipalities by ID for fast lookup
-        const municipiosMap: Record<number, { nome: string; regiao_nome: string }> = {};
-        municipiosData.forEach((m: { id: number; nome: string; regiao_nome: string }) => {
-          municipiosMap[m.id] = { nome: m.nome, regiao_nome: m.regiao_nome };
-        });
 
         // Map months (Integer -> String) to match frontend format
         const MES_MAP_REVERSE: Record<number, string> = {
-          1: "Janeiro",
-          2: "Fevereiro",
-          3: "Março",
-          4: "Abril",
-          5: "Maio",
-          6: "Junho",
-          7: "Julho",
-          8: "Agosto",
-          9: "Setembro",
-          10: "Outubro",
-          11: "Novembro",
-          12: "Dezembro"
+          1: "Janeiro", 2: "Fevereiro", 3: "Março", 4: "Abril",
+          5: "Maio", 6: "Junho", 7: "Julho", 8: "Agosto",
+          9: "Setembro", 10: "Outubro", 11: "Novembro", 12: "Dezembro"
         };
 
         // Format occurrences to CrimeRecord[]
         const records: CrimeRecord[] = ocorrenciasData.map((occ: any) => {
-          const municipioInfo = municipiosMap[occ.municipio_id];
           return {
-            id: String(occ.id),
-            regiao: municipioInfo ? municipioInfo.regiao_nome : 'Não especificado',
-            municipio: municipioInfo ? municipioInfo.nome : 'Não especificado',
-            categoria_crime: occ.categoria_macro,
-            tipo_crime: occ.nome_crime,
-            ano: String(occ.ano),
+            categoria_crime: occ.categoria_crime,
             mes: MES_MAP_REVERSE[occ.mes] || 'Janeiro',
             ocorrencias: occ.total_ocorrencias,
-            variacao_mensal: occ.variacao_mensal
           };
         });
 
@@ -83,118 +72,64 @@ function App() {
     };
 
     fetchData();
-  }, []);
-
-  // Simulate loading delay whenever filters change
-  useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [municipiosData, municipioSelecionado, anoSelecionado]); // Fetch data only when municipio or ano change
 
   // Dynamic filter list options
   const regioesList = useMemo(() => {
-    return Array.from(new Set(crimeRecords.map((d) => d.regiao))).sort();
-  }, [crimeRecords]);
+    return Array.from(new Set(municipiosData.map((d) => d.regiao_nome))).sort();
+  }, [municipiosData]);
 
-  // Cascading Filter: municipalities list depends on the selected region
   const municipiosList = useMemo(() => {
     const filtered = regiaoSelecionada === 'Todas'
-      ? crimeRecords
-      : crimeRecords.filter((d) => d.regiao === regiaoSelecionada);
-    return Array.from(new Set(filtered.map((d) => d.municipio))).sort();
-  }, [crimeRecords, regiaoSelecionada]);
+      ? municipiosData
+      : municipiosData.filter((d) => d.regiao_nome === regiaoSelecionada);
+    return Array.from(new Set(filtered.map((d) => d.nome))).sort();
+  }, [municipiosData, regiaoSelecionada]);
 
-  // Categoria filter list options
+  // We have hardcoded lists for categories since we only have server-side aggregated data
   const categoriasList = useMemo(() => {
     return Array.from(new Set(crimeRecords.map((d) => d.categoria_crime))).sort();
   }, [crimeRecords]);
 
-  // Cascading Filter: types of crime list depends on the selected category
+  // Crimes list will be empty for now since backend doesn't return 'tipo_crime'
   const tiposCrimeList = useMemo(() => {
-    const filtered = categoriaSelecionada === 'Todas'
-      ? crimeRecords
-      : crimeRecords.filter((d) => d.categoria_crime === categoriaSelecionada);
-    return Array.from(new Set(filtered.map((d) => d.tipo_crime))).sort();
-  }, [crimeRecords, categoriaSelecionada]);
+    return ['Todos'];
+  }, []);
 
   const anosList = useMemo(() => {
-    return Array.from(new Set(crimeRecords.map((d) => String(d.ano)))).sort((a, b) => b.localeCompare(a));
-  }, [crimeRecords]);
+    return ['2021', '2022', '2023', '2024'];
+  }, []);
 
   const mesesList = useMemo(() => {
     const MES_ORDEM: Record<string, number> = {
-      'Janeiro': 1,
-      'Fevereiro': 2,
-      'Março': 3,
-      'Abril': 4,
-      'Maio': 5,
-      'Junho': 6,
-      'Julho': 7,
-      'Agosto': 8,
-      'Setembro': 9,
-      'Outubro': 10,
-      'Novembro': 11,
-      'Dezembro': 12,
+      'Janeiro': 1, 'Fevereiro': 2, 'Março': 3, 'Abril': 4,
+      'Maio': 5, 'Junho': 6, 'Julho': 7, 'Agosto': 8,
+      'Setembro': 9, 'Outubro': 10, 'Novembro': 11, 'Dezembro': 12,
     };
     return Array.from(new Set(crimeRecords.map((d) => d.mes))).sort((a, b) => {
       return (MES_ORDEM[a] || 0) - (MES_ORDEM[b] || 0);
     });
   }, [crimeRecords]);
 
-  // Derived filtered data (dadosFiltrados)
+  // Derived filtered data (dadosFiltrados) applied on client for month and category
   const dadosFiltrados = useMemo(() => {
     return crimeRecords.filter((item) => {
-      const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
-      const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
       const matchCategoria = categoriaSelecionada === 'Todas' || item.categoria_crime === categoriaSelecionada;
-      const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
-      const matchAno = anoSelecionado === 'Todos' || String(item.ano) === anoSelecionado;
       const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
-      return matchRegiao && matchMunicipio && matchCategoria && matchCrime && matchAno && matchMes;
+      return matchCategoria && matchMes;
     });
-  }, [crimeRecords, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [crimeRecords, categoriaSelecionada, mesSelecionado]);
 
   // Derived statistics for StatCards
   const stats = useMemo(() => {
     const total = dadosFiltrados.reduce((sum, item) => sum + item.ocorrencias, 0);
 
-    // Calculate previous period total for variation
-    let variacaoTotal: number | null = null;
-    if (anoSelecionado !== 'Todos') {
-      const prevYear = String(parseInt(anoSelecionado) - 1);
-      const hasDataForPrevYear = crimeRecords.some((item) => item.ano === prevYear);
-      
-      if (hasDataForPrevYear) {
-        const prevYearData = crimeRecords.filter((item) => {
-          const matchRegiao = regiaoSelecionada === 'Todas' || item.regiao === regiaoSelecionada;
-          const matchMunicipio = municipioSelecionado === 'Todos' || item.municipio === municipioSelecionado;
-          const matchCategoria = categoriaSelecionada === 'Todas' || item.categoria_crime === categoriaSelecionada;
-          const matchCrime = crimeSelecionado === 'Todos' || item.tipo_crime === crimeSelecionado;
-          const matchAno = item.ano === prevYear;
-          const matchMes = mesSelecionado === 'Todos' || item.mes === mesSelecionado;
-          return matchRegiao && matchMunicipio && matchCategoria && matchCrime && matchAno && matchMes;
-        });
+    const variacaoTotal: number | null = null; // Backend now only returns 1 year at a time
 
-        if (prevYearData.length > 0) {
-          const prevYearTotal = prevYearData.reduce((sum, item) => sum + item.ocorrencias, 0);
-          if (prevYearTotal > 0) {
-            variacaoTotal = ((total - prevYearTotal) / prevYearTotal) * 100;
-          } else if (prevYearTotal === 0 && total === 0) {
-            variacaoTotal = 0;
-          } else {
-            variacaoTotal = 100;
-          }
-        }
-      }
-    }
-
-    // Calculate crime mais frequente
+    // Calculate category mais frequente
     const counts: Record<string, number> = {};
     dadosFiltrados.forEach((item) => {
-      counts[item.tipo_crime] = (counts[item.tipo_crime] || 0) + item.ocorrencias;
+      counts[item.categoria_crime] = (counts[item.categoria_crime] || 0) + item.ocorrencias;
     });
     let crimeMaisFrequente = '';
     let maxVal = -1;
@@ -205,8 +140,7 @@ function App() {
       }
     });
 
-    // Calculate media mensal
-    const uniqueMonths = Array.from(new Set(dadosFiltrados.map((item) => `${item.ano}-${item.mes}`)));
+    const uniqueMonths = Array.from(new Set(dadosFiltrados.map((item) => item.mes)));
     const numMonths = uniqueMonths.length || 1;
     const mediaMensal = Math.round(total / numMonths);
 
@@ -216,7 +150,24 @@ function App() {
       crimeMaisFrequente,
       mediaMensal,
     };
-  }, [crimeRecords, dadosFiltrados, regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
+  }, [dadosFiltrados]);
+
+  // Adapt the RegionTable to expect new schema. We rename the fields.
+  const tableData = dadosFiltrados.map(r => ({
+    municipio: r.categoria_crime,
+    ocorrencias: r.ocorrencias,
+    variacao_mensal: 0,
+    regiao: '',
+    ano: anoSelecionado,
+    mes: r.mes,
+    categoria_crime: r.categoria_crime,
+    tipo_crime: r.categoria_crime
+  }));
+
+  const chartData = dadosFiltrados.map(r => ({
+    ...r,
+    tipo_crime: r.categoria_crime
+  }));
 
   return (
     <>
@@ -261,20 +212,20 @@ function App() {
           {isLoading ? (
             <>
               <div className="chartsGrid">
-                <TrendChart data={dadosFiltrados} isLoading={true} />
-                <CrimeDistributionChart data={dadosFiltrados} isLoading={true} />
+                <TrendChart data={chartData} isLoading={true} />
+                <CrimeDistributionChart data={chartData} isLoading={true} />
               </div>
-              <RegionTable data={dadosFiltrados} isLoading={true} />
+              <RegionTable data={tableData} isLoading={true} />
             </>
           ) : dadosFiltrados.length === 0 ? (
             <EmptyState />
           ) : (
             <>
               <div className="chartsGrid">
-                <TrendChart data={dadosFiltrados} isLoading={false} />
-                <CrimeDistributionChart data={dadosFiltrados} isLoading={false} />
+                <TrendChart data={chartData} isLoading={false} />
+                <CrimeDistributionChart data={chartData} isLoading={false} />
               </div>
-              <RegionTable data={dadosFiltrados} isLoading={false} />
+              <RegionTable data={tableData} isLoading={false} />
             </>
           )}
         </div>

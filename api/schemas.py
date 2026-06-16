@@ -10,15 +10,9 @@ class MunicipioResponse(BaseModel):
         from_attributes = True
 
 class OcorrenciaResponse(BaseModel):
-    id: int
-    municipio_id: int
-    tipo_crime_id: int
-    nome_crime: str
-    categoria_macro: str
-    ano: int
+    categoria_crime: str
     mes: int
     total_ocorrencias: int
-    variacao_mensal: float
 
     class Config:
         from_attributes = True

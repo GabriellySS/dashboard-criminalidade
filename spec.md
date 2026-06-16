@@ -13,6 +13,8 @@ Construir o frontend de uma aplicação web (Single Page Application) que exibe 
 * **Backend / API (Camada Intermediária):**
   - **Framework:** `FastAPI` (Python) com servidor ASGI `uvicorn`.
   - **Função:** Serve como ponte de comunicação entre o banco de dados PostgreSQL e o frontend em React, entregando dados dinâmicos processados.
+  - **Arquitetura de Dados (Server-Side Aggregation):** A API não retorna mais dados brutos (`SELECT *`). A rota `/api/ocorrencias` agora exige os parâmetros `municipio_id` e `ano`, e agrupa os dados por `categoria_crime` e `mes` diretamente no banco de dados usando SQLAlchemy. Isso reduz drasticamente o payload e melhora o desempenho.
+  - **Fluxo do Frontend (Default Filtering):** O React agora carrega com um estado inicial padrão (ex: município "Cotia" no ano "2023"), evitando buscar toda a base de uma vez. O frontend consome apenas os totais pré-agregados, focando em renderização leve e delegando as agregações pesadas para o banco de dados.
   - **Estrutura:** A camada de backend estará contida na pasta raiz `/api` do projeto.
   - **Segurança e Comunicação:** Uso do middleware `CORSMiddleware` do FastAPI para gerenciar a política de CORS, permitindo que o frontend React faça requisições HTTP seguras à API.
 
