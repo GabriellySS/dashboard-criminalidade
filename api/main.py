@@ -2,6 +2,7 @@ import sys
 import os
 # pyrefly: ignore [missing-import]
 from contextlib import asynccontextmanager
+# pyrefly: ignore [missing-import]
 from dotenv import load_dotenv
 
 # Carrega variáveis do .env antes de qualquer outra importação que as utilize
