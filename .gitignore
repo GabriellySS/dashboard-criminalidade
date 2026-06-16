@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+__pycache__/
+*.pyc
+*.pyo
+
+.docker/
+
 .vite/
 .venv/
 
