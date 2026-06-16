@@ -31,9 +31,13 @@ def get_db():
         db.close()
 
 app = FastAPI(
-    title="SSP Dashboard API",
-    description="API REST para consulta de dados de criminalidade do Estado de São Paulo",
-    version="1.0.0"
+    title="Dashboard Criminalidade API",
+    description=(
+        "API REST para consulta de dados de criminalidade. "
+        "Atualmente serve dados do Estado de São Paulo (SSP-SP). "
+        "Schema v2: suporte multi-estado ativo — endpoint /api/estados disponível."
+    ),
+    version="2.0.0"
 )
 
 # Origens permitidas: lidas da variável CORS_ORIGINS (lista separada por vírgula).
@@ -55,6 +59,32 @@ async def get_status():
     """Rota de teste simples para verificar a integridade da API."""
     return {"status": "Servidor FastAPI rodando e conectado!"}
 
+@app.get("/api/estados")
+def list_estados(db: Session = Depends(get_db)):
+    """
+    Retorna todos os estados cadastrados no banco de dados.
+    Atualmente apenas 'SP' possui dados ingeridos; os demais estados
+    estão registrados no seed e prontos para receber dados futuros.
+    """
+    result = db.execute(text("""
+        SELECT e.id, e.sigla, e.nome, e.regiao_br,
+               COUNT(DISTINCT r.id) AS num_regioes
+        FROM estados e
+        LEFT JOIN regioes r ON r.estado_id = e.id
+        GROUP BY e.id, e.sigla, e.nome, e.regiao_br
+        ORDER BY e.sigla
+    """))
+    return [
+        {
+            "id": row[0],
+            "sigla": row[1],
+            "nome": row[2],
+            "regiao_br": row[3],
+            "num_regioes": row[4]
+        }
+        for row in result
+    ]
+
 @app.get("/api/municipios", response_model=List[MunicipioResponse])
 def list_municipios(db: Session = Depends(get_db)):
     """Retorna todos os municípios cadastrados no banco de dados, incluindo o nome da região."""
@@ -74,9 +104,11 @@ def list_ocorrencias(
     db: Session = Depends(get_db)
 ):
     """
-    Retorna a lista de ocorrências com filtros opcionais de município, região e ano,
-    realizando JOIN com tipos_crime, municipios e regioes para permitir
-    a agregação dinâmica.
+    Retorna a lista de ocorrências com filtros opcionais de município, região e ano.
+
+    Retrocompatibilidade v2: as queries não foram alteradas pois o JOIN
+    municipios → regioes não depende da coluna estado_id. Quando o filtro
+    por estado for implementado (P1), adicionar AND r.estado_id = :estado_id.
     """
     is_municipio = municipio and municipio != "Todos" and municipio != "Todas as cidades"
     is_regiao = regiao and regiao != "Todas"
