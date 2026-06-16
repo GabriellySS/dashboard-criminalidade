@@ -52,22 +52,52 @@ app.add_middleware(
 
 ---
 
-## 3. Estrutura de Dados (PostgreSQL)
+## 3. Topologia do Banco de Dados — Schema v2 (Multi-Estado)
 
-Os dados consolidados no banco relacional contêm:
-- `id` (UUID ou Serial, Chave Primária)
-- `regiao` (VARCHAR)
-- `municipio` (VARCHAR)
-- `categoria_crime` (VARCHAR)
-- `tipo_crime` (VARCHAR)
-- `ano` (INTEGER)
-- `mes` (VARCHAR)
-- `ocorrencias` (INTEGER)
-- `variacao_mensal` (NUMERIC)
+*Atualizado em `feat/schema-multi-estado`. Versão anterior tinha 4 tabelas; v2 adiciona `estados` como entidade de primeira classe.*
 
-### Índices de Performance (adicionados em perf/sec-p0-fundacao)
+### Diagrama de Tabelas
 
-O schema em `database/schema.sql` agora inclui 5 índices compostos críticos que eliminam `SEQUENTIAL SCAN` nas queries de filtragem e JOIN:
+```
+estados (NOVO)
+  id       SERIAL PK
+  sigla    CHAR(2) UNIQUE   ← 'SP', 'RJ', 'MG', ...
+  nome     VARCHAR(100)
+  regiao_br VARCHAR(20)     ← 'Sudeste', 'Nordeste', ...
+       │
+       │ 1:N
+       ▼
+regioes (ALTERADO)
+  id        SERIAL PK
+  estado_id INT FK → estados.id   ← NOVO
+  nome      VARCHAR(100)
+  UNIQUE (estado_id, nome)         ← substituiu UNIQUE(nome)
+       │
+       │ 1:N
+       ▼
+municipios
+  id        SERIAL PK
+  regiao_id INT FK → regioes.id
+  nome      VARCHAR(150)
+       │
+       │ 1:N
+       ▼
+ocorrencias (tabela de fatos — sem alterações)
+  id                SERIAL PK
+  municipio_id      INT FK → municipios.id
+  tipo_crime_id     INT FK → tipos_crime.id
+  ano, mes          INT
+  total_ocorrencias INT
+  variacao_mensal   FLOAT
+```
+
+### Regras de Negócio da Migração
+
+- A constraint `UNIQUE(nome)` em `regioes` foi removida e substituída por `UNIQUE(estado_id, nome)`. Isso permite que dois estados tenham regiões de mesmo nome (ex: "Capital" em SP e RJ) sem conflito.
+- Dados legados (regiões já inseridas sem `estado_id`) são vinculados automaticamente ao estado `SP` via script de migração (`database/migration_v1_to_v2.sql`).
+- O pipeline ETL (`etl_loader.py`) agora resolve o `estado_id` de `SP` uma vez por transação via `_get_estado_id()` e o injeta no `INSERT INTO regioes`.
+
+### Índices de Performance (6 índices — v2)
 
 | Índice | Tabela | Colunas | Query coberta |
 |---|---|---|---|
@@ -76,14 +106,31 @@ O schema em `database/schema.sql` agora inclui 5 índices compostos críticos qu
 | `idx_municipios_regiao_id` | `municipios` | `(regiao_id)` | `JOIN regioes r ON m.regiao_id = r.id` |
 | `idx_municipios_nome` | `municipios` | `(nome)` | `WHERE m.nome = :municipio` |
 | `idx_regioes_nome` | `regioes` | `(nome)` | `WHERE r.nome = :regiao` |
-
-**Impacto esperado:** Redução de latência de O(N) para O(log N) na query principal de `/api/ocorrencias`.
+| `idx_regioes_estado_id` *(NOVO)* | `regioes` | `(estado_id)` | `JOIN estados e ON r.estado_id = e.id` |
 
 > **Nota:** Em bancos em produção com dados ao vivo, execute os índices com `CREATE INDEX CONCURRENTLY` para não bloquear leituras durante a criação.
 
 ---
 
-## 4. Server-Side Aggregation
+## 4. Endpoints Disponíveis
+
+| Método | Rota | Descrição | Status |
+|---|---|---|---|
+| `GET` | `/api/status` | Health check da API | Ativo |
+| `GET` | `/api/estados` | Lista todos os 27 estados (com contagem de regiões) | **NOVO** |
+| `GET` | `/api/municipios` | Lista todos os municípios com nome da região | Ativo |
+| `GET` | `/api/ocorrencias` | Ocorrências com filtros: `municipio`, `regiao`, `ano` | Ativo |
+
+### Filtros Planejados (P1 — próxima fase)
+
+```
+GET /api/ocorrencias?estado={uf}&municipio={m}&regiao={r}&ano={a}
+GET /api/municipios?estado={uf}&regiao={r}
+GET /api/anos-disponiveis?estado={uf}
+GET /api/tipos-crime?categoria={c}
+```
+
+## 5. Server-Side Aggregation
 
 A API não retorna mais dados brutos (`SELECT *`).
 A rota principal `/api/ocorrencias` aceita parâmetros de query opcionais para filtragem:
@@ -97,3 +144,7 @@ A agregação (GROUP BY) é feita no próprio PostgreSQL (via SQLAlchemy), retor
 - `ano`
 - `total_ocorrencias`
 - `municipio`
+
+> **Retrocompatibilidade v2:** As queries existentes nas rotas `/api/municipios` e `/api/ocorrencias`
+> não foram alteradas. O JOIN `municipios → regioes` não depende de `estado_id` — apenas da FK
+> `regiao_id` que já existia. O filtro por estado será adicionado nas rotas P1 sem breaking change.
