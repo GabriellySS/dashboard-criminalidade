@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.2 *(atualizado em 16/06/2026 — branch `feat/schema-multi-estado` — **TODOS OS P0 CONCLUÍDOS** ✅)*  
+> **Versão:** 1.3 *(atualizado em 16/06/2026 — branch `feat/api-redis-cache`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -596,7 +596,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🔴 P0~~ | ~~Índices compostos no banco~~ | ~~Baixo (1h)~~ | ~~Altíssimo~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
 | ~~🔴 P0~~ | ~~Variáveis de ambiente (remover credentials hardcoded)~~ | ~~Baixo (2h)~~ | ~~Alto (segurança)~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
 | ~~🔴 P0~~ | ~~Adicionar `estado_id` em `regioes` + migration~~ | ~~Médio (4h)~~ | ~~Bloqueador da expansão~~ | ✅ **Concluído** *(feat/schema-multi-estado)* |
-| 🟡 P1 | Cache Redis nas rotas da API | Médio (8h) | Alto | ⏳ Pendente |
+| ~~🟡 P1~~ | ~~Cache Redis nas rotas da API~~ | ~~Médio (8h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/api-redis-cache)* |
 | 🟡 P1 | Refatoração do scraper para `BaseScraper` | Alto (2 dias) | Alto | ⏳ Pendente |
 | 🟡 P1 | Lista de anos dinâmica no frontend | Baixo (2h) | Médio | ⏳ Pendente |
 | 🟡 P1 | Estado de erro + retry no frontend | Médio (4h) | Médio | ⏳ Pendente |
