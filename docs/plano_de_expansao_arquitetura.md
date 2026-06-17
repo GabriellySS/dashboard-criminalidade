@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.5 *(atualizado em 17/06/2026 — branch `refactor/pipeline-strategy-pattern`)*  
+> **Versão:** 1.6 *(atualizado em 17/06/2026 — branch `feat/frontend-p2-combobox`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -600,7 +600,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🟡 P1~~ | ~~Refatoração do scraper para `BaseScraper`~~ | ~~Alto (2 dias)~~ | ~~Alto~~ | ✅ **Concluído** *(refactor/pipeline-strategy-pattern)* |
 | ~~🟡 P1~~ | ~~Lista de anos dinâmica no frontend~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | ~~🟡 P1~~ | ~~Estado de erro + retry no frontend~~ | ~~Médio (4h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
-| 🟢 P2 | Combobox com busca para municípios | Médio (1 dia) | Alto (UX) | ⏳ Pendente |
+| ~~🟢 P2~~ | ~~Combobox com busca para municípios~~ | ~~Médio (1 dia)~~ | ~~Alto (UX)~~ | ✅ **Concluído** *(feat/frontend-p2-combobox)* |
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
 | 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
 | 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |

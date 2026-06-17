@@ -65,7 +65,8 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
   let totalOccurrences = 0;
 
   data.forEach((item) => {
-    groupMap[item.tipo_crime] = (groupMap[item.tipo_crime] || 0) + item.ocorrencias;
+    const key = item.tipo_crime ?? item.categoria_crime;
+    groupMap[key] = (groupMap[key] || 0) + item.ocorrencias;
     totalOccurrences += item.ocorrencias;
   });
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Filter } from 'lucide-react';
+import { MunicipioCombobox } from '../Combobox/MunicipioCombobox';
 import styles from './FilterBar.module.css';
 
 interface FilterBarProps {
@@ -43,8 +44,20 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   anosList,
   mesesList,
 }) => {
+  /**
+   * Regra de cascata geográfica:
+   * O Combobox de Município permanece desabilitado enquanto "Todas" as regiões
+   * estiver selecionada. Quando uma Região específica é escolhida, o Combobox
+   * é habilitado e lista apenas os municípios daquela região.
+   *
+   * Com a virtualização, a lista suporta 5.570+ municípios sem degradação de
+   * performance — apenas os itens visíveis no viewport são renderizados no DOM.
+   */
+  const isMunicipioDisabled = regiaoSelecionada === 'Todas';
+
   return (
     <div className={styles.filterBar}>
+      {/* Filtro: Região */}
       <div className={styles.filterGroup}>
         <label htmlFor="regiao-select">Região</label>
         <select
@@ -66,25 +79,20 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
+      {/* Filtro: Município — Combobox virtualizado (substitui <select> nativo) */}
       <div className={styles.filterGroup}>
-        <label htmlFor="municipio-select">Município</label>
-        <select
-          id="municipio-select"
-          aria-label="Filtrar por Município"
-          className={styles.select}
+        <label htmlFor="municipio-combobox">Município</label>
+        <MunicipioCombobox
+          id="municipio-combobox"
+          ariaLabel="Filtrar por Município"
+          options={municipiosList}
           value={municipioSelecionado}
-          onChange={(e) => setMunicipioSelecionado(e.target.value)}
-          disabled={regiaoSelecionada === 'Todas'}
-        >
-          <option value="Todas as cidades">Todas as cidades</option>
-          {municipiosList.map((m) => (
-            <option key={m} value={m}>
-              {m}
-            </option>
-          ))}
-        </select>
+          onChange={setMunicipioSelecionado}
+          disabled={isMunicipioDisabled}
+        />
       </div>
 
+      {/* Filtro: Categoria de Crime */}
       <div className={styles.filterGroup}>
         <label htmlFor="categoria-select">Categoria de Crime</label>
         <select
@@ -106,6 +114,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
+      {/* Filtro: Tipo de Crime */}
       <div className={styles.filterGroup}>
         <label htmlFor="crime-select">Tipo de Crime</label>
         <select
@@ -128,6 +137,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
+      {/* Filtro: Ano */}
       <div className={styles.filterGroup}>
         <label htmlFor="ano-select">Ano</label>
         <select
@@ -146,6 +156,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
+      {/* Filtro: Mês */}
       <div className={styles.filterGroup}>
         <label htmlFor="mes-select">Mês</label>
         <select
@@ -164,7 +175,11 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </select>
       </div>
 
-      <button className={styles.button} type="button" aria-label="Aplicar filtros selecionados">
+      <button
+        className={styles.button}
+        type="button"
+        aria-label="Aplicar filtros selecionados"
+      >
         <Filter size={16} fill="white" />
         Aplicar Filtros
       </button>
