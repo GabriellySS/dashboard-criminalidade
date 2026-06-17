@@ -1,0 +1,107 @@
+/* ============================================================
+   ErrorState — Flat Design System
+   Alinhado às variáveis CSS de src/styles/variables.css
+   ============================================================ */
+
+.container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Anel de ícone com cor de perigo */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  padding: 1rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  max-width: 420px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Detalhe técnico discreto — visível mas não prioritário */
+.technicalDetail {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem 0 0;
+  max-width: 480px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+
+/* Botão de retry — destaque primário com ícone */
+.retryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.12);
+}
+
+.retryButton:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.16);
+}
+
+.retryButton:active {
+  opacity: 0.78;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.10);
+}
+
+/* Animação de rotação no ícone ao fazer hover */
+.retryButton:hover svg {
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
