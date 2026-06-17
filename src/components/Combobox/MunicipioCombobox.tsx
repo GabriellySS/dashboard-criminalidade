@@ -46,6 +46,12 @@ interface MunicipioComboboxProps {
   onChange: (value: string) => void;
   /** Se true, o campo fica bloqueado (aguardando seleção de Região) */
   disabled?: boolean;
+  /**
+   * UX-05 — Microcopy explicativo exibido quando o campo está desabilitado.
+   * Aparece como tooltip nativo (title) e como hint acessível abaixo do campo.
+   * Ex: "Selecione uma região primeiro"
+   */
+  disabledReason?: string;
   /** ID do elemento para associação com <label> externo */
   id?: string;
   /** Aria-label descritivo */
@@ -59,6 +65,7 @@ export const MunicipioCombobox: React.FC<MunicipioComboboxProps> = ({
   value,
   onChange,
   disabled = false,
+  disabledReason,
   id,
   ariaLabel = 'Selecionar município',
 }) => {
@@ -183,6 +190,10 @@ export const MunicipioCombobox: React.FC<MunicipioComboboxProps> = ({
     !value || value === TODAS_AS_CIDADES ? 'Todas as cidades' : value;
 
   // ── Render ────────────────────────────────────────────────────────────────────
+
+  // UX-05: ID do hint acessível para aria-describedby quando desabilitado
+  const hintId = `${inputId}-hint`;
+
   return (
     <div
       ref={wrapperRef}
@@ -199,6 +210,7 @@ export const MunicipioCombobox: React.FC<MunicipioComboboxProps> = ({
         aria-controls={listId}
         aria-haspopup="listbox"
         aria-disabled={disabled}
+        aria-describedby={disabled && disabledReason ? hintId : undefined}
         disabled={disabled}
         className={[
           styles.trigger,
@@ -208,10 +220,17 @@ export const MunicipioCombobox: React.FC<MunicipioComboboxProps> = ({
           .filter(Boolean)
           .join(' ')}
         onClick={isOpen ? closeDropdown : openDropdown}
-        title={triggerLabel}
+        title={disabled && disabledReason ? disabledReason : triggerLabel}
       >
         {triggerLabel}
       </button>
+
+      {/* UX-05: Microcopy condicional abaixo do campo quando desabilitado */}
+      {disabled && disabledReason && (
+        <p id={hintId} className={styles.disabledHint} aria-live="polite">
+          {disabledReason}
+        </p>
+      )}
 
       {/* Dropdown */}
       {isOpen && (

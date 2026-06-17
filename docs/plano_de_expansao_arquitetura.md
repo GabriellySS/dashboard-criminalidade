@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.6 *(atualizado em 17/06/2026 — branch `feat/frontend-p2-combobox`)*  
+> **Versão:** 1.7 *(atualizado em 17/06/2026 — branch `feat/ux-quick-wins-filterbar`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -592,7 +592,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 ## 5. Prioridades de Execução (Resumo)
 
 | Prioridade | Item | Esforço | Impacto | Status |
-|---|---|---|---|---|
+|---|---|---|---|
 | ~~🔴 P0~~ | ~~Índices compostos no banco~~ | ~~Baixo (1h)~~ | ~~Altíssimo~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
 | ~~🔴 P0~~ | ~~Variáveis de ambiente (remover credentials hardcoded)~~ | ~~Baixo (2h)~~ | ~~Alto (segurança)~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
 | ~~🔴 P0~~ | ~~Adicionar `estado_id` em `regioes` + migration~~ | ~~Médio (4h)~~ | ~~Bloqueador da expansão~~ | ✅ **Concluído** *(feat/schema-multi-estado)* |
@@ -601,13 +601,13 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🟡 P1~~ | ~~Lista de anos dinâmica no frontend~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | ~~🟡 P1~~ | ~~Estado de erro + retry no frontend~~ | ~~Médio (4h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | ~~🟢 P2~~ | ~~Combobox com busca para municípios~~ | ~~Médio (1 dia)~~ | ~~Alto (UX)~~ | ✅ **Concluído** *(feat/frontend-p2-combobox)* |
+| ~~🟢 P2~~ | ~~**[UX-04]** Ocultar filtro "Tipo de Crime" inoperante~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
+| ~~🟢 P2~~ | ~~**[UX-05]** Microcopy no campo Município desabilitado~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
+| ~~🟢 P2~~ | ~~**[UX-03]** Mover botão + definir modelo eager vs lazy~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
+| ~~🟢 P2~~ | ~~**[UX-02]** Botão "Limpar Filtros" com contagem~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
 | 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
 | 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |
-| 🟢 P2 | **[UX-04]** Ocultar filtro "Tipo de Crime" inoperante | Baixo (30min) | Médio | ⏳ Pendente |
-| 🟢 P2 | **[UX-05]** Microcopy no campo Município desabilitado | Baixo (30min) | Médio | ⏳ Pendente |
-| 🟢 P2 | **[UX-03]** Mover botão + definir modelo eager vs lazy | Baixo (1h) | Alto | ⏳ Pendente |
-| 🟢 P2 | **[UX-02]** Botão "Limpar Filtros" com contagem | Baixo (1h) | Alto | ⏳ Pendente |
 | 🟢 P2 | **[UX-01]** Chips de filtros ativos com remoção individual | Médio (4h) | Alto | ⏳ Pendente |
 | 🟢 P2 | **[UX-07]** Agrupamento semântico na FilterBar | Baixo (2h) | Médio | ⏳ Pendente |
 | 🟢 P3 | **[UX-06]** Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
