@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.4 *(atualizado em 17/06/2026 — branch `feat/frontend-p1-anos-erros`)*  
+> **Versão:** 1.5 *(atualizado em 17/06/2026 — branch `refactor/pipeline-strategy-pattern`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -597,7 +597,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🔴 P0~~ | ~~Variáveis de ambiente (remover credentials hardcoded)~~ | ~~Baixo (2h)~~ | ~~Alto (segurança)~~ | ✅ **Concluído** *(perf/sec-p0-fundacao)* |
 | ~~🔴 P0~~ | ~~Adicionar `estado_id` em `regioes` + migration~~ | ~~Médio (4h)~~ | ~~Bloqueador da expansão~~ | ✅ **Concluído** *(feat/schema-multi-estado)* |
 | ~~🟡 P1~~ | ~~Cache Redis nas rotas da API~~ | ~~Médio (8h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/api-redis-cache)* |
-| 🟡 P1 | Refatoração do scraper para `BaseScraper` | Alto (2 dias) | Alto | ⏳ Pendente |
+| ~~🟡 P1~~ | ~~Refatoração do scraper para `BaseScraper`~~ | ~~Alto (2 dias)~~ | ~~Alto~~ | ✅ **Concluído** *(refactor/pipeline-strategy-pattern)* |
 | ~~🟡 P1~~ | ~~Lista de anos dinâmica no frontend~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | ~~🟡 P1~~ | ~~Estado de erro + retry no frontend~~ | ~~Médio (4h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | 🟢 P2 | Combobox com busca para municípios | Médio (1 dia) | Alto (UX) | ⏳ Pendente |
