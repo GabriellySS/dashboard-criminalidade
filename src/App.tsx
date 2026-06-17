@@ -12,13 +12,21 @@ import './App.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
 
+// ── Valores padrão dos filtros (usados pelo botão Limpar Filtros) ───────────
+const DEFAULT_REGIAO    = 'Capital';
+const DEFAULT_MUNICIPIO = 'São Paulo (Capital)';
+const DEFAULT_CATEGORIA = 'Todas';
+const DEFAULT_CRIME     = 'Todos';
+const DEFAULT_ANO       = 'Todos';
+const DEFAULT_MES       = 'Todos';
+
 function App() {
-  const [regiaoSelecionada, setRegiaoSelecionada] = useState('Capital');
-  const [municipioSelecionado, setMunicipioSelecionado] = useState('São Paulo (Capital)');
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todas');
-  const [crimeSelecionado, setCrimeSelecionado] = useState('Todos');
-  const [anoSelecionado, setAnoSelecionado] = useState('Todos');
-  const [mesSelecionado, setMesSelecionado] = useState('Todos');
+  const [regiaoSelecionada, setRegiaoSelecionada] = useState(DEFAULT_REGIAO);
+  const [municipioSelecionado, setMunicipioSelecionado] = useState(DEFAULT_MUNICIPIO);
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState(DEFAULT_CATEGORIA);
+  const [crimeSelecionado, setCrimeSelecionado] = useState(DEFAULT_CRIME);
+  const [anoSelecionado, setAnoSelecionado] = useState(DEFAULT_ANO);
+  const [mesSelecionado, setMesSelecionado] = useState(DEFAULT_MES);
   const [municipiosData, setMunicipiosData] = useState<any[]>([]);
   const [municipiosError, setMunicipiosError] = useState<string | null>(null);
   const [municipiosRetryKey, setMunicipiosRetryKey] = useState(0);
@@ -106,6 +114,27 @@ function App() {
     );
   }, [crimeRecords]);
 
+  // ─── UX-02: Conta filtros ativos (diferentes do valor padrão) ────────────
+  const activeFiltersCount = useMemo(() => {
+    let count = 0;
+    if (regiaoSelecionada    !== DEFAULT_REGIAO)    count++;
+    if (municipioSelecionado !== DEFAULT_MUNICIPIO) count++;
+    if (categoriaSelecionada !== DEFAULT_CATEGORIA) count++;
+    if (anoSelecionado       !== DEFAULT_ANO)       count++;
+    if (mesSelecionado       !== DEFAULT_MES)       count++;
+    return count;
+  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, anoSelecionado, mesSelecionado]);
+
+  // ─── UX-02: Reset de todos os filtros para os valores iniciais ───────────
+  const handleClearFilters = () => {
+    setRegiaoSelecionada(DEFAULT_REGIAO);
+    setMunicipioSelecionado(DEFAULT_MUNICIPIO);
+    setCategoriaSelecionada(DEFAULT_CATEGORIA);
+    setCrimeSelecionado(DEFAULT_CRIME);
+    setAnoSelecionado(DEFAULT_ANO);
+    setMesSelecionado(DEFAULT_MES);
+  };
+
   // ─── Dados filtrados (cliente: mês + categoria) ───────────────────────────
   const dadosFiltrados = useMemo(() => {
     return crimeRecords.filter((item) => {
@@ -190,6 +219,8 @@ function App() {
           tiposCrimeList={tiposCrimeList}
           anosList={anosList}
           mesesList={mesesList}
+          onClearFilters={handleClearFilters}
+          activeFiltersCount={activeFiltersCount}
         />
 
         <div className="dashboardLayout">
