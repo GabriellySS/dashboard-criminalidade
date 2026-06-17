@@ -275,3 +275,26 @@ async def list_ocorrencias(
         }
         for r in result
     ]
+
+
+@app.get("/api/anos-disponiveis")
+@cache(expire=CACHE_TTL_MUNICIPIOS)
+async def list_anos_disponiveis(db: Session = Depends(get_db)):
+    """
+    Retorna a lista de anos únicos com dados de ocorrências no banco,
+    ordenados em ordem decrescente (mais recente primeiro).
+
+    Substitui a lista hardcoded no frontend (FRONTEND-01), garantindo que
+    o filtro de ano sempre reflita os dados reais no banco de dados.
+
+    Cache: TTL de 24 horas (dado muda somente após ingestão do ETL).
+    Chave de cache determinística: 'ssp_dashboard:/api/anos-disponiveis'.
+
+    Response: lista de inteiros — ex: [2024, 2023, 2022, 2021]
+    """
+    result = db.execute(text("""
+        SELECT DISTINCT o.ano
+        FROM ocorrencias o
+        ORDER BY o.ano DESC
+    """))
+    return [row[0] for row in result]

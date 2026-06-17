@@ -17,3 +17,111 @@ Suporte nativo a temas Light e Dark com troca reativa.
 * **Layout:** Horizontal (`row`, `gap: 1rem`) com ícone à esquerda e blocos de texto à direita.
 * **Ícones:** Total (`BarChart` ou similares), Frequente (`AlertCircle`), Média (`Calendar`).
 * **Badge de Porcentagem:** Dinâmica, comparando com período anterior. Apenas visível se existirem dados comparativos.
+
+---
+
+## 4. Política de Tratamento de Erros (P1 — implementado em `feat/frontend-p1-anos-erros`)
+
+### 4.1 Princípio
+
+Nenhum erro de API deve ser silencioso. Toda falha de rede ou resposta HTTP não-2xx
+deve resultar em **feedback visual claro e acionável** para o usuário, substituindo os
+`console.error` anteriores.
+
+### 4.2 Arquitetura de Estados de Erro
+
+Cada hook de data fetching expõe obrigatoriamente três campos:
+
+```typescript
+interface QueryState<T> {
+  data: T | null;
+  isLoading: boolean;
+  isError: boolean;
+  errorMessage: string | null;  // mensagem técnica para exibição discreta
+  refetch: () => void;          // dispara nova busca sem alterar filtros
+}
+```
+
+#### Hooks implementados:
+| Hook | Arquivo | Endpoint consumido |
+|---|---|---|
+| `useOcorrencias` | `src/hooks/useOcorrencias.ts` | `GET /api/ocorrencias` |
+| `useAnosDisponiveis` | `src/hooks/useAnosDisponiveis.ts` | `GET /api/anos-disponiveis` |
+
+### 4.3 Componente `<ErrorState />`
+
+**Localização:** `src/components/ErrorState/`
+
+Exibido quando `isError === true`. Alinhado ao Design System Flat:
+- Anel de ícone `AlertTriangle` com `--color-danger` e `--color-danger-bg`
+- Título e descrição amigáveis ao usuário (sem jargão técnico)
+- Detalhe técnico discreto (mensagem HTTP, exibida como badge monoespaciada)
+- Botão **"Tentar Novamente"** com ícone `RefreshCw` que dispara `refetch()`
+  - Hover: ícone rotaciona 360° com animação CSS `spin`
+  - Acessibilidade: `role="alert"`, `aria-live="assertive"`, `id="error-retry-btn"`
+
+### 4.4 Cenários de erro cobertos
+
+| Cenário | Onde exibido | Ação de retry |
+|---|---|---|
+| Falha ao carregar `/api/municipios` | Substitui toda a área de conteúdo | Rebusca municípios via `municipiosRetryKey` |
+| Falha ao carregar `/api/ocorrencias` | Substitui a área de gráficos e charts | Chama `refetch()` do `useOcorrencias` |
+| Falha ao carregar `/api/anos-disponiveis` | Silencioso — dropdown exibe só "Todos os Anos" | `isAnosError` disponível para exibição futura |
+
+### 4.5 Regra de classificação de erros
+
+```typescript
+// Toda resposta HTTP não-2xx lança Error com código e statusText
+if (!res.ok) {
+  throw new Error(`Erro ${res.status}: ${res.statusText}`);
+}
+// Erros de rede (offline) são capturados pelo catch e propagados como errorMessage
+```
+
+---
+
+## 5. Lista de Anos Dinâmica (P1 — implementado em `feat/frontend-p1-anos-erros`)
+
+### 5.1 Problema anterior
+
+O array `['2024', '2023', '2022', '2021']` estava hardcoded em `App.tsx` (linha 111).
+Isso causaria divergência automática com o banco de dados a cada novo ano de dados ingerido.
+
+### 5.2 Solução implementada
+
+#### Backend — novo endpoint
+```
+GET /api/anos-disponiveis
+```
+- Retorna `DISTINCT o.ano` da tabela `ocorrencias`, ordenado `DESC`
+- Cache TTL: 24 horas (mesmo TTL que `/api/municipios`, dado quase estático)
+- Response: `[2024, 2023, 2022, 2021]` (array de inteiros)
+
+#### Frontend — hook `useAnosDisponiveis`
+
+```typescript
+// src/hooks/useAnosDisponiveis.ts
+const { anos, isLoading, isError, refetch } = useAnosDisponiveis();
+```
+
+- Chama o endpoint na montagem do componente
+- Converte os inteiros para `string[]`
+- Garante ordem decrescente via `.sort((a, b) => b - a)`
+- Suporta tanto `number[]` direto quanto `{ anos: number[] }` como response
+- Em caso de erro no endpoint, `anos` é `[]` e o filtro exibe apenas "Todos os Anos"
+
+#### Integração no `App.tsx`
+
+```typescript
+const anosList = useMemo(() => {
+  return isAnosError ? [] : anosDisponiveis; // nunca hardcoded
+}, [anosDisponiveis, isAnosError]);
+```
+
+### 5.3 Comportamento do dropdown de Ano
+
+| Situação | Opções exibidas |
+|---|---|
+| Endpoint respondeu com sucesso | "Todos os Anos" + anos em ordem decrescente |
+| Endpoint em erro / lista vazia | "Todos os Anos" (único item) |
+| Endpoint carregando | "Todos os Anos" (até os dados chegarem) |

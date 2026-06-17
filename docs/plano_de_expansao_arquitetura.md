@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.3 *(atualizado em 16/06/2026 — branch `feat/api-redis-cache`)*  
+> **Versão:** 1.4 *(atualizado em 17/06/2026 — branch `feat/frontend-p1-anos-erros`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -598,8 +598,8 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🔴 P0~~ | ~~Adicionar `estado_id` em `regioes` + migration~~ | ~~Médio (4h)~~ | ~~Bloqueador da expansão~~ | ✅ **Concluído** *(feat/schema-multi-estado)* |
 | ~~🟡 P1~~ | ~~Cache Redis nas rotas da API~~ | ~~Médio (8h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/api-redis-cache)* |
 | 🟡 P1 | Refatoração do scraper para `BaseScraper` | Alto (2 dias) | Alto | ⏳ Pendente |
-| 🟡 P1 | Lista de anos dinâmica no frontend | Baixo (2h) | Médio | ⏳ Pendente |
-| 🟡 P1 | Estado de erro + retry no frontend | Médio (4h) | Médio | ⏳ Pendente |
+| ~~🟡 P1~~ | ~~Lista de anos dinâmica no frontend~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
+| ~~🟡 P1~~ | ~~Estado de erro + retry no frontend~~ | ~~Médio (4h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/frontend-p1-anos-erros)* |
 | 🟢 P2 | Combobox com busca para municípios | Médio (1 dia) | Alto (UX) | ⏳ Pendente |
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
 | 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
