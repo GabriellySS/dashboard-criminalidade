@@ -162,13 +162,13 @@ retornados). Não há indicação de que o estado é temporário.
 
 | ID | Heurística | Problema | Esforço | Impacto | Status |
 |---|---|---|---|---|---|
-| UX-01 | H1 | Chips de filtros ativos com remoção individual (`×`) | Médio (4h) | Alto | ⏳ Pendente |
+| ~~UX-01~~ | ~~H1~~ | ~~Chips de filtros ativos com remoção individual (`×`)~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | ~~UX-02~~ | ~~H3~~ | ~~Botão "Limpar Filtros" com contagem `(N)`~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | ~~UX-03~~ | ~~H4~~ | ~~Definir modelo eager vs. lazy + mover botão para direita~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | ~~UX-04~~ | ~~H10~~ | ~~Ocultar "Tipo de Crime" até backend suportar~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | ~~UX-05~~ | ~~H5~~ | ~~Microcopy no Município desabilitado~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | UX-06 | H7 | Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
-| UX-07 | H8 | Agrupamento semântico com separadores visuais | Baixo (2h) | Médio | ⏳ Pendente |
+| ~~UX-07~~ | ~~H8~~ | ~~Agrupamento semântico com separadores visuais~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | UX-08 | H6 | Skeleton no dropdown de Mês durante loading | Baixo (30min) | Baixo | ⏳ Pendente |
 
 ---
