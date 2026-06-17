@@ -604,8 +604,17 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
 | 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
 | 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |
+| 🟢 P2 | **[UX-04]** Ocultar filtro "Tipo de Crime" inoperante | Baixo (30min) | Médio | ⏳ Pendente |
+| 🟢 P2 | **[UX-05]** Microcopy no campo Município desabilitado | Baixo (30min) | Médio | ⏳ Pendente |
+| 🟢 P2 | **[UX-03]** Mover botão + definir modelo eager vs lazy | Baixo (1h) | Alto | ⏳ Pendente |
+| 🟢 P2 | **[UX-02]** Botão "Limpar Filtros" com contagem | Baixo (1h) | Alto | ⏳ Pendente |
+| 🟢 P2 | **[UX-01]** Chips de filtros ativos com remoção individual | Médio (4h) | Alto | ⏳ Pendente |
+| 🟢 P2 | **[UX-07]** Agrupamento semântico na FilterBar | Baixo (2h) | Médio | ⏳ Pendente |
+| 🟢 P3 | **[UX-06]** Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
 | 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico | ⏳ Pendente |
 | 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico | ⏳ Pendente |
+
+> 📌 **Auditoria UX completa:** [`docs/specs/05-ux_heuristicas_filtros.md`](file:///e:/PROJETOS/dashboard-criminalidade/docs/specs/05-ux_heuristicas_filtros.md) — análise detalhada de cada item [UX-0N] contra as Heurísticas de Nielsen, com raciocínio, evidências e wireframes.
 
 ---
 
