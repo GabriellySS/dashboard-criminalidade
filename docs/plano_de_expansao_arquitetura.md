@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.7 *(atualizado em 17/06/2026 — branch `feat/ux-quick-wins-filterbar`)*  
+> **Versão:** 1.8 *(atualizado em 17/06/2026 — branch `feat/ux-semantic-grouping-chips`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -608,8 +608,8 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
 | 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
 | 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |
-| 🟢 P2 | **[UX-01]** Chips de filtros ativos com remoção individual | Médio (4h) | Alto | ⏳ Pendente |
-| 🟢 P2 | **[UX-07]** Agrupamento semântico na FilterBar | Baixo (2h) | Médio | ⏳ Pendente |
+| ~~🟢 P2~~ | ~~**[UX-01]** Chips de filtros ativos com remoção individual~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
+| ~~🟢 P2~~ | ~~**[UX-07]** Agrupamento semântico na FilterBar~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | 🟢 P3 | **[UX-06]** Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
 | 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico | ⏳ Pendente |
 | 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico | ⏳ Pendente |

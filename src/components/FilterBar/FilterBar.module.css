@@ -1,29 +1,105 @@
+/* ============================================================
+   FilterBar — UX-07 (Agrupamento Semântico) + UX-01 (Chips)
+   Design System: src/styles/variables.css
+   ============================================================ */
+
+/* ── Container principal ────────────────────────────────────── */
 .filterBar {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  align-items: end;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   box-shadow: var(--shadow-subtle);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-.filterGroup {
+/* ── Linha superior: grupos de filtros + botão de ação ──────── */
+.filtersRow {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: flex-end;
+  gap: 0;
+  flex-wrap: wrap;
+  row-gap: 1rem;
 }
 
-.filterGroup label {
+/* ── UX-07: Grupo semântico (fieldset visual) ───────────────── */
+/*
+ * Cada grupo tem:
+ *   - legend uppercase em fonte menor (label de grupo)
+ *   - campos de filtro lado a lado (flex)
+ *   - padding lateral para espaço interno ao grupo
+ *
+ * Usamos <fieldset> semanticamente mas resetamos o estilo nativo.
+ */
+.filterGroup {
+  border: none;
+  margin: 0;
+  padding: 0 1.25rem 0 0;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Remove o padding lateral do primeiro grupo */
+.filtersRow .filterGroup:first-child {
+  padding-left: 0;
+}
+
+/* ── Label do grupo (legend / UX-07) ─────────────────────────── */
+.groupLabel {
+  display: block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.625rem;
+  padding: 0;
+  /* Garante que a legend não empurre o layout do fieldset */
+  float: none;
+  width: 100%;
+  /* Linha decorativa ao final do label de grupo */
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Campos dentro do grupo (flex horizontal) ────────────────── */
+.groupFields {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-end;
+}
+
+/* ── Campo individual (label + controle) ─────────────────────── */
+.filterField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+.fieldLabel {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-text-secondary);
 }
 
+/* ── Separador vertical entre grupos (UX-07) ─────────────────── */
+.groupDivider {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--color-border);
+  margin: 0 1rem;
+  flex-shrink: 0;
+  /* Recua levemente para não cortar o groupLabel border-bottom */
+  margin-top: 0.25rem;
+}
+
+/* ── Select nativo ───────────────────────────────────────────── */
 .select {
   width: 100%;
   padding: 0.625rem 0.875rem;
@@ -54,24 +130,22 @@
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
-/* ── Grupo de ações (UX-03: extremo direito do fluxo em Z) ──────── */
+/* ── Grupo de ações (UX-03: extremo direito do fluxo em Z) ───── */
 .actionsGroup {
   display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  justify-content: flex-end;
-  /* Faz o grupo de ações ocupar a última célula do grid,
-     sempre alinhado à direita independente de quantos filtros houver */
+  align-items: flex-end;
+  padding-bottom: 0;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
-/* ── Botão principal "Aplicar Filtros" ──────────────────────────── */
+/* ── Botão principal "Aplicar" ───────────────────────────────── */
 .button {
   background-color: var(--color-accent);
   color: #ffffff;
   border: none;
   border-radius: var(--radius-sm);
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem 1.125rem;
   font-size: 0.875rem;
   font-weight: 600;
   display: flex;
@@ -97,22 +171,121 @@
   transform: scale(0.98);
 }
 
-/* ── Botão "Limpar (N)" — UX-02: saída de emergência clara (H3) ─── */
+/* ============================================================
+   UX-01 — Linha de Chips de Filtros Ativos
+   Fica logo abaixo dos dropdowns, separada por uma borda sutil.
+   Só é renderizada quando há ≥1 filtro diferente do padrão.
+   ============================================================ */
+
+.chipsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.875rem;
+  margin-top: 0.875rem;
+  border-top: 1px solid var(--color-border);
+  /* Animação de entrada suave */
+  animation: chipsIn 0.18s ease-out;
+}
+
+@keyframes chipsIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Prefixo "Filtros ativos:" */
+.chipsLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Container dos chips */
+.chipsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  flex: 1;
+}
+
+/* ── Chip individual ─────────────────────────────────────────── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.625rem;
+  background-color: var(--color-accent-light);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 999px; /* pílula */
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  transition: background-color 0.12s, border-color 0.12s;
+  animation: chipIn 0.15s ease-out;
+}
+
+@keyframes chipIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.chipText {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Botão [×] dentro do chip */
+.chipRemove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-accent);
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.65;
+  flex-shrink: 0;
+  transition: opacity 0.12s, background-color 0.12s;
+}
+
+.chipRemove:hover {
+  opacity: 1;
+  background-color: rgba(59, 130, 246, 0.15);
+}
+
+.chipRemove:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* ── Botão "Limpar (N)" — UX-02, ao final da linha de chips ─── */
 .clearButton {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  height: 38px;
-  padding: 0 0.875rem;
-  font-size: 0.8125rem;
+  height: 28px;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
   font-weight: 500;
   font-family: inherit;
   color: var(--color-text-secondary);
   background: transparent;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  border-radius: 999px; /* harmoniza com os chips */
   cursor: pointer;
   white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
   transition: color 0.15s, border-color 0.15s, background-color 0.15s;
 }
 
@@ -131,20 +304,65 @@
   transform: scale(0.97);
 }
 
-@media (max-width: 768px) {
-  .filterBar {
-    grid-template-columns: 1fr;
+/* ============================================================
+   Responsividade
+   ============================================================ */
+
+@media (max-width: 900px) {
+  /* Em telas médias, os grupos viram linhas próprias */
+  .filtersRow {
+    flex-direction: column;
+    align-items: stretch;
     gap: 1rem;
+  }
+
+  .filterGroup {
+    padding: 0;
+  }
+
+  .groupDivider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    align-self: auto;
   }
 
   .actionsGroup {
     margin-left: 0;
-    justify-content: stretch;
-    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterBar {
+    padding: 1rem;
   }
 
-  .button,
+  .groupFields {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .filterField {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .actionsGroup {
+    width: 100%;
+  }
+
+  .chipsRow {
+    gap: 0.5rem;
+  }
+
   .clearButton {
+    margin-left: 0;
     width: 100%;
     justify-content: center;
   }

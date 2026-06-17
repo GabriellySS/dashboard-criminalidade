@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { Header } from './components/Header/Header';
 import { FilterBar } from './components/FilterBar/FilterBar';
+import type { FilterKey } from './components/FilterBar/FilterBar';
 import { StatCards } from './components/StatCards/StatCards';
 import { TrendChart } from './components/TrendChart/TrendChart';
 import { CrimeDistributionChart } from './components/CrimeDistributionChart/CrimeDistributionChart';
@@ -135,6 +136,41 @@ function App() {
     setMesSelecionado(DEFAULT_MES);
   };
 
+  // ─── UX-01: Remove um filtro individual, resetando-o ao valor padrão ──────
+  const handleRemoveFilter = (key: FilterKey) => {
+    switch (key) {
+      case 'regiao':
+        setRegiaoSelecionada(DEFAULT_REGIAO);
+        // Ao resetar a região ao padrão, o município também volta ao padrão
+        setMunicipioSelecionado(DEFAULT_MUNICIPIO);
+        break;
+      case 'municipio':
+        setMunicipioSelecionado(DEFAULT_MUNICIPIO);
+        break;
+      case 'categoria':
+        setCategoriaSelecionada(DEFAULT_CATEGORIA);
+        setCrimeSelecionado(DEFAULT_CRIME);
+        break;
+      case 'ano':
+        setAnoSelecionado(DEFAULT_ANO);
+        break;
+      case 'mes':
+        setMesSelecionado(DEFAULT_MES);
+        break;
+    }
+  };
+
+  // ─── UX-01: Constrói a lista de chips com label legível para cada filtro ativo
+  const activeChips = useMemo(() => {
+    const chips: { key: FilterKey; label: string }[] = [];
+    if (regiaoSelecionada    !== DEFAULT_REGIAO)    chips.push({ key: 'regiao',    label: regiaoSelecionada });
+    if (municipioSelecionado !== DEFAULT_MUNICIPIO) chips.push({ key: 'municipio', label: municipioSelecionado });
+    if (categoriaSelecionada !== DEFAULT_CATEGORIA) chips.push({ key: 'categoria', label: categoriaSelecionada });
+    if (anoSelecionado       !== DEFAULT_ANO)       chips.push({ key: 'ano',       label: `Ano: ${anoSelecionado}` });
+    if (mesSelecionado       !== DEFAULT_MES)       chips.push({ key: 'mes',       label: mesSelecionado });
+    return chips;
+  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, anoSelecionado, mesSelecionado]);
+
   // ─── Dados filtrados (cliente: mês + categoria) ───────────────────────────
   const dadosFiltrados = useMemo(() => {
     return crimeRecords.filter((item) => {
@@ -221,6 +257,8 @@ function App() {
           mesesList={mesesList}
           onClearFilters={handleClearFilters}
           activeFiltersCount={activeFiltersCount}
+          onRemoveFilter={handleRemoveFilter}
+          activeChips={activeChips}
         />
 
         <div className="dashboardLayout">
