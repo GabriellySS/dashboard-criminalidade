@@ -164,7 +164,7 @@ retornados). Não há indicação de que o estado é temporário.
 |---|---|---|---|---|---|
 | ~~UX-01~~ | ~~H1~~ | ~~Chips de filtros ativos com remoção individual (`×`)~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | ~~UX-02~~ | ~~H3~~ | ~~Botão "Limpar Filtros" com contagem `(N)`~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
-| ~~UX-03~~ | ~~H4~~ | ~~Definir modelo eager vs. lazy + mover botão para direita~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
+| ~~UX-03~~ | ~~H4~~ | ~~Definir modelo eager (remover botão Aplicar)~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-auto-apply-filters)* |
 | ~~UX-04~~ | ~~H10~~ | ~~Ocultar "Tipo de Crime" até backend suportar~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | ~~UX-05~~ | ~~H5~~ | ~~Microcopy no Município desabilitado~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | UX-06 | H7 | Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
@@ -180,9 +180,8 @@ retornados). Não há indicação de que o estado é temporário.
 │  ── GEOGRAFIA ──────────────────  ── TIPOLOGIA ─────  ── PERÍODO ─────────  │
 │  [ Região ▼ ]  [ Município 🔍 ]   [ Categoria ▼ ]     [ Ano ▼ ]  [ Mês ▼ ] │
 │                                                                              │
-│  Filtros ativos: [× Capital] [× São Paulo] [× 2024]    [Limpar (3)]  [▶ →] │
+│  Filtros ativos: [× Capital] [× São Paulo] [× 2024]    [Limpar (3)]        │
 └─────────────────────────────────────────────────────────────────────────────┘
-                                                               ↑ botão no fim
 ```
 
 **Mudanças em relação ao estado atual:**

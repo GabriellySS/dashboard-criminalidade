@@ -130,47 +130,6 @@
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
-/* ── Grupo de ações (UX-03: extremo direito do fluxo em Z) ───── */
-.actionsGroup {
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 0;
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-/* ── Botão principal "Aplicar" ───────────────────────────────── */
-.button {
-  background-color: var(--color-accent);
-  color: #ffffff;
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 0.625rem 1.125rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  height: 38px;
-  justify-content: center;
-  white-space: nowrap;
-  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
-}
-
-.button:hover {
-  opacity: 0.9;
-}
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
-}
-
-.button:active {
-  transform: scale(0.98);
-}
-
 /* ============================================================
    UX-01 — Linha de Chips de Filtros Ativos
    Fica logo abaixo dos dropdowns, separada por uma borda sutil.
@@ -326,11 +285,6 @@
     margin: 0;
     align-self: auto;
   }
-
-  .actionsGroup {
-    margin-left: 0;
-    justify-content: flex-end;
-  }
 }
 
 @media (max-width: 480px) {
@@ -346,15 +300,6 @@
   .filterField {
     flex: 1 1 auto;
     min-width: 0;
-  }
-
-  .button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .actionsGroup {
-    width: 100%;
   }
 
   .chipsRow {
