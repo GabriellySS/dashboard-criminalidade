@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filter, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { MunicipioCombobox } from '../Combobox/MunicipioCombobox';
 import styles from './FilterBar.module.css';
 
@@ -191,22 +191,6 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
           </div>
         </fieldset>
-
-        {/*
-         * ── AÇÕES — UX-03: extremo direito do fluxo em Z ─────────────────────
-         * Separado dos grupos semânticos mas pertence à mesma linha de filtros.
-         */}
-        <div className={styles.actionsGroup}>
-          <button
-            id="apply-filters-btn"
-            className={styles.button}
-            type="button"
-            aria-label="Aplicar filtros selecionados"
-          >
-            <Filter size={16} fill="white" />
-            Aplicar
-          </button>
-        </div>
 
       </div>
 

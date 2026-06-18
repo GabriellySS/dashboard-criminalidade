@@ -1,7 +1,8 @@
 # Especificação: Lógica de Filtros e Cascata no Frontend
 
-## 1. Filtragem Cruzada
+## 1. Filtragem Cruzada e Eager Filtering
 A SPA utiliza regras complexas de filtragem cruzada e cascatas de dependências.
+O sistema opera sob o modelo de **Eager Filtering** (filtragem reativa): qualquer alteração em um controle de filtro dispara imediatamente a busca de dados na API. O botão "Aplicar" foi removido para reduzir o atrito e fornecer feedback instantâneo.
 
 ## 2. Cascata Geográfica (Região > Município)
 * **Estado Inicial:** `regiaoSelecionada` ('Capital'), `municipioSelecionado` ('São Paulo (Capital)').
