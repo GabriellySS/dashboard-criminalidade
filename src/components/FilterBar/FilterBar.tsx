@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { MunicipioCombobox } from '../Combobox/MunicipioCombobox';
+import { Skeleton } from '../Skeleton/Skeleton';
 import styles from './FilterBar.module.css';
 
 // ── Tipos ────────────────────────────────────────────────────────────────────
@@ -36,6 +37,7 @@ interface FilterBarProps {
   onRemoveFilter: (key: FilterKey) => void;
   // UX-01: mapa de chips ativos {key → label legível}
   activeChips: { key: FilterKey; label: string }[];
+  isLoading?: boolean;
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
@@ -61,6 +63,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   activeFiltersCount,
   onRemoveFilter,
   activeChips,
+  isLoading = false,
 }) => {
   /**
    * UX-05: Cascata geográfica — Município desabilitado até região ser escolhida.
@@ -175,18 +178,24 @@ export const FilterBar: React.FC<FilterBarProps> = ({
 
             <div className={styles.filterField}>
               <label htmlFor="mes-select" className={styles.fieldLabel}>Mês</label>
-              <select
-                id="mes-select"
-                aria-label="Filtrar por Mês"
-                className={styles.select}
-                value={mesSelecionado}
-                onChange={(e) => setMesSelecionado(e.target.value)}
-              >
-                <option value="Todos">Todos os Meses</option>
-                {mesesList.map((m) => (
-                  <option key={m} value={m}>{m}</option>
-                ))}
-              </select>
+              {isLoading ? (
+                <div style={{ height: '36px', width: '100%' }}>
+                  <Skeleton borderRadius="6px" />
+                </div>
+              ) : (
+                <select
+                  id="mes-select"
+                  aria-label="Filtrar por Mês"
+                  className={styles.select}
+                  value={mesSelecionado}
+                  onChange={(e) => setMesSelecionado(e.target.value)}
+                >
+                  <option value="Todos">Todos os Meses</option>
+                  {mesesList.map((m) => (
+                    <option key={m} value={m}>{m}</option>
+                  ))}
+                </select>
+              )}
             </div>
 
           </div>

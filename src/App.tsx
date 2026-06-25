@@ -21,6 +21,12 @@ const DEFAULT_CRIME     = 'Todos';
 const DEFAULT_ANO       = 'Todos';
 const DEFAULT_MES       = 'Todos';
 
+const MES_ORDEM: Record<string, number> = {
+  Janeiro: 1, Fevereiro: 2, Março: 3, Abril: 4,
+  Maio: 5, Junho: 6, Julho: 7, Agosto: 8,
+  Setembro: 9, Outubro: 10, Novembro: 11, Dezembro: 12,
+};
+
 function App() {
   const [regiaoSelecionada, setRegiaoSelecionada] = useState(DEFAULT_REGIAO);
   const [municipioSelecionado, setMunicipioSelecionado] = useState(DEFAULT_MUNICIPIO);
@@ -105,11 +111,6 @@ function App() {
   }, [anosDisponiveis, isAnosError]);
 
   const mesesList = useMemo(() => {
-    const MES_ORDEM: Record<string, number> = {
-      Janeiro: 1, Fevereiro: 2, Março: 3, Abril: 4,
-      Maio: 5, Junho: 6, Julho: 7, Agosto: 8,
-      Setembro: 9, Outubro: 10, Novembro: 11, Dezembro: 12,
-    };
     return Array.from(new Set(crimeRecords.map((d) => d.mes))).sort(
       (a, b) => (MES_ORDEM[a] || 0) - (MES_ORDEM[b] || 0),
     );
@@ -259,6 +260,7 @@ function App() {
           activeFiltersCount={activeFiltersCount}
           onRemoveFilter={handleRemoveFilter}
           activeChips={activeChips}
+          isLoading={isLoading}
         />
 
         <div className="dashboardLayout">

@@ -125,3 +125,20 @@ const anosList = useMemo(() => {
 | Endpoint respondeu com sucesso | "Todos os Anos" + anos em ordem decrescente |
 | Endpoint em erro / lista vazia | "Todos os Anos" (único item) |
 | Endpoint carregando | "Todos os Anos" (até os dados chegarem) |
+
+---
+
+## 6. Performance e UX: Loading States (P2 — implementado em `perf/frontend-p2-skeletons-usememo`)
+
+### 6.1 Skeleton Loaders para CLS Zero
+Todos os componentes visuais que dependem de dados remotos devem apresentar um estado visual de carregamento que simule as dimensões e o layout do conteúdo real. Isso zera o _Cumulative Layout Shift_ (CLS), garantindo que a página não "pule" quando os dados chegarem.
+
+* **Diretriz:** Utilizar o componente base `<Skeleton />` (com `width`, `height` e `borderRadius` configuráveis) dentro das estruturas do layout do componente.
+* Em componentes complexos como gráficos (`CrimeDistributionChart`), deve-se espelhar a estrutura de dados (por exemplo, um esqueleto para a lista de legendas e um esqueleto circular para o pie chart).
+* **Dropdowns/Filtros:** Quando uma lista de filtros estiver sendo processada, exibir um pequeno `Skeleton` na respectiva área (Ex: Item UX-08 no campo "Mês").
+
+### 6.2 Otimização de Performance (useMemo)
+Todo processamento de dados pesado derivado da API deve ser estabilizado e minimizado:
+* **Arrays Estáticos e Constantes:** Dicionários de formatação e arrays fixos devem sempre ser declarados em escopo de módulo (fora do componente) para não recriar a referência em cada render.
+* **Agregação e Filtragem:** As rotinas de formatação e consolidação de dados (ex: `chartData` em gráficos complexos) devem ser sempre envelopadas rigorosamente com `useMemo`, especificando apenas as dependências mínimas necessárias. Isso evita que re-renders do React (como digitação em outro campo) provoquem recálculo de centenas/milhares de linhas de dados na memória.
+

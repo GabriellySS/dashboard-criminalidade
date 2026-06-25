@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.9 *(atualizado em 18/06/2026 — branch `feat/ux-auto-apply-filters`)*  
+> **Versão:** 1.10 *(atualizado em 25/06/2026 — branch `perf/frontend-p2-skeletons-usememo`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -606,10 +606,11 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🟢 P2~~ | ~~**[UX-03]** Remover botão + definir modelo eager (Eager Filtering)~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-auto-apply-filters)* |
 | ~~🟢 P2~~ | ~~**[UX-02]** Botão "Limpar Filtros" com contagem~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
-| 🟢 P2 | Skeleton loaders consistentes em todos os componentes | Baixo (3h) | Médio (UX) | ⏳ Pendente |
-| 🟢 P2 | `chartData` em `useMemo` + constantes de módulo | Baixo (1h) | Baixo | ⏳ Pendente |
+| ~~🟢 P2~~ | ~~Skeleton loaders consistentes em todos os componentes~~ | ~~Baixo (3h)~~ | ~~Médio (UX)~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
+| ~~🟢 P2~~ | ~~`chartData` em `useMemo` + constantes de módulo~~ | ~~Baixo (1h)~~ | ~~Baixo~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
 | ~~🟢 P2~~ | ~~**[UX-01]** Chips de filtros ativos com remoção individual~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | ~~🟢 P2~~ | ~~**[UX-07]** Agrupamento semântico na FilterBar~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
+| ~~🟢 P2~~ | ~~**[UX-08]** Skeleton no dropdown de Mês durante loading~~ | ~~Baixo (30min)~~ | ~~Baixo~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
 | 🟢 P3 | **[UX-06]** Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
 | 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico | ⏳ Pendente |
 | 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico | ⏳ Pendente |
