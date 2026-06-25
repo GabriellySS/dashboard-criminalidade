@@ -11,9 +11,11 @@ O sistema opera sob o modelo de **Eager Filtering** (filtragem reativa): qualque
 * Quando uma Região é selecionada, o município assume o padrão "Todas as cidades", permitindo visualização agregada macro.
 
 ## 3. Cascata de Tipologia (Categoria > Tipo Específico)
-* **Estado Inicial:** `categoriaSelecionada` ('Todas').
+* **Estado Inicial:** `categoriaSelecionada` ('Todas'), `crimeSelecionado` ('Todos').
 * O dropdown de Categoria precede o de Tipo de Crime.
-* Selecionar Categoria altera as opções de Tipo para listar apenas crimes daquela macro-categoria.
+* A lista de tipos de crime é consumida dinamicamente da API (`/api/tipos-crime`).
+* Selecionar Categoria altera as opções de Tipo de Crime para listar apenas crimes daquela macro-categoria (`?categoria={c}`).
+* Ao alterar a Categoria, o `crimeSelecionado` é resetado para "Todos" para evitar cruzamentos inválidos.
 
 ## 4. Filtro de Ano e Mês
 * Ano é listado em ordem decrescente.

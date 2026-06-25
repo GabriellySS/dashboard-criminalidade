@@ -201,6 +201,7 @@ async def list_ocorrencias(
     municipio: Optional[str] = None,
     regiao: Optional[str] = None,
     ano: Optional[int] = None,
+    tipo_crime: Optional[str] = None,
     db: Session = Depends(get_db)
 ):
     """
@@ -258,6 +259,10 @@ async def list_ocorrencias(
         query += " AND r.nome = :regiao"
         params["regiao"] = regiao
 
+    if tipo_crime and tipo_crime != "Todos":
+        query += " AND tc.nome_crime = :tipo_crime"
+        params["tipo_crime"] = tipo_crime
+
     query += f"""
         GROUP BY tc.categoria_macro, o.mes, o.ano, {geo_group}
         ORDER BY o.mes DESC, tc.categoria_macro ASC
@@ -297,4 +302,26 @@ async def list_anos_disponiveis(db: Session = Depends(get_db)):
         FROM ocorrencias o
         ORDER BY o.ano DESC
     """))
+    return [row[0] for row in result]
+
+
+@app.get("/api/tipos-crime")
+@cache(expire=CACHE_TTL_ESTADOS)
+async def list_tipos_crime(categoria: Optional[str] = None, db: Session = Depends(get_db)):
+    """
+    Retorna a lista de tipos de crime únicos cadastrados no banco.
+    Se 'categoria' for providenciado, filtra os tipos de crime pela categoria macro.
+    
+    Cache: TTL de 24 horas (dado quase estático).
+    """
+    query = "SELECT DISTINCT nome_crime FROM tipos_crime"
+    params = {}
+    
+    if categoria and categoria != "Todas":
+        query += " WHERE categoria_macro = :categoria"
+        params["categoria"] = categoria
+        
+    query += " ORDER BY nome_crime"
+    
+    result = db.execute(text(query), params)
     return [row[0] for row in result]

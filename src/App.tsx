@@ -9,6 +9,7 @@ import { EmptyState } from './components/EmptyState/EmptyState';
 import { ErrorState } from './components/ErrorState/ErrorState';
 import { useOcorrencias } from './hooks/useOcorrencias';
 import { useAnosDisponiveis } from './hooks/useAnosDisponiveis';
+import { useTiposCrime } from './hooks/useTiposCrime';
 import './App.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
@@ -44,6 +45,11 @@ function App() {
     isError: isAnosError,
   } = useAnosDisponiveis();
 
+  // ─── Hook: tipos de crime (dinâmico via /api/tipos-crime) ─────────────────
+  const {
+    tiposCrime: tiposCrimeListResult,
+  } = useTiposCrime(categoriaSelecionada);
+
   // ─── Hook: ocorrências com tratamento de erro e retry ─────────────────────
   const {
     data: crimeRecords,
@@ -56,6 +62,7 @@ function App() {
       municipio: municipioSelecionado,
       regiao: regiaoSelecionada,
       ano: anoSelecionado,
+      tipo_crime: crimeSelecionado,
     },
     municipiosData.length > 0,
   );
@@ -100,8 +107,9 @@ function App() {
     return Array.from(new Set(crimeRecords.map((d) => d.categoria_crime))).sort();
   }, [crimeRecords]);
 
-  // Tipo de crime: inoperante até o backend expor o campo (FRONTEND-02 pendente)
-  const tiposCrimeList = useMemo(() => ['Todos'], []);
+  const tiposCrimeList = useMemo(() => {
+    return tiposCrimeListResult.length > 0 ? tiposCrimeListResult : [];
+  }, [tiposCrimeListResult]);
 
   // Lista de anos: dinâmica via hook useAnosDisponiveis, decrescente.
   // Fallback para lista vazia enquanto carrega ou em caso de erro no endpoint.
@@ -122,10 +130,11 @@ function App() {
     if (regiaoSelecionada    !== DEFAULT_REGIAO)    count++;
     if (municipioSelecionado !== DEFAULT_MUNICIPIO) count++;
     if (categoriaSelecionada !== DEFAULT_CATEGORIA) count++;
+    if (crimeSelecionado     !== DEFAULT_CRIME)     count++;
     if (anoSelecionado       !== DEFAULT_ANO)       count++;
     if (mesSelecionado       !== DEFAULT_MES)       count++;
     return count;
-  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, anoSelecionado, mesSelecionado]);
+  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // ─── UX-02: Reset de todos os filtros para os valores iniciais ───────────
   const handleClearFilters = () => {
@@ -152,6 +161,9 @@ function App() {
         setCategoriaSelecionada(DEFAULT_CATEGORIA);
         setCrimeSelecionado(DEFAULT_CRIME);
         break;
+      case 'crime':
+        setCrimeSelecionado(DEFAULT_CRIME);
+        break;
       case 'ano':
         setAnoSelecionado(DEFAULT_ANO);
         break;
@@ -167,10 +179,11 @@ function App() {
     if (regiaoSelecionada    !== DEFAULT_REGIAO)    chips.push({ key: 'regiao',    label: regiaoSelecionada });
     if (municipioSelecionado !== DEFAULT_MUNICIPIO) chips.push({ key: 'municipio', label: municipioSelecionado });
     if (categoriaSelecionada !== DEFAULT_CATEGORIA) chips.push({ key: 'categoria', label: categoriaSelecionada });
+    if (crimeSelecionado     !== DEFAULT_CRIME)     chips.push({ key: 'crime',     label: crimeSelecionado });
     if (anoSelecionado       !== DEFAULT_ANO)       chips.push({ key: 'ano',       label: `Ano: ${anoSelecionado}` });
     if (mesSelecionado       !== DEFAULT_MES)       chips.push({ key: 'mes',       label: mesSelecionado });
     return chips;
-  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, anoSelecionado, mesSelecionado]);
+  }, [regiaoSelecionada, municipioSelecionado, categoriaSelecionada, crimeSelecionado, anoSelecionado, mesSelecionado]);
 
   // ─── Dados filtrados (cliente: mês + categoria) ───────────────────────────
   const dadosFiltrados = useMemo(() => {
