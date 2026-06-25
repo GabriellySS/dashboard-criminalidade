@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   AreaChart,
   Area,
@@ -50,31 +50,33 @@ const MES_ORDEM: Record<string, number> = {
 export const TrendChart: React.FC<TrendChartProps> = ({ data, isLoading = false }) => {
   const [activeTab, setActiveTab] = useState('12m');
 
-  // Aggregate data chronologically by Month/Year
-  const aggregatedMap: Record<string, { label: string; valor: number; sortKey: number }> = {};
+  const chartData = useMemo(() => {
+    // Aggregate data chronologically by Month/Year
+    const aggregatedMap: Record<string, { label: string; valor: number; sortKey: number }> = {};
 
-  data.forEach((item) => {
-    const key = `${item.ano}-${item.mes}`;
-    const mesIndex = MES_ORDEM[item.mes] || 0;
-    const sortKey = parseInt(item.ano) * 100 + mesIndex;
+    data.forEach((item) => {
+      const key = `${item.ano}-${item.mes}`;
+      const mesIndex = MES_ORDEM[item.mes] || 0;
+      const sortKey = parseInt(item.ano) * 100 + mesIndex;
 
-    if (!aggregatedMap[key]) {
-      const mesAbr = MESES_ABR[item.mes] || item.mes.substring(0, 3);
-      aggregatedMap[key] = {
-        label: `${mesAbr}/${String(item.ano).substring(2)}`,
-        valor: 0,
-        sortKey,
-      };
-    }
-    aggregatedMap[key].valor += item.ocorrencias;
-  });
+      if (!aggregatedMap[key]) {
+        const mesAbr = MESES_ABR[item.mes] || item.mes.substring(0, 3);
+        aggregatedMap[key] = {
+          label: `${mesAbr}/${String(item.ano).substring(2)}`,
+          valor: 0,
+          sortKey,
+        };
+      }
+      aggregatedMap[key].valor += item.ocorrencias;
+    });
 
-  const chartData = Object.values(aggregatedMap)
-    .sort((a, b) => a.sortKey - b.sortKey)
-    .map((item) => ({
-      name: item.label,
-      ocorrencias: item.valor,
-    }));
+    return Object.values(aggregatedMap)
+      .sort((a, b) => a.sortKey - b.sortKey)
+      .map((item) => ({
+        name: item.label,
+        ocorrencias: item.valor,
+      }));
+  }, [data]);
 
   const formatYAxis = (value: number) => {
     if (value >= 1000) {
