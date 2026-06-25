@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   PieChart,
   Pie,
@@ -60,49 +60,53 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
   data,
   isLoading = false,
 }) => {
-  // 1. Group and sum occurrences per crime type
-  const groupMap: Record<string, number> = {};
-  let totalOccurrences = 0;
+  const { chartData, totalOccurrences } = useMemo(() => {
+    // 1. Group and sum occurrences per crime type
+    const groupMap: Record<string, number> = {};
+    let totalOccurrences = 0;
 
-  data.forEach((item) => {
-    const key = item.tipo_crime ?? item.categoria_crime;
-    groupMap[key] = (groupMap[key] || 0) + item.ocorrencias;
-    totalOccurrences += item.ocorrencias;
-  });
-
-  // 2. Sort all crimes descending by occurrences
-  const sortedRawData = Object.entries(groupMap)
-    .map(([crime, value]) => ({ name: crime, value }))
-    .sort((a, b) => b.value - a.value);
-
-  // 3. Keep top 4 and group the rest into "Outros"
-  const top4 = sortedRawData.slice(0, 4);
-  const othersRaw = sortedRawData.slice(4);
-
-  const chartData: Array<{ name: string; value: number; percentage: number; color: string }> = [];
-
-  // Add top 4 elements
-  top4.forEach((entry, idx) => {
-    const percentage = totalOccurrences > 0 ? (entry.value / totalOccurrences) * 100 : 0;
-    chartData.push({
-      name: entry.name,
-      value: entry.value,
-      percentage,
-      color: PRESET_COLORS[idx] || DEFAULT_COLOR,
+    data.forEach((item) => {
+      const key = item.tipo_crime ?? item.categoria_crime;
+      groupMap[key] = (groupMap[key] || 0) + item.ocorrencias;
+      totalOccurrences += item.ocorrencias;
     });
-  });
 
-  // Aggregate others if present
-  if (othersRaw.length > 0) {
-    const othersValue = othersRaw.reduce((sum, item) => sum + item.value, 0);
-    const othersPercentage = totalOccurrences > 0 ? (othersValue / totalOccurrences) * 100 : 0;
-    chartData.push({
-      name: 'Outros',
-      value: othersValue,
-      percentage: othersPercentage,
-      color: OUTROS_COLOR,
+    // 2. Sort all crimes descending by occurrences
+    const sortedRawData = Object.entries(groupMap)
+      .map(([crime, value]) => ({ name: crime, value }))
+      .sort((a, b) => b.value - a.value);
+
+    // 3. Keep top 4 and group the rest into "Outros"
+    const top4 = sortedRawData.slice(0, 4);
+    const othersRaw = sortedRawData.slice(4);
+
+    const chartData: Array<{ name: string; value: number; percentage: number; color: string }> = [];
+
+    // Add top 4 elements
+    top4.forEach((entry, idx) => {
+      const percentage = totalOccurrences > 0 ? (entry.value / totalOccurrences) * 100 : 0;
+      chartData.push({
+        name: entry.name,
+        value: entry.value,
+        percentage,
+        color: PRESET_COLORS[idx] || DEFAULT_COLOR,
+      });
     });
-  }
+
+    // Aggregate others if present
+    if (othersRaw.length > 0) {
+      const othersValue = othersRaw.reduce((sum, item) => sum + item.value, 0);
+      const othersPercentage = totalOccurrences > 0 ? (othersValue / totalOccurrences) * 100 : 0;
+      chartData.push({
+        name: 'Outros',
+        value: othersValue,
+        percentage: othersPercentage,
+        color: OUTROS_COLOR,
+      });
+    }
+
+    return { chartData, totalOccurrences };
+  }, [data]);
 
   return (
     <div className={styles.chartContainer}>
@@ -113,7 +117,26 @@ export const CrimeDistributionChart: React.FC<CrimeDistributionChartProps> = ({
 
       {isLoading ? (
         <div className={styles.chartContent}>
-          <Skeleton borderRadius="12px" />
+          <div className={styles.legendContainer}>
+            {[1, 2, 3, 4].map((i) => (
+              <div key={`skeleton-legend-${i}`} className={styles.legendItem}>
+                <div className={styles.legendHeader}>
+                  <div className={styles.legendLeft}>
+                    <Skeleton width="120px" height="16px" borderRadius="4px" />
+                  </div>
+                  <div className={styles.legendRight}>
+                    <Skeleton width="40px" height="16px" borderRadius="4px" />
+                  </div>
+                </div>
+                <div className={styles.progressBarTrack}>
+                  <Skeleton width="100%" height="6px" borderRadius="3px" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.responsiveContainer}>
+            <Skeleton width="180px" height="180px" borderRadius="50%" />
+          </div>
         </div>
       ) : chartData.length === 0 ? (
         <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', color: 'var(--color-text-secondary)', minHeight: '260px' }}>
