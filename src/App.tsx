@@ -10,17 +10,10 @@ import { ErrorState } from './components/ErrorState/ErrorState';
 import { useOcorrencias } from './hooks/useOcorrencias';
 import { useAnosDisponiveis } from './hooks/useAnosDisponiveis';
 import { useTiposCrime } from './hooks/useTiposCrime';
+import { useUrlFilters, DEFAULT_REGIAO, DEFAULT_MUNICIPIO, DEFAULT_CATEGORIA, DEFAULT_CRIME, DEFAULT_ANO, DEFAULT_MES } from './hooks/useUrlFilters';
 import './App.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000';
-
-// ── Valores padrão dos filtros (usados pelo botão Limpar Filtros) ───────────
-const DEFAULT_REGIAO    = 'Capital';
-const DEFAULT_MUNICIPIO = 'São Paulo (Capital)';
-const DEFAULT_CATEGORIA = 'Todas';
-const DEFAULT_CRIME     = 'Todos';
-const DEFAULT_ANO       = 'Todos';
-const DEFAULT_MES       = 'Todos';
 
 const MES_ORDEM: Record<string, number> = {
   Janeiro: 1, Fevereiro: 2, Março: 3, Abril: 4,
@@ -29,12 +22,20 @@ const MES_ORDEM: Record<string, number> = {
 };
 
 function App() {
-  const [regiaoSelecionada, setRegiaoSelecionada] = useState(DEFAULT_REGIAO);
-  const [municipioSelecionado, setMunicipioSelecionado] = useState(DEFAULT_MUNICIPIO);
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState(DEFAULT_CATEGORIA);
-  const [crimeSelecionado, setCrimeSelecionado] = useState(DEFAULT_CRIME);
-  const [anoSelecionado, setAnoSelecionado] = useState(DEFAULT_ANO);
-  const [mesSelecionado, setMesSelecionado] = useState(DEFAULT_MES);
+  const {
+    regiaoSelecionada,
+    setRegiaoSelecionada,
+    municipioSelecionado,
+    setMunicipioSelecionado,
+    categoriaSelecionada,
+    setCategoriaSelecionada,
+    crimeSelecionado,
+    setCrimeSelecionado,
+    anoSelecionado,
+    setAnoSelecionado,
+    mesSelecionado,
+    setMesSelecionado,
+  } = useUrlFilters();
   const [municipiosData, setMunicipiosData] = useState<any[]>([]);
   const [municipiosError, setMunicipiosError] = useState<string | null>(null);
   const [municipiosRetryKey, setMunicipiosRetryKey] = useState(0);

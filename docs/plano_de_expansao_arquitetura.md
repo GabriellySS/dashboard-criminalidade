@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.11 *(atualizado em 25/06/2026 — branch `feat/fullstack-p2-tipo-crime`)*  
+> **Versão:** 1.12 *(atualizado em 01/07/2026 — branch `feat/ux-p3-deep-linking`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -611,7 +611,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🟢 P2~~ | ~~**[UX-01]** Chips de filtros ativos com remoção individual~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | ~~🟢 P2~~ | ~~**[UX-07]** Agrupamento semântico na FilterBar~~ | ~~Baixo (2h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
 | ~~🟢 P2~~ | ~~**[UX-08]** Skeleton no dropdown de Mês durante loading~~ | ~~Baixo (30min)~~ | ~~Baixo~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
-| 🟢 P3 | **[UX-06]** Deep linking — filtros na query string da URL | Médio (1 dia) | Alto | ⏳ Pendente |
+| ~~🟢 P3~~ | ~~**[UX-06]** Deep linking — filtros na query string da URL~~ | ~~Médio (1 dia)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-p3-deep-linking)* |
 | 🟢 P3 | `sources.yaml` + ETL runner genérico | Alto (3 dias) | Estratégico | ⏳ Pendente |
 | 🟢 P3 | Adicionar primeiro estado novo (ex: MG ou RJ) | Alto (1 semana) | Estratégico | ⏳ Pendente |
 
