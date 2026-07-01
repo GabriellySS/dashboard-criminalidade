@@ -140,3 +140,18 @@ O `<select id="municipio-select">` foi substituído por:
 A interface (`FilterBarProps`) não foi alterada — os mesmos `municipiosList`,
 `municipioSelecionado` e `setMunicipioSelecionado` são passados, garantindo
 retrocompatibilidade total com o `App.tsx`.
+
+---
+
+## 6. Deep Linking e Estado Bi-direcional da URL (P3)
+
+### 6.1 Sincronização Bi-direcional
+O estado dos filtros (`regiao`, `municipio`, `categoria`, `crime`, `ano`, `mes`) agora possui sincronização bi-direcional com a *query string* da URL, provida pelo hook `useUrlFilters`.
+- **Inicialização:** No primeiro load da aplicação, os estados são hidratados lendo a *query string* (`new URLSearchParams(window.location.search)`). Se um filtro não estiver presente na URL, o valor `DEFAULT_*` (ex: "Capital" para região) é utilizado.
+- **Atualização em tempo real:** Qualquer mudança efetuada na UI (ex: selecionando uma opção no `FilterBar`) aciona um `window.history.replaceState`. Isso garante que a URL sempre reflita o estado exato dos filtros na tela sem poluir o histórico de navegação (o botão "Voltar" do navegador não acumulará cada seleção individual do usuário).
+
+### 6.2 Proteção de Cascata na URL
+A leitura dos filtros na inicialização implementa validação defensiva contra URLs inválidas ou inconsistentes, assegurando a integridade dos dados enviados para a API:
+- Se o usuário acessar uma URL com o parâmetro `municipio` preenchido, mas sem o parâmetro `regiao` correspondente, a lógica de inicialização **ignora** o `municipio` da URL, aplicando o fallback.
+- A mesma proteção aplica-se para `crime` e `categoria`. Se `crime` estiver na URL sem `categoria`, o valor de `crime` é descartado.
+Isso impede violações das regras de cascata (ver Seções 2 e 3) e evita "estados fantasmas" onde a interface tentaria carregar um município de uma região diferente da atualmente selecionada.
