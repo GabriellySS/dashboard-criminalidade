@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { FilterKey } from '../components/FilterBar/FilterBar';
+
 
 export const DEFAULT_REGIAO    = 'Capital';
 export const DEFAULT_MUNICIPIO = 'São Paulo (Capital)';
