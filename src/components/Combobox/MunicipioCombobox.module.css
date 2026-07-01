@@ -152,6 +152,9 @@
 /* ── UX-05: Microcopy condicional quando o campo está desabilitado ── */
 /* Explica a dependência hierárquica sem sobrecarregar visualmente.   */
 .disabledHint {
+  position: absolute;
+  top: 100%;
+  left: 0;
   margin: 0.25rem 0 0 0;
   font-size: 0.6875rem;
   color: var(--color-text-secondary);

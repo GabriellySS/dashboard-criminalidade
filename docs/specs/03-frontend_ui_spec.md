@@ -142,3 +142,5 @@ Todo processamento de dados pesado derivado da API deve ser estabilizado e minim
 * **Arrays Estáticos e Constantes:** Dicionários de formatação e arrays fixos devem sempre ser declarados em escopo de módulo (fora do componente) para não recriar a referência em cada render.
 * **Agregação e Filtragem:** As rotinas de formatação e consolidação de dados (ex: `chartData` em gráficos complexos) devem ser sempre envelopadas rigorosamente com `useMemo`, especificando apenas as dependências mínimas necessárias. Isso evita que re-renders do React (como digitação em outro campo) provoquem recálculo de centenas/milhares de linhas de dados na memória.
 
+### 6.3 Prevenção de Layout Shifts (Microcopy)
+* **Diretriz:** Textos de dica, erro ou validação (microcopy) injetados dinamicamente abaixo de inputs devem utilizar posicionamento absoluto ou alinhamento flex-start no container pai para não causar desalinhamento dos campos adjacentes.
