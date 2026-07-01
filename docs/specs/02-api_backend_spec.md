@@ -124,15 +124,15 @@ ocorrencias (tabela de fatos — sem alterações)
 | `GET` | `/api/status` | Health check da API | Ativo |
 | `GET` | `/api/estados` | Lista todos os 27 estados (com contagem de regiões) | **NOVO** |
 | `GET` | `/api/municipios` | Lista todos os municípios com nome da região | Ativo |
-| `GET` | `/api/ocorrencias` | Ocorrências com filtros: `municipio`, `regiao`, `ano` | Ativo |
+| `GET` | `/api/ocorrencias` | Ocorrências com filtros: `municipio`, `regiao`, `ano`, `tipo_crime` | Ativo |
+| `GET` | `/api/tipos-crime` | Lista tipos de crime únicos, filtra por `categoria` (opcional) | **NOVO** |
 
 ### Filtros Planejados (P1 — próxima fase)
 
 ```
-GET /api/ocorrencias?estado={uf}&municipio={m}&regiao={r}&ano={a}
+GET /api/ocorrencias?estado={uf}&municipio={m}&regiao={r}&ano={a}&tipo_crime={tc}
 GET /api/municipios?estado={uf}&regiao={r}
 GET /api/anos-disponiveis?estado={uf}
-GET /api/tipos-crime?categoria={c}
 ```
 
 ## 5. Server-Side Aggregation
@@ -142,6 +142,7 @@ A rota principal `/api/ocorrencias` aceita parâmetros de query opcionais para f
 - `municipio` (str, opcional)
 - `regiao` (str, opcional)
 - `ano` (int, opcional)
+- `tipo_crime` (str, opcional)
 
 A agregação (GROUP BY) é feita no próprio PostgreSQL (via SQLAlchemy), retornando as propriedades:
 - `categoria_crime`

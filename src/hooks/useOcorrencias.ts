@@ -13,6 +13,7 @@ export interface UseOcorrenciasParams {
   municipio: string;
   regiao: string;
   ano: string;
+  tipo_crime?: string;
 }
 
 export interface UseOcorrenciasResult {
@@ -57,6 +58,9 @@ export function useOcorrencias(
         const searchParams = new URLSearchParams();
 
         if (ano !== 'Todos') searchParams.set('ano', ano);
+        if (paramsRef.current.tipo_crime && paramsRef.current.tipo_crime !== 'Todos') {
+          searchParams.set('tipo_crime', paramsRef.current.tipo_crime);
+        }
 
         const isMunicipio =
           municipio !== 'Todas as cidades' && municipio !== 'Todos' && municipio !== '';
@@ -106,7 +110,7 @@ export function useOcorrencias(
     fetchData();
     // fetchCounter garante que o refetch manual dispara uma nova busca
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [enabled, params.municipio, params.regiao, params.ano, fetchCounter]);
+  }, [enabled, params.municipio, params.regiao, params.ano, params.tipo_crime, fetchCounter]);
 
   return { data, isLoading, isError, errorMessage, refetch };
 }

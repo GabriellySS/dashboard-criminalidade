@@ -7,7 +7,7 @@ import styles from './FilterBar.module.css';
 // ── Tipos ────────────────────────────────────────────────────────────────────
 
 /** Identificadores de cada filtro individual — usados pelos chips (UX-01). */
-export type FilterKey = 'regiao' | 'municipio' | 'categoria' | 'ano' | 'mes';
+export type FilterKey = 'regiao' | 'municipio' | 'categoria' | 'crime' | 'ano' | 'mes';
 
 interface FilterBarProps {
   // Valores atuais
@@ -49,6 +49,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   setMunicipioSelecionado,
   categoriaSelecionada,
   setCategoriaSelecionada,
+  crimeSelecionado,
   setCrimeSelecionado,
   anoSelecionado,
   setAnoSelecionado,
@@ -57,6 +58,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   regioesList,
   municipiosList,
   categoriasList,
+  tiposCrimeList,
   anosList,
   mesesList,
   onClearFilters,
@@ -126,7 +128,6 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         <div className={styles.groupDivider} aria-hidden="true" />
 
         {/* ── GRUPO: TIPOLOGIA ── */}
-        {/* UX-04: "Tipo de Crime" foi removido — backend não expõe tipo_crime. */}
         <fieldset className={styles.filterGroup} aria-label="Filtros de tipologia criminal">
           <legend className={styles.groupLabel}>Tipologia</legend>
           <div className={styles.groupFields}>
@@ -145,6 +146,22 @@ export const FilterBar: React.FC<FilterBarProps> = ({
               >
                 <option value="Todas">Todas as Categorias</option>
                 {categoriasList.map((c) => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className={styles.filterField}>
+              <label htmlFor="crime-select" className={styles.fieldLabel}>Tipo de Crime</label>
+              <select
+                id="crime-select"
+                aria-label="Filtrar por Tipo de Crime"
+                className={styles.select}
+                value={crimeSelecionado}
+                onChange={(e) => setCrimeSelecionado(e.target.value)}
+              >
+                <option value="Todos">Todos os Crimes</option>
+                {tiposCrimeList.map((c) => (
                   <option key={c} value={c}>{c}</option>
                 ))}
               </select>

@@ -3,7 +3,7 @@
 > **Classificação:** Documento Interno de Engenharia  
 > **Autoria:** Auditoria Automatizada — Staff Software Engineer / Data Engineering  
 > **Data:** Junho de 2026  
-> **Versão:** 1.10 *(atualizado em 25/06/2026 — branch `perf/frontend-p2-skeletons-usememo`)*  
+> **Versão:** 1.11 *(atualizado em 25/06/2026 — branch `feat/fullstack-p2-tipo-crime`)*  
 > **Repositório:** `GabriellySS/dashboard-criminalidade`
 
 ---
@@ -605,7 +605,7 @@ INSERT INTO estados (sigla, nome, regiao_br) VALUES
 | ~~🟢 P2~~ | ~~**[UX-05]** Microcopy no campo Município desabilitado~~ | ~~Baixo (30min)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
 | ~~🟢 P2~~ | ~~**[UX-03]** Remover botão + definir modelo eager (Eager Filtering)~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-auto-apply-filters)* |
 | ~~🟢 P2~~ | ~~**[UX-02]** Botão "Limpar Filtros" com contagem~~ | ~~Baixo (1h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-quick-wins-filterbar)* |
-| 🟢 P2 | Ativar filtro de Tipo de Crime (end-to-end) | Médio (6h) | Médio | ⏳ Pendente |
+| ~~🟢 P2~~ | ~~Ativar filtro de Tipo de Crime (end-to-end)~~ | ~~Médio (6h)~~ | ~~Médio~~ | ✅ **Concluído** *(feat/fullstack-p2-tipo-crime)* |
 | ~~🟢 P2~~ | ~~Skeleton loaders consistentes em todos os componentes~~ | ~~Baixo (3h)~~ | ~~Médio (UX)~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
 | ~~🟢 P2~~ | ~~`chartData` em `useMemo` + constantes de módulo~~ | ~~Baixo (1h)~~ | ~~Baixo~~ | ✅ **Concluído** *(perf/frontend-p2-skeletons-usememo)* |
 | ~~🟢 P2~~ | ~~**[UX-01]** Chips de filtros ativos com remoção individual~~ | ~~Médio (4h)~~ | ~~Alto~~ | ✅ **Concluído** *(feat/ux-semantic-grouping-chips)* |
